@@ -185,7 +185,7 @@ namespace WindowsFormsApplication
 			}
 		}
 
-		public static void InsertUserInfo(string f, string m, string l, string t, String g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
+		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
 			
 			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele,'gender`,'age','adress','city','governorate','occupation','maritial','mensturalhistory','firstvisit') VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + ");";
@@ -196,7 +196,7 @@ namespace WindowsFormsApplication
 	
 
 	
-
+		/*
 		public static DataTable getAllBuildings()
 		{
 			String sql = @"select id , name from flowers_park.buildings;";
@@ -941,7 +941,7 @@ namespace WindowsFormsApplication
 
 			return dt;
 		}
-
+		*/
 
 		#endregion
 
