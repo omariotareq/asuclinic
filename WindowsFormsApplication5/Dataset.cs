@@ -183,18 +183,16 @@ namespace WindowsFormsApplication5
 				return 0; // wrong user or password
 			}
 		}
+		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 
-/*
-		public static void AddToLog(int ID, String action, String description)
 		{
 
 			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele,'gender`,'age','adress','city','governorate','occupation','maritial','mensturalhistory','firstvisit') VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + ");";
 
 			executeQuery(sql);
 		}
-
-
-
+/*
+		public static void AddToLog(int ID, String action, String description)
 		public static DataTable getAllBuildings()
 		{
 			String sql = @"select id , name from flowers_park.buildings;";
