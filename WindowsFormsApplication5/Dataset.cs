@@ -183,6 +183,31 @@ namespace WindowsFormsApplication5
 				return 0; // wrong user or password
 			}
 		}
+		public static long getMaxrID(int id)    //MAXID
+		{
+		 String sql = @"select MAX(id ) as maximumID from asudb.dbo.personal_info";
+
+			DataTable dt = getDataTable(sql);
+
+			if (dt.Rows.Count > 0)
+			{
+				DataRow dataRow = dt.Rows[0];
+
+				long MaxID = Convert.ToInt32(dataRow[dt.Columns.IndexOf("id")]);
+
+
+
+
+
+
+				return MaxID;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+
 
 		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
