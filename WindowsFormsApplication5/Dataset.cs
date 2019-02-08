@@ -187,7 +187,7 @@ namespace WindowsFormsApplication5
 
 		{
 
-			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele,'gender`,'age','adress','city','governorate','occupation','maritial','mensturalhistory','firstvisit') VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + "');";
+			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele`,`gender`,`age`,`adress`,`city`,`governorate`,`occupation`,`maritial`,`mensturalhistory`,`firstvisit`) VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + "');";
 
 			executeQuery(sql);
 
