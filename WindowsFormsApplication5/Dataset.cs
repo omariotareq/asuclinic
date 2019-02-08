@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 
-namespace WindowsFormsApplication
+namespace WindowsFormsApplication5
 {
 	class DataSet
 	{
