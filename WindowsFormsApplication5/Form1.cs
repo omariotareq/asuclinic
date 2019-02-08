@@ -48,7 +48,7 @@ namespace WindowsFormsApplication5
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value);
+            DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
             Form2 f2 = new Form2();
             f2.ShowDialog();
         }
