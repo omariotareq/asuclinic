@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication5
 {
-    public partial class login_form : Form
+    public partial class Login_Form : Form
     {
-        public login_form()
+        long user_id = 0;
+        public Login_Form()
         {
             InitializeComponent();
+        }
+        
+        private void lgnBtn_Click(object sender, EventArgs e)
+        {
+            user_id = DataSet.getUserID(loginTB.Text, passwordTB.Text);
+            if(user_id != 0){
+                Form1 f1 = new Form1();
+                this.Hide();
+                f1.ShowDialog();
+                this.Close();
+            }
+            else{
+                MessageBox.Show("failure bitch");
+            }
         }
     }
 }

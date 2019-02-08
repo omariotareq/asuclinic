@@ -57,6 +57,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.firstvisitDP = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // patientID
@@ -339,12 +340,23 @@
             this.button1.Text = "Proceed to Examination";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.AliceBlue;
+            this.button3.Location = new System.Drawing.Point(12, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(116, 24);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "Logout";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(966, 569);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.firstvisitDP);
             this.Controls.Add(this.label13);
@@ -416,6 +428,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker firstvisitDP;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

@@ -1,5 +1,4 @@
 ﻿
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
 
-namespace WindowsFormsApplication
+namespace WindowsFormsApplication5
 {
 	class DataSet
 	{
@@ -185,6 +184,7 @@ namespace WindowsFormsApplication
 			}
 		}
 
+/*
 		public static void AddToLog(int ID, String action, String description)
 		{
 			String currentDT = Varibles.getCurrentDateTimeStr();
@@ -193,14 +193,7 @@ namespace WindowsFormsApplication
 			executeQuery(sql);
 		}
 
-		public static void AddToLog(String action, String description)
-		{
-			int userID = Varibles.loggedInUser.getId();
-			String currentDT = Varibles.getCurrentDateTimeStr();
-			String sql = @"INSERT INTO `flowers_park`.`log` (`user_id`, `action`, `date`, `description`) VALUES ('" + userID + "', '" + action + "', '" + currentDT + "', '" + description + "');";
-
-			executeQuery(sql);
-		}
+		
 
 		public static DataTable getAllBuildings()
 		{
@@ -946,7 +939,7 @@ namespace WindowsFormsApplication
 
 			return dt;
 		}
-
+        */
 
 		#endregion
 
