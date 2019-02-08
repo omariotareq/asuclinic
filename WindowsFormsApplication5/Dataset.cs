@@ -185,22 +185,17 @@ namespace WindowsFormsApplication
 			}
 		}
 
-		public static void AddToLog(int ID, String action, String description)
+		public static void InsertUserInfo(string f, string m, string l, string t, String g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
-			String currentDT = Varibles.getCurrentDateTimeStr();
-			String sql = @"INSERT INTO `flowers_park`.`log` (`user_id`, `action`, `date`, `description`) VALUES ('" + userID + "', '" + action + "', '" + currentDT + "', '" + description + "');";
+			
+			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele,'gender`,'age','adress','city','governorate','occupation','maritial','mensturalhistory','firstvisit') VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + ");";
 
 			executeQuery(sql);
 		}
 
-		public static void AddToLog(String action, String description)
-		{
-			int userID = Varibles.loggedInUser.getId();
-			String currentDT = Varibles.getCurrentDateTimeStr();
-			String sql = @"INSERT INTO `flowers_park`.`log` (`user_id`, `action`, `date`, `description`) VALUES ('" + userID + "', '" + action + "', '" + currentDT + "', '" + description + "');";
+	
 
-			executeQuery(sql);
-		}
+	
 
 		public static DataTable getAllBuildings()
 		{
