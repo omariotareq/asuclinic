@@ -188,8 +188,7 @@ namespace WindowsFormsApplication5
 		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
 			
-			String sql = @"INSERT INTO `asudbo.dbo.personal-info` (`fname`, `mname`, `lname`, `tele`,`gender`,`age`,`adress`,`city`,`governorate`,`occupation`,`maritial`,`mensturalhistory`,`firstvisit`) VALUES ('" + f + "', '" + m + "', '" + l + "', '" + t + "', '" + g + "', '" + age + "', '" + address + "', '" + city + "','"+governorate+ "','" + mari + "','" + menst + ",'" + fv + "');";
-
+			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) VALUES ('f' , 'm', 'l', t, 'g', age, ' address' , 'city','governoate','occu','mari','menst', 'fv '  )";
 			executeQuery(sql);
 
 
