@@ -183,9 +183,9 @@ namespace WindowsFormsApplication5
 				return 0; // wrong user or password
 			}
 		}
-		public static long getMaxrID(int id)    //MAXID
+		public static long getMaxrID()    //MAXID
 		{
-		 String sql = @"select MAX(id ) as maximumID from asudb.dbo.personal_info";
+		 String sql = @"select MAX(id) as maximumID from asudb.dbo.personal_info";
 
 			DataTable dt = getDataTable(sql);
 
@@ -193,7 +193,7 @@ namespace WindowsFormsApplication5
 			{
 				DataRow dataRow = dt.Rows[0];
 
-				long MaxID = Convert.ToInt32(dataRow[dt.Columns.IndexOf("id")]);
+                long MaxID = Convert.ToInt32(dataRow[dt.Columns.IndexOf("maximumID")]);
 
 
 
