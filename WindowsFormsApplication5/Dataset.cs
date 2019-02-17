@@ -218,6 +218,34 @@ namespace WindowsFormsApplication5
 
 		}
 
+			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	)
+		{
+			
+			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +ma+  "'  )";
+			executeQuery(sql);
+			 //ezay23ml el hewar dh bnfsf el id ya omar ?
+
+		}
+
+		public static void InsertExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	)
+		{
+			
+			String sql = @"INSERT INTO  asudb.dbo.Exam_details (Systolic, diastolic, pulse, Temp,Resp.rate,Weight,Hight,,BMI,General exam findings,Local exam findings) VALUES ('"+ sys + "',' " + di + "','" + pu + "','"+ te +"','" + rr + "','" + w + "', '"+ h + "','" +bm+ "','" +ge+ "','" +le+ "')";
+			executeQuery(sql);
+			 //ezay23ml el hewar dh bnfsf el id ya omar ?
+
+		}
+		//search form
+		public static DataTable getAllpatientinfo(int ID)
+		{
+			String sql = @"SELECT fname,mname,lname FROM asudb.dbo.personal_info where   personal_info.id = '" + ID + "'";
+
+			DataTable dt = getDataTable(sql);
+
+			return dt;
+		}
+
+
 	
 
 	
