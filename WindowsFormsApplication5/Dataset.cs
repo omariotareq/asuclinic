@@ -238,7 +238,7 @@ namespace WindowsFormsApplication5
 		//search form
 		public static DataTable getAllpatientinfo(string name)
 		{
-			String sql = @"SELECT fname,mname,lname FROM asudb.dbo.personal_info where   personal_info.fname Like = '" +name + "'";
+			String sql = @"SELECT fname,mname,lname,age FROM asudb.dbo.personal_info where   personal_info.fname Like = '" +name + "'";
 
 			DataTable dt = getDataTable(sql);
 
