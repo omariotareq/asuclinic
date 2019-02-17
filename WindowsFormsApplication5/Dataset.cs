@@ -218,10 +218,10 @@ namespace WindowsFormsApplication5
 
 		}
 
-			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	)
+			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	, int p_id)
 		{
 			
-			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +ma+  "'  )";
+			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +main+  "'  WHERE p_id ='"+ p_id+ "')'";
 			executeQuery(sql);
 			 //ezay23ml el hewar dh bnfsf el id ya omar ?
 
