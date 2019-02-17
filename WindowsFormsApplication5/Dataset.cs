@@ -221,7 +221,7 @@ namespace WindowsFormsApplication5
 			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	)
 		{
 			
-			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +ma+  "'  )";
+			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +main+  "'  )";
 			executeQuery(sql);
 			 //ezay23ml el hewar dh bnfsf el id ya omar ?
 
@@ -236,9 +236,9 @@ namespace WindowsFormsApplication5
 
 		}
 		//search form
-		public static DataTable getAllpatientinfo(int ID)
+		public static DataTable getAllpatientinfo(string name)
 		{
-			String sql = @"SELECT fname,mname,lname FROM asudb.dbo.personal_info where   personal_info.id = '" + ID + "'";
+			String sql = @"SELECT fname,mname,lname FROM asudb.dbo.personal_info where   personal_info.fname Like = '" +name + "'";
 
 			DataTable dt = getDataTable(sql);
 
