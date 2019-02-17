@@ -160,7 +160,7 @@ namespace WindowsFormsApplication5
 		#region Mostafa
 		public static long getUserID(String username, String Password)    //loginform
 		{
-			String sql = @"select login.id as id  from asudb.dbo.login 
+			String sql = @"select login.id as id  from asudb.dbo.login
                            where login.username = '" + username + "' AND login.password = '" + Password + "';";
 
 			DataTable dt = getDataTable(sql);
@@ -170,11 +170,11 @@ namespace WindowsFormsApplication5
 				DataRow dataRow = dt.Rows[0];
 
 				long userID = Convert.ToInt32(dataRow[dt.Columns.IndexOf("id")]);
-				
 
-				
 
-				
+
+
+
 
 				return userID;
 			}
@@ -211,17 +211,17 @@ namespace WindowsFormsApplication5
 
 		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
-			
+
 			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) VALUES ('"+ f + "',' " + m + "','" + l + "','"+ t +"','" + g + "','" + age + "', '"+ address + "','" +city+ "','" +governorate+ "','" +occu+ "','" +mari+ "','" +menst+ "', '" +fv+  "'  )";
 			executeQuery(sql);
 
 
 		}
 
-			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	)
+			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	, int p_id)
 		{
-			
-			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +main+  "'  )";
+
+			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +main+  "'  WHERE p_id ='"+ p_id+ "')'";
 			executeQuery(sql);
 			 //ezay23ml el hewar dh bnfsf el id ya omar ?
 
@@ -229,7 +229,7 @@ namespace WindowsFormsApplication5
 
 		public static void InsertExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	)
 		{
-			
+
 			String sql = @"INSERT INTO  asudb.dbo.Exam_details (Systolic, diastolic, pulse, Temp,Resp.rate,Weight,Hight,,BMI,General exam findings,Local exam findings) VALUES ('"+ sys + "',' " + di + "','" + pu + "','"+ te +"','" + rr + "','" + w + "', '"+ h + "','" +bm+ "','" +ge+ "','" +le+ "')";
 			executeQuery(sql);
 			 //ezay23ml el hewar dh bnfsf el id ya omar ?
@@ -246,9 +246,9 @@ namespace WindowsFormsApplication5
 		}
 
 
-	
 
-	
+
+
 		/*
 		public static DataTable getAllBuildings()
 		{
@@ -270,7 +270,7 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getFloorsNo(int buildingID)
 		{
-			String sql = @"select distinct floor_no from flowers_park.appartments where 
+			String sql = @"select distinct floor_no from flowers_park.appartments where
                             appartments.building_id = '" + buildingID + "';";
 
 			DataTable dt = getDataTable(sql);
@@ -280,7 +280,7 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getAppsNo(int buildingID, int floorNo)
 		{
-			String sql = @"select distinct app_no from flowers_park.appartments where 
+			String sql = @"select distinct app_no from flowers_park.appartments where
                             appartments.building_id = '" + buildingID + "' AND appartments.floor_no = '" + floorNo + "';";
 
 			DataTable dt = getDataTable(sql);
@@ -293,13 +293,13 @@ namespace WindowsFormsApplication5
 			String sql = "select appartments.id as appID, appartments.app_type_id , "
 				+ "CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo, clients.client_name , " +
 				@"app_maintenance , administrative_expenses , app_area , garden_area ,  roof_building_area ,
-                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price , 
+                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price ,
                 ((app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance + (number_of_garages * garage_price)) AS totalPrice,
                  ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) ) AS app_price,
                 ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance ) AS priceWithoutGarage
                  from(flowers_park.appartments
                 left outer  join flowers_park.reserves on appartments.id = reserves.app_id)
-                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings , 
+                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings ,
 				flowers_park.appartments_types
                  where appartments.building_id = " + buildingID + " AND floor_no = " + floorNo + @"
                 AND appartments.building_id = flowers_park.buildings.id AND appartments.app_type_id = appartments_types.id
@@ -317,16 +317,16 @@ namespace WindowsFormsApplication5
 			String sql = "select appartments.id as appID, appartments.app_type_id , "
 				+ "CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo, clients.client_name , " +
 				@"app_maintenance , administrative_expenses , app_area , garden_area ,  roof_building_area ,
-                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price , 
+                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price ,
                 ((app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance + (number_of_garages * garage_price)) AS totalPrice,
                  ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) ) AS app_price,
                 ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance ) AS priceWithoutGarage
                  from(flowers_park.appartments
                 left outer  join flowers_park.reserves on appartments.id = reserves.app_id)
-                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings , 
+                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings ,
 				flowers_park.appartments_types
                  where appartments.building_id = " + buildingID + " AND appartments.floor_no = " + floorNo +
-				 " AND appartments.app_no = " + appNo + @" AND appartments.building_id = flowers_park.buildings.id AND 
+				 " AND appartments.app_no = " + appNo + @" AND appartments.building_id = flowers_park.buildings.id AND
                   appartments.app_type_id = appartments_types.id
                     order by appID
                     ; ";
@@ -343,13 +343,13 @@ namespace WindowsFormsApplication5
 			String sql = "select appartments.id as appID, appartments.app_type_id , "
 				+ "CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo, clients.client_name , " +
 				@"app_maintenance , administrative_expenses , app_area , garden_area ,  roof_building_area ,
-                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price , 
+                 roof_empty_area , app_building_meter_price , app_empty_meter_price , number_of_garages , garage_price ,
                 ((app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance + (number_of_garages * garage_price)) AS totalPrice,
                  ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) ) AS app_price,
                 ( (app_building_meter_price * (app_area + roof_building_area)) + (app_empty_meter_price * (garden_area + roof_empty_area)) + administrative_expenses + app_maintenance ) AS priceWithoutGarage
                  from(flowers_park.appartments
                 left outer  join flowers_park.reserves on appartments.id = reserves.app_id)
-                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings , 
+                left outer JOIN flowers_park.clients ON reserves.client_id = clients.id , flowers_park.buildings ,
 				flowers_park.appartments_types
                  where appartments.building_id = " + buildingID + @"
                 AND appartments.building_id = flowers_park.buildings.id AND appartments.app_type_id = appartments_types.id
@@ -439,8 +439,8 @@ namespace WindowsFormsApplication5
 			{
 				blocked = 0;
 			}
-			String sql = @"INSERT INTO `flowers_park`.`users` 
-                    (`username`, `password`, `user_type`, `blocked`) 
+			String sql = @"INSERT INTO `flowers_park`.`users`
+                    (`username`, `password`, `user_type`, `blocked`)
                     VALUES ('" + username + "', '" + password + "', '" + userType + "', " + isBlocked + ");";
 
 			executeQuery(sql);
@@ -448,7 +448,7 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getLog(String userID)
 		{
-			String sql = @"SELECT username , action , description , date FROM flowers_park.log , flowers_park.users  
+			String sql = @"SELECT username , action , description , date FROM flowers_park.log , flowers_park.users
                             where users.id = log.user_id AND user_id LIKE '" + userID + "'" +
 							"order by date desc;";
 
@@ -459,8 +459,8 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getClientsByName(String clientName)
 		{
-			String sql = @"SELECT id, client_name, client_mob, client_address, client_file,  client_session 
-                            FROM flowers_park.clients 
+			String sql = @"SELECT id, client_name, client_mob, client_address, client_file,  client_session
+                            FROM flowers_park.clients
                             WHERE (client_name LIKE '" + clientName + "')";
 
 			DataTable dt = getDataTable(sql);
@@ -470,8 +470,8 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getClientsNamesByName(String clientName)
 		{
-			String sql = @"SELECT id, client_name 
-                            FROM flowers_park.clients 
+			String sql = @"SELECT id, client_name
+                            FROM flowers_park.clients
                             WHERE (client_name LIKE '" + clientName + "')";
 
 			DataTable dt = getDataTable(sql);
@@ -481,8 +481,8 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getDataTableOfClients()
 		{
-			String sql = @"SELECT id, client_name, client_mob, client_address, client_file,  client_session 
-                            FROM flowers_park.clients 
+			String sql = @"SELECT id, client_name, client_mob, client_address, client_file,  client_session
+                            FROM flowers_park.clients
                             WHERE (id = '0')";
 
 			DataTable dt = getDataTable(sql);
@@ -500,7 +500,7 @@ namespace WindowsFormsApplication5
 
 		public static void updateClient(String clientName, String clientMob, String clientAddress, String clientFile, int clientSession, int clientID)
 		{
-			String sql = @"UPDATE `flowers_park`.`clients` 
+			String sql = @"UPDATE `flowers_park`.`clients`
                         SET `client_name`='" + clientName + "', `client_mob`='" + clientMob + "', `client_address`='" + clientAddress + "',"
 						+ "`client_file`='" + clientFile + "', `client_session`='" + clientSession + "' WHERE `id`='" + clientID + "';";
 
@@ -516,7 +516,7 @@ namespace WindowsFormsApplication5
 
 		public static void insertReserve(int reserve_id, int client_id, double area)
 		{
-			String sql = @"INSERT INTO `flowers_park`.`reserves` (`id`,`client_id`, `area`) 
+			String sql = @"INSERT INTO `flowers_park`.`reserves` (`id`,`client_id`, `area`)
                         VALUES ('" + reserve_id + "' ,'" + client_id + "' , '" + area + "');";
 
 			executeQuery(sql);
@@ -553,7 +553,7 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getAllReservesByClientID(int clientID)
 		{
-			String sql = @"SELECT  id 
+			String sql = @"SELECT  id
                             from flowers_park.reserves
                             where client_id = " + clientID + @"
                             order by id;";
@@ -565,7 +565,7 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getReserveByID(int reserveID)
 		{
-			String sql = @"SELECT  reserves.area , reserves.app_id , buildings.name, 
+			String sql = @"SELECT  reserves.area , reserves.app_id , buildings.name,
                         floor_no , app_no FROM flowers_park.reserves left outer join
                         flowers_park.appartments on reserves.app_id = appartments.id
                         left outer join flowers_park.buildings on appartments.building_id = buildings.id
@@ -580,7 +580,7 @@ namespace WindowsFormsApplication5
 		{
 			String sql = @"SELECT distinct appartments.floor_no FROM flowers_park.appartments left outer join flowers_park.reserves
                             on appartments.id = reserves.app_id
-                            where reserves.id is null AND appartments.building_id = " + buildingID + @" 
+                            where reserves.id is null AND appartments.building_id = " + buildingID + @"
                             AND appartments.app_area = " + appArea + " ;";
 
 			DataTable dt = getDataTable(sql);
@@ -592,7 +592,7 @@ namespace WindowsFormsApplication5
 		{
 			String sql = @"SELECT flowers_park.appartments.id , appartments.app_no FROM flowers_park.appartments left outer join flowers_park.reserves
                             on appartments.id = reserves.app_id
-                            where reserves.id is null AND appartments.building_id = " + buildingID + @" 
+                            where reserves.id is null AND appartments.building_id = " + buildingID + @"
                             AND appartments.app_area = " + appArea + @"
                             AND flowers_park.appartments.floor_no = " + floorNo + " ;";
 
@@ -603,8 +603,8 @@ namespace WindowsFormsApplication5
 
 		public static void assignReserve(int reserveID, int app_id, double reserveAmmount)
 		{
-			String sql = @"update flowers_park.reserves 
-                        set app_id = " + app_id + " , reserve_ammount = " + reserveAmmount + @" 
+			String sql = @"update flowers_park.reserves
+                        set app_id = " + app_id + " , reserve_ammount = " + reserveAmmount + @"
                         where id = " + reserveID + " ;";
 
 			executeQuery(sql);
@@ -612,9 +612,9 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getAppInfo(int appID)
 		{
-			String sql = @"SELECT app_maintenance , administrative_expenses , app_area , 
+			String sql = @"SELECT app_maintenance , administrative_expenses , app_area ,
                             garden_area , roof_building_area , roof_empty_area , app_building_meter_price ,
-                            app_empty_meter_price , number_of_garages , garage_price 
+                            app_empty_meter_price , number_of_garages , garage_price
                             FROM flowers_park.appartments
                             where id = " + appID + ";";
 
@@ -679,7 +679,7 @@ namespace WindowsFormsApplication5
 						"CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo , " +
 						@"invoices.ammount , invoices_types.start_date , invoices.payment_date , invoices.is_paid ,
                         invoices.inv_penalty ,
-                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date 
+                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date
                         FROM flowers_park.invoices , flowers_park.reserves ,
                         flowers_park.invoices_types , flowers_park.appartments , flowers_park.buildings
                         where invoices.reserve_id = reserves.id AND invoices.inv_type_id = invoices_types.id
@@ -697,13 +697,13 @@ namespace WindowsFormsApplication5
 						"CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo , " +
 						@"invoices.ammount , invoices_types.start_date , invoices.payment_date , invoices.is_paid ,
                         invoices.inv_penalty ,
-                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date 
-                        , clients.client_name 
+                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date
+                        , clients.client_name
                         FROM flowers_park.invoices , flowers_park.reserves ,
-                        flowers_park.invoices_types , flowers_park.appartments , flowers_park.buildings 
-                        , flowers_park.clients 
+                        flowers_park.invoices_types , flowers_park.appartments , flowers_park.buildings
+                        , flowers_park.clients
                         where invoices.reserve_id = reserves.id AND invoices.inv_type_id = invoices_types.id
-                        AND reserves.app_id = appartments.id AND appartments.building_id = buildings.id  
+                        AND reserves.app_id = appartments.id AND appartments.building_id = buildings.id
                         AND reserves.id = invoices.reserve_id AND reserves.client_id  = clients.id
                         AND invoices.inv_type_id = " + monthID + " ; ";
 
@@ -718,13 +718,13 @@ namespace WindowsFormsApplication5
 						"CONCAT(buildings.name,\"-\",floor_no, \"-\", app_no) AS appNo , " +
 						@"invoices.ammount , invoices_types.start_date , invoices.payment_date , invoices.is_paid ,
                         invoices.inv_penalty ,
-                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date 
-                        , clients.client_name 
+                        invoices.inv_penalty_date , invoices.inv_penalty_is_paid , invoices_types.due_date
+                        , clients.client_name
                         FROM flowers_park.invoices , flowers_park.reserves ,
-                        flowers_park.invoices_types , flowers_park.appartments , flowers_park.buildings 
-                        , flowers_park.clients 
+                        flowers_park.invoices_types , flowers_park.appartments , flowers_park.buildings
+                        , flowers_park.clients
                         where invoices.reserve_id = reserves.id AND invoices.inv_type_id = invoices_types.id
-                        AND reserves.app_id = appartments.id AND appartments.building_id = buildings.id  
+                        AND reserves.app_id = appartments.id AND appartments.building_id = buildings.id
                         AND reserves.id = invoices.reserve_id AND reserves.client_id  = clients.id ; ";
 
 			DataTable dt = getDataTable(sql);
@@ -819,9 +819,9 @@ namespace WindowsFormsApplication5
 
 		public static DataTable getReserveInvoices(int reserve_id)
 		{
-			String sql = @"SELECT reserves_invoices.id as reserve_invoices_id,payment_date,ammount,reserves_invoices_types.type 
+			String sql = @"SELECT reserves_invoices.id as reserve_invoices_id,payment_date,ammount,reserves_invoices_types.type
                         FROM flowers_park.reserves_invoices , flowers_park.reserves_invoices_types
-                        where reserves_invoices.reserve_type_id = reserves_invoices_types.id 
+                        where reserves_invoices.reserve_type_id = reserves_invoices_types.id
                         AND reserves_invoices.reserve_id = " + reserve_id + ";";
 
 			DataTable dt = getDataTable(sql);
@@ -832,7 +832,7 @@ namespace WindowsFormsApplication5
 
 		public static void insertReserveInvoice(String paymentDate, double ammount, int reserveID, int reserveTypeID)
 		{
-			String sql = @"INSERT INTO `flowers_park`.`reserves_invoices` 
+			String sql = @"INSERT INTO `flowers_park`.`reserves_invoices`
                         (`payment_date`, `ammount`, `reserve_id`, `reserve_type_id`)
                         VALUES ('" + paymentDate + "', '" + ammount + "', '" + reserveID + "', '" + reserveTypeID + "');";
 
@@ -916,7 +916,7 @@ namespace WindowsFormsApplication5
 		public static DataTable getPenaltyPrintPageDetails(int invoice_id)
 		{
 			String sql = @"SELECT invoices.id , invoices_types.inv_month , invoices.inv_penalty ,
-                        invoices.ammount , clients.client_name , clients.client_file , invoices_types.start_date 
+                        invoices.ammount , clients.client_name , clients.client_file , invoices_types.start_date
                         , invoices_types.due_date , invoices.payment_date , buildings.name as building_name ,
                         appartments.floor_no ,appartments.app_no
                         FROM flowers_park.invoices  , flowers_park.reserves , flowers_park.clients ,
