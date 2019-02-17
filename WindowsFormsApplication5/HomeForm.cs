@@ -24,5 +24,11 @@ namespace WindowsFormsApplication5
             Form1 f1 = new Form1();
             f1.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            patients_form pf = new patients_form();
+            pf.ShowDialog();
+        }
     }
 }
