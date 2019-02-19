@@ -183,49 +183,74 @@ namespace WindowsFormsApplication5
 				return 0; // wrong user or password
 			}
 		}
-		public static long getMaxrID()    //MAXID
-		{
-		 String sql = @"select MAX(id) as maximumID from asudb.dbo.personal_info";
+        //public static long getMaxrID()    //MAXID
+        //{
+        // String sql = @"select MAX(id) as maximumID from asudb.dbo.personal_info";
 
+        //    DataTable dt = getDataTable(sql);
+
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        DataRow dataRow = dt.Rows[0];
+
+        //        long MaxID = Convert.ToInt64(dataRow[dt.Columns.IndexOf("maximumID")]);
+
+
+        //        return MaxID;
+        //    }
+        //    else
+        //    {
+        //        return 0;
+        //    }
+        //}
+
+
+		public static long InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
+		{
+
+			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) OUTPUT INSERTED.id as id 
+            VALUES ('"+ f + "',' " + m + "','" + l + "','"+ t +"','" + g + "','" + age + "', '"+ address + "','" +city+ "','" +governorate+ "','" +occu+ "','" +mari+ "','" +menst+ "', '" +fv+  "'  )";
 			DataTable dt = getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dataRow = dt.Rows[0];
 
-			if (dt.Rows.Count > 0)
-			{
-				DataRow dataRow = dt.Rows[0];
+                long id = Convert.ToInt64(dataRow[dt.Columns.IndexOf("id")]);
 
-                long MaxID = Convert.ToInt32(dataRow[dt.Columns.IndexOf("maximumID")]);
+                return id;
+            }
+            else
+            {
+                return -1;
+            }
 
-
-
-
-
-
-				return MaxID;
-			}
-			else
-			{
-				return 0;
-			}
 		}
 
+        public static DataTable getPatientHistory(long p_id)
+        {
+            String sql = @"SELECT * FROM asudb.dbo.History WHERE p_id ='"+p_id +"'" ;
+            DataTable dt = getDataTable(sql);
 
-		public static void InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
+            return dt;
+        }
+
+			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, int t, int D, int nm, string m, string b, int pd, int wl,int wlg, string  hd,string main	, long p_id)
 		{
 
-			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) VALUES ('"+ f + "',' " + m + "','" + l + "','"+ t +"','" + g + "','" + age + "', '"+ address + "','" +city+ "','" +governorate+ "','" +occu+ "','" +mari+ "','" +menst+ "', '" +fv+  "'  )";
-			executeQuery(sql);
-
-
-		}
-
-			public static void InsertHistoryInfo(DateTime cd, string sd, string ap, string cc, string f, bool t, bool D, int nm, string m, string b, bool pd, bool wl,int wlg, string  hd,string main	, int p_id)
-		{
-
-			String sql = @"INSERT INTO  asudb.dbo.History (currentdate, statusofdiagnosis, Abdominalpain, current-complain	,fever,Tesnismus,Diarrhea,noofmotions,muscs,bleeding,perianal-discharge,weightloss,weightlossinkg,historydetails,mainfestations) VALUES ('"+ cd + "',' " + sd + "','" + ap + "','"+ cc +"','" + f + "','" + t + "', '"+ D + "','" +nm+ "','" +m+ "','" +b+ "','" +pd+ "','" +wl+ "', '" +wlg+  "', '" +hd+  "', '" +main+  "'  WHERE p_id ='"+ p_id+ "')'";
-			executeQuery(sql);
-			 //ezay23ml el hewar dh bnfsf el id ya omar ?
+			String sql = @"UPDATE asudb.dbo.History SET currentdate='"+ cd + "',statusofdiagnosis='" + sd + "',Abdominalpain='" + ap + "',currentcomplain='"+ cc +"',fever='" + f + "',Tesnismus='" + t + "',Diarrhea= '"+ D + "',noofmotions='" +nm+ "',muscs='" +m+ "',bleeding='" +b+ "',perianaldischarge='" +pd+ "',weightloss='" +wl+ "',weightlossinkg= '" +wlg+  "',historydetails= '" +hd+  "',mainfestations= '" +main+ "' WHERE p_id='" +p_id+ "' ";
+            executeQuery(sql);
+			
 
 		}
+
+            public static void InsertHistoryFirstTime(DateTime cd, long p_id)
+            {
+
+                String sql = @"INSERT INTO  asudb.dbo.History (currentdate,p_id) VALUES ('" + cd + "','" + p_id + "' )";
+                executeQuery(sql);
+                //ezay23ml el hewar dh bnfsf el id ya omar ?
+
+            }
 
 		public static void InsertExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	)
 		{
