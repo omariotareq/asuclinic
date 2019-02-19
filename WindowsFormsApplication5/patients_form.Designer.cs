@@ -38,6 +38,8 @@
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patHistoryBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,13 +120,38 @@
             // 
             // patHistoryBtn
             // 
-            this.patHistoryBtn.Location = new System.Drawing.Point(49, 411);
+            this.patHistoryBtn.BackColor = System.Drawing.Color.PowderBlue;
+            this.patHistoryBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patHistoryBtn.Location = new System.Drawing.Point(25, 411);
             this.patHistoryBtn.Name = "patHistoryBtn";
             this.patHistoryBtn.Size = new System.Drawing.Size(145, 33);
             this.patHistoryBtn.TabIndex = 3;
             this.patHistoryBtn.Text = "History";
-            this.patHistoryBtn.UseVisualStyleBackColor = true;
+            this.patHistoryBtn.UseVisualStyleBackColor = false;
             this.patHistoryBtn.Click += new System.EventHandler(this.patHistoryBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(209, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "First Examination";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(390, 411);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 33);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Lab Results";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // patients_form
             // 
@@ -133,6 +160,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(925, 558);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.patHistoryBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -159,5 +188,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.Button patHistoryBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

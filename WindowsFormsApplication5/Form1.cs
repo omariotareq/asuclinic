@@ -52,6 +52,7 @@ namespace WindowsFormsApplication5
             long id = DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
             
             DataSet.InsertHistoryFirstTime(DateTime.Now.Date , id );
+            MessageBox.Show("Patient id is:" + id);
             patient_history f2 = new patient_history(id, firstNameTB.Text + middleNameTB.Text + lastNameTB.Text, Convert.ToInt16(ageTB.Text));
             this.Hide();
             f2.ShowDialog();
