@@ -45,5 +45,25 @@ namespace WindowsFormsApplication5
             dataGridView1.DataSource = dataGridView1BindingSource;
 
         }
+
+        private void patHistoryBtn_Click(object sender, EventArgs e)
+        {
+            int ri = dataGridView1.SelectedCells[0].RowIndex;
+            int p_id =Convert.ToInt16( dataGridView1.Rows[ri].Cells[0].Value );
+            string name = Convert.ToString(dataGridView1.Rows[ri].Cells[1].Value) + Convert.ToString(dataGridView1.Rows[ri].Cells[2].Value)+" " + Convert.ToString(dataGridView1.Rows[ri].Cells[3].Value);
+            int age = Convert.ToInt16( dataGridView1.Rows[ri].Cells[4].Value );
+            patient_history ph = new patient_history(p_id,name,age);
+            ph.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int ri = dataGridView1.SelectedCells[0].RowIndex;
+            int p_id =Convert.ToInt16( dataGridView1.Rows[ri].Cells[0].Value );
+            string name = Convert.ToString(dataGridView1.Rows[ri].Cells[1].Value) + Convert.ToString(dataGridView1.Rows[ri].Cells[2].Value)+" " + Convert.ToString(dataGridView1.Rows[ri].Cells[3].Value);
+            int age = Convert.ToInt16( dataGridView1.Rows[ri].Cells[4].Value );
+            examination_form ef = new examination_form(p_id, name, age);
+            ef.ShowDialog();
+        }
     }
 }

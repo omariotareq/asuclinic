@@ -15,7 +15,7 @@ namespace WindowsFormsApplication5
         public Form1()
         {
             InitializeComponent();
-            patientID.Text = (Convert.ToInt16(DataSet.getMaxrID()) + 1) + "";
+          
             //MessageBox.Show("Hi");
         }
 
@@ -49,9 +49,14 @@ namespace WindowsFormsApplication5
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
-            Form2 f2 = new Form2();
+            long id = DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
+            
+            DataSet.InsertHistoryFirstTime(DateTime.Now.Date , id );
+            MessageBox.Show("Patient id is:" + id);
+            patient_history f2 = new patient_history(id, firstNameTB.Text + middleNameTB.Text + lastNameTB.Text, Convert.ToInt16(ageTB.Text));
+            this.Hide();
             f2.ShowDialog();
+            this.Close();           
         }
 
         private void button3_Click(object sender, EventArgs e)

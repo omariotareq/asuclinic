@@ -37,6 +37,9 @@
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telephone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patHistoryBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,14 +51,17 @@
             this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(250, 51);
+            this.textBox1.Location = new System.Drawing.Point(285, 12);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 38);
+            this.textBox1.Size = new System.Drawing.Size(327, 38);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(550, 60);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(640, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -65,6 +71,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -73,7 +82,7 @@
             this.LastName,
             this.Age,
             this.Telephone});
-            this.dataGridView1.Location = new System.Drawing.Point(128, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(174, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(603, 329);
             this.dataGridView1.TabIndex = 2;
@@ -109,12 +118,51 @@
             this.Telephone.HeaderText = "Telephone";
             this.Telephone.Name = "Telephone";
             // 
+            // patHistoryBtn
+            // 
+            this.patHistoryBtn.BackColor = System.Drawing.Color.PowderBlue;
+            this.patHistoryBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patHistoryBtn.Location = new System.Drawing.Point(25, 411);
+            this.patHistoryBtn.Name = "patHistoryBtn";
+            this.patHistoryBtn.Size = new System.Drawing.Size(145, 33);
+            this.patHistoryBtn.TabIndex = 3;
+            this.patHistoryBtn.Text = "History";
+            this.patHistoryBtn.UseVisualStyleBackColor = false;
+            this.patHistoryBtn.Click += new System.EventHandler(this.patHistoryBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.PowderBlue;
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(209, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "First Examination";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.PowderBlue;
+            this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(390, 411);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 33);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Lab Results";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // patients_form
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(877, 518);
+            this.ClientSize = new System.Drawing.Size(925, 558);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.patHistoryBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -139,5 +187,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
+        private System.Windows.Forms.Button patHistoryBtn;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
