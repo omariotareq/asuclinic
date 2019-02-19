@@ -244,6 +244,17 @@ namespace WindowsFormsApplication5
 
 			return dt;
 		}
+		//SURGERYDATAENTERY
+		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id ){
+
+
+
+                String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "',,'"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
+		       	executeQuery(sql);
+                                                 }
+
+
+
 
 
 
