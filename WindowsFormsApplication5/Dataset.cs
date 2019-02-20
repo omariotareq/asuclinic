@@ -248,18 +248,32 @@ namespace WindowsFormsApplication5
 
                 String sql = @"INSERT INTO  asudb.dbo.History (currentdate,p_id) VALUES ('" + cd + "','" + p_id + "' )";
                 executeQuery(sql);
-                //ezay23ml el hewar dh bnfsf el id ya omar ?
+              
 
             }
 
-		public static void InsertExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	)
+		public static void UpdateExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	,long p_id)
 		{
 
-			String sql = @"INSERT INTO  asudb.dbo.Exam_details (Systolic, diastolic, pulse, Temp,Resp.rate,Weight,Hight,,BMI,General exam findings,Local exam findings) VALUES ('"+ sys + "',' " + di + "','" + pu + "','"+ te +"','" + rr + "','" + w + "', '"+ h + "','" +bm+ "','" +ge+ "','" +le+ "')";
+			String sql = @"UPDATE  asudb.dbo.Exam_details SET Systolic='"+ sys + "',diastolic='" + di + "',pulse='"+ pu + "',Temp='"+ te +"',Resp_rate= '"+ rr +"',Weight='"+ w +"',Hight='"+ h +"',BMI='"+bm+"',General_findings='"+ge+"',Local_findings='"+le+"' WHERE p_id ='"+p_id+ "'";
 			executeQuery(sql);
-			 //ezay23ml el hewar dh bnfsf el id ya omar ?
+		
 
 		}
+
+        public static DataTable getPatientExamInfo(long p_id)
+        {
+            String sql = @"SELECT * FROM asudb.dbo.Exam_details WHERE p_id ='" + p_id + "'";
+            DataTable dt = getDataTable(sql);
+
+            return dt;
+        }
+
+        public static void InsertExamFirst(long p_id)
+        {
+            String sql = @"INSERT INTO  asudb.dbo.Exam_details (p_id) VALUES ('" + p_id +  "')";
+            executeQuery(sql);
+        }
 		//search form
 		public static DataTable getAllpatientinfo(string name)
 		{
