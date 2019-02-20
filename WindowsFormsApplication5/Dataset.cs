@@ -252,6 +252,7 @@ namespace WindowsFormsApplication5
 
             }
 
+
 		public static void UpdateExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	,long p_id)
 		{
 
@@ -284,17 +285,26 @@ namespace WindowsFormsApplication5
 			return dt;
 		}
 		//SURGERYDATAENTERY
-		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id ){
+		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id )
+        {
+            String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "','"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
+		    executeQuery(sql);
+        }
 
+        public static DataTable getPatientLabDates(long p_id)
+        {
+            String sql = @"SELECT labdate FROM asudb.dbo.labentery WHERE  p_id=  '" + p_id + "'";
 
+            DataTable dt = getDataTable(sql);
 
-                String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "',,'"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
-		       	executeQuery(sql);
-                                                 }
+            return dt;
+        }
 
-
-
-
+        public static void InsertLab(DateTime ld, int p_id)
+        {
+            String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,p_id) VALUES ('"  + ld + "','"+ p_id+ "'  )";
+            executeQuery(sql);
+        }
 
 
 
