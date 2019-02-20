@@ -208,7 +208,7 @@ namespace WindowsFormsApplication5
 		public static long InsertUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv)
 		{
 
-			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) OUTPUT INSERTED.id as id 
+			String sql = @"INSERT INTO  asudb.dbo.personal_info (fname, mname, lname, tele,gender,age,adress,city,governorate,occupation,maritialstatus,mensturalhistory,firstvisit) OUTPUT INSERTED.id as id
             VALUES ('"+ f + "',' " + m + "','" + l + "','"+ t +"','" + g + "','" + age + "', '"+ address + "','" +city+ "','" +governorate+ "','" +occu+ "','" +mari+ "','" +menst+ "', '" +fv+  "'  )";
 			DataTable dt = getDataTable(sql);
             if (dt.Rows.Count > 0)
@@ -239,7 +239,7 @@ namespace WindowsFormsApplication5
 
 			String sql = @"UPDATE asudb.dbo.History SET currentdate='"+ cd + "',statusofdiagnosis='" + sd + "',Abdominalpain='" + ap + "',currentcomplain='"+ cc +"',fever='" + f + "',Tesnismus='" + t + "',Diarrhea= '"+ D + "',noofmotions='" +nm+ "',muscs='" +m+ "',bleeding='" +b+ "',perianaldischarge='" +pd+ "',weightloss='" +wl+ "',weightlossinkg= '" +wlg+  "',historydetails= '" +hd+  "',mainfestations= '" +main+ "' WHERE p_id='" +p_id+ "' ";
             executeQuery(sql);
-			
+
 
 		}
 
@@ -248,16 +248,17 @@ namespace WindowsFormsApplication5
 
                 String sql = @"INSERT INTO  asudb.dbo.History (currentdate,p_id) VALUES ('" + cd + "','" + p_id + "' )";
                 executeQuery(sql);
-              
+
 
             }
+
 
 		public static void UpdateExamInfo(string sys, string di, string pu, string te, string rr, string w, string h, string bm, string ge, string le	,long p_id)
 		{
 
 			String sql = @"UPDATE  asudb.dbo.Exam_details SET Systolic='"+ sys + "',diastolic='" + di + "',pulse='"+ pu + "',Temp='"+ te +"',Resp_rate= '"+ rr +"',Weight='"+ w +"',Hight='"+ h +"',BMI='"+bm+"',General_findings='"+ge+"',Local_findings='"+le+"' WHERE p_id ='"+p_id+ "'";
 			executeQuery(sql);
-		
+
 
 		}
 
@@ -284,20 +285,31 @@ namespace WindowsFormsApplication5
 			return dt;
 		}
 		//SURGERYDATAENTERY
-		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id ){
-
-
-
-                String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "',,'"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
-		       	executeQuery(sql);
-                                                 }
+		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id )
+        {
+            String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "','"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
+		    executeQuery(sql);
+        }
 
 					public static long InsertlabenteryInfo(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe,int ESR,int CRP,int ANCA,int ASCA,int TTG,int ARBCs,int puscells,int clodef ,int  para,int toolscs,int paranotes,int othernotes,int tt,int tp,int Qua,int HB,int HBV,int HC,int HIV,int Am,int LI,int NA,int K,int Ca ,int Mg ,int ph,int FALT ,int FAST,int FTP,int FAlb,int fdb,int ftb,int FALP,int FFGT,int INR,int SCreat,int BUn,string otherdetails,int p_id)
 		                  String sql = @"INSERT INTO  asudb.dbo.personal_info (labdate,cbchb,cbchema,cbcmcv,cbcrdw,cbcplatlets,cbctlc,cbcneuro,cbclym,cbceos,ironstudyseriron,ironstudytibc,ironstudyserumfe,iaimESR,iaimCRP,iaimpANCA,iaimASCA,iaimfecacal,iaimAntiTTG,SARBCs,SApuscells,SAclodef,SApara,SAstoolcs,SAparanotes,SAothernotes,INFtt,INFtp,INQua,INHB,INHBV,INHC,INHIV,BCAm, BCLI, ,BCNA,BCK,BCCa,BCMg,BCph,LARFALT,LARFAST,LARFTp,LARFAlb,LARFdb,LARFtb,LARFALP,LARFGGT,LARFINR,LARFScreat,LARFBUN,otherlabdetails,p_id)
                             VALUES ('"+ labdat + "',' " + hb + "','" + hema + "','"+ mcv +"','" + rdw+ "','" + latlets + "', '"+ tlc + "','" +neuro+ "','" +lym+ "','" +ceos+ "','" +seriron+ "','" +tibc+ "', '" +serumfe+  "', '" +ESR+  "', '" +CRP+  "', '" +ANCA+  "', '" +ASCA+  "', '" +TTG+  "' ,'" +ARBCs+  "', '" +puscells+  "' ,'" +clodef+  "' ,'" +para+  "' ,'" +toolscs+  "','" +paranotes+  "','" +othernotes+  "','" +tt+  "','" +tp+  "','" +Qua+  "','" +HB+  "','" +HBV+  "','" +HC+  "','" +HIV+  "','" +Am+  "' ,,'" +LI+  "' ,'" +NA+  "' ,'" +K+  "' ,'" +Ca+  "' ,'" +Mg+  "' ,'" +ph+  "' ,'" +FALT+  "','" +FAST+  "' ,'" +FTP+  "' ,'" +FAlb+  "' ,'" +fdb+  "' ,'" +ftb+  "','" +FALP+  "' ,'" +FFGT+  "' ,'" +INR+  "' ,'" +SCreat+  "' ,'" +BUn+  "' ,'" +otherdetails+  "' WHERE p_id ='"+ p_id+  "' )";
 
+            DataTable dt = getDataTable(sql);
 
-		/*,'" +Am+  "' 
+            return dt;
+        }
+
+        public static void InsertLab(DateTime ld, int p_id)
+        {
+            String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,p_id) VALUES ('"  + ld + "','"+ p_id+ "'  )";
+            executeQuery(sql);
+        }
+
+
+
+
+		/*
 		public static DataTable getAllBuildings()
 		{
 			String sql = @"select id , name from flowers_park.buildings;";
