@@ -291,10 +291,20 @@ namespace WindowsFormsApplication5
 		    executeQuery(sql);
         }
 
-					public static long InsertlabenteryInfo(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe,int ESR,int CRP,int ANCA,int ASCA,int TTG,int ARBCs,int puscells,int clodef ,int  para,int toolscs,int paranotes,int othernotes,int tt,int tp,int Qua,int HB,int HBV,int HC,int HIV,int Am,int LI,int NA,int K,int Ca ,int Mg ,int ph,int FALT ,int FAST,int FTP,int FAlb,int fdb,int ftb,int FALP,int FFGT,int INR,int SCreat,int BUn,string otherdetails,int p_id)
-		                  String sql = @"INSERT INTO  asudb.dbo.personal_info (labdate,cbchb,cbchema,cbcmcv,cbcrdw,cbcplatlets,cbctlc,cbcneuro,cbclym,cbceos,ironstudyseriron,ironstudytibc,ironstudyserumfe,iaimESR,iaimCRP,iaimpANCA,iaimASCA,iaimfecacal,iaimAntiTTG,SARBCs,SApuscells,SAclodef,SApara,SAstoolcs,SAparanotes,SAothernotes,INFtt,INFtp,INQua,INHB,INHBV,INHC,INHIV,BCAm, BCLI, ,BCNA,BCK,BCCa,BCMg,BCph,LARFALT,LARFAST,LARFTp,LARFAlb,LARFdb,LARFtb,LARFALP,LARFGGT,LARFINR,LARFScreat,LARFBUN,otherlabdetails,p_id)
-                            VALUES ('"+ labdat + "',' " + hb + "','" + hema + "','"+ mcv +"','" + rdw+ "','" + latlets + "', '"+ tlc + "','" +neuro+ "','" +lym+ "','" +ceos+ "','" +seriron+ "','" +tibc+ "', '" +serumfe+  "', '" +ESR+  "', '" +CRP+  "', '" +ANCA+  "', '" +ASCA+  "', '" +TTG+  "' ,'" +ARBCs+  "', '" +puscells+  "' ,'" +clodef+  "' ,'" +para+  "' ,'" +toolscs+  "','" +paranotes+  "','" +othernotes+  "','" +tt+  "','" +tp+  "','" +Qua+  "','" +HB+  "','" +HBV+  "','" +HC+  "','" +HIV+  "','" +Am+  "' ,,'" +LI+  "' ,'" +NA+  "' ,'" +K+  "' ,'" +Ca+  "' ,'" +Mg+  "' ,'" +ph+  "' ,'" +FALT+  "','" +FAST+  "' ,'" +FTP+  "' ,'" +FAlb+  "' ,'" +fdb+  "' ,'" +ftb+  "','" +FALP+  "' ,'" +FFGT+  "' ,'" +INR+  "' ,'" +SCreat+  "' ,'" +BUn+  "' ,'" +otherdetails+  "' WHERE p_id ='"+ p_id+  "' )";
+        public static void InsertlabenteryInfo(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe, int ESR, int CRP, int ANCA, int ASCA, int TTG, int ARBCs, int puscells, int clodef, int para, int toolscs, String paranotes, String othernotes, int tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, int Am, int LI, int NA, int K, int Ca, int Mg, int ph, int FALT, int FAST, int FTP, int FAlb, int fdb, int ftb, int FALP, int FFGT, int INR, int SCreat, int BUn, string otherdetails, int p_id, int LARFib)
+        {
 
+            String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,cbchb,cbchema,cbcmcv,cbcrdw,cbcplatlets,cbctlc,cbcneuro,cbclym,cbceos,ironstudyseriron,ironstudytibc,ironstudyserumfe,iaimESR,iaimCRP,iaimpANCA,iaimASCA,iaimfecacal,iaimAntiTTG,SARBCs,SApuscells,SAclodef,SApara,SAstoolcs,SAparanotes,SAothernotes,INFtt,INFtp,INQua,INHB,INHBV,INHC,INHIV,BCAm, BCLI,BCNA,BCK,BCCa,BCMg,BCph,LARFALT,LARFAST,LARFTp,LARFAlb,LARFdb,LARFtb,LARFALP,LARFGGT,LARFINR,LARFScreat,LARFBUN,otherlabdetails,p_id,LARFib)
+                            VALUES ('" + labdat + "',' " + hb + "','" + hema + "','" + mcv + "','" + rdw + "','" + latlets + "', '" + tlc + "','" + neuro + "','" + lym + "','" + ceos + "','" + seriron + "','" + tibc + "', '" + serumfe + "', '" + ESR + "', '" + CRP + "', '" + ANCA + "', '" + ASCA + "', '" + TTG + "' ,'" + ARBCs + "', '" + puscells + "' ,'" + clodef + "' ,'" + para + "' ,'" + toolscs + "','" + paranotes + "','" + othernotes + "','" + tt + "','" + tp + "','" + Qua + "','" + HB + "','" + HBV + "','" + HC + "','" + HIV + "','" + Am + "' ,,'" + LI + "' ,'" + NA + "' ,'" + K + "' ,'" + Ca + "' ,'" + Mg + "' ,'" + ph + "' ,'" + FALT + "','" + FAST + "' ,'" + FTP + "' ,'" + FAlb + "' ,'" + fdb + "' ,'" + ftb + "','" + FALP + "' ,'" + FFGT + "' ,'" + INR + "' ,'" + SCreat + "' ,'" + BUn + "' ,'" + otherdetails + "','" + p_id + "','" + LARFib + "' )";
+
+            executeQuery(sql);
+
+
+        }
+
+        public static DataTable getPatientLabDates( int p_id)
+        {
+            string sql= @"SELECT labdate FROM asudb.dbo.labentery WHERE p_id='"+p_id+ "'";
             DataTable dt = getDataTable(sql);
 
             return dt;
