@@ -17,6 +17,7 @@ namespace WindowsFormsApplication5
         public patients_form()
         {
             InitializeComponent();
+            fillAllGV();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +27,25 @@ namespace WindowsFormsApplication5
 
         }
 
+        private void fillAllGV()
+        {
+            isRowAdded = false;
+            DataTable dt = DataSet.selectAllPatients();
+            dataGridView1BindingSource.DataSource = dt;
+
+            dataGridView1.Columns["id"].DataPropertyName = "id";
+            dataGridView1.Columns["FirstName"].DataPropertyName = "fname";
+            dataGridView1.Columns["LastName"].DataPropertyName = "lname";
+            dataGridView1.Columns["MiddleName"].DataPropertyName = "mname";
+            dataGridView1.Columns["Age"].DataPropertyName = "age";
+            dataGridView1.Columns["Telephone"].DataPropertyName = "tele";
+
+
+            dataGridView1.AutoGenerateColumns = false;
+
+            dataGridView1.DataSource = dataGridView1BindingSource;
+
+        }
         private void fillGV(String patName)
         {
             isRowAdded = false;
@@ -74,6 +94,16 @@ namespace WindowsFormsApplication5
             int age = Convert.ToInt16(dataGridView1.Rows[ri].Cells[4].Value);
             lab_results lr = new lab_results(p_id, name, age);
             lr.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int ri = dataGridView1.SelectedCells[0].RowIndex;
+            int p_id = Convert.ToInt16(dataGridView1.Rows[ri].Cells[0].Value);
+            string name = Convert.ToString(dataGridView1.Rows[ri].Cells[1].Value) + Convert.ToString(dataGridView1.Rows[ri].Cells[2].Value) + " " + Convert.ToString(dataGridView1.Rows[ri].Cells[3].Value);
+            int age = Convert.ToInt16(dataGridView1.Rows[ri].Cells[4].Value);
+            enterography_form ef = new enterography_form(p_id, name, age);
+            ef.ShowDialog();
         }
     }
 }
