@@ -309,7 +309,91 @@ namespace WindowsFormsApplication5
 
 
         }
+		public static void Updatelabentery(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe, int ESR, int CRP, int ANCA, int ASCA,int fecacal, int TTG, int ARBCs, int puscells, int clodef, int para, int toolscs, String paranotes, String othernotes, int tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, int Am, int LI, int NA, int K, int Ca, int Mg, int ph, int FALT, int FAST, int FTP, int FAlb, int fdb, int ftb, int FALP, int FFGT, int INR, int SCreat, int BUn, string otherdetails, int p_id, int LARFib)
+        {
 
+string sql=	@"UPDATE asudb.dbo.labentery
+   SET 
+      [cbchema]			= '"+hema+@"'
+      ,[cbchb]				= '"+hb+@"'
+      ,[cbcmcv]				= '"+mcv+@"'
+      ,[cbcrdw]				= '"+rdw+@"'
+      ,[cbcplatlets]		= '"+latlets+@"'
+      ,[cbctlc]				= '"+tlc+@"'
+      ,[cbcneuro]			= '"+neuro+@"'
+      ,[cbclym]				= '"+lym+@"'
+      ,[cbceos]				= '"+ceos+@"'
+      ,[ironstudyseriron]	= '"+seriron+@"'
+      ,[ironstudytibc]		= '"+ibc+@"'
+      ,[ironstudyserumfe]	= '"+serumfe+@"'
+      ,[iaimESR]			= '"+ESR+@"'
+      ,[iaimCRP]			= '"+CRP+@"'
+      ,[iaimpANCA]			= '"+ANCA+@"'
+      ,[iaimASCA]			= '"+ASCA+@"'
+      ,[iaimfecacal]		= '"+fecacal+@"'
+      ,[iaimAntiTTG]		= '"+TTG+@"'
+      ,[SARBCs]				= '"+ARBCs+@"'
+      ,[SApuscells]			= '"+puscells+@"'
+      ,[SAclodef]			= '"+clodef+@"'
+      ,[SApara]				= '"+para+@"'
+      ,[SAstoolcs]			= '"+toolcs+@"'
+      ,[SAparanotes]		= '"+paranotes+@"'
+      ,[SAothernotes]		= '"+othernotes+@"'
+      ,[INFtt]				= '"+tt+@"'
+      ,[INFtp]				= '"+tp+@"'
+      ,[INQua]				= '"+Qua+@"'
+      ,[INHB]				= '"+HB+@"'
+      ,[INHBV]				= '"+HBV+@"'
+      ,[INHC]				= '"+HC+@"'
+      ,[INHIV]				= '"+HIV+@"'
+      ,[BCAm]				= '"+Am+@"'
+      ,[BCLI]				= '"+LI+@"'
+      ,[BCNA]				= '"+NA+@"'
+      ,[BCK]				= '"+K+@"'
+      ,[BCCa]				= '"+Ca+@"'
+      ,[BCMg]				= '"+Mg+@"'
+      ,[BCph]				= '"+ph+@"'
+      ,[LARFALT]			= '"+FALT+@"'
+      ,[LARFAST]			= '"+FAST+@"'
+      ,[LARFTp]				= '"+FTp+@"'
+      ,[LARFAlb]			= '"+FAlb+@"'
+      ,[LARFdb]				= '"+LFdb+@"'
+      ,[LARFtb]				= '"+Ftb+@"'
+      ,[LARFALP]			= '"+FALP+@"'
+      ,[LARFGGT]			= '"+FFGT+@"'
+      ,[LARFINR]			= '"+INR+@"'
+      ,[LARFScreat]			= '"+Screat+@"'
+      ,[LARFBUN]			= '"+BUN+@"'
+      ,[otherlabdetails]	= '"+otherlabdetails+@"' 
+      ,[LARFib]				= '"+LARFib+@"'
+         WHERE p_id ='"+p_id+ "'AND  labdate='"+labdat+"'";
+
+
+		executeQuery(sql);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
         public static DataTable getPatientLabDates( int p_id)
         {
             string sql= @"SELECT labdate FROM asudb.dbo.labentery WHERE p_id='"+p_id+ "'";
