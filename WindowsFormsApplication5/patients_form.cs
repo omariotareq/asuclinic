@@ -95,5 +95,15 @@ namespace WindowsFormsApplication5
             lab_results lr = new lab_results(p_id, name, age);
             lr.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int ri = dataGridView1.SelectedCells[0].RowIndex;
+            int p_id = Convert.ToInt16(dataGridView1.Rows[ri].Cells[0].Value);
+            string name = Convert.ToString(dataGridView1.Rows[ri].Cells[1].Value) + Convert.ToString(dataGridView1.Rows[ri].Cells[2].Value) + " " + Convert.ToString(dataGridView1.Rows[ri].Cells[3].Value);
+            int age = Convert.ToInt16(dataGridView1.Rows[ri].Cells[4].Value);
+            enterography_form ef = new enterography_form(p_id, name, age);
+            ef.ShowDialog();
+        }
     }
 }
