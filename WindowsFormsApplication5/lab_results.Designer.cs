@@ -39,6 +39,8 @@
             this.otherlabdataTB = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.hivChkbx = new System.Windows.Forms.CheckBox();
+            this.label58 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.hbvChkbx = new System.Windows.Forms.CheckBox();
@@ -127,6 +129,9 @@
             this.serumIronTB = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labDate = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.eosinoTB = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -146,11 +151,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.hbTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labDate = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.hivChkbx = new System.Windows.Forms.CheckBox();
-            this.label58 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -227,12 +227,13 @@
             // dateCB
             // 
             this.dateCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateCB.FormatString = "D";
+            this.dateCB.FormatString = "yyyy-MM-dd";
             this.dateCB.FormattingEnabled = true;
             this.dateCB.Location = new System.Drawing.Point(642, 12);
             this.dateCB.Name = "dateCB";
             this.dateCB.Size = new System.Drawing.Size(227, 32);
             this.dateCB.TabIndex = 42;
+            this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged_1);
             // 
             // groupBox1
             // 
@@ -246,11 +247,11 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.saveBtn);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.labDate);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateCB);
+            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1240, 626);
@@ -315,6 +316,28 @@
             this.groupBox8.TabIndex = 72;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Infection";
+            // 
+            // hivChkbx
+            // 
+            this.hivChkbx.AutoSize = true;
+            this.hivChkbx.Location = new System.Drawing.Point(605, 80);
+            this.hivChkbx.Name = "hivChkbx";
+            this.hivChkbx.Size = new System.Drawing.Size(15, 14);
+            this.hivChkbx.TabIndex = 114;
+            this.hivChkbx.UseVisualStyleBackColor = true;
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Location = new System.Drawing.Point(558, 74);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(44, 24);
+            this.label58.TabIndex = 113;
+            this.label58.Text = "HIV";
             // 
             // label55
             // 
@@ -1280,13 +1303,50 @@
             // saveBtn
             // 
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(1077, 553);
+            this.saveBtn.Location = new System.Drawing.Point(1081, 549);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(148, 36);
             this.saveBtn.TabIndex = 66;
-            this.saveBtn.Text = "Insert";
+            this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 24);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "lab date";
+            // 
+            // labDate
+            // 
+            this.labDate.CustomFormat = "dd/MM/yyyy";
+            this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.labDate.Location = new System.Drawing.Point(96, 48);
+            this.labDate.Name = "labDate";
+            this.labDate.Size = new System.Drawing.Size(144, 31);
+            this.labDate.TabIndex = 45;
+            this.labDate.ValueChanged += new System.EventHandler(this.labDate_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(467, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 24);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Browse lab dates";
             // 
             // groupBox2
             // 
@@ -1309,7 +1369,7 @@
             this.groupBox2.Controls.Add(this.hbTB);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 81);
+            this.groupBox2.Location = new System.Drawing.Point(10, 78);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(365, 219);
             this.groupBox2.TabIndex = 47;
@@ -1495,64 +1555,6 @@
             this.label4.Size = new System.Drawing.Size(37, 24);
             this.label4.TabIndex = 48;
             this.label4.Text = "Hb";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 24);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "lab date";
-            // 
-            // labDate
-            // 
-            this.labDate.CustomFormat = "dd/MM/yyyy";
-            this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.labDate.Location = new System.Drawing.Point(96, 48);
-            this.labDate.Name = "labDate";
-            this.labDate.Size = new System.Drawing.Size(144, 31);
-            this.labDate.TabIndex = 45;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(467, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 24);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Browse lab dates";
-            // 
-            // hivChkbx
-            // 
-            this.hivChkbx.AutoSize = true;
-            this.hivChkbx.Location = new System.Drawing.Point(605, 80);
-            this.hivChkbx.Name = "hivChkbx";
-            this.hivChkbx.Size = new System.Drawing.Size(15, 14);
-            this.hivChkbx.TabIndex = 114;
-            this.hivChkbx.UseVisualStyleBackColor = true;
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(558, 74);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(44, 24);
-            this.label58.TabIndex = 113;
-            this.label58.Text = "HIV";
             // 
             // lab_results
             // 

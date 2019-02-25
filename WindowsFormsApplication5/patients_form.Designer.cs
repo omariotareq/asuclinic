@@ -76,7 +76,7 @@
             this.LastName,
             this.Age,
             this.Telephone});
-            this.dataGridView1.Location = new System.Drawing.Point(229, 95);
+            this.dataGridView1.Location = new System.Drawing.Point(208, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(603, 329);
             this.dataGridView1.TabIndex = 2;

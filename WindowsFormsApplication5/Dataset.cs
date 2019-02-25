@@ -284,6 +284,14 @@ namespace WindowsFormsApplication5
 
 			return dt;
 		}
+        public static DataTable selectAllPatients()
+        {
+            String sql = @"SELECT id,fname,mname,lname,age,tele FROM asudb.dbo.personal_info";
+
+            DataTable dt = getDataTable(sql);
+
+            return dt;
+        }
 		//SURGERYDATAENTERY
 		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id )
         {
@@ -291,11 +299,11 @@ namespace WindowsFormsApplication5
 		    executeQuery(sql);
         }
 
-        public static void InsertlabenteryInfo(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe, int ESR, int CRP, int ANCA, int ASCA, int TTG, int ARBCs, int puscells, int clodef, int para, int toolscs, String paranotes, String othernotes, int tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, int Am, int LI, int NA, int K, int Ca, int Mg, int ph, int FALT, int FAST, int FTP, int FAlb, int fdb, int ftb, int FALP, int FFGT, int INR, int SCreat, int BUn, string otherdetails, int p_id, int LARFib)
+        public static void InsertlabenteryInfo(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe, int ESR, int CRP, int ANCA, int ASCA,int fecacal, int TTG, int ARBCs, int puscells, int clodef, int para, int toolscs, String paranotes, String othernotes, int tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, int Am, int LI, int NA, int K, int Ca, int Mg, int ph, int FALT, int FAST, int FTP, int FAlb, int fdb, int ftb, int FALP, int FFGT, int INR, int SCreat, int BUn, string otherdetails, int p_id, int LARFib)
         {
 
             String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,cbchb,cbchema,cbcmcv,cbcrdw,cbcplatlets,cbctlc,cbcneuro,cbclym,cbceos,ironstudyseriron,ironstudytibc,ironstudyserumfe,iaimESR,iaimCRP,iaimpANCA,iaimASCA,iaimfecacal,iaimAntiTTG,SARBCs,SApuscells,SAclodef,SApara,SAstoolcs,SAparanotes,SAothernotes,INFtt,INFtp,INQua,INHB,INHBV,INHC,INHIV,BCAm, BCLI,BCNA,BCK,BCCa,BCMg,BCph,LARFALT,LARFAST,LARFTp,LARFAlb,LARFdb,LARFtb,LARFALP,LARFGGT,LARFINR,LARFScreat,LARFBUN,otherlabdetails,p_id,LARFib)
-                            VALUES ('" + labdat + "',' " + hb + "','" + hema + "','" + mcv + "','" + rdw + "','" + latlets + "', '" + tlc + "','" + neuro + "','" + lym + "','" + ceos + "','" + seriron + "','" + tibc + "', '" + serumfe + "', '" + ESR + "', '" + CRP + "', '" + ANCA + "', '" + ASCA + "', '" + TTG + "' ,'" + ARBCs + "', '" + puscells + "' ,'" + clodef + "' ,'" + para + "' ,'" + toolscs + "','" + paranotes + "','" + othernotes + "','" + tt + "','" + tp + "','" + Qua + "','" + HB + "','" + HBV + "','" + HC + "','" + HIV + "','" + Am + "' ,,'" + LI + "' ,'" + NA + "' ,'" + K + "' ,'" + Ca + "' ,'" + Mg + "' ,'" + ph + "' ,'" + FALT + "','" + FAST + "' ,'" + FTP + "' ,'" + FAlb + "' ,'" + fdb + "' ,'" + ftb + "','" + FALP + "' ,'" + FFGT + "' ,'" + INR + "' ,'" + SCreat + "' ,'" + BUn + "' ,'" + otherdetails + "','" + p_id + "','" + LARFib + "' )";
+                            VALUES ('" + labdat + "',' " + hb + "','" + hema + "','" + mcv + "','" + rdw + "','" + latlets + "', '" + tlc + "','" + neuro + "','" + lym + "','" + ceos + "','" + seriron + "','" + tibc + "', '" + serumfe + "', '" + ESR + "', '" + CRP + "', '" + ANCA + "', '" + ASCA + "', '"+fecacal+"','" + TTG + "' ,'" + ARBCs + "', '" + puscells + "' ,'" + clodef + "' ,'" + para + "' ,'" + toolscs + "','" + paranotes + "','" + othernotes + "','" + tt + "','" + tp + "','" + Qua + "','" + HB + "','" + HBV + "','" + HC + "','" + HIV + "','" + Am + "' ,'" + LI + "' ,'" + NA + "' ,'" + K + "' ,'" + Ca + "' ,'" + Mg + "' ,'" + ph + "' ,'" + FALT + "','" + FAST + "' ,'" + FTP + "' ,'" + FAlb + "' ,'" + fdb + "' ,'" + ftb + "','" + FALP + "' ,'" + FFGT + "' ,'" + INR + "' ,'" + SCreat + "' ,'" + BUn + "' ,'" + otherdetails + "','" + p_id + "','" + LARFib + "' )";
 
             executeQuery(sql);
 
@@ -307,6 +315,14 @@ namespace WindowsFormsApplication5
             string sql= @"SELECT labdate FROM asudb.dbo.labentery WHERE p_id='"+p_id+ "'";
             DataTable dt = getDataTable(sql);
 
+            return dt;
+        }
+
+        public static DataTable getLabDetails(string date,int p_id)
+        {
+            
+            string sql = @"SELECT * FROM asudb.dbo.labentery WHERE labdate='"+date+"' AND p_id='"+p_id+"' ";
+            DataTable dt = getDataTable(sql);
             return dt;
         }
 

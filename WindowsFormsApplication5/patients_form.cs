@@ -17,6 +17,7 @@ namespace WindowsFormsApplication5
         public patients_form()
         {
             InitializeComponent();
+            fillAllGV();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,6 +27,25 @@ namespace WindowsFormsApplication5
 
         }
 
+        private void fillAllGV()
+        {
+            isRowAdded = false;
+            DataTable dt = DataSet.selectAllPatients();
+            dataGridView1BindingSource.DataSource = dt;
+
+            dataGridView1.Columns["id"].DataPropertyName = "id";
+            dataGridView1.Columns["FirstName"].DataPropertyName = "fname";
+            dataGridView1.Columns["LastName"].DataPropertyName = "lname";
+            dataGridView1.Columns["MiddleName"].DataPropertyName = "mname";
+            dataGridView1.Columns["Age"].DataPropertyName = "age";
+            dataGridView1.Columns["Telephone"].DataPropertyName = "tele";
+
+
+            dataGridView1.AutoGenerateColumns = false;
+
+            dataGridView1.DataSource = dataGridView1BindingSource;
+
+        }
         private void fillGV(String patName)
         {
             isRowAdded = false;
