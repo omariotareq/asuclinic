@@ -33,7 +33,9 @@ namespace WindowsFormsApplication5
         char[] mural_fibrosis_char;
         char[] pres_dila_char;
         char[] loss_haus_char;
- 
+
+        DataTable dt_date = new DataTable();
+        BindingSource dateBindingSource = new BindingSource();
         public enterography_form(int pa_id, string name, int age)
         {
             InitializeComponent();
@@ -41,8 +43,22 @@ namespace WindowsFormsApplication5
             patNameLb.Text = name;
             ageLbl.Text = "" + age;
             p_id = pa_id;
+
+            refreshDateCB();
         }
 
+        private void refreshDateCB()
+        {
+            enteroDatesCB.SelectedIndexChanged -= enteroDatesCB_SelectedIndexChanged;
+
+
+            dt_date = DataSet.getPatiententerographyDates(p_id);
+            dateBindingSource.DataSource = dt_date;
+            enteroDatesCB.DataSource = dt_date;
+            enteroDatesCB.DisplayMember = "date";
+
+            enteroDatesCB.SelectedIndexChanged += enteroDatesCB_SelectedIndexChanged;
+        }
         public static char[] intToBinary(int number)
         {
             
@@ -390,61 +406,61 @@ namespace WindowsFormsApplication5
 
             if (jejuCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
 
             if (ileumCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
 
             if (rtColonCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
             if (trColonCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
             if (ltColonCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
             if (sigColonCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
             if (rectumCombSignChkbx.Checked)
             {
-                fat_edema = fat_edema + "1";
+                comb_sign = comb_sign + "1";
             }
             else
             {
-                fat_edema = fat_edema + "0";
+                comb_sign = comb_sign + "0";
             }
 
         }
@@ -659,17 +675,45 @@ namespace WindowsFormsApplication5
                 gatherPressDila();
                 gatherLossHaus();
 
-                DataSet.InsertenterographyyInfo(enterDate.Value.Date,studyTypeCB.Text,binToInt(muc_enhanc),jejuEnhancAmountTB.Text,ileumEnhancAmountTB.Text,rtColonEnhancAmountTB.Text,trColonEnhancAmountTB.Text,
-                    ltColonEnhancAmountTB.Text,sigColonEnhancAmountTB.Text,rectumEnhancAmountTB.Text,binToInt(muc_irr),binToInt(sub_edema),jejuThicknessEdemaTB.Text,ileumThicknessEdemaTB.Text,rtColonThicknessEdemaTB.Text,trColonThicknessEdemaTB.Text,
-                    ltColonThicknessEdemaTB.Text,sigColonThicknessEdemaTB.Text,rectumThicknessEdemaTB.Text,mural_abcess,jejuLengthActTB.Text,ileumLengthActTB.Text,rtColonLengthActTB.Text,trColonLengthActTB.Text,ltColonLengthActTB.Text,sigColonLengthActTB.Text,
-                    rectumLengthActTB.Text,jejuMuralThicknessTB.Text,ileumMuralThicknessTB.Text,rtColonMuralThicknessTB.Text,trColonMuralThicknessTB.Text,ltColonMuralThicknessTB.Text,sigColonMuralThicknessTB.Text,rectumMuralThicknessTB.Text,
-                    fat_edema,comb_sign,mural_fibrosis,jejuNarrwoingCB.Text,ileumNarrwoingCB.Text,rtColonNarrwoingCB.Text,trColonNarrwoingCB.Text,ltColonNarrwoingCB.Text,sigColonNarrwoingCB.Text,rectumNarrwoingCB.Text,pres_dila,jejuPresDiameterTB.Text,
-                    ileumPresDiameterTB.Text,rtColonPresDiameterTB.Text,trColonPresDiameterTB.Text,ltColonPresDiameterTB.Text,sigColonPresDiameterTB.Text,rectumPresDiameterTB.Text,loss_haus,)
+                int fistula =0;
+                int abcess_form = 0;
+
+                if(fistulaChkbx.Checked){
+                    fistula =1;
+                }
+                else{
+                    fistula = 0;
+                }
+
+                if(abcessFormChkbx.Checked){
+                    abcess_form =1;
+                }
+                else{
+                    abcess_form = 0;
+                }
+
+                DataSet.InsertenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
+                    ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
+                    ltColonThicknessEdemaTB.Text, sigColonThicknessEdemaTB.Text, rectumThicknessEdemaTB.Text, binToInt(mural_abcess), jejuLengthActTB.Text, ileumLengthActTB.Text, rtColonLengthActTB.Text, trColonLengthActTB.Text, ltColonLengthActTB.Text, sigColonLengthActTB.Text,
+                    rectumLengthActTB.Text, jejuMuralThicknessTB.Text, ileumMuralThicknessTB.Text, rtColonMuralThicknessTB.Text, trColonMuralThicknessTB.Text, ltColonMuralThicknessTB.Text, sigColonMuralThicknessTB.Text, rectumMuralThicknessTB.Text,
+                    binToInt(fat_edema), binToInt(comb_sign), binToInt(mural_fibrosis), jejuNarrwoingCB.Text, ileumNarrwoingCB.Text, rtColonNarrwoingCB.Text, trColonNarrwoingCB.Text, ltColonNarrwoingCB.Text, sigColonNarrwoingCB.Text, rectumNarrwoingCB.Text, binToInt(pres_dila), jejuPresDiameterTB.Text,
+                    ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus),Convert.ToInt16(activeSegmentTB.Text), fistula, abcess_form, Convert.ToInt16(lengthOfTrackTB.Text), 
+                    Convert.ToInt16(diameterOfAbcTB.Text), Convert.ToInt16(diameterOfTrackTB.Text), Convert.ToInt16(volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id);
+
+                refreshDateCB();
+
+                MessageBox.Show("Saved successfully");
+                    
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void enteroDatesCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         

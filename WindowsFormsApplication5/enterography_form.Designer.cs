@@ -34,6 +34,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.enteroDatesCB = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -202,7 +203,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.enterDate = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -448,6 +448,16 @@
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(462, 1270);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 40);
+            this.button2.TabIndex = 221;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // enteroDatesCB
             // 
             this.enteroDatesCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -460,6 +470,7 @@
             this.enteroDatesCB.Name = "enteroDatesCB";
             this.enteroDatesCB.Size = new System.Drawing.Size(190, 32);
             this.enteroDatesCB.TabIndex = 220;
+            this.enteroDatesCB.SelectedIndexChanged += new System.EventHandler(this.enteroDatesCB_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -2161,16 +2172,6 @@
             this.enterDate.Name = "enterDate";
             this.enterDate.Size = new System.Drawing.Size(144, 31);
             this.enterDate.TabIndex = 47;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(462, 1270);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 40);
-            this.button2.TabIndex = 221;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // enterography_form
             // 
