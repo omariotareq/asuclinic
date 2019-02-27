@@ -202,6 +202,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.enterDate = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,6 +277,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.enteroDatesCB);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Controls.Add(this.button1);
@@ -442,7 +444,7 @@
             this.groupBox1.Controls.Add(this.enterDate);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 1324);
+            this.groupBox1.Size = new System.Drawing.Size(996, 1329);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             // 
@@ -468,7 +470,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 1271);
+            this.button1.Location = new System.Drawing.Point(280, 1266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 218;
@@ -2160,6 +2162,16 @@
             this.enterDate.Size = new System.Drawing.Size(144, 31);
             this.enterDate.TabIndex = 47;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(462, 1270);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 40);
+            this.button2.TabIndex = 221;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // enterography_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2367,5 +2379,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
         private System.Windows.Forms.ComboBox enteroDatesCB;
+        private System.Windows.Forms.Button button2;
     }
 }

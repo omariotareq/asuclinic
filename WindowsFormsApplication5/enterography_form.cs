@@ -645,6 +645,33 @@ namespace WindowsFormsApplication5
             MessageBox.Show(muc_enhanc +" - "+trans);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                gatherMucEnhanc();
+                gatherMucIrr();
+                gatherSubEdema();
+                gatherMurAbc();
+                gatherFatEdm();
+                gatherCombSign();
+                gatherMuralFib();
+                gatherPressDila();
+                gatherLossHaus();
+
+                DataSet.InsertenterographyyInfo(enterDate.Value.Date,studyTypeCB.Text,binToInt(muc_enhanc),jejuEnhancAmountTB.Text,ileumEnhancAmountTB.Text,rtColonEnhancAmountTB.Text,trColonEnhancAmountTB.Text,
+                    ltColonEnhancAmountTB.Text,sigColonEnhancAmountTB.Text,rectumEnhancAmountTB.Text,binToInt(muc_irr),binToInt(sub_edema),jejuThicknessEdemaTB.Text,ileumThicknessEdemaTB.Text,rtColonThicknessEdemaTB.Text,trColonThicknessEdemaTB.Text,
+                    ltColonThicknessEdemaTB.Text,sigColonThicknessEdemaTB.Text,rectumThicknessEdemaTB.Text,mural_abcess,jejuLengthActTB.Text,ileumLengthActTB.Text,rtColonLengthActTB.Text,trColonLengthActTB.Text,ltColonLengthActTB.Text,sigColonLengthActTB.Text,
+                    rectumLengthActTB.Text,jejuMuralThicknessTB.Text,ileumMuralThicknessTB.Text,rtColonMuralThicknessTB.Text,trColonMuralThicknessTB.Text,ltColonMuralThicknessTB.Text,sigColonMuralThicknessTB.Text,rectumMuralThicknessTB.Text,
+                    fat_edema,comb_sign,mural_fibrosis,jejuNarrwoingCB.Text,ileumNarrwoingCB.Text,rtColonNarrwoingCB.Text,trColonNarrwoingCB.Text,ltColonNarrwoingCB.Text,sigColonNarrwoingCB.Text,rectumNarrwoingCB.Text,pres_dila,jejuPresDiameterTB.Text,
+                    ileumPresDiameterTB.Text,rtColonPresDiameterTB.Text,trColonPresDiameterTB.Text,ltColonPresDiameterTB.Text,sigColonPresDiameterTB.Text,rectumPresDiameterTB.Text,loss_haus,)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         
        
     }
