@@ -157,7 +157,7 @@ namespace WindowsFormsApplication5
 
 		#endregion
 
-		#region Mostafa
+		#region Ehna
 		public static long getUserID(String username, String Password)    //loginform
 		{
 			String sql = @"select login.id as id  from asudb.dbo.login
@@ -313,7 +313,7 @@ namespace WindowsFormsApplication5
         {
 
 string sql=	@"UPDATE asudb.dbo.labentery
-   SET 
+   SET
       [cbchema]			= '"+hema+@"'
       ,[cbchb]				= '"+hb+@"'
       ,[cbcmcv]				= '"+mcv+@"'
@@ -364,22 +364,23 @@ string sql=	@"UPDATE asudb.dbo.labentery
       ,[LARFINR]			= '"+INR+@"'
       ,[LARFScreat]			= '"+SCreat+@"'
       ,[LARFBUN]			= '"+BUn+@"'
-      ,[otherlabdetails]	= '"+otherdetails+@"' 
+      ,[otherlabdetails]	= '"+otherdetails+@"'
       ,[LARFib]				= '"+LARFib+@"'
          WHERE p_id ='"+p_id+ "'AND  labdate='"+labdat+"'";
 
 
 		executeQuery(sql);
 			//27/2
-}         public static void InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema,string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp , string Scp, string Rep,int Lh,int ttl,bool cf,bool caf ,int clot,int cdab,int cdot,int cdvt,string ctof ,string cabs,string cttf,string comother,string oth ,string enter,int p_id, int LARFib)
+}
+        public static void InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, int ttl, int cf, int caf, int clot, int cdab, int cdot, int cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id)
         {
 
-            String sql = @"INSERT INTO asuudb.dbo.enterography
-           (date,Entrostudy,mucosalen,jejEa,ilEa,RcEa,TcEa,LcEa,ScEa,ReEa,Mucosalirrefi,submucosaledema,jethofSMedema,ilthofSMedema ,RcthofSMedema,TcthofSMedema ,LcthofSMedema ,ScthofSMedema,RethofSMedema,muralabscess,jelengthactivity,illengthactivity  ,Rclengthactivity   ,Tclengthactivity  ,Lclengthactivity    ,Sclengthactivity,Relengthactivity,jemuralthickness,ilmuralthickness,Rcmuralthickness,Tcmuralthickness    ,Lcmuralthickness  ,Scmuralthickness   ,Remuralthickness   ,Fatedema   ,combsign,Muralfib,jeNarstr,ilNarstr ,RcNarstr,TcNarstr,LcNarstr ,ScNarstr  ,ReNarstr  ,Prestenoticdial,jePrestenoticdiam,ilPrestenoticdiam  ,RcPrestenoticdiam ,TcPrestenoticdiam  ,LcPrestenoticdiam,ScPrestenoticdiam  ,RePrestenoticdiam ,LossofHaus,totallength  ,compfistula  ,compAbscessformation  ,complenoftrack,compdiamofab,compdiamoftrack,compvolofab,comptypeoffistula,compabsloc,compothertypefis,compotherabsloc,otherentrofindings ,EntroReport ,p_id)
-           
-		       VALUES ('" + date + "',' " + enst + "','" + musleh + "','" + jeE + "','" + ilE + "','" + RcE + "', '" + TcE + "','" + LcE + "','" + ScE + "','" + ReE + "','" + Msl + "','" + subdema + "', '" + jedema + "', '" + ildema + "', '" + Rcdema + "', '" + Tcdema + "', '" + Lcdema + "', '"+Scdema+"','" + Redema+ "' ,'" + muralab + "', '" + jela + "' ,'" + illa + "' ,'" + Rcla + "' ,'" + Tcla + "','" + Lcla+ "','" + Scla + "','" + Rela + "','" + jemt + "','" + ilmt + "','" + Rcmt + "','" + Tcmt + "','" + Lcmt + "','" + Scmt + "','" + Remt + "' ,'" + fd + "' ,'" + cs + "' ,'" + mf + "' ,'" + jens + "' ,'" + ilns + "' ,'" + Rcns + "' ,'" + Tcns + "','" + Lcns + "' ,'" + Scns + "' ,'" + Rens + "' ,'" + presd + "' ,'" + jep + "','" + ilp + "' ,'" + Rcp + "' ,'" + Tcp + "' ,'" + Lcp + "' ,'" + Scp + "' ,'" + Rep + "','"+Lh+"', '" + ttl + "', '" + cf + "', '" + caf + "', '" + clot + "', '" + cdab + "', '" + cdot + "', '" + cdvt + "', '" + ctof + "', '" + cabs + "', '" + cttf + "', '" + comother + "', '" + oth + "', '" + enter+ "','" + p_id + "' )";
-			 
-                                                                                                  
+            String sql = @"INSERT INTO asudb.dbo.enterography
+           (date,Entrostudy,mucosalenh,jejEa,ilEa,RcEa,TcEa,LcEa,ScEa,ReEa,Mucosalirrefi,submucosaledema,jethofSMedema,ilthofSMedema ,RcthofSMedema,TcthofSMedema ,LcthofSMedema ,ScthofSMedema,RethofSMedema,muralabscess,jelengthactivity,illengthactivity  ,Rclengthactivity   ,Tclengthactivity  ,Lclengthactivity    ,Sclengthactivity,Relengthactivity,jemuralthickness,ilmuralthickness,Rcmuralthickness,Tcmuralthickness    ,Lcmuralthickness  ,Scmuralthickness   ,Remuralthickness   ,Fatedema   ,combsign,Muralfib,jeNarstr,ilNarstr ,RcNarstr,TcNarstr,LcNarstr ,ScNarstr  ,ReNarstr  ,Prestenoticdial,jePrestenoticdiam,ilPrestenoticdiam  ,RcPrestenoticdiam ,TcPrestenoticdiam  ,LcPrestenoticdiam,ScPrestenoticdiam  ,RePrestenoticdiam ,LossofHaus,totallength  ,compfistula  ,compAbscessformation  ,complenoftrack,compdiamofab,compdiamoftrack,compvolofab,comptypeoffistula,compabsloc,compothertypefis,compotherabsloc,otherentrofindings ,EntroReport ,p_id)
+
+		       VALUES ('" + date + "',' " + enst + "','" + musleh + "','" + jeE + "','" + ilE + "','" + RcE + "', '" + TcE + "','" + LcE + "','" + ScE + "','" + ReE + "','" + Msl + "','" + subdema + "', '" + jedema + "', '" + ildema + "', '" + Rcdema + "', '" + Tcdema + "', '" + Lcdema + "', '"+Scdema+"','" + Redema+ "' ,'" + muralab + "', '" + jela + "' ,'" + illa + "' ,'" + Rcla + "' ,'" + Tcla + "','" + Lcla+ "','" + Scla + "','" + Rela + "','" + jemt + "','" + ilmt + "','" + Rcmt + "','" + Tcmt + "','" + Lcmt + "','" + Scmt + "','" + Remt + "' ,'" + fd + "' ,'" + cs + "' ,'" + mf + "' ,'" + jens + "' ,'" + ilns + "' ,'" + Rcns + "' ,'" + Tcns + "','" + Lcns + "' ,'" + Scns + "' ,'" + Rens + "' ,'" + presd + "' ,'" + jep + "','" + ilp + "' ,'" + Rcp + "' ,'" + Tcp + "' ,'" + lcp + "' ,'" + Scp + "' ,'" + Rep + "','"+Lh+"', '" + ttl + "', '" + cf + "', '" + caf + "', '" + clot + "', '" + cdab + "', '" + cdot + "', '" + cdvt + "', '" + ctof + "', '" + cabs + "', '" + cttf + "', '" + comother + "', '" + oth + "', '" + enter+ "','" + p_id + "' )";
+
+
 		   executeQuery(sql);
 
 
@@ -394,7 +395,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
             DataTable dt = getDataTable(sql);
 
             return dt;
-        } 
+        }
 		//27/2
 		   public static DataTable getPatiententerographyDates( int p_id)
         {
@@ -402,10 +403,10 @@ string sql=	@"UPDATE asudb.dbo.labentery
             DataTable dt = getDataTable(sql);
 
             return dt;
-        } //27/2  
-         public static DataTable getenterography(string date,int p_id)
+        } //27/2
+         public static DataTable getEnterography(string date,int p_id)
         {
-            
+
             string sql = @"SELECT * FROM asudb.dbo.enterography WHERE date='"+date+"' AND p_id='"+p_id+"' ";
             DataTable dt = getDataTable(sql);
             return dt;
@@ -413,7 +414,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
         public static DataTable getLabDetails(string date,int p_id)
         {
-            
+
             string sql = @"SELECT * FROM asudb.dbo.labentery WHERE labdate='"+date+"' AND p_id='"+p_id+"' ";
             DataTable dt = getDataTable(sql);
             return dt;

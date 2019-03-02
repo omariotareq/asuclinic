@@ -34,6 +34,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.enteroDatesCB = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -276,6 +277,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.enteroDatesCB);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Controls.Add(this.button1);
@@ -442,9 +444,19 @@
             this.groupBox1.Controls.Add(this.enterDate);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 1324);
+            this.groupBox1.Size = new System.Drawing.Size(996, 1329);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(462, 1270);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 40);
+            this.button2.TabIndex = 221;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // enteroDatesCB
             // 
@@ -458,6 +470,7 @@
             this.enteroDatesCB.Name = "enteroDatesCB";
             this.enteroDatesCB.Size = new System.Drawing.Size(190, 32);
             this.enteroDatesCB.TabIndex = 220;
+            this.enteroDatesCB.SelectedIndexChanged += new System.EventHandler(this.enteroDatesCB_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -468,7 +481,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(404, 1271);
+            this.button1.Location = new System.Drawing.Point(280, 1266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 218;
@@ -2367,5 +2380,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
         private System.Windows.Forms.ComboBox enteroDatesCB;
+        private System.Windows.Forms.Button button2;
     }
 }
