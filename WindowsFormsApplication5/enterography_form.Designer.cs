@@ -37,7 +37,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.enteroDatesCB = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.attachmentFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -280,32 +279,12 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.enteroDatesCB);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.attachmentFlowPanel);
             this.groupBox1.Controls.Add(this.label46);
             this.groupBox1.Controls.Add(this.enteroReportTB);
             this.groupBox1.Controls.Add(this.label45);
             this.groupBox1.Controls.Add(this.otherEnterographyTB);
             this.groupBox1.Controls.Add(this.label44);
-            this.groupBox1.Controls.Add(this.otherAbcLocTB);
-            this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Controls.Add(this.abcessLocationCB);
-            this.groupBox1.Controls.Add(this.label39);
-            this.groupBox1.Controls.Add(this.volOfAbcTB);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.diameterOfAbcTB);
-            this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.abcessFormChkbx);
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.otherFistulaTypeTB);
-            this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.typeOfFistulaCB);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.diameterOfTrackTB);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.lengthOfTrackTB);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.fistulaChkbx);
             this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.activeSegmentTB);
@@ -398,7 +377,6 @@
             this.groupBox1.Controls.Add(this.ileumSubMucEdemaChkbx);
             this.groupBox1.Controls.Add(this.ileumMucIrrChkbx);
             this.groupBox1.Controls.Add(this.ileumEnhancAmountTB);
-            this.groupBox1.Controls.Add(this.ileumMucosalEnhancChkb);
             this.groupBox1.Controls.Add(this.jejuNarrwoingCB);
             this.groupBox1.Controls.Add(this.jejuPresDiameterTB);
             this.groupBox1.Controls.Add(this.jejuMuralFibrosisChkbx);
@@ -442,6 +420,26 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.enterDate);
+            this.groupBox1.Controls.Add(this.ileumMucosalEnhancChkb);
+            this.groupBox1.Controls.Add(this.otherAbcLocTB);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.abcessLocationCB);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.volOfAbcTB);
+            this.groupBox1.Controls.Add(this.label40);
+            this.groupBox1.Controls.Add(this.diameterOfAbcTB);
+            this.groupBox1.Controls.Add(this.label41);
+            this.groupBox1.Controls.Add(this.abcessFormChkbx);
+            this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.otherFistulaTypeTB);
+            this.groupBox1.Controls.Add(this.label37);
+            this.groupBox1.Controls.Add(this.typeOfFistulaCB);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Controls.Add(this.diameterOfTrackTB);
+            this.groupBox1.Controls.Add(this.label35);
+            this.groupBox1.Controls.Add(this.lengthOfTrackTB);
+            this.groupBox1.Controls.Add(this.label34);
+            this.groupBox1.Controls.Add(this.fistulaChkbx);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(996, 1329);
@@ -461,6 +459,7 @@
             // enteroDatesCB
             // 
             this.enteroDatesCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enteroDatesCB.FormatString = "yyyy-MM-dd";
             this.enteroDatesCB.FormattingEnabled = true;
             this.enteroDatesCB.Items.AddRange(new object[] {
             "CTE",
@@ -479,23 +478,13 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 206);
             this.flowLayoutPanel1.TabIndex = 219;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(280, 1266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 218;
-            this.button1.Text = "trial";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // attachmentFlowPanel
             // 
             this.attachmentFlowPanel.Controls.Add(this.pictureBox3);
             this.attachmentFlowPanel.Controls.Add(this.pictureBox4);
             this.attachmentFlowPanel.Controls.Add(this.pictureBox5);
             this.attachmentFlowPanel.Controls.Add(this.pictureBox6);
-            this.attachmentFlowPanel.Location = new System.Drawing.Point(597, 1227);
+            this.attachmentFlowPanel.Location = new System.Drawing.Point(648, 1227);
             this.attachmentFlowPanel.Margin = new System.Windows.Forms.Padding(2);
             this.attachmentFlowPanel.Name = "attachmentFlowPanel";
             this.attachmentFlowPanel.Size = new System.Drawing.Size(208, 50);
@@ -2172,6 +2161,7 @@
             this.enterDate.Name = "enterDate";
             this.enterDate.Size = new System.Drawing.Size(144, 31);
             this.enterDate.TabIndex = 47;
+            this.enterDate.ValueChanged += new System.EventHandler(this.enterDate_ValueChanged);
             // 
             // enterography_form
             // 
@@ -2181,12 +2171,12 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1031, 561);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.patNameLb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1047, 720);
             this.Name = "enterography_form";
@@ -2371,7 +2361,6 @@
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox enteroReportTB;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel attachmentFlowPanel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
