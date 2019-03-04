@@ -145,6 +145,8 @@ namespace WindowsFormsApplication5
 			return dt;
 		}
 
+
+
 		public static void executeQuery(String sql)
 		{
 		    SqlCommand cmd = DataSet.getCommand();
@@ -299,7 +301,7 @@ namespace WindowsFormsApplication5
 		    executeQuery(sql);
         }
 
-        public static void InsertlabenteryInfo(DateTime labdat, string hb, string hema, string mcv, string rdw, string latlets, string tlc, string neuro, string lym, string ceos, string seriron, string tibc, string serumfe, string ESR, string CRP, string ANCA, string ASCA,string fecacal, string TTG, string ARBCs, string puscells, string clodef, string para, string toolscs, String paranotes, String othernotes, string tt, string tp, String Qua, string HB, string HBV, string HC, int HIV, string Am, string LI, string NA, string K, string Ca, string Mg, string ph, string FALT, string FAST, string FTP, string FAlb, string fdb, string ftb, string FALP, string FFGT, string INR, string SCreat, string BUn, string otherdetails, int p_id, int LARFib)
+        public static void InsertlabenteryInfo(DateTime labdat, string hb, string hema, string mcv, string rdw, string latlets, string tlc, string neuro, string lym, string ceos, string seriron, string tibc, string serumfe, string ESR, string CRP, string ANCA, string ASCA, string fecacal, string TTG, string ARBCs, string puscells, string clodef, int para, string toolscs, String paranotes, String othernotes, string tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, string Am, string LI, string NA, string K, string Ca, string Mg, string ph, string FALT, string FAST, string FTP, string FAlb, string fdb, string ftb, string FALP, string FFGT, string INR, string SCreat, string BUn, string otherdetails, int p_id, string LARFib)
         {
 
             String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,cbchb,cbchema,cbcmcv,cbcrdw,cbcplatlets,cbctlc,cbcneuro,cbclym,cbceos,ironstudyseriron,ironstudytibc,ironstudyserumfe,iaimESR,iaimCRP,iaimpANCA,iaimASCA,iaimfecacal,iaimAntiTTG,SARBCs,SApuscells,SAclodef,SApara,SAstoolcs,SAparanotes,SAothernotes,INFtt,INFtp,INQua,INHB,INHBV,INHC,INHIV,BCAm, BCLI,BCNA,BCK,BCCa,BCMg,BCph,LARFALT,LARFAST,LARFTp,LARFAlb,LARFdb,LARFtb,LARFALP,LARFGGT,LARFINR,LARFScreat,LARFBUN,otherlabdetails,p_id,LARFib)
@@ -372,16 +374,28 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		executeQuery(sql);
 			//27/2
 }
-        public static void InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, int ttl, int cf, int caf, int clot, int cdab, int cdot, int cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id)
+        public static long InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, string ttl, int cf, int caf, string clot, string cdab, string cdot, string cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id)
         {
 
             String sql = @"INSERT INTO asudb.dbo.enterography
-           (date,Entrostudy,mucosalenh,jejEa,ilEa,RcEa,TcEa,LcEa,ScEa,ReEa,Mucosalirrefi,submucosaledema,jethofSMedema,ilthofSMedema ,RcthofSMedema,TcthofSMedema ,LcthofSMedema ,ScthofSMedema,RethofSMedema,muralabscess,jelengthactivity,illengthactivity  ,Rclengthactivity   ,Tclengthactivity  ,Lclengthactivity    ,Sclengthactivity,Relengthactivity,jemuralthickness,ilmuralthickness,Rcmuralthickness,Tcmuralthickness    ,Lcmuralthickness  ,Scmuralthickness   ,Remuralthickness   ,Fatedema   ,combsign,Muralfib,jeNarstr,ilNarstr ,RcNarstr,TcNarstr,LcNarstr ,ScNarstr  ,ReNarstr  ,Prestenoticdial,jePrestenoticdiam,ilPrestenoticdiam  ,RcPrestenoticdiam ,TcPrestenoticdiam  ,LcPrestenoticdiam,ScPrestenoticdiam  ,RePrestenoticdiam ,LossofHaus,totallength  ,compfistula  ,compAbscessformation  ,complenoftrack,compdiamofab,compdiamoftrack,compvolofab,comptypeoffistula,compabsloc,compothertypefis,compotherabsloc,otherentrofindings ,EntroReport ,p_id)
+           (date,Entrostudy,mucosalenh,jejEa,ilEa,RcEa,TcEa,LcEa,ScEa,ReEa,Mucosalirrefi,submucosaledema,jethofSMedema,ilthofSMedema ,RcthofSMedema,TcthofSMedema ,LcthofSMedema ,ScthofSMedema,RethofSMedema,muralabscess,jelengthactivity,illengthactivity  ,Rclengthactivity   ,Tclengthactivity  ,Lclengthactivity    ,Sclengthactivity,Relengthactivity,jemuralthickness,ilmuralthickness,Rcmuralthickness,Tcmuralthickness    ,Lcmuralthickness  ,Scmuralthickness   ,Remuralthickness   ,Fatedema   ,combsign,Muralfib,jeNarstr,ilNarstr ,RcNarstr,TcNarstr,LcNarstr ,ScNarstr  ,ReNarstr  ,Prestenoticdial,jePrestenoticdiam,ilPrestenoticdiam  ,RcPrestenoticdiam ,TcPrestenoticdiam  ,LcPrestenoticdiam,ScPrestenoticdiam  ,RePrestenoticdiam ,LossofHaus,totallength  ,compfistula  ,compAbscessformation  ,complenoftrack,compdiamofab,compdiamoftrack,compvolofab,comptypeoffistula,compabsloc,compothertypefis,compotherabsloc,otherentrofindings ,EntroReport ,p_id)  OUTPUT INSERTED.id as id
 
 		       VALUES ('" + date + "',' " + enst + "','" + musleh + "','" + jeE + "','" + ilE + "','" + RcE + "', '" + TcE + "','" + LcE + "','" + ScE + "','" + ReE + "','" + Msl + "','" + subdema + "', '" + jedema + "', '" + ildema + "', '" + Rcdema + "', '" + Tcdema + "', '" + Lcdema + "', '"+Scdema+"','" + Redema+ "' ,'" + muralab + "', '" + jela + "' ,'" + illa + "' ,'" + Rcla + "' ,'" + Tcla + "','" + Lcla+ "','" + Scla + "','" + Rela + "','" + jemt + "','" + ilmt + "','" + Rcmt + "','" + Tcmt + "','" + Lcmt + "','" + Scmt + "','" + Remt + "' ,'" + fd + "' ,'" + cs + "' ,'" + mf + "' ,'" + jens + "' ,'" + ilns + "' ,'" + Rcns + "' ,'" + Tcns + "','" + Lcns + "' ,'" + Scns + "' ,'" + Rens + "' ,'" + presd + "' ,'" + jep + "','" + ilp + "' ,'" + Rcp + "' ,'" + Tcp + "' ,'" + lcp + "' ,'" + Scp + "' ,'" + Rep + "','"+Lh+"', '" + ttl + "', '" + cf + "', '" + caf + "', '" + clot + "', '" + cdab + "', '" + cdot + "', '" + cdvt + "', '" + ctof + "', '" + cabs + "', '" + cttf + "', '" + comother + "', '" + oth + "', '" + enter+ "','" + p_id + "' )";
 
 
-		   executeQuery(sql);
+            DataTable dt = getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow dataRow = dt.Rows[0];
+
+                long id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+                return id;
+            }
+            else
+            {
+                return -1;
+            }
 
 
         }
@@ -448,15 +462,58 @@ string sql=	@"UPDATE asudb.dbo.labentery
             DataTable dt = getDataTable(sql);
             return dt;
         }
+				public static void insertImages(int id, byte[] image)
+				{
+						String sql = @"INSERT INTO  asudb.dbo.imageentro (enntroid,imageentro) VALUES ('" + id + "','" + image + "'  )";
+						executeQuery(sql);
+				}
+
+
+				public static DataTable selectImages(int e_id)
+				{
+
+						string sql = @"SELECT * FROM asudb.dbo.imageentro WHERE enntroid='" + e_id + "' ";
+						DataTable dt = getDataTable(sql);
+						return dt;
+				}
+
+				public static void parametrizedInsert(int e_id, byte[] image)
+				{
+
+						string sql = "INSERT INTO  asudb.dbo.imageentro (enntroid,imageentro) VALUES  (@id,@img);";
+
+						using (SqlConnection connection = new SqlConnection(DataSet.myBuilder.ConnectionString))
+						using (SqlCommand command = new SqlCommand(sql, connection))
+						{
+								connection.Open();
+								var entroid = new SqlParameter("id", SqlDbType.Int);
+							 // entroid.Value = e_id;
+
+								var img = new SqlParameter("img", SqlDbType.VarBinary);
+							 // img.Value = image;
+
+								command.Parameters.AddWithValue("@id", e_id);
+								command.Parameters.AddWithValue("@img", image);
+								command.ExecuteNonQuery();
+								connection.Close();
+						}
+
+				}
+
 
 		//3/2/20199
-		public static long Insertpatholgydata(DateTime date, string il,string ilad, string ilc, string nii, string Er, bool uc, bool gra, string other, string irco, string cradc, string balco, string cry,string basl,string crypco,string lamin,bool lamen,bool ulceo,bool gran,string otherfind,string finalreport,int pid)
+		public static void Insertpatholgydata(DateTime date, string il,string ilad, string ilc, string nii, string Er, bool uc, bool gra, string other, string irco, string cradc, string balco, string cry,string basl,string crypco,string lamin,bool lamen,bool ulceo,bool gran,string otherfind,string finalreport,int pid)
 		{
 
-			String sql = @"INSERT INTO  asudb.dbo.patholgy (patholgydate, ileir, ilad, ilic,Niil,ilER,ucil,grail,otherileal,irco,cradco,balco,crycco,basalco,crypco,lamineosco,lameneutroco,ulceo,granilco,otherfindings,finalreport,firstvisit) 
+			String sql = @"INSERT INTO  asudb.dbo.patholgy (patholgydate, ileir, ilad, ilic,Niil,ilER,ucil,grail,otherileal,irco,cradco,balco,crycco,basalco,crypco,lamineosco,lameneutroco,ulceo,granilco,otherfindings,finalreport,firstvisit)
             VALUES ('"+ date + "',' " + il+ "','" + ilad + "','"+ ilc +"','" + nii + "','" + Er + "', '"+ uc + "','" +gra+ "','" +other+ "','" +irco+ "','" +cradc+ "','" +balco+ "', '" +cry+  "' , '" +basl+  "'  , '" +crypco+  "'  , '" +lamin+  "'  , '" +lamen+  "'  , '" +ulceo+  "', '" +gran+  "'  , '" +otherfind+  "'  , '" +finalreport+  "'  ) where p_id='"+pid+"' ";
-            executeQuery(sql);   
+            executeQuery(sql);
 			}
+
+
+
+
+
 		/*
 		public static DataTable getAllBuildings()
 		{
