@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +17,7 @@ namespace WindowsFormsApplication5
     {
 
         int p_id = 0;
+        long e_id = 0;
         string muc_enhanc = "";
         string muc_irr = "";
         string sub_edema = "";
@@ -23,6 +27,8 @@ namespace WindowsFormsApplication5
         string mural_fibrosis = "";
         string pres_dila = "";
         string loss_haus = "";
+
+        byte[] arr_upload_image;
 
         char[] muc_enhanc_char ;
         char[] muc_irr_char;
@@ -47,7 +53,9 @@ namespace WindowsFormsApplication5
             ageLbl.Text = "" + age;
             p_id = pa_id;
 
+            
             refreshDateCB();
+            enteroDatesCB.Text = "";
         }
 
         private void refreshDateCB()
@@ -695,17 +703,18 @@ namespace WindowsFormsApplication5
                     abcess_form = 0;
                 }
 
-                DataSet.InsertenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
+                e_id= DataSet.InsertenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
                     ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
                     ltColonThicknessEdemaTB.Text, sigColonThicknessEdemaTB.Text, rectumThicknessEdemaTB.Text, binToInt(mural_abcess), jejuLengthActTB.Text, ileumLengthActTB.Text, rtColonLengthActTB.Text, trColonLengthActTB.Text, ltColonLengthActTB.Text, sigColonLengthActTB.Text,
                     rectumLengthActTB.Text, jejuMuralThicknessTB.Text, ileumMuralThicknessTB.Text, rtColonMuralThicknessTB.Text, trColonMuralThicknessTB.Text, ltColonMuralThicknessTB.Text, sigColonMuralThicknessTB.Text, rectumMuralThicknessTB.Text,
                     binToInt(fat_edema), binToInt(comb_sign), binToInt(mural_fibrosis), jejuNarrwoingCB.Text, ileumNarrwoingCB.Text, rtColonNarrwoingCB.Text, trColonNarrwoingCB.Text, ltColonNarrwoingCB.Text, sigColonNarrwoingCB.Text, rectumNarrwoingCB.Text, binToInt(pres_dila), jejuPresDiameterTB.Text,
                     ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus),(activeSegmentTB.Text), fistula, abcess_form, (lengthOfTrackTB.Text), 
                     diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id);
-
+                
                 refreshDateCB();
 
                 MessageBox.Show("Saved successfully");
+                button1.Enabled = true;
                     
             }
             catch (Exception ex)
@@ -718,6 +727,7 @@ namespace WindowsFormsApplication5
         private void fillData()
         {
             int temp = 0;
+            
             char[] temp_char = new char[7];
 
             /* char[] muc_enhanc_char ;
@@ -736,8 +746,10 @@ namespace WindowsFormsApplication5
            mainBindingSource.DataSource = dt;
 
            studyTypeCB.DataBindings.Clear();
-           
+           e_id = Convert.ToInt32(dt.Rows[0]["id"]);
 
+           enterDate.DataBindings.Clear();
+           this.enterDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "date", true));
             this.studyTypeCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Entrostudy", true));
 
            this.jejuEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jejEa", true));
@@ -1126,6 +1138,7 @@ namespace WindowsFormsApplication5
                         if (tb is TextBox)
                         {
                             tb.DataBindings.Clear();
+                            tb.Text = "";
                         }
                         if (tb is ComboBox)
                         {
@@ -1138,12 +1151,16 @@ namespace WindowsFormsApplication5
                     }
                 
             }
+
+            
         }
 
 
         private void enteroDatesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             fillData();
+            fillImages();
+            button1.Enabled = true;
         }
 
         private void enterDate_ValueChanged(object sender, EventArgs e)
@@ -1151,7 +1168,203 @@ namespace WindowsFormsApplication5
             clearBindings();
         }
 
-        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (PictureBox item in attachmentFlowPanel.Controls)
+                {
+                    bool isNullOrEmpty = (item == null) || (item.Image == null);
+                    if (!isNullOrEmpty)
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        byte[] PhotoByte = null;
+                        item.Image.Save(ms, ImageFormat.Jpeg);
+                        PhotoByte = ms.ToArray(); 
+
+                        /*Image img = item.Image;
+                        ImageConverter converter = new ImageConverter();
+                        arr_upload_image = (byte[])converter.ConvertTo(img, typeof(byte[]));*/
+
+
+                        if (p_id != 0)
+                        {
+
+                            try
+                            {
+                               DataSet.parametrizedInsert(Convert.ToInt16(e_id), PhotoByte);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please select a date");
+                        }
+                    }
+
+                }
+                MessageBox.Show("upload complete");
+                clearPb();
+                flowLayoutPanel1.Controls.Clear();
+                fillImages();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("please select a valid date");
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void clearPb()
+        {
+            pictureBox3.Image = null;
+            pictureBox4.Image = null;
+            pictureBox5.Image = null;
+            pictureBox6.Image = null;
+        }
+
+        private void fillImages()
+        {
+
+
+            try
+            {
+                flowLayoutPanel1.Controls.Clear();
+                DataTable di = new DataTable();
+                di = DataSet.selectImages(Convert.ToInt16(e_id));
+                byte[] image_arr = null;
+                Image photo = null;
+
+               for(int i=0;i<di.Rows.Count;i++)
+                {
+                    try
+                    {
+                        image_arr = (byte[])di.Rows[i]["imageentro"];
+
+                        //photo = (Bitmap)((new ImageConverter()).ConvertFrom(image_arr));
+                       
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+                    PictureBox pb = new PictureBox();
+                    MemoryStream stream = new MemoryStream(image_arr,0,image_arr.Length);
+                    pb.Image = Image.FromStream(stream);
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pb.BackColor = Color.Transparent;
+                    pb.Height = 100;
+                    pb.Width = 100;
+                    pb.Click += new EventHandler(pb_click);
+                    flowLayoutPanel1.Controls.Add(pb);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
+        }
+
+        private void chooseImage()
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                         Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox3.Image = new Bitmap(openFileDialog.FileName);
+            }
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                         Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox3.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                         Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox4.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                         Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox5.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                         Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox6.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pb_click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+
+       /*     if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete this photo ?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    // Do something
+
+                   // attachmentTableAdapter.DeleteAttachmentQuery(Convert.ToInt32(((PictureBox)sender).Tag));
+                  //  photoPanel.Controls.Clear();
+                    fillImages();
+                }
+            }
+            if (me.Button == System.Windows.Forms.MouseButtons.Left)
+            {*/
+                PhotoPreviewForm ppf = new PhotoPreviewForm(((PictureBox)sender).Image);
+                ppf.ShowDialog();
+            }
+        }
        
-    }
+    
 }

@@ -100,6 +100,12 @@
     <Compile Include="patient_history.Designer.cs">
       <DependentUpon>patient_history.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhotoPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoPreviewForm.Designer.cs">
+      <DependentUpon>PhotoPreviewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="patient_history.resx">
       <DependentUpon>patient_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoPreviewForm.resx">
+      <DependentUpon>PhotoPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

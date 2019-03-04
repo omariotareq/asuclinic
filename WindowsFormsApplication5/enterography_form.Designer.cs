@@ -34,6 +34,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.activeSegmentTB = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.enteroDatesCB = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,28 +49,8 @@
             this.label45 = new System.Windows.Forms.Label();
             this.otherEnterographyTB = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.otherAbcLocTB = new System.Windows.Forms.TextBox();
-            this.label38 = new System.Windows.Forms.Label();
-            this.abcessLocationCB = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.volOfAbcTB = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.diameterOfAbcTB = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.abcessFormChkbx = new System.Windows.Forms.CheckBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.otherFistulaTypeTB = new System.Windows.Forms.TextBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.typeOfFistulaCB = new System.Windows.Forms.ComboBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.diameterOfTrackTB = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.lengthOfTrackTB = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.fistulaChkbx = new System.Windows.Forms.CheckBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.activeSegmentTB = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.rectumLossHausChkb = new System.Windows.Forms.CheckBox();
             this.sigColonLossHausChkb = new System.Windows.Forms.CheckBox();
@@ -158,7 +140,6 @@
             this.ileumSubMucEdemaChkbx = new System.Windows.Forms.CheckBox();
             this.ileumMucIrrChkbx = new System.Windows.Forms.CheckBox();
             this.ileumEnhancAmountTB = new System.Windows.Forms.TextBox();
-            this.ileumMucosalEnhancChkb = new System.Windows.Forms.CheckBox();
             this.jejuNarrwoingCB = new System.Windows.Forms.ComboBox();
             this.jejuPresDiameterTB = new System.Windows.Forms.TextBox();
             this.jejuMuralFibrosisChkbx = new System.Windows.Forms.CheckBox();
@@ -202,6 +183,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.enterDate = new System.Windows.Forms.DateTimePicker();
+            this.ileumMucosalEnhancChkb = new System.Windows.Forms.CheckBox();
+            this.otherAbcLocTB = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.abcessLocationCB = new System.Windows.Forms.ComboBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.volOfAbcTB = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.diameterOfAbcTB = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.abcessFormChkbx = new System.Windows.Forms.CheckBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.otherFistulaTypeTB = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.typeOfFistulaCB = new System.Windows.Forms.ComboBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.diameterOfTrackTB = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.lengthOfTrackTB = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.fistulaChkbx = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,6 +277,8 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.activeSegmentTB);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.enteroDatesCB);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
@@ -287,7 +290,6 @@
             this.groupBox1.Controls.Add(this.label44);
             this.groupBox1.Controls.Add(this.label33);
             this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.activeSegmentTB);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.rectumLossHausChkb);
             this.groupBox1.Controls.Add(this.sigColonLossHausChkb);
@@ -442,13 +444,32 @@
             this.groupBox1.Controls.Add(this.fistulaChkbx);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(996, 1329);
+            this.groupBox1.Size = new System.Drawing.Size(996, 1336);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(869, 1244);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 21);
+            this.button1.TabIndex = 222;
+            this.button1.Text = "Upload";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // activeSegmentTB
+            // 
+            this.activeSegmentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activeSegmentTB.Location = new System.Drawing.Point(308, 701);
+            this.activeSegmentTB.Name = "activeSegmentTB";
+            this.activeSegmentTB.Size = new System.Drawing.Size(118, 26);
+            this.activeSegmentTB.TabIndex = 187;
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(462, 1270);
+            this.button2.Location = new System.Drawing.Point(467, 1277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 40);
             this.button2.TabIndex = 221;
@@ -500,6 +521,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -511,6 +534,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -522,6 +546,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -533,6 +558,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label46
             // 
@@ -594,236 +620,6 @@
             this.label44.TabIndex = 210;
             this.label44.Text = "Other enterography findings";
             // 
-            // otherAbcLocTB
-            // 
-            this.otherAbcLocTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherAbcLocTB.Location = new System.Drawing.Point(340, 936);
-            this.otherAbcLocTB.Name = "otherAbcLocTB";
-            this.otherAbcLocTB.Size = new System.Drawing.Size(287, 26);
-            this.otherAbcLocTB.TabIndex = 208;
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.Black;
-            this.label38.Location = new System.Drawing.Point(335, 913);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(265, 20);
-            this.label38.TabIndex = 207;
-            this.label38.Text = "Other abcess location (mention)";
-            // 
-            // abcessLocationCB
-            // 
-            this.abcessLocationCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.abcessLocationCB.FormattingEnabled = true;
-            this.abcessLocationCB.Items.AddRange(new object[] {
-            "LIF",
-            "Deep pelvic",
-            "Rectovesical",
-            "Rectovaginal",
-            "Central abdominal",
-            "Subhepatic",
-            "Perisplenic",
-            "Retroperitoneal",
-            "Free/Peritonitis",
-            "Other"});
-            this.abcessLocationCB.Location = new System.Drawing.Point(491, 873);
-            this.abcessLocationCB.Name = "abcessLocationCB";
-            this.abcessLocationCB.Size = new System.Drawing.Size(136, 28);
-            this.abcessLocationCB.TabIndex = 206;
-            // 
-            // label39
-            // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(336, 879);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(141, 20);
-            this.label39.TabIndex = 205;
-            this.label39.Text = "Abcess location:";
-            // 
-            // volOfAbcTB
-            // 
-            this.volOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volOfAbcTB.Location = new System.Drawing.Point(551, 841);
-            this.volOfAbcTB.Name = "volOfAbcTB";
-            this.volOfAbcTB.Size = new System.Drawing.Size(76, 26);
-            this.volOfAbcTB.TabIndex = 204;
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(335, 845);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(187, 20);
-            this.label40.TabIndex = 203;
-            this.label40.Text = "Volume of abcess (ml)";
-            // 
-            // diameterOfAbcTB
-            // 
-            this.diameterOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diameterOfAbcTB.Location = new System.Drawing.Point(551, 810);
-            this.diameterOfAbcTB.Name = "diameterOfAbcTB";
-            this.diameterOfAbcTB.Size = new System.Drawing.Size(76, 26);
-            this.diameterOfAbcTB.TabIndex = 202;
-            // 
-            // label41
-            // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(335, 814);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(210, 20);
-            this.label41.TabIndex = 201;
-            this.label41.Text = "Diameter of abcess (mm)";
-            // 
-            // abcessFormChkbx
-            // 
-            this.abcessFormChkbx.AutoSize = true;
-            this.abcessFormChkbx.Location = new System.Drawing.Point(496, 786);
-            this.abcessFormChkbx.Name = "abcessFormChkbx";
-            this.abcessFormChkbx.Size = new System.Drawing.Size(15, 14);
-            this.abcessFormChkbx.TabIndex = 200;
-            this.abcessFormChkbx.UseVisualStyleBackColor = true;
-            // 
-            // label42
-            // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(335, 782);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(149, 20);
-            this.label42.TabIndex = 199;
-            this.label42.Text = "Abcess formation";
-            // 
-            // otherFistulaTypeTB
-            // 
-            this.otherFistulaTypeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherFistulaTypeTB.Location = new System.Drawing.Point(11, 938);
-            this.otherFistulaTypeTB.Name = "otherFistulaTypeTB";
-            this.otherFistulaTypeTB.Size = new System.Drawing.Size(265, 26);
-            this.otherFistulaTypeTB.TabIndex = 198;
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(6, 915);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(228, 20);
-            this.label37.TabIndex = 197;
-            this.label37.Text = "Other fistula type (mention)";
-            // 
-            // typeOfFistulaCB
-            // 
-            this.typeOfFistulaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeOfFistulaCB.FormattingEnabled = true;
-            this.typeOfFistulaCB.Items.AddRange(new object[] {
-            "Enterocentric",
-            "Enterocolic",
-            "Colocolic",
-            "Perinal",
-            "Rectovaginal",
-            "Rectovesical",
-            "Enterocutaneous",
-            "Other"});
-            this.typeOfFistulaCB.Location = new System.Drawing.Point(140, 878);
-            this.typeOfFistulaCB.Name = "typeOfFistulaCB";
-            this.typeOfFistulaCB.Size = new System.Drawing.Size(136, 28);
-            this.typeOfFistulaCB.TabIndex = 196;
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(7, 881);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(127, 20);
-            this.label36.TabIndex = 195;
-            this.label36.Text = "Type of fistula:";
-            // 
-            // diameterOfTrackTB
-            // 
-            this.diameterOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.diameterOfTrackTB.Location = new System.Drawing.Point(200, 844);
-            this.diameterOfTrackTB.Name = "diameterOfTrackTB";
-            this.diameterOfTrackTB.Size = new System.Drawing.Size(76, 26);
-            this.diameterOfTrackTB.TabIndex = 194;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(6, 847);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(188, 20);
-            this.label35.TabIndex = 193;
-            this.label35.Text = "Diameter of track(mm)";
-            // 
-            // lengthOfTrackTB
-            // 
-            this.lengthOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lengthOfTrackTB.Location = new System.Drawing.Point(200, 812);
-            this.lengthOfTrackTB.Name = "lengthOfTrackTB";
-            this.lengthOfTrackTB.Size = new System.Drawing.Size(76, 26);
-            this.lengthOfTrackTB.TabIndex = 192;
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(6, 816);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(171, 20);
-            this.label34.TabIndex = 191;
-            this.label34.Text = "Length of track(mm)";
-            // 
-            // fistulaChkbx
-            // 
-            this.fistulaChkbx.AutoSize = true;
-            this.fistulaChkbx.Location = new System.Drawing.Point(83, 788);
-            this.fistulaChkbx.Name = "fistulaChkbx";
-            this.fistulaChkbx.Size = new System.Drawing.Size(15, 14);
-            this.fistulaChkbx.TabIndex = 190;
-            this.fistulaChkbx.UseVisualStyleBackColor = true;
-            // 
             // label33
             // 
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -850,14 +646,6 @@
             this.label32.Size = new System.Drawing.Size(141, 24);
             this.label32.TabIndex = 188;
             this.label32.Text = "Complications";
-            // 
-            // activeSegmentTB
-            // 
-            this.activeSegmentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.activeSegmentTB.Location = new System.Drawing.Point(308, 701);
-            this.activeSegmentTB.Name = "activeSegmentTB";
-            this.activeSegmentTB.Size = new System.Drawing.Size(118, 26);
-            this.activeSegmentTB.TabIndex = 187;
             // 
             // label31
             // 
@@ -1634,16 +1422,6 @@
             this.ileumEnhancAmountTB.Size = new System.Drawing.Size(66, 26);
             this.ileumEnhancAmountTB.TabIndex = 92;
             // 
-            // ileumMucosalEnhancChkb
-            // 
-            this.ileumMucosalEnhancChkb.AutoSize = true;
-            this.ileumMucosalEnhancChkb.Location = new System.Drawing.Point(386, 148);
-            this.ileumMucosalEnhancChkb.Name = "ileumMucosalEnhancChkb";
-            this.ileumMucosalEnhancChkb.Size = new System.Drawing.Size(15, 14);
-            this.ileumMucosalEnhancChkb.TabIndex = 91;
-            this.ileumMucosalEnhancChkb.UseVisualStyleBackColor = true;
-            this.ileumMucosalEnhancChkb.CheckedChanged += new System.EventHandler(this.ileumMucosalEnhancChkb_CheckedChanged);
-            // 
             // jejuNarrwoingCB
             // 
             this.jejuNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2163,6 +1941,246 @@
             this.enterDate.TabIndex = 47;
             this.enterDate.ValueChanged += new System.EventHandler(this.enterDate_ValueChanged);
             // 
+            // ileumMucosalEnhancChkb
+            // 
+            this.ileumMucosalEnhancChkb.AutoSize = true;
+            this.ileumMucosalEnhancChkb.Location = new System.Drawing.Point(386, 148);
+            this.ileumMucosalEnhancChkb.Name = "ileumMucosalEnhancChkb";
+            this.ileumMucosalEnhancChkb.Size = new System.Drawing.Size(15, 14);
+            this.ileumMucosalEnhancChkb.TabIndex = 91;
+            this.ileumMucosalEnhancChkb.UseVisualStyleBackColor = true;
+            this.ileumMucosalEnhancChkb.CheckedChanged += new System.EventHandler(this.ileumMucosalEnhancChkb_CheckedChanged);
+            // 
+            // otherAbcLocTB
+            // 
+            this.otherAbcLocTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherAbcLocTB.Location = new System.Drawing.Point(340, 936);
+            this.otherAbcLocTB.Name = "otherAbcLocTB";
+            this.otherAbcLocTB.Size = new System.Drawing.Size(287, 26);
+            this.otherAbcLocTB.TabIndex = 208;
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(335, 913);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(265, 20);
+            this.label38.TabIndex = 207;
+            this.label38.Text = "Other abcess location (mention)";
+            // 
+            // abcessLocationCB
+            // 
+            this.abcessLocationCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abcessLocationCB.FormattingEnabled = true;
+            this.abcessLocationCB.Items.AddRange(new object[] {
+            "LIF",
+            "Deep pelvic",
+            "Rectovesical",
+            "Rectovaginal",
+            "Central abdominal",
+            "Subhepatic",
+            "Perisplenic",
+            "Retroperitoneal",
+            "Free/Peritonitis",
+            "Other"});
+            this.abcessLocationCB.Location = new System.Drawing.Point(491, 873);
+            this.abcessLocationCB.Name = "abcessLocationCB";
+            this.abcessLocationCB.Size = new System.Drawing.Size(136, 28);
+            this.abcessLocationCB.TabIndex = 206;
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(336, 879);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(141, 20);
+            this.label39.TabIndex = 205;
+            this.label39.Text = "Abcess location:";
+            // 
+            // volOfAbcTB
+            // 
+            this.volOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.volOfAbcTB.Location = new System.Drawing.Point(551, 841);
+            this.volOfAbcTB.Name = "volOfAbcTB";
+            this.volOfAbcTB.Size = new System.Drawing.Size(76, 26);
+            this.volOfAbcTB.TabIndex = 204;
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(335, 845);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(187, 20);
+            this.label40.TabIndex = 203;
+            this.label40.Text = "Volume of abcess (ml)";
+            // 
+            // diameterOfAbcTB
+            // 
+            this.diameterOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diameterOfAbcTB.Location = new System.Drawing.Point(551, 810);
+            this.diameterOfAbcTB.Name = "diameterOfAbcTB";
+            this.diameterOfAbcTB.Size = new System.Drawing.Size(76, 26);
+            this.diameterOfAbcTB.TabIndex = 202;
+            // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(335, 814);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(210, 20);
+            this.label41.TabIndex = 201;
+            this.label41.Text = "Diameter of abcess (mm)";
+            // 
+            // abcessFormChkbx
+            // 
+            this.abcessFormChkbx.AutoSize = true;
+            this.abcessFormChkbx.Location = new System.Drawing.Point(496, 786);
+            this.abcessFormChkbx.Name = "abcessFormChkbx";
+            this.abcessFormChkbx.Size = new System.Drawing.Size(15, 14);
+            this.abcessFormChkbx.TabIndex = 200;
+            this.abcessFormChkbx.UseVisualStyleBackColor = true;
+            // 
+            // label42
+            // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(335, 782);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(149, 20);
+            this.label42.TabIndex = 199;
+            this.label42.Text = "Abcess formation";
+            // 
+            // otherFistulaTypeTB
+            // 
+            this.otherFistulaTypeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherFistulaTypeTB.Location = new System.Drawing.Point(11, 938);
+            this.otherFistulaTypeTB.Name = "otherFistulaTypeTB";
+            this.otherFistulaTypeTB.Size = new System.Drawing.Size(265, 26);
+            this.otherFistulaTypeTB.TabIndex = 198;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(6, 915);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(228, 20);
+            this.label37.TabIndex = 197;
+            this.label37.Text = "Other fistula type (mention)";
+            // 
+            // typeOfFistulaCB
+            // 
+            this.typeOfFistulaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeOfFistulaCB.FormattingEnabled = true;
+            this.typeOfFistulaCB.Items.AddRange(new object[] {
+            "Enterocentric",
+            "Enterocolic",
+            "Colocolic",
+            "Perinal",
+            "Rectovaginal",
+            "Rectovesical",
+            "Enterocutaneous",
+            "Other"});
+            this.typeOfFistulaCB.Location = new System.Drawing.Point(140, 878);
+            this.typeOfFistulaCB.Name = "typeOfFistulaCB";
+            this.typeOfFistulaCB.Size = new System.Drawing.Size(136, 28);
+            this.typeOfFistulaCB.TabIndex = 196;
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Location = new System.Drawing.Point(7, 881);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(127, 20);
+            this.label36.TabIndex = 195;
+            this.label36.Text = "Type of fistula:";
+            // 
+            // diameterOfTrackTB
+            // 
+            this.diameterOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diameterOfTrackTB.Location = new System.Drawing.Point(200, 844);
+            this.diameterOfTrackTB.Name = "diameterOfTrackTB";
+            this.diameterOfTrackTB.Size = new System.Drawing.Size(76, 26);
+            this.diameterOfTrackTB.TabIndex = 194;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Black;
+            this.label35.Location = new System.Drawing.Point(6, 847);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(188, 20);
+            this.label35.TabIndex = 193;
+            this.label35.Text = "Diameter of track(mm)";
+            // 
+            // lengthOfTrackTB
+            // 
+            this.lengthOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lengthOfTrackTB.Location = new System.Drawing.Point(200, 812);
+            this.lengthOfTrackTB.Name = "lengthOfTrackTB";
+            this.lengthOfTrackTB.Size = new System.Drawing.Size(76, 26);
+            this.lengthOfTrackTB.TabIndex = 192;
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(6, 816);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(171, 20);
+            this.label34.TabIndex = 191;
+            this.label34.Text = "Length of track(mm)";
+            // 
+            // fistulaChkbx
+            // 
+            this.fistulaChkbx.AutoSize = true;
+            this.fistulaChkbx.Location = new System.Drawing.Point(83, 788);
+            this.fistulaChkbx.Name = "fistulaChkbx";
+            this.fistulaChkbx.Size = new System.Drawing.Size(15, 14);
+            this.fistulaChkbx.TabIndex = 190;
+            this.fistulaChkbx.UseVisualStyleBackColor = true;
+            // 
             // enterography_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2170,7 +2188,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1031, 561);
+            this.ClientSize = new System.Drawing.Size(1048, 561);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.patNameLb);
@@ -2370,5 +2388,6 @@
         private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
         private System.Windows.Forms.ComboBox enteroDatesCB;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
