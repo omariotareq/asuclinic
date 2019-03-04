@@ -425,11 +425,38 @@ string sql=	@"UPDATE asudb.dbo.labentery
             String sql = @"INSERT INTO  asudb.dbo.labentery (labdate,p_id) VALUES ('"  + ld + "','"+ p_id+ "'  )";
             executeQuery(sql);
         }
+		     // 3/2/2019
 
+		    public static DataTable getpathologydata(string date,int p_id)
+        {
 
+            string sql = @"SELECT * FROM asudb.dbo.patholgy WHERE patholgydate='"+date+"' AND p_id='"+p_id+"' ";
+            DataTable dt = getDataTable(sql);
+            return dt;
+        }
+		//3/2/2019
+		public static void Insertpatholgy(DateTime ld, int p_id)
+        {
+            String sql = @"INSERT INTO  asudb.dbo.patholgy (patholgydate,p_id) VALUES ('"  + ld + "','"+ p_id+ "'  )";
+            executeQuery(sql);
+        }
+		//3/2/2019
+		 public static DataTable getpatholgy(string date,int p_id)
+        {
 
+            string sql = @"SELECT * FROM asudb.dbo.patholgy WHERE patholgydate='"+date+"' AND p_id='"+p_id+"' ";
+            DataTable dt = getDataTable(sql);
+            return dt;
+        }
 
+		//3/2/20199
+		public static long Insertpatholgydata(DateTime date, string il,string ilad, string ilc, string nii, string Er, bool uc, bool gra, string other, string irco, string cradc, string balco, string cry,string basl,string crypco,string lamin,bool lamen,bool ulceo,bool gran,string otherfind,string finalreport,int pid)
+		{
 
+			String sql = @"INSERT INTO  asudb.dbo.patholgy (patholgydate, ileir, ilad, ilic,Niil,ilER,ucil,grail,otherileal,irco,cradco,balco,crycco,basalco,crypco,lamineosco,lameneutroco,ulceo,granilco,otherfindings,finalreport,firstvisit) 
+            VALUES ('"+ date + "',' " + il+ "','" + ilad + "','"+ ilc +"','" + nii + "','" + Er + "', '"+ uc + "','" +gra+ "','" +other+ "','" +irco+ "','" +cradc+ "','" +balco+ "', '" +cry+  "' , '" +basl+  "'  , '" +crypco+  "'  , '" +lamin+  "'  , '" +lamen+  "'  , '" +ulceo+  "', '" +gran+  "'  , '" +otherfind+  "'  , '" +finalreport+  "'  ) where p_id='"+pid+"' ";
+            executeQuery(sql);   
+			}
 		/*
 		public static DataTable getAllBuildings()
 		{
