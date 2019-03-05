@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -172,9 +173,16 @@ namespace WindowsFormsApplication5
                 MessageBox.Show("Saved Successfully");
                 refreshDateCB();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                switch (ex.Number)
+                {
+                    case 2601:
+                        MessageBox.Show("This date already contains pathology results registered on the system! \nPlease try a differenet date");
+                        break;
+                    default:
+                        throw;
+                }
             }
         }
 
