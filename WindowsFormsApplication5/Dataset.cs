@@ -297,7 +297,7 @@ namespace WindowsFormsApplication5
 		//SURGERYDATAENTERY
 		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id )
         {
-            String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication) VALUES ('"+ ds + "','"+ si + "',' " + opd + "','" + sc + "'WHERE p_id ='"+ p_id+ "')";
+            String sql = @"INSERT INTO  asudb.dbo.surgery (Dateofsurgery,surgicalindication,operativedetails,surgicalcomplication,p_id) VALUES ('"+ ds + "','"+ si + "',' " + opd + "','" + sc + "','"+ p_id+ "')";
 		    executeQuery(sql);
         }
 
@@ -510,7 +510,21 @@ string sql=	@"UPDATE asudb.dbo.labentery
             executeQuery(sql);
 			}
 
+                public static DataTable getSurgery(string date,int p_id)
+                {
 
+                    string sql = @"SELECT * FROM asudb.dbo.surgery WHERE Dateofsurgery='" + date + "' AND p_id= '"+p_id+"' ";
+                    DataTable dt = getDataTable(sql);
+                    return dt;
+                }
+
+                public static DataTable getSurgeryDates(int p_id)
+                {
+
+                    string sql = @"SELECT * FROM asudb.dbo.surgery WHERE  p_id= '" + p_id + "' ";
+                    DataTable dt = getDataTable(sql);
+                    return dt;
+                }
 
 
 
