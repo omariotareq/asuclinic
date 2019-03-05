@@ -18,6 +18,7 @@ namespace WindowsFormsApplication5
 			InitializeComponent();
 			patNameLb.Text = name;
 			ageLbl.Text = "" + age;
+			//hkjhk/
 			p_id = pa_id;
 		}
 
