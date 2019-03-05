@@ -290,9 +290,8 @@
             this.ileumInfReaction.FormatString = "D";
             this.ileumInfReaction.FormattingEnabled = true;
             this.ileumInfReaction.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "Focal",
+            "Diffuse"});
             this.ileumInfReaction.Location = new System.Drawing.Point(276, 124);
             this.ileumInfReaction.Name = "ileumInfReaction";
             this.ileumInfReaction.Size = new System.Drawing.Size(92, 32);
@@ -304,9 +303,9 @@
             this.archDist.FormatString = "D";
             this.archDist.FormattingEnabled = true;
             this.archDist.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "Mild",
+            "None",
+            "Severe"});
             this.archDist.Location = new System.Drawing.Point(276, 168);
             this.archDist.Name = "archDist";
             this.archDist.Size = new System.Drawing.Size(92, 32);
@@ -332,9 +331,9 @@
             this.infCells.FormatString = "D";
             this.infCells.FormattingEnabled = true;
             this.infCells.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "None",
+            "Mild",
+            "Severe"});
             this.infCells.Location = new System.Drawing.Point(276, 213);
             this.infCells.Name = "infCells";
             this.infCells.Size = new System.Drawing.Size(92, 32);
@@ -360,9 +359,9 @@
             this.neutInf.FormatString = "D";
             this.neutInf.FormattingEnabled = true;
             this.neutInf.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "None",
+            "Few",
+            "Many"});
             this.neutInf.Location = new System.Drawing.Point(276, 259);
             this.neutInf.Name = "neutInf";
             this.neutInf.Size = new System.Drawing.Size(92, 32);
@@ -454,9 +453,9 @@
             this.cryptAbc.FormatString = "D";
             this.cryptAbc.FormattingEnabled = true;
             this.cryptAbc.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "None",
+            "Mild",
+            "Severe"});
             this.cryptAbc.Location = new System.Drawing.Point(833, 258);
             this.cryptAbc.Name = "cryptAbc";
             this.cryptAbc.Size = new System.Drawing.Size(92, 32);
@@ -482,9 +481,9 @@
             this.basalLymph.FormatString = "D";
             this.basalLymph.FormattingEnabled = true;
             this.basalLymph.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "None",
+            "Mild",
+            "Severe"});
             this.basalLymph.Location = new System.Drawing.Point(833, 212);
             this.basalLymph.Name = "basalLymph";
             this.basalLymph.Size = new System.Drawing.Size(92, 32);
@@ -510,9 +509,9 @@
             this.cryptDist.FormatString = "D";
             this.cryptDist.FormattingEnabled = true;
             this.cryptDist.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "None",
+            "Mild",
+            "Severe"});
             this.cryptDist.Location = new System.Drawing.Point(833, 167);
             this.cryptDist.Name = "cryptDist";
             this.cryptDist.Size = new System.Drawing.Size(92, 32);
@@ -538,9 +537,8 @@
             this.colonInfReaction.FormatString = "D";
             this.colonInfReaction.FormattingEnabled = true;
             this.colonInfReaction.Items.AddRange(new object[] {
-            "Negative",
-            "Postive",
-            "Borderline"});
+            "Focal",
+            "Diffuse"});
             this.colonInfReaction.Location = new System.Drawing.Point(833, 123);
             this.colonInfReaction.Name = "colonInfReaction";
             this.colonInfReaction.Size = new System.Drawing.Size(92, 32);
@@ -724,6 +722,7 @@
             this.saveBtn.TabIndex = 141;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // pathology_form
             // 

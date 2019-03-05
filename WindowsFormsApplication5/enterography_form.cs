@@ -717,9 +717,16 @@ namespace WindowsFormsApplication5
                 button1.Enabled = true;
                     
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                switch (ex.Number)
+                {
+                    case 2601:
+                        MessageBox.Show("This date already contains enterography results registered on the system! \nPlease try a differenet date");
+                        break;
+                    default:
+                        throw;
+                }
             }
         }
 
