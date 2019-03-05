@@ -108,7 +108,7 @@ namespace WindowsFormsApplication5
             ef.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+private void button5_Click(object sender, EventArgs e)
         {
             int ri = dataGridView1.SelectedCells[0].RowIndex;
             int p_id = Convert.ToInt16(dataGridView1.Rows[ri].Cells[0].Value);
@@ -119,5 +119,16 @@ namespace WindowsFormsApplication5
             pathology_form ef = new pathology_form(p_id, name, age);
             ef.ShowDialog();
         }
-    }
+private void button5_Click(object sender, EventArgs e)
+        {
+            int ri = dataGridView1.SelectedCells[0].RowIndex;
+            int p_id = Convert.ToInt16(dataGridView1.Rows[ri].Cells[0].Value);
+            string name = Convert.ToString(dataGridView1.Rows[ri].Cells[1].Value) + Convert.ToString(dataGridView1.Rows[ri].Cells[2].Value) + " " + Convert.ToString(dataGridView1.Rows[ri].Cells[3].Value);
+            int age = Convert.ToInt16(dataGridView1.Rows[ri].Cells[4].Value);
+
+
+            surgery_form sf = new surgery_form(p_id, name, age);
+            ef.ShowDialog();
+        }
+    }        
 }
