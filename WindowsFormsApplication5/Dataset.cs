@@ -400,10 +400,61 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
         }
 
+		//3/6/2019
+		public static long Insertultrasonicinfo(int uscheck, DateTime date, string jeE, string ilE, string RcE, string TcE, string LcE, string SiE, int subed, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Sidema, string jela, string illa, string Rcla, string Tcla, string Lcla, string Sila, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Simt, string mhje, string mhil, string mhrc, string mhtc, string mhlc, string mhsi, string mpje, string mpil, string mprc, string mptc, string mplc, string mpsi, string mrje, string mril, string mrrc, string mrtc, string mrlc, string mrsi, string mpije, string mpiil, string mpirc, string mpitc, string mpilc, string mpisi, int fat, int local, string llsj, string llsi, string llsrc, string llstc, string llslc, string llssi, string llvj, string llvi, string llvrc, string llvtc,string llvlc,string llvsi,int muralfib,int luminalstric,int pres,string diam,int tl,int pof,int leng,string type,int pa,int dia,int vol,string loa,string otherlloac, string oth, string ultra, int p_id)
+		{
+
+			String sql = @"INSERT INTO asudb.dbo.ultrasonicradio
+           (ultrasoniccheck,Dateofus,moje,moil,morc,motc,molc,mosi,subedema,smtje,smtil ,smtrc,smttc ,smtlc ,smtis,slje,slil  ,slrc   ,sltc  ,sllcl    ,slsi,mtje,mt,mtrc,mttc    ,mtlc  ,mtsi,mhje,mhil ,mhrc,mhtc,mhlc ,mhsi ,mpje,mpil  ,mprc ,mptc  ,mplc,mpsi,mrje,mril  ,mrrc ,mrtc  ,mrlc,mrsi,mpije,mpiil,mpirc,mpitc,mpilc,mpisi,fatcreepsign,locallnenla,llsje,llsil,llsrc,llstc,llslc,llssi,llvje,llvil,llvrc,llvtc,llvlc,llvsi,muralfib,luminalstric,presdialation,prestronicdiam,tcl,pof,length,typeoffis,pa,Diam,volume,loa,otherlloac,otherfinding,ultrasoundreport ,p_id)  OUTPUT INSERTED.id as id
+
+		       VALUES ('" + uscheck+ "','" + date + "','" + jeE + "','" + ilE + "','" + RcE + "', '" + TcE + "','" + LcE + "','" + SiE + "','" + subed + "',, '" + jedema + "', '" + ildema + "', '" + Rcdema + "', '" + Tcdema + "', '" + Lcdema + "', '" + Sidema + "' , '" + jela + "' ,'" + illa + "' ,'" + Rcla + "' ,'" + Tcla + "','" + Lcla + "','" + Sila + "','" + jemt + "','" + ilmt + "','" + Rcmt + "','" + Tcmt + "','" + Lcmt + "','" + Simt + "' ,'" + mhje + "' ,'" + mhil + "' ,'" + mhrc + "' ,'" + mhtc + "','" + mhlc + "' ,'" + mhsi + "'   ,'" + mpje + "','" + mpil + "' ,'" + mprc + "' ,'" + mptc + "' ,'" + mplc + "' ,'" +mpsi  + "' ,'" + mrje + "', '" + mril + "', '" + mrrc + "', '" + mrtc + "', '" + mrlc + "', '" + mrsi + "', '" + mpije + "', '" + mpiil + "', '" + mpirc + "', '" + mpitc + "', '" + mpilc + "', '" + mpisi + "', '" + fat + "', '" + local+ "', '" + llsj + "', '" + llsi + "', '" + llsrc + "','" + llstc + "','" + llslc + "','" + llssi + "','" + llvj + "','" + llvi + "','" + llvrc + "','" + llvtc + "','" + llvlc + "','" + llvsi + "', '" + muralfib + "','" + luminalstric + "','" + pres + "','"+diam+ "',,'" + tl + "','" + pof + "','" + leng + "','" + type + "','" + pa +"' ,'" + dia + "','" + vol+ "','" + loa + "','" + otherlloac + "','"+oth+"','" + ultra + "','" + p_id + "' )";
+
+
+			DataTable dt = getDataTable(sql);
+			if (dt.Rows.Count > 0)
+			{
+				DataRow dataRow = dt.Rows[0];
+
+				long id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+				return id;
+			}
+			else
+			{
+				return -1;
+			}
+
+
+		}
+
+		//3/6/2019
+		public static DataTable getultrasonicDates(int p_id)
+		{
+			string sql = @"SELECT labdate FROM asudb.dbo.ultrasonicradio WHERE p_id='" + p_id + "'";
+			DataTable dt = getDataTable(sql);
+
+			return dt;
+		}
+		//3/6/2019
+		public static DataTable getUltrasonic(string date, int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.ultrasonicradio WHERE Dateofus='" + date + "' AND p_id='" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+		public static DataTable getUltrasonics(string date, int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.ultrasonicradio WHERE Dateofus='" + date + "' AND p_id='" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
 
 
 
-        public static DataTable getPatientLabDates( int p_id)
+
+		public static DataTable getPatientLabDates( int p_id)
         {
             string sql= @"SELECT labdate FROM asudb.dbo.labentery WHERE p_id='"+p_id+ "'";
             DataTable dt = getDataTable(sql);
