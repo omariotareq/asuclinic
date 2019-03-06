@@ -161,21 +161,15 @@
             this.sigColonPresDiaTB = new System.Windows.Forms.TextBox();
             this.totalActiveLengthTB = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.usDate = new System.Windows.Forms.DateTimePicker();
-            this.dateCB = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.presFistChkbx = new System.Windows.Forms.CheckBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.fistulaLengthTB = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.fistulaDiamTB = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.fistTypeCB = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.otherFisTypeTB = new System.Windows.Forms.TextBox();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.attachmentFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.usReportTB = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.otherFindingsTB = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
             this.otherTypeAbcTB = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.locationAbcCB = new System.Windows.Forms.ComboBox();
@@ -186,19 +180,25 @@
             this.label39 = new System.Windows.Forms.Label();
             this.presOfAbcChkbx = new System.Windows.Forms.CheckBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.otherFindingsTB = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.usReportTB = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.attachmentFlowPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.otherFisTypeTB = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.fistTypeCB = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.fistulaDiamTB = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.fistulaLengthTB = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.presFistChkbx = new System.Windows.Forms.CheckBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.usDate = new System.Windows.Forms.DateTimePicker();
+            this.dateCB = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -1657,186 +1657,105 @@
             this.groupBox1.TabIndex = 312;
             this.groupBox1.TabStop = false;
             // 
-            // label5
+            // saveBtn
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.saveBtn.Enabled = false;
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Location = new System.Drawing.Point(435, 1479);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(165, 34);
+            this.saveBtn.TabIndex = 391;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(838, 1375);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 21);
+            this.button1.TabIndex = 390;
+            this.button1.Text = "Upload";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(528, 1057);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 288);
+            this.flowLayoutPanel1.TabIndex = 389;
+            // 
+            // attachmentFlowPanel
+            // 
+            this.attachmentFlowPanel.Controls.Add(this.pictureBox3);
+            this.attachmentFlowPanel.Controls.Add(this.pictureBox4);
+            this.attachmentFlowPanel.Controls.Add(this.pictureBox5);
+            this.attachmentFlowPanel.Controls.Add(this.pictureBox6);
+            this.attachmentFlowPanel.Location = new System.Drawing.Point(617, 1358);
+            this.attachmentFlowPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.attachmentFlowPanel.Name = "attachmentFlowPanel";
+            this.attachmentFlowPanel.Size = new System.Drawing.Size(208, 50);
+            this.attachmentFlowPanel.TabIndex = 388;
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 30);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 24);
-            this.label5.TabIndex = 316;
-            this.label5.Text = "Date";
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.Location = new System.Drawing.Point(666, 1028);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(159, 20);
+            this.label46.TabIndex = 387;
+            this.label46.Text = "Ultrasound images";
             // 
-            // label12
+            // usReportTB
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.usReportTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usReportTB.Location = new System.Drawing.Point(20, 1272);
+            this.usReportTB.Multiline = true;
+            this.usReportTB.Name = "usReportTB";
+            this.usReportTB.Size = new System.Drawing.Size(458, 182);
+            this.usReportTB.TabIndex = 386;
+            // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(329, 14);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(168, 24);
-            this.label12.TabIndex = 314;
-            this.label12.Text = "Browse US dates";
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(16, 1244);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(150, 20);
+            this.label41.TabIndex = 385;
+            this.label41.Text = "Ultrasound report";
             // 
-            // usDate
+            // otherFindingsTB
             // 
-            this.usDate.CustomFormat = "dd/MM/yyyy";
-            this.usDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.usDate.Location = new System.Drawing.Point(20, 57);
-            this.usDate.Name = "usDate";
-            this.usDate.Size = new System.Drawing.Size(144, 31);
-            this.usDate.TabIndex = 315;
+            this.otherFindingsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherFindingsTB.Location = new System.Drawing.Point(20, 1047);
+            this.otherFindingsTB.Multiline = true;
+            this.otherFindingsTB.Name = "otherFindingsTB";
+            this.otherFindingsTB.Size = new System.Drawing.Size(327, 175);
+            this.otherFindingsTB.TabIndex = 384;
             // 
-            // dateCB
+            // label44
             // 
-            this.dateCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateCB.FormatString = "yyyy-MM-dd";
-            this.dateCB.FormattingEnabled = true;
-            this.dateCB.Location = new System.Drawing.Point(504, 10);
-            this.dateCB.Name = "dateCB";
-            this.dateCB.Size = new System.Drawing.Size(227, 32);
-            this.dateCB.TabIndex = 313;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Maroon;
-            this.label19.Location = new System.Drawing.Point(17, 764);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(141, 24);
-            this.label19.TabIndex = 362;
-            this.label19.Text = "Complications";
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.Navy;
-            this.label31.Location = new System.Drawing.Point(17, 801);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(201, 20);
-            this.label31.TabIndex = 363;
-            this.label31.Text = "Presence of fistula (US)";
-            // 
-            // presFistChkbx
-            // 
-            this.presFistChkbx.AutoSize = true;
-            this.presFistChkbx.Location = new System.Drawing.Point(264, 805);
-            this.presFistChkbx.Name = "presFistChkbx";
-            this.presFistChkbx.Size = new System.Drawing.Size(15, 14);
-            this.presFistChkbx.TabIndex = 364;
-            this.presFistChkbx.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Navy;
-            this.label32.Location = new System.Drawing.Point(16, 836);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(110, 20);
-            this.label32.TabIndex = 365;
-            this.label32.Text = "Length (mm)";
-            // 
-            // fistulaLengthTB
-            // 
-            this.fistulaLengthTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fistulaLengthTB.Location = new System.Drawing.Point(228, 838);
-            this.fistulaLengthTB.Name = "fistulaLengthTB";
-            this.fistulaLengthTB.Size = new System.Drawing.Size(85, 26);
-            this.fistulaLengthTB.TabIndex = 366;
-            // 
-            // label33
-            // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Navy;
-            this.label33.Location = new System.Drawing.Point(16, 877);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(127, 20);
-            this.label33.TabIndex = 367;
-            this.label33.Text = "Diameter (mm)";
-            // 
-            // fistulaDiamTB
-            // 
-            this.fistulaDiamTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fistulaDiamTB.Location = new System.Drawing.Point(228, 877);
-            this.fistulaDiamTB.Name = "fistulaDiamTB";
-            this.fistulaDiamTB.Size = new System.Drawing.Size(85, 26);
-            this.fistulaDiamTB.TabIndex = 368;
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Navy;
-            this.label34.Location = new System.Drawing.Point(16, 918);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(127, 20);
-            this.label34.TabIndex = 369;
-            this.label34.Text = "Type of fistule:";
-            // 
-            // fistTypeCB
-            // 
-            this.fistTypeCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fistTypeCB.FormattingEnabled = true;
-            this.fistTypeCB.Items.AddRange(new object[] {
-            "Enterocutaneous",
-            "Enterocolic",
-            "Colocolic",
-            "Perianal",
-            "Rectovaginal",
-            "Rectovesical",
-            "Enterocutaneous",
-            "Other"});
-            this.fistTypeCB.Location = new System.Drawing.Point(205, 916);
-            this.fistTypeCB.Name = "fistTypeCB";
-            this.fistTypeCB.Size = new System.Drawing.Size(131, 28);
-            this.fistTypeCB.TabIndex = 370;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Navy;
-            this.label35.Location = new System.Drawing.Point(16, 965);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(173, 20);
-            this.label35.TabIndex = 371;
-            this.label35.Text = "Other type of fistule:";
-            // 
-            // otherFisTypeTB
-            // 
-            this.otherFisTypeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherFisTypeTB.Location = new System.Drawing.Point(201, 962);
-            this.otherFisTypeTB.Name = "otherFisTypeTB";
-            this.otherFisTypeTB.Size = new System.Drawing.Size(138, 26);
-            this.otherFisTypeTB.TabIndex = 372;
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(16, 1019);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(122, 20);
+            this.label44.TabIndex = 383;
+            this.label44.Text = "Other findings";
             // 
             // otherTypeAbcTB
             // 
@@ -1962,80 +1881,186 @@
             this.label40.TabIndex = 373;
             this.label40.Text = "Presence of abcess (US)";
             // 
-            // otherFindingsTB
+            // otherFisTypeTB
             // 
-            this.otherFindingsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherFindingsTB.Location = new System.Drawing.Point(20, 1047);
-            this.otherFindingsTB.Multiline = true;
-            this.otherFindingsTB.Name = "otherFindingsTB";
-            this.otherFindingsTB.Size = new System.Drawing.Size(327, 175);
-            this.otherFindingsTB.TabIndex = 384;
+            this.otherFisTypeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherFisTypeTB.Location = new System.Drawing.Point(201, 962);
+            this.otherFisTypeTB.Name = "otherFisTypeTB";
+            this.otherFisTypeTB.Size = new System.Drawing.Size(138, 26);
+            this.otherFisTypeTB.TabIndex = 372;
             // 
-            // label44
+            // label35
             // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(16, 1019);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(122, 20);
-            this.label44.TabIndex = 383;
-            this.label44.Text = "Other findings";
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.Navy;
+            this.label35.Location = new System.Drawing.Point(16, 965);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(173, 20);
+            this.label35.TabIndex = 371;
+            this.label35.Text = "Other type of fistule:";
             // 
-            // usReportTB
+            // fistTypeCB
             // 
-            this.usReportTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usReportTB.Location = new System.Drawing.Point(20, 1272);
-            this.usReportTB.Multiline = true;
-            this.usReportTB.Name = "usReportTB";
-            this.usReportTB.Size = new System.Drawing.Size(458, 182);
-            this.usReportTB.TabIndex = 386;
+            this.fistTypeCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fistTypeCB.FormattingEnabled = true;
+            this.fistTypeCB.Items.AddRange(new object[] {
+            "Enterocutaneous",
+            "Enterocolic",
+            "Colocolic",
+            "Perianal",
+            "Rectovaginal",
+            "Rectovesical",
+            "Enterocutaneous",
+            "Other"});
+            this.fistTypeCB.Location = new System.Drawing.Point(205, 916);
+            this.fistTypeCB.Name = "fistTypeCB";
+            this.fistTypeCB.Size = new System.Drawing.Size(131, 28);
+            this.fistTypeCB.TabIndex = 370;
             // 
-            // label41
+            // label34
             // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.Black;
-            this.label41.Location = new System.Drawing.Point(16, 1244);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(150, 20);
-            this.label41.TabIndex = 385;
-            this.label41.Text = "Ultrasound report";
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Navy;
+            this.label34.Location = new System.Drawing.Point(16, 918);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(127, 20);
+            this.label34.TabIndex = 369;
+            this.label34.Text = "Type of fistule:";
             // 
-            // button1
+            // fistulaDiamTB
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(838, 1375);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 21);
-            this.button1.TabIndex = 390;
-            this.button1.Text = "Upload";
-            this.button1.UseVisualStyleBackColor = true;
+            this.fistulaDiamTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fistulaDiamTB.Location = new System.Drawing.Point(228, 877);
+            this.fistulaDiamTB.Name = "fistulaDiamTB";
+            this.fistulaDiamTB.Size = new System.Drawing.Size(85, 26);
+            this.fistulaDiamTB.TabIndex = 368;
             // 
-            // flowLayoutPanel1
+            // label33
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(528, 1057);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 288);
-            this.flowLayoutPanel1.TabIndex = 389;
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Navy;
+            this.label33.Location = new System.Drawing.Point(16, 877);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(127, 20);
+            this.label33.TabIndex = 367;
+            this.label33.Text = "Diameter (mm)";
             // 
-            // attachmentFlowPanel
+            // fistulaLengthTB
             // 
-            this.attachmentFlowPanel.Controls.Add(this.pictureBox3);
-            this.attachmentFlowPanel.Controls.Add(this.pictureBox4);
-            this.attachmentFlowPanel.Controls.Add(this.pictureBox5);
-            this.attachmentFlowPanel.Controls.Add(this.pictureBox6);
-            this.attachmentFlowPanel.Location = new System.Drawing.Point(617, 1358);
-            this.attachmentFlowPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.attachmentFlowPanel.Name = "attachmentFlowPanel";
-            this.attachmentFlowPanel.Size = new System.Drawing.Size(208, 50);
-            this.attachmentFlowPanel.TabIndex = 388;
+            this.fistulaLengthTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fistulaLengthTB.Location = new System.Drawing.Point(228, 838);
+            this.fistulaLengthTB.Name = "fistulaLengthTB";
+            this.fistulaLengthTB.Size = new System.Drawing.Size(85, 26);
+            this.fistulaLengthTB.TabIndex = 366;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Navy;
+            this.label32.Location = new System.Drawing.Point(16, 836);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(110, 20);
+            this.label32.TabIndex = 365;
+            this.label32.Text = "Length (mm)";
+            // 
+            // presFistChkbx
+            // 
+            this.presFistChkbx.AutoSize = true;
+            this.presFistChkbx.Location = new System.Drawing.Point(264, 805);
+            this.presFistChkbx.Name = "presFistChkbx";
+            this.presFistChkbx.Size = new System.Drawing.Size(15, 14);
+            this.presFistChkbx.TabIndex = 364;
+            this.presFistChkbx.UseVisualStyleBackColor = true;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Navy;
+            this.label31.Location = new System.Drawing.Point(17, 801);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(201, 20);
+            this.label31.TabIndex = 363;
+            this.label31.Text = "Presence of fistula (US)";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Maroon;
+            this.label19.Location = new System.Drawing.Point(17, 764);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(141, 24);
+            this.label19.TabIndex = 362;
+            this.label19.Text = "Complications";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 30);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 24);
+            this.label5.TabIndex = 316;
+            this.label5.Text = "Date";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(329, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(168, 24);
+            this.label12.TabIndex = 314;
+            this.label12.Text = "Browse US dates";
+            // 
+            // usDate
+            // 
+            this.usDate.CustomFormat = "dd/MM/yyyy";
+            this.usDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.usDate.Location = new System.Drawing.Point(20, 57);
+            this.usDate.Name = "usDate";
+            this.usDate.Size = new System.Drawing.Size(144, 31);
+            this.usDate.TabIndex = 315;
+            // 
+            // dateCB
+            // 
+            this.dateCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateCB.FormatString = "yyyy-MM-dd";
+            this.dateCB.FormattingEnabled = true;
+            this.dateCB.Location = new System.Drawing.Point(504, 10);
+            this.dateCB.Name = "dateCB";
+            this.dateCB.Size = new System.Drawing.Size(227, 32);
+            this.dateCB.TabIndex = 313;
             // 
             // pictureBox3
             // 
@@ -2080,31 +2105,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Black;
-            this.label46.Location = new System.Drawing.Point(666, 1028);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(159, 20);
-            this.label46.TabIndex = 387;
-            this.label46.Text = "Ultrasound images";
-            // 
-            // saveBtn
-            // 
-            this.saveBtn.Enabled = false;
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(435, 1479);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(165, 34);
-            this.saveBtn.TabIndex = 391;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = true;
             // 
             // ultrasound_form
             // 

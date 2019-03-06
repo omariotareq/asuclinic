@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dataset.cs" />
+    <Compile Include="endoscopy_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="endoscopy_form.Designer.cs">
+      <DependentUpon>endoscopy_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="enterography_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
       <DependentUpon>ultrasound_form.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="endoscopy_form.resx">
+      <DependentUpon>endoscopy_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="enterography_form.resx">
       <DependentUpon>enterography_form.cs</DependentUpon>
     </EmbeddedResource>

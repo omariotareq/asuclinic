@@ -42,6 +42,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +120,7 @@
             // 
             this.patHistoryBtn.BackColor = System.Drawing.Color.PowderBlue;
             this.patHistoryBtn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patHistoryBtn.Location = new System.Drawing.Point(12, 482);
+            this.patHistoryBtn.Location = new System.Drawing.Point(78, 481);
             this.patHistoryBtn.Name = "patHistoryBtn";
             this.patHistoryBtn.Size = new System.Drawing.Size(145, 33);
             this.patHistoryBtn.TabIndex = 3;
@@ -130,7 +132,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.PowderBlue;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(189, 482);
+            this.button2.Location = new System.Drawing.Point(255, 481);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 33);
             this.button2.TabIndex = 4;
@@ -142,7 +144,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.PowderBlue;
             this.button3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(366, 482);
+            this.button3.Location = new System.Drawing.Point(432, 481);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 33);
             this.button3.TabIndex = 5;
@@ -154,7 +156,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.PowderBlue;
             this.button4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(543, 482);
+            this.button4.Location = new System.Drawing.Point(609, 481);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(145, 33);
             this.button4.TabIndex = 6;
@@ -166,13 +168,37 @@
             // 
             this.button5.BackColor = System.Drawing.Color.PowderBlue;
             this.button5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(720, 482);
+            this.button5.Location = new System.Drawing.Point(786, 481);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(145, 33);
             this.button5.TabIndex = 7;
             this.button5.Text = "Surgery";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.PowderBlue;
+            this.button6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(78, 538);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(145, 33);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "Ultrasound";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.PowderBlue;
+            this.button7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(255, 538);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(145, 33);
+            this.button7.TabIndex = 9;
+            this.button7.Text = "Endoscopy";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // patients_form
             // 
@@ -181,6 +207,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 616);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -215,5 +243,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
 	}
 }

@@ -2376,18 +2376,18 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox otherEnterographyTB;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox enteroReportTB;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
+        private System.Windows.Forms.ComboBox enteroDatesCB;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel attachmentFlowPanel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
-        private System.Windows.Forms.ComboBox enteroDatesCB;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label46;
     }
 }
