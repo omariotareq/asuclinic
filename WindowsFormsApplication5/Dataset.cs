@@ -401,11 +401,11 @@ string sql=	@"UPDATE asudb.dbo.labentery
         }
 
 		//3/6/2019
-		public static long Insertultrasonicinfo(int uscheck, DateTime date, string moje, string moil, string moRc, string moTc, string moLc, string moSi, int subed, string smtje, string smtil, string smtRc, string smtTc, string smtLc, string smtSi, string slje, string slil, string slRc, string slTc, string slLc, string slSi,string mtje,string mtil,string mtrc,string mttc,string mtlc,string mtsi, string mhje, string mhil, string mhrc, string mhtc, string mhlc, string mhsi, string mpje, string mpil, string mprc, string mptc, string mplc, string mpsi, string mrje, string mril, string mrrc, string mrtc, string mrlc, string mrsi, string mpije, string mpiil, string mpirc, string mpitc, string mpilc, string mpisi, int fat, int local, string llsj, string llsi, string llsrc, string llstc, string llslc, string llssi, string llvj, string llvi, string llvrc, string llvtc,string llvlc,string llvsi,int muralfib,int luminalstric,int pres,string jdiam,string idiam,string rtcdiam,string trcdiam,string ltcdiam,string sigcdiam,string tl,int pof,string leng,string fis_dia,string type,string othertypefis,int pa,int dia,int vol,string loa,string otherlloac, string oth, string ultra, int p_id)
+		public static int Insertultrasonicinfo(int uscheck, DateTime date, string moje, string moil, string moRc, string moTc, string moLc, string moSi, int subed, string smtje, string smtil, string smtRc, string smtTc, string smtLc, string smtSi, string slje, string slil, string slRc, string slTc, string slLc, string slSi,string mtje,string mtil,string mtrc,string mttc,string mtlc,string mtsi, string mhje, string mhil, string mhrc, string mhtc, string mhlc, string mhsi, string mpje, string mpil, string mprc, string mptc, string mplc, string mpsi, string mrje, string mril, string mrrc, string mrtc, string mrlc, string mrsi, string mpije, string mpiil, string mpirc, string mpitc, string mpilc, string mpisi, int fat, int local, string llsj, string llsi, string llsrc, string llstc, string llslc, string llssi, string llvj, string llvi, string llvrc, string llvtc,string llvlc,string llvsi,int muralfib,int luminalstric,int pres,string jdiam,string idiam,string rtcdiam,string trcdiam,string ltcdiam,string sigcdiam,string tl,int pof,string leng,string fis_dia,string type,string othertypefis,int pa,string dia,string vol,string loa,string otherlloac, string oth, string ultra, int p_id)
 		{
 
 			String sql = @"INSERT INTO asudb.dbo.ultrasonicradio
-           (ultrasoniccheck,Dateofus,moje,moil,morc,motc,molc,mosi,subedema,smtje,smtil ,smtrc,smttc ,smtlc ,smtsi,slje,slil  ,slrc   ,sltc  ,sllc ,slsi,mtje,mtil,mtrc,mttc,mtlc,mtsi,mhje,mhil ,mhrc,mhtc,mhlc ,mhsi ,mpje,mpil  ,mprc ,mptc  ,mplc,mpsi,mrje,mril  ,mrrc ,mrtc  ,mrlc,mrsi,mpije,mpiil,mpirc,mpitc,mpilc,mpisi,fatcreepsign,locallnenla,llsje,llsil,llsrc,llstc,llslc,llssi,llvje,llvil,llvrc,llvtc,llvlc,llvsi,muralfib,luminalstric,presdialation,prestronicdiam,tcl,pof,length,fis_diameter,typeoffis,othertypefis,pa,Diam,volume,loa,otherlloac,otherfinding,ultrasoundreport ,p_id)  OUTPUT INSERTED.id as id
+           (ultrasoniccheck,Dateofus,moje,moil,morc,motc,molc,mosi,subedema,smtje,smtil ,smtrc,smttc ,smtlc ,smtsi,slje,slil  ,slrc   ,sltc  ,sllc ,slsi,mtje,mtil,mtrc,mttc,mtlc,mtsi,mhje,mhil ,mhrc,mhtc,mhlc ,mhsi ,mpje,mpil  ,mprc ,mptc  ,mplc,mpsi,mrje,mril  ,mrrc ,mrtc  ,mrlc,mrsi,mpije,mpiil,mpirc,mpitc,mpilc,mpisi,fatcreepsign,locallnenla,llsje,llsil,llsrc,llstc,llslc,llssi,llvje,llvil,llvrc,llvtc,llvlc,llvsi,muralfib,luminalstric,presdialation,jejuPresDiam,ileumPresDiam,rtColonPresDiam,trColonPresDiam,ltColonPresDiam,sigColonPresDiam,tcl,pof,length,fis_diameter,typeoffis,othertypefis,pa,Diam,volume,loa,otherlloac,otherfinding,ultrasoundreport ,p_id)  OUTPUT INSERTED.id as id
 
 		       VALUES ('" + uscheck + "','" + date + "','" + moje + "','" + moil + "','" + moRc + "', '" + moTc + "','" + moLc + "','" + moSi + "','" + subed + "' , '" + smtje + "' ,'" + smtil + "' ,'" + smtRc + "' ,'" + smtTc + "','" + smtLc + "','" + smtSi + "','" + slje + "','" + slil + "','" + slRc + "','" + slTc + "','" + slLc + "','" + slSi +"','" + mtje + "','" + mtil + "','" + mtrc + "','" + mttc + "','" + mtlc + "','" + mtsi + "' ,'" + mhje + "' ,'" + mhil + "' ,'" + mhrc + "' ,'" + mhtc + "','" + mhlc + "' ,'" + mhsi + "'   ,'" + mpje + "','" + mpil + "' ,'" + mprc + "' ,'" + mptc + "' ,'" + mplc + "' ,'" + mpsi + "' ,'" + mrje + "', '" + mril + "', '" + mrrc + "', '" + mrtc + "', '" + mrlc + "', '" + mrsi + "', '" + mpije + "', '" + mpiil + "', '" + mpirc + "', '" + mpitc + "', '" + mpilc + "', '" + mpisi + "', '" + fat + "', '" + local + "', '" + llsj + "', '" + llsi + "', '" + llsrc + "','" + llstc + "','" + llslc + "','" + llssi + "','" + llvj + "','" + llvi + "','" + llvrc + "','" + llvtc + "','" + llvlc + "','" + llvsi + "', '" + muralfib + "','" + luminalstric + "','" + pres + "','" + jdiam + "','" + idiam + "','" + rtcdiam + "','" + trcdiam + "','" + ltcdiam + "','" + sigcdiam + "','" + tl + "','" + pof + "','" + leng + "','" + fis_dia + "','" + type + "','" + othertypefis + "','" + pa + "' ,'" + dia + "','" + vol + "','" + loa + "','" + otherlloac + "','" + oth + "','" + ultra + "','" + p_id + "' )";
 
@@ -415,7 +415,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			{
 				DataRow dataRow = dt.Rows[0];
 
-				long id = Convert.ToInt32(dt.Rows[0]["id"]);
+                int id = Convert.ToInt32(dt.Rows[0]["id"]);
 
 				return id;
 			}
@@ -427,10 +427,23 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 		}
 
+        public static DataTable getUltrasonicImages(int p_id)
+        {
+            string sql = @"SELECT u_image FROM asudb.dbo.u_images WHERE u_id='" + p_id + "'";
+            DataTable dt = getDataTable(sql);
+
+            return dt;
+        }
+        public static void insertUltraImages(int id, byte[] image)
+        {
+            String sql = @"INSERT INTO  asudb.dbo.u_images (u_id,u_image) VALUES ('" + id + "','" + image + "'  )";
+            executeQuery(sql);
+        }
+
 		//3/6/2019
 		public static DataTable getultrasonicDates(int p_id)
 		{
-			string sql = @"SELECT labdate FROM asudb.dbo.ultrasonicradio WHERE p_id='" + p_id + "'";
+            string sql = @"SELECT Dateofus FROM asudb.dbo.ultrasonicradio WHERE p_id='" + p_id + "'";
 			DataTable dt = getDataTable(sql);
 
 			return dt;
@@ -551,6 +564,28 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 				}
 
+                public static void parametrizedInsertUltra(int e_id, byte[] image)
+                {
+
+                    string sql = "INSERT INTO  asudb.dbo.u_images (u_id,u_image) VALUES  (@id,@img);";
+
+                    using (SqlConnection connection = new SqlConnection(DataSet.myBuilder.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        var entroid = new SqlParameter("id", SqlDbType.Int);
+                        // entroid.Value = e_id;
+
+                        var img = new SqlParameter("img", SqlDbType.VarBinary);
+                        // img.Value = image;
+
+                        command.Parameters.AddWithValue("@id", e_id);
+                        command.Parameters.AddWithValue("@img", image);
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+
+                }
 
 		//3/2/20199
                 public static void Insertpatholgydata(DateTime date, string il, string ilad, string ilc, string nii, string Er, int uc, int gra, string other, string irco, string cradc, string balco, string cry, string lamin, int lamen, int ulceo, int gran, string otherfind, string finalreport, int pid)

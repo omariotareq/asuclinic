@@ -734,7 +734,6 @@ namespace WindowsFormsApplication5
         private void fillData()
         {
             int temp = 0;
-            
             char[] temp_char = new char[7];
 
             /* char[] muc_enhanc_char ;
@@ -1165,9 +1164,11 @@ namespace WindowsFormsApplication5
 
         private void enteroDatesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             fillData();
             fillImages();
             button1.Enabled = true;
+            Cursor.Current = Cursors.Default;
         }
 
         private void enterDate_ValueChanged(object sender, EventArgs e)

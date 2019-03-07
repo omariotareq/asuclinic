@@ -28,6 +28,8 @@ namespace WindowsFormsApplication5
             ageLbl.Text =""+ age;
         }
 
+
+
         private void loadHistory()
         {
             this.patDiagnosisCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patBindingSource, "statusofdiagnosis", true));

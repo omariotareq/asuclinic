@@ -50,6 +50,7 @@
             this.ClientSize = new System.Drawing.Size(634, 556);
             this.Controls.Add(this.previewPb);
             this.Name = "PhotoPreviewForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PhotoPreviewForm";
             ((System.ComponentModel.ISupportInitialize)(this.previewPb)).EndInit();
             this.ResumeLayout(false);

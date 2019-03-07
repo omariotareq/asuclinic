@@ -213,24 +213,20 @@
             // 
             // ageLbl
             // 
-            this.ageLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(575, 16);
+            this.ageLbl.Location = new System.Drawing.Point(567, 16);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
             this.ageLbl.TabIndex = 46;
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(515, 16);
+            this.label20.Location = new System.Drawing.Point(507, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
             this.label20.TabIndex = 45;
@@ -238,24 +234,20 @@
             // 
             // patNameLb
             // 
-            this.patNameLb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.patNameLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(278, 16);
+            this.patNameLb.Location = new System.Drawing.Point(270, 16);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
             this.patNameLb.TabIndex = 44;
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(201, 16);
+            this.label18.Location = new System.Drawing.Point(193, 16);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 43;
@@ -263,12 +255,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 9);
+            this.label3.Location = new System.Drawing.Point(-2, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 31);
             this.label3.TabIndex = 42;
@@ -276,7 +266,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSize = true;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.activeSegmentTB);
             this.groupBox1.Controls.Add(this.button2);
@@ -442,7 +432,7 @@
             this.groupBox1.Controls.Add(this.lengthOfTrackTB);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.fistulaChkbx);
-            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Location = new System.Drawing.Point(4, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(996, 1336);
             this.groupBox1.TabIndex = 47;
@@ -450,6 +440,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(869, 1244);
             this.button1.Name = "button1";
@@ -461,6 +452,7 @@
             // 
             // activeSegmentTB
             // 
+            this.activeSegmentTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.activeSegmentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeSegmentTB.Location = new System.Drawing.Point(308, 701);
             this.activeSegmentTB.Name = "activeSegmentTB";
@@ -469,6 +461,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button2.Location = new System.Drawing.Point(467, 1277);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 40);
@@ -479,6 +472,7 @@
             // 
             // enteroDatesCB
             // 
+            this.enteroDatesCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.enteroDatesCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enteroDatesCB.FormatString = "yyyy-MM-dd";
             this.enteroDatesCB.FormattingEnabled = true;
@@ -494,6 +488,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(541, 1018);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 206);
@@ -501,6 +496,7 @@
             // 
             // attachmentFlowPanel
             // 
+            this.attachmentFlowPanel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.attachmentFlowPanel.Controls.Add(this.pictureBox3);
             this.attachmentFlowPanel.Controls.Add(this.pictureBox4);
             this.attachmentFlowPanel.Controls.Add(this.pictureBox5);
@@ -513,6 +509,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox3.Location = new System.Drawing.Point(2, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
@@ -526,6 +523,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox4.Location = new System.Drawing.Point(53, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -538,6 +536,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox5.Location = new System.Drawing.Point(104, 2);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
@@ -550,6 +549,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox6.Location = new System.Drawing.Point(155, 2);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
@@ -562,9 +562,7 @@
             // 
             // label46
             // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label46.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.Black;
@@ -576,6 +574,7 @@
             // 
             // enteroReportTB
             // 
+            this.enteroReportTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.enteroReportTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enteroReportTB.Location = new System.Drawing.Point(11, 1018);
             this.enteroReportTB.Multiline = true;
@@ -585,9 +584,7 @@
             // 
             // label45
             // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label45.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.Black;
@@ -599,6 +596,7 @@
             // 
             // otherEnterographyTB
             // 
+            this.otherEnterographyTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.otherEnterographyTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.otherEnterographyTB.Location = new System.Drawing.Point(688, 808);
             this.otherEnterographyTB.Multiline = true;
@@ -608,9 +606,7 @@
             // 
             // label44
             // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label44.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
@@ -622,9 +618,7 @@
             // 
             // label33
             // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
@@ -636,9 +630,7 @@
             // 
             // label32
             // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(6, 748);
@@ -649,9 +641,7 @@
             // 
             // label31
             // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(6, 704);
@@ -662,6 +652,7 @@
             // 
             // rectumLossHausChkb
             // 
+            this.rectumLossHausChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumLossHausChkb.AutoSize = true;
             this.rectumLossHausChkb.Location = new System.Drawing.Point(906, 647);
             this.rectumLossHausChkb.Name = "rectumLossHausChkb";
@@ -671,6 +662,7 @@
             // 
             // sigColonLossHausChkb
             // 
+            this.sigColonLossHausChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonLossHausChkb.AutoSize = true;
             this.sigColonLossHausChkb.Location = new System.Drawing.Point(806, 647);
             this.sigColonLossHausChkb.Name = "sigColonLossHausChkb";
@@ -680,6 +672,7 @@
             // 
             // ltColonLossHausChkb
             // 
+            this.ltColonLossHausChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonLossHausChkb.AutoSize = true;
             this.ltColonLossHausChkb.Location = new System.Drawing.Point(701, 647);
             this.ltColonLossHausChkb.Name = "ltColonLossHausChkb";
@@ -689,6 +682,7 @@
             // 
             // trColonLossHausChkb
             // 
+            this.trColonLossHausChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonLossHausChkb.AutoSize = true;
             this.trColonLossHausChkb.Location = new System.Drawing.Point(597, 647);
             this.trColonLossHausChkb.Name = "trColonLossHausChkb";
@@ -698,6 +692,7 @@
             // 
             // rtColonLossHausChkb
             // 
+            this.rtColonLossHausChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonLossHausChkb.AutoSize = true;
             this.rtColonLossHausChkb.Location = new System.Drawing.Point(493, 647);
             this.rtColonLossHausChkb.Name = "rtColonLossHausChkb";
@@ -707,6 +702,7 @@
             // 
             // rectumNarrwoingCB
             // 
+            this.rectumNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumNarrwoingCB.FormattingEnabled = true;
             this.rectumNarrwoingCB.Location = new System.Drawing.Point(869, 531);
@@ -716,6 +712,7 @@
             // 
             // rectumPresDiameterTB
             // 
+            this.rectumPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumPresDiameterTB.Location = new System.Drawing.Point(880, 601);
             this.rectumPresDiameterTB.Name = "rectumPresDiameterTB";
@@ -724,6 +721,7 @@
             // 
             // rectumMuralFibrosisChkbx
             // 
+            this.rectumMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumMuralFibrosisChkbx.AutoSize = true;
             this.rectumMuralFibrosisChkbx.Location = new System.Drawing.Point(906, 505);
             this.rectumMuralFibrosisChkbx.Name = "rectumMuralFibrosisChkbx";
@@ -733,6 +731,7 @@
             // 
             // rectumPresDilatatiorChkbx
             // 
+            this.rectumPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumPresDilatatiorChkbx.AutoSize = true;
             this.rectumPresDilatatiorChkbx.Location = new System.Drawing.Point(906, 574);
             this.rectumPresDilatatiorChkbx.Name = "rectumPresDilatatiorChkbx";
@@ -742,6 +741,7 @@
             // 
             // rectumCombSignChkbx
             // 
+            this.rectumCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumCombSignChkbx.AutoSize = true;
             this.rectumCombSignChkbx.Location = new System.Drawing.Point(906, 471);
             this.rectumCombSignChkbx.Name = "rectumCombSignChkbx";
@@ -751,6 +751,7 @@
             // 
             // rectumFatEdemaChkbx
             // 
+            this.rectumFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumFatEdemaChkbx.AutoSize = true;
             this.rectumFatEdemaChkbx.Location = new System.Drawing.Point(906, 437);
             this.rectumFatEdemaChkbx.Name = "rectumFatEdemaChkbx";
@@ -760,6 +761,7 @@
             // 
             // rectumMuralThicknessTB
             // 
+            this.rectumMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumMuralThicknessTB.Location = new System.Drawing.Point(880, 400);
             this.rectumMuralThicknessTB.Name = "rectumMuralThicknessTB";
@@ -768,6 +770,7 @@
             // 
             // rectumLengthActTB
             // 
+            this.rectumLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumLengthActTB.Location = new System.Drawing.Point(880, 366);
             this.rectumLengthActTB.Name = "rectumLengthActTB";
@@ -776,6 +779,7 @@
             // 
             // rectumMuralAbcChkb
             // 
+            this.rectumMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumMuralAbcChkb.AutoSize = true;
             this.rectumMuralAbcChkb.Location = new System.Drawing.Point(906, 336);
             this.rectumMuralAbcChkb.Name = "rectumMuralAbcChkb";
@@ -785,6 +789,7 @@
             // 
             // rectumThicknessEdemaTB
             // 
+            this.rectumThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumThicknessEdemaTB.Location = new System.Drawing.Point(880, 288);
             this.rectumThicknessEdemaTB.Name = "rectumThicknessEdemaTB";
@@ -793,6 +798,7 @@
             // 
             // rectumSubMucEdemaChkbx
             // 
+            this.rectumSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumSubMucEdemaChkbx.AutoSize = true;
             this.rectumSubMucEdemaChkbx.Location = new System.Drawing.Point(906, 248);
             this.rectumSubMucEdemaChkbx.Name = "rectumSubMucEdemaChkbx";
@@ -802,6 +808,7 @@
             // 
             // rectumMucIrrChkbx
             // 
+            this.rectumMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumMucIrrChkbx.AutoSize = true;
             this.rectumMucIrrChkbx.Location = new System.Drawing.Point(906, 217);
             this.rectumMucIrrChkbx.Name = "rectumMucIrrChkbx";
@@ -811,6 +818,7 @@
             // 
             // rectumEnhancAmountTB
             // 
+            this.rectumEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rectumEnhancAmountTB.Location = new System.Drawing.Point(880, 175);
             this.rectumEnhancAmountTB.Name = "rectumEnhancAmountTB";
@@ -819,6 +827,7 @@
             // 
             // rectumMucosalEnhancChkb
             // 
+            this.rectumMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rectumMucosalEnhancChkb.AutoSize = true;
             this.rectumMucosalEnhancChkb.Location = new System.Drawing.Point(906, 148);
             this.rectumMucosalEnhancChkb.Name = "rectumMucosalEnhancChkb";
@@ -828,6 +837,7 @@
             // 
             // sigColonNarrwoingCB
             // 
+            this.sigColonNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonNarrwoingCB.FormattingEnabled = true;
             this.sigColonNarrwoingCB.Location = new System.Drawing.Point(769, 531);
@@ -837,6 +847,7 @@
             // 
             // sigColonPresDiameterTB
             // 
+            this.sigColonPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonPresDiameterTB.Location = new System.Drawing.Point(780, 601);
             this.sigColonPresDiameterTB.Name = "sigColonPresDiameterTB";
@@ -845,6 +856,7 @@
             // 
             // sigColonMuralFibrosisChkbx
             // 
+            this.sigColonMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonMuralFibrosisChkbx.AutoSize = true;
             this.sigColonMuralFibrosisChkbx.Location = new System.Drawing.Point(806, 505);
             this.sigColonMuralFibrosisChkbx.Name = "sigColonMuralFibrosisChkbx";
@@ -854,6 +866,7 @@
             // 
             // sigColonPresDilatatiorChkbx
             // 
+            this.sigColonPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonPresDilatatiorChkbx.AutoSize = true;
             this.sigColonPresDilatatiorChkbx.Location = new System.Drawing.Point(806, 574);
             this.sigColonPresDilatatiorChkbx.Name = "sigColonPresDilatatiorChkbx";
@@ -863,6 +876,7 @@
             // 
             // sigColonCombSignChkbx
             // 
+            this.sigColonCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonCombSignChkbx.AutoSize = true;
             this.sigColonCombSignChkbx.Location = new System.Drawing.Point(806, 471);
             this.sigColonCombSignChkbx.Name = "sigColonCombSignChkbx";
@@ -872,6 +886,7 @@
             // 
             // sigColonFatEdemaChkbx
             // 
+            this.sigColonFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonFatEdemaChkbx.AutoSize = true;
             this.sigColonFatEdemaChkbx.Location = new System.Drawing.Point(806, 437);
             this.sigColonFatEdemaChkbx.Name = "sigColonFatEdemaChkbx";
@@ -881,6 +896,7 @@
             // 
             // sigColonMuralThicknessTB
             // 
+            this.sigColonMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonMuralThicknessTB.Location = new System.Drawing.Point(780, 400);
             this.sigColonMuralThicknessTB.Name = "sigColonMuralThicknessTB";
@@ -889,6 +905,7 @@
             // 
             // sigColonLengthActTB
             // 
+            this.sigColonLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonLengthActTB.Location = new System.Drawing.Point(780, 366);
             this.sigColonLengthActTB.Name = "sigColonLengthActTB";
@@ -897,6 +914,7 @@
             // 
             // sigColonMuralAbcChkb
             // 
+            this.sigColonMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonMuralAbcChkb.AutoSize = true;
             this.sigColonMuralAbcChkb.Location = new System.Drawing.Point(806, 336);
             this.sigColonMuralAbcChkb.Name = "sigColonMuralAbcChkb";
@@ -906,6 +924,7 @@
             // 
             // sigColonThicknessEdemaTB
             // 
+            this.sigColonThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonThicknessEdemaTB.Location = new System.Drawing.Point(780, 288);
             this.sigColonThicknessEdemaTB.Name = "sigColonThicknessEdemaTB";
@@ -914,6 +933,7 @@
             // 
             // sigColonSubMucEdemaChkbx
             // 
+            this.sigColonSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonSubMucEdemaChkbx.AutoSize = true;
             this.sigColonSubMucEdemaChkbx.Location = new System.Drawing.Point(806, 248);
             this.sigColonSubMucEdemaChkbx.Name = "sigColonSubMucEdemaChkbx";
@@ -923,6 +943,7 @@
             // 
             // sigColonMucIrrChkbx
             // 
+            this.sigColonMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonMucIrrChkbx.AutoSize = true;
             this.sigColonMucIrrChkbx.Location = new System.Drawing.Point(806, 217);
             this.sigColonMucIrrChkbx.Name = "sigColonMucIrrChkbx";
@@ -932,6 +953,7 @@
             // 
             // sigColonEnhancAmountTB
             // 
+            this.sigColonEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonEnhancAmountTB.Location = new System.Drawing.Point(780, 175);
             this.sigColonEnhancAmountTB.Name = "sigColonEnhancAmountTB";
@@ -940,6 +962,7 @@
             // 
             // sigColonMucosalEnhancChkb
             // 
+            this.sigColonMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.sigColonMucosalEnhancChkb.AutoSize = true;
             this.sigColonMucosalEnhancChkb.Location = new System.Drawing.Point(806, 148);
             this.sigColonMucosalEnhancChkb.Name = "sigColonMucosalEnhancChkb";
@@ -949,6 +972,7 @@
             // 
             // ltColonNarrwoingCB
             // 
+            this.ltColonNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonNarrwoingCB.FormattingEnabled = true;
             this.ltColonNarrwoingCB.Location = new System.Drawing.Point(664, 531);
@@ -958,6 +982,7 @@
             // 
             // ltColonPresDiameterTB
             // 
+            this.ltColonPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonPresDiameterTB.Location = new System.Drawing.Point(675, 601);
             this.ltColonPresDiameterTB.Name = "ltColonPresDiameterTB";
@@ -966,6 +991,7 @@
             // 
             // ltColonMuralFibrosisChkbx
             // 
+            this.ltColonMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonMuralFibrosisChkbx.AutoSize = true;
             this.ltColonMuralFibrosisChkbx.Location = new System.Drawing.Point(701, 505);
             this.ltColonMuralFibrosisChkbx.Name = "ltColonMuralFibrosisChkbx";
@@ -975,6 +1001,7 @@
             // 
             // ltColonPresDilatatiorChkbx
             // 
+            this.ltColonPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonPresDilatatiorChkbx.AutoSize = true;
             this.ltColonPresDilatatiorChkbx.Location = new System.Drawing.Point(701, 574);
             this.ltColonPresDilatatiorChkbx.Name = "ltColonPresDilatatiorChkbx";
@@ -984,6 +1011,7 @@
             // 
             // ltColonCombSignChkbx
             // 
+            this.ltColonCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonCombSignChkbx.AutoSize = true;
             this.ltColonCombSignChkbx.Location = new System.Drawing.Point(701, 471);
             this.ltColonCombSignChkbx.Name = "ltColonCombSignChkbx";
@@ -993,6 +1021,7 @@
             // 
             // ltColonFatEdemaChkbx
             // 
+            this.ltColonFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonFatEdemaChkbx.AutoSize = true;
             this.ltColonFatEdemaChkbx.Location = new System.Drawing.Point(701, 437);
             this.ltColonFatEdemaChkbx.Name = "ltColonFatEdemaChkbx";
@@ -1002,6 +1031,7 @@
             // 
             // ltColonMuralThicknessTB
             // 
+            this.ltColonMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonMuralThicknessTB.Location = new System.Drawing.Point(675, 400);
             this.ltColonMuralThicknessTB.Name = "ltColonMuralThicknessTB";
@@ -1010,6 +1040,7 @@
             // 
             // ltColonLengthActTB
             // 
+            this.ltColonLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonLengthActTB.Location = new System.Drawing.Point(675, 366);
             this.ltColonLengthActTB.Name = "ltColonLengthActTB";
@@ -1018,6 +1049,7 @@
             // 
             // ltColonMuralAbcChkb
             // 
+            this.ltColonMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonMuralAbcChkb.AutoSize = true;
             this.ltColonMuralAbcChkb.Location = new System.Drawing.Point(701, 336);
             this.ltColonMuralAbcChkb.Name = "ltColonMuralAbcChkb";
@@ -1027,6 +1059,7 @@
             // 
             // ltColonThicknessEdemaTB
             // 
+            this.ltColonThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonThicknessEdemaTB.Location = new System.Drawing.Point(675, 288);
             this.ltColonThicknessEdemaTB.Name = "ltColonThicknessEdemaTB";
@@ -1035,6 +1068,7 @@
             // 
             // ltColonSubMucEdemaChkbx
             // 
+            this.ltColonSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonSubMucEdemaChkbx.AutoSize = true;
             this.ltColonSubMucEdemaChkbx.Location = new System.Drawing.Point(701, 248);
             this.ltColonSubMucEdemaChkbx.Name = "ltColonSubMucEdemaChkbx";
@@ -1044,6 +1078,7 @@
             // 
             // ltColonMucIrrChkbx
             // 
+            this.ltColonMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonMucIrrChkbx.AutoSize = true;
             this.ltColonMucIrrChkbx.Location = new System.Drawing.Point(701, 217);
             this.ltColonMucIrrChkbx.Name = "ltColonMucIrrChkbx";
@@ -1053,6 +1088,7 @@
             // 
             // ltColonEnhancAmountTB
             // 
+            this.ltColonEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonEnhancAmountTB.Location = new System.Drawing.Point(675, 175);
             this.ltColonEnhancAmountTB.Name = "ltColonEnhancAmountTB";
@@ -1061,6 +1097,7 @@
             // 
             // ltColonMucosalEnhancChkb
             // 
+            this.ltColonMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ltColonMucosalEnhancChkb.AutoSize = true;
             this.ltColonMucosalEnhancChkb.Location = new System.Drawing.Point(701, 148);
             this.ltColonMucosalEnhancChkb.Name = "ltColonMucosalEnhancChkb";
@@ -1070,6 +1107,7 @@
             // 
             // trColonNarrwoingCB
             // 
+            this.trColonNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonNarrwoingCB.FormattingEnabled = true;
             this.trColonNarrwoingCB.Location = new System.Drawing.Point(560, 531);
@@ -1079,6 +1117,7 @@
             // 
             // trColonPresDiameterTB
             // 
+            this.trColonPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonPresDiameterTB.Location = new System.Drawing.Point(571, 601);
             this.trColonPresDiameterTB.Name = "trColonPresDiameterTB";
@@ -1087,6 +1126,7 @@
             // 
             // trColonMuralFibrosisChkbx
             // 
+            this.trColonMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonMuralFibrosisChkbx.AutoSize = true;
             this.trColonMuralFibrosisChkbx.Location = new System.Drawing.Point(597, 505);
             this.trColonMuralFibrosisChkbx.Name = "trColonMuralFibrosisChkbx";
@@ -1096,6 +1136,7 @@
             // 
             // trColonPresDilatatiorChkbx
             // 
+            this.trColonPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonPresDilatatiorChkbx.AutoSize = true;
             this.trColonPresDilatatiorChkbx.Location = new System.Drawing.Point(597, 574);
             this.trColonPresDilatatiorChkbx.Name = "trColonPresDilatatiorChkbx";
@@ -1105,6 +1146,7 @@
             // 
             // trColonCombSignChkbx
             // 
+            this.trColonCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonCombSignChkbx.AutoSize = true;
             this.trColonCombSignChkbx.Location = new System.Drawing.Point(597, 471);
             this.trColonCombSignChkbx.Name = "trColonCombSignChkbx";
@@ -1114,6 +1156,7 @@
             // 
             // trColonFatEdemaChkbx
             // 
+            this.trColonFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonFatEdemaChkbx.AutoSize = true;
             this.trColonFatEdemaChkbx.Location = new System.Drawing.Point(597, 437);
             this.trColonFatEdemaChkbx.Name = "trColonFatEdemaChkbx";
@@ -1123,6 +1166,7 @@
             // 
             // trColonMuralThicknessTB
             // 
+            this.trColonMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonMuralThicknessTB.Location = new System.Drawing.Point(571, 400);
             this.trColonMuralThicknessTB.Name = "trColonMuralThicknessTB";
@@ -1131,6 +1175,7 @@
             // 
             // trColonLengthActTB
             // 
+            this.trColonLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonLengthActTB.Location = new System.Drawing.Point(571, 366);
             this.trColonLengthActTB.Name = "trColonLengthActTB";
@@ -1139,6 +1184,7 @@
             // 
             // trColonMuralAbcChkb
             // 
+            this.trColonMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonMuralAbcChkb.AutoSize = true;
             this.trColonMuralAbcChkb.Location = new System.Drawing.Point(597, 336);
             this.trColonMuralAbcChkb.Name = "trColonMuralAbcChkb";
@@ -1148,6 +1194,7 @@
             // 
             // trColonThicknessEdemaTB
             // 
+            this.trColonThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonThicknessEdemaTB.Location = new System.Drawing.Point(571, 288);
             this.trColonThicknessEdemaTB.Name = "trColonThicknessEdemaTB";
@@ -1156,6 +1203,7 @@
             // 
             // trColonSubMucEdemaChkbx
             // 
+            this.trColonSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonSubMucEdemaChkbx.AutoSize = true;
             this.trColonSubMucEdemaChkbx.Location = new System.Drawing.Point(597, 248);
             this.trColonSubMucEdemaChkbx.Name = "trColonSubMucEdemaChkbx";
@@ -1165,6 +1213,7 @@
             // 
             // trColonMucIrrChkbx
             // 
+            this.trColonMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonMucIrrChkbx.AutoSize = true;
             this.trColonMucIrrChkbx.Location = new System.Drawing.Point(597, 217);
             this.trColonMucIrrChkbx.Name = "trColonMucIrrChkbx";
@@ -1174,6 +1223,7 @@
             // 
             // trColonEnhancAmountTB
             // 
+            this.trColonEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonEnhancAmountTB.Location = new System.Drawing.Point(571, 175);
             this.trColonEnhancAmountTB.Name = "trColonEnhancAmountTB";
@@ -1182,6 +1232,7 @@
             // 
             // trColonMucosalEnhancChkb
             // 
+            this.trColonMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.trColonMucosalEnhancChkb.AutoSize = true;
             this.trColonMucosalEnhancChkb.Location = new System.Drawing.Point(597, 148);
             this.trColonMucosalEnhancChkb.Name = "trColonMucosalEnhancChkb";
@@ -1191,6 +1242,7 @@
             // 
             // rtColonNarrwoingCB
             // 
+            this.rtColonNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonNarrwoingCB.FormattingEnabled = true;
             this.rtColonNarrwoingCB.Location = new System.Drawing.Point(456, 531);
@@ -1200,6 +1252,7 @@
             // 
             // rtColonPresDiameterTB
             // 
+            this.rtColonPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonPresDiameterTB.Location = new System.Drawing.Point(467, 601);
             this.rtColonPresDiameterTB.Name = "rtColonPresDiameterTB";
@@ -1208,6 +1261,7 @@
             // 
             // rtColonMuralFibrosisChkbx
             // 
+            this.rtColonMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonMuralFibrosisChkbx.AutoSize = true;
             this.rtColonMuralFibrosisChkbx.Location = new System.Drawing.Point(493, 505);
             this.rtColonMuralFibrosisChkbx.Name = "rtColonMuralFibrosisChkbx";
@@ -1217,6 +1271,7 @@
             // 
             // rtColonPresDilatatiorChkbx
             // 
+            this.rtColonPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonPresDilatatiorChkbx.AutoSize = true;
             this.rtColonPresDilatatiorChkbx.Location = new System.Drawing.Point(493, 574);
             this.rtColonPresDilatatiorChkbx.Name = "rtColonPresDilatatiorChkbx";
@@ -1226,6 +1281,7 @@
             // 
             // rtColonCombSignChkbx
             // 
+            this.rtColonCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonCombSignChkbx.AutoSize = true;
             this.rtColonCombSignChkbx.Location = new System.Drawing.Point(493, 471);
             this.rtColonCombSignChkbx.Name = "rtColonCombSignChkbx";
@@ -1235,6 +1291,7 @@
             // 
             // rtColonFatEdemaChkbx
             // 
+            this.rtColonFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonFatEdemaChkbx.AutoSize = true;
             this.rtColonFatEdemaChkbx.Location = new System.Drawing.Point(493, 437);
             this.rtColonFatEdemaChkbx.Name = "rtColonFatEdemaChkbx";
@@ -1244,6 +1301,7 @@
             // 
             // rtColonMuralThicknessTB
             // 
+            this.rtColonMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonMuralThicknessTB.Location = new System.Drawing.Point(467, 400);
             this.rtColonMuralThicknessTB.Name = "rtColonMuralThicknessTB";
@@ -1252,6 +1310,7 @@
             // 
             // rtColonLengthActTB
             // 
+            this.rtColonLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonLengthActTB.Location = new System.Drawing.Point(467, 366);
             this.rtColonLengthActTB.Name = "rtColonLengthActTB";
@@ -1260,6 +1319,7 @@
             // 
             // rtColonMuralAbcChkb
             // 
+            this.rtColonMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonMuralAbcChkb.AutoSize = true;
             this.rtColonMuralAbcChkb.Location = new System.Drawing.Point(493, 336);
             this.rtColonMuralAbcChkb.Name = "rtColonMuralAbcChkb";
@@ -1269,6 +1329,7 @@
             // 
             // rtColonThicknessEdemaTB
             // 
+            this.rtColonThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonThicknessEdemaTB.Location = new System.Drawing.Point(467, 288);
             this.rtColonThicknessEdemaTB.Name = "rtColonThicknessEdemaTB";
@@ -1277,6 +1338,7 @@
             // 
             // rtColonSubMucEdemaChkbx
             // 
+            this.rtColonSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonSubMucEdemaChkbx.AutoSize = true;
             this.rtColonSubMucEdemaChkbx.Location = new System.Drawing.Point(493, 248);
             this.rtColonSubMucEdemaChkbx.Name = "rtColonSubMucEdemaChkbx";
@@ -1286,6 +1348,7 @@
             // 
             // rtColonMucIrrChkbx
             // 
+            this.rtColonMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonMucIrrChkbx.AutoSize = true;
             this.rtColonMucIrrChkbx.Location = new System.Drawing.Point(493, 217);
             this.rtColonMucIrrChkbx.Name = "rtColonMucIrrChkbx";
@@ -1295,6 +1358,7 @@
             // 
             // rtColonEnhancAmountTB
             // 
+            this.rtColonEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonEnhancAmountTB.Location = new System.Drawing.Point(467, 175);
             this.rtColonEnhancAmountTB.Name = "rtColonEnhancAmountTB";
@@ -1303,6 +1367,7 @@
             // 
             // rtColonMucosalEnhancChkb
             // 
+            this.rtColonMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rtColonMucosalEnhancChkb.AutoSize = true;
             this.rtColonMucosalEnhancChkb.Location = new System.Drawing.Point(493, 148);
             this.rtColonMucosalEnhancChkb.Name = "rtColonMucosalEnhancChkb";
@@ -1312,6 +1377,7 @@
             // 
             // ileumNarrwoingCB
             // 
+            this.ileumNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumNarrwoingCB.FormattingEnabled = true;
             this.ileumNarrwoingCB.Location = new System.Drawing.Point(349, 531);
@@ -1321,6 +1387,7 @@
             // 
             // ileumPresDiameterTB
             // 
+            this.ileumPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumPresDiameterTB.Location = new System.Drawing.Point(360, 601);
             this.ileumPresDiameterTB.Name = "ileumPresDiameterTB";
@@ -1329,6 +1396,7 @@
             // 
             // ileumMuralFibrosisChkbx
             // 
+            this.ileumMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumMuralFibrosisChkbx.AutoSize = true;
             this.ileumMuralFibrosisChkbx.Location = new System.Drawing.Point(386, 505);
             this.ileumMuralFibrosisChkbx.Name = "ileumMuralFibrosisChkbx";
@@ -1338,6 +1406,7 @@
             // 
             // ileumPresDilatatiorChkbx
             // 
+            this.ileumPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumPresDilatatiorChkbx.AutoSize = true;
             this.ileumPresDilatatiorChkbx.Location = new System.Drawing.Point(386, 574);
             this.ileumPresDilatatiorChkbx.Name = "ileumPresDilatatiorChkbx";
@@ -1347,6 +1416,7 @@
             // 
             // ileumCombSignChkbx
             // 
+            this.ileumCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumCombSignChkbx.AutoSize = true;
             this.ileumCombSignChkbx.Location = new System.Drawing.Point(386, 471);
             this.ileumCombSignChkbx.Name = "ileumCombSignChkbx";
@@ -1356,6 +1426,7 @@
             // 
             // ileumFatEdemaChkbx
             // 
+            this.ileumFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumFatEdemaChkbx.AutoSize = true;
             this.ileumFatEdemaChkbx.Location = new System.Drawing.Point(386, 437);
             this.ileumFatEdemaChkbx.Name = "ileumFatEdemaChkbx";
@@ -1365,6 +1436,7 @@
             // 
             // ileumMuralThicknessTB
             // 
+            this.ileumMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumMuralThicknessTB.Location = new System.Drawing.Point(360, 400);
             this.ileumMuralThicknessTB.Name = "ileumMuralThicknessTB";
@@ -1373,6 +1445,7 @@
             // 
             // ileumLengthActTB
             // 
+            this.ileumLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumLengthActTB.Location = new System.Drawing.Point(360, 366);
             this.ileumLengthActTB.Name = "ileumLengthActTB";
@@ -1381,6 +1454,7 @@
             // 
             // ileumMuralAbcChkb
             // 
+            this.ileumMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumMuralAbcChkb.AutoSize = true;
             this.ileumMuralAbcChkb.Location = new System.Drawing.Point(386, 336);
             this.ileumMuralAbcChkb.Name = "ileumMuralAbcChkb";
@@ -1390,6 +1464,7 @@
             // 
             // ileumThicknessEdemaTB
             // 
+            this.ileumThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumThicknessEdemaTB.Location = new System.Drawing.Point(360, 288);
             this.ileumThicknessEdemaTB.Name = "ileumThicknessEdemaTB";
@@ -1398,6 +1473,7 @@
             // 
             // ileumSubMucEdemaChkbx
             // 
+            this.ileumSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumSubMucEdemaChkbx.AutoSize = true;
             this.ileumSubMucEdemaChkbx.Location = new System.Drawing.Point(386, 248);
             this.ileumSubMucEdemaChkbx.Name = "ileumSubMucEdemaChkbx";
@@ -1407,6 +1483,7 @@
             // 
             // ileumMucIrrChkbx
             // 
+            this.ileumMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumMucIrrChkbx.AutoSize = true;
             this.ileumMucIrrChkbx.Location = new System.Drawing.Point(386, 217);
             this.ileumMucIrrChkbx.Name = "ileumMucIrrChkbx";
@@ -1416,6 +1493,7 @@
             // 
             // ileumEnhancAmountTB
             // 
+            this.ileumEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ileumEnhancAmountTB.Location = new System.Drawing.Point(360, 175);
             this.ileumEnhancAmountTB.Name = "ileumEnhancAmountTB";
@@ -1424,6 +1502,7 @@
             // 
             // jejuNarrwoingCB
             // 
+            this.jejuNarrwoingCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuNarrwoingCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuNarrwoingCB.FormattingEnabled = true;
             this.jejuNarrwoingCB.Location = new System.Drawing.Point(243, 531);
@@ -1433,6 +1512,7 @@
             // 
             // jejuPresDiameterTB
             // 
+            this.jejuPresDiameterTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuPresDiameterTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuPresDiameterTB.Location = new System.Drawing.Point(254, 601);
             this.jejuPresDiameterTB.Name = "jejuPresDiameterTB";
@@ -1441,6 +1521,7 @@
             // 
             // jejuMuralFibrosisChkbx
             // 
+            this.jejuMuralFibrosisChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuMuralFibrosisChkbx.AutoSize = true;
             this.jejuMuralFibrosisChkbx.Location = new System.Drawing.Point(280, 505);
             this.jejuMuralFibrosisChkbx.Name = "jejuMuralFibrosisChkbx";
@@ -1450,6 +1531,7 @@
             // 
             // jejuPresDilatatiorChkbx
             // 
+            this.jejuPresDilatatiorChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuPresDilatatiorChkbx.AutoSize = true;
             this.jejuPresDilatatiorChkbx.Location = new System.Drawing.Point(280, 574);
             this.jejuPresDilatatiorChkbx.Name = "jejuPresDilatatiorChkbx";
@@ -1459,6 +1541,7 @@
             // 
             // jejuCombSignChkbx
             // 
+            this.jejuCombSignChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuCombSignChkbx.AutoSize = true;
             this.jejuCombSignChkbx.Location = new System.Drawing.Point(280, 471);
             this.jejuCombSignChkbx.Name = "jejuCombSignChkbx";
@@ -1468,6 +1551,7 @@
             // 
             // jejuFatEdemaChkbx
             // 
+            this.jejuFatEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuFatEdemaChkbx.AutoSize = true;
             this.jejuFatEdemaChkbx.Location = new System.Drawing.Point(280, 437);
             this.jejuFatEdemaChkbx.Name = "jejuFatEdemaChkbx";
@@ -1477,6 +1561,7 @@
             // 
             // jejuMuralThicknessTB
             // 
+            this.jejuMuralThicknessTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuMuralThicknessTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuMuralThicknessTB.Location = new System.Drawing.Point(254, 400);
             this.jejuMuralThicknessTB.Name = "jejuMuralThicknessTB";
@@ -1485,6 +1570,7 @@
             // 
             // jejuLengthActTB
             // 
+            this.jejuLengthActTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuLengthActTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuLengthActTB.Location = new System.Drawing.Point(254, 366);
             this.jejuLengthActTB.Name = "jejuLengthActTB";
@@ -1493,6 +1579,7 @@
             // 
             // jejuMuralAbcChkb
             // 
+            this.jejuMuralAbcChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuMuralAbcChkb.AutoSize = true;
             this.jejuMuralAbcChkb.Location = new System.Drawing.Point(280, 336);
             this.jejuMuralAbcChkb.Name = "jejuMuralAbcChkb";
@@ -1502,6 +1589,7 @@
             // 
             // jejuThicknessEdemaTB
             // 
+            this.jejuThicknessEdemaTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuThicknessEdemaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuThicknessEdemaTB.Location = new System.Drawing.Point(254, 288);
             this.jejuThicknessEdemaTB.Name = "jejuThicknessEdemaTB";
@@ -1510,6 +1598,7 @@
             // 
             // jejuSubMucEdemaChkbx
             // 
+            this.jejuSubMucEdemaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuSubMucEdemaChkbx.AutoSize = true;
             this.jejuSubMucEdemaChkbx.Location = new System.Drawing.Point(280, 248);
             this.jejuSubMucEdemaChkbx.Name = "jejuSubMucEdemaChkbx";
@@ -1519,6 +1608,7 @@
             // 
             // jejuMucIrrChkbx
             // 
+            this.jejuMucIrrChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuMucIrrChkbx.AutoSize = true;
             this.jejuMucIrrChkbx.Location = new System.Drawing.Point(280, 217);
             this.jejuMucIrrChkbx.Name = "jejuMucIrrChkbx";
@@ -1528,6 +1618,7 @@
             // 
             // jejuEnhancAmountTB
             // 
+            this.jejuEnhancAmountTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuEnhancAmountTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jejuEnhancAmountTB.Location = new System.Drawing.Point(254, 175);
             this.jejuEnhancAmountTB.Name = "jejuEnhancAmountTB";
@@ -1536,6 +1627,7 @@
             // 
             // jejuMucosalEnhancChkb
             // 
+            this.jejuMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.jejuMucosalEnhancChkb.AutoSize = true;
             this.jejuMucosalEnhancChkb.Location = new System.Drawing.Point(280, 148);
             this.jejuMucosalEnhancChkb.Name = "jejuMucosalEnhancChkb";
@@ -1545,9 +1637,7 @@
             // 
             // label30
             // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Navy;
@@ -1559,9 +1649,7 @@
             // 
             // label29
             // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Navy;
@@ -1573,9 +1661,7 @@
             // 
             // label28
             // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Navy;
@@ -1587,9 +1673,7 @@
             // 
             // label27
             // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Navy;
@@ -1601,9 +1685,7 @@
             // 
             // label26
             // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Navy;
@@ -1615,9 +1697,7 @@
             // 
             // label25
             // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Navy;
@@ -1629,9 +1709,7 @@
             // 
             // label24
             // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Navy;
@@ -1643,9 +1721,7 @@
             // 
             // label23
             // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Navy;
@@ -1657,9 +1733,7 @@
             // 
             // label22
             // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Navy;
@@ -1671,9 +1745,7 @@
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Navy;
@@ -1685,9 +1757,7 @@
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Navy;
@@ -1699,9 +1769,7 @@
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Navy;
@@ -1713,9 +1781,7 @@
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Navy;
@@ -1727,9 +1793,7 @@
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
@@ -1741,9 +1805,7 @@
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Navy;
@@ -1755,9 +1817,7 @@
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Navy;
@@ -1769,9 +1829,7 @@
             // 
             // label12
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Maroon;
@@ -1783,9 +1841,7 @@
             // 
             // label11
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Maroon;
@@ -1797,9 +1853,7 @@
             // 
             // label10
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Maroon;
@@ -1811,9 +1865,7 @@
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Maroon;
@@ -1825,9 +1877,7 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Maroon;
@@ -1839,9 +1889,7 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Maroon;
@@ -1853,9 +1901,7 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Maroon;
@@ -1867,9 +1913,7 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 115);
@@ -1880,9 +1924,7 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(440, 78);
@@ -1893,6 +1935,7 @@
             // 
             // studyTypeCB
             // 
+            this.studyTypeCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.studyTypeCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studyTypeCB.FormattingEnabled = true;
             this.studyTypeCB.Items.AddRange(new object[] {
@@ -1906,9 +1949,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 57);
@@ -1919,9 +1960,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(311, 16);
@@ -1932,6 +1971,7 @@
             // 
             // enterDate
             // 
+            this.enterDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.enterDate.CustomFormat = "dd/MM/yyyy";
             this.enterDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -1943,6 +1983,7 @@
             // 
             // ileumMucosalEnhancChkb
             // 
+            this.ileumMucosalEnhancChkb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ileumMucosalEnhancChkb.AutoSize = true;
             this.ileumMucosalEnhancChkb.Location = new System.Drawing.Point(386, 148);
             this.ileumMucosalEnhancChkb.Name = "ileumMucosalEnhancChkb";
@@ -1953,6 +1994,7 @@
             // 
             // otherAbcLocTB
             // 
+            this.otherAbcLocTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.otherAbcLocTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.otherAbcLocTB.Location = new System.Drawing.Point(340, 936);
             this.otherAbcLocTB.Name = "otherAbcLocTB";
@@ -1961,9 +2003,7 @@
             // 
             // label38
             // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.Black;
@@ -1975,6 +2015,7 @@
             // 
             // abcessLocationCB
             // 
+            this.abcessLocationCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.abcessLocationCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.abcessLocationCB.FormattingEnabled = true;
             this.abcessLocationCB.Items.AddRange(new object[] {
@@ -1995,9 +2036,7 @@
             // 
             // label39
             // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.Black;
@@ -2009,6 +2048,7 @@
             // 
             // volOfAbcTB
             // 
+            this.volOfAbcTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.volOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.volOfAbcTB.Location = new System.Drawing.Point(551, 841);
             this.volOfAbcTB.Name = "volOfAbcTB";
@@ -2017,9 +2057,7 @@
             // 
             // label40
             // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.Black;
@@ -2031,6 +2069,7 @@
             // 
             // diameterOfAbcTB
             // 
+            this.diameterOfAbcTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.diameterOfAbcTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diameterOfAbcTB.Location = new System.Drawing.Point(551, 810);
             this.diameterOfAbcTB.Name = "diameterOfAbcTB";
@@ -2039,9 +2078,7 @@
             // 
             // label41
             // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.Black;
@@ -2053,6 +2090,7 @@
             // 
             // abcessFormChkbx
             // 
+            this.abcessFormChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.abcessFormChkbx.AutoSize = true;
             this.abcessFormChkbx.Location = new System.Drawing.Point(496, 786);
             this.abcessFormChkbx.Name = "abcessFormChkbx";
@@ -2062,9 +2100,7 @@
             // 
             // label42
             // 
-            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label42.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Black;
@@ -2076,6 +2112,7 @@
             // 
             // otherFistulaTypeTB
             // 
+            this.otherFistulaTypeTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.otherFistulaTypeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.otherFistulaTypeTB.Location = new System.Drawing.Point(11, 938);
             this.otherFistulaTypeTB.Name = "otherFistulaTypeTB";
@@ -2084,9 +2121,7 @@
             // 
             // label37
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.Black;
@@ -2098,6 +2133,7 @@
             // 
             // typeOfFistulaCB
             // 
+            this.typeOfFistulaCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.typeOfFistulaCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeOfFistulaCB.FormattingEnabled = true;
             this.typeOfFistulaCB.Items.AddRange(new object[] {
@@ -2116,9 +2152,7 @@
             // 
             // label36
             // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Black;
@@ -2130,6 +2164,7 @@
             // 
             // diameterOfTrackTB
             // 
+            this.diameterOfTrackTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.diameterOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diameterOfTrackTB.Location = new System.Drawing.Point(200, 844);
             this.diameterOfTrackTB.Name = "diameterOfTrackTB";
@@ -2138,9 +2173,7 @@
             // 
             // label35
             // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
@@ -2152,6 +2185,7 @@
             // 
             // lengthOfTrackTB
             // 
+            this.lengthOfTrackTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lengthOfTrackTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lengthOfTrackTB.Location = new System.Drawing.Point(200, 812);
             this.lengthOfTrackTB.Name = "lengthOfTrackTB";
@@ -2160,9 +2194,7 @@
             // 
             // label34
             // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
@@ -2174,6 +2206,7 @@
             // 
             // fistulaChkbx
             // 
+            this.fistulaChkbx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.fistulaChkbx.AutoSize = true;
             this.fistulaChkbx.Location = new System.Drawing.Point(83, 788);
             this.fistulaChkbx.Name = "fistulaChkbx";
@@ -2186,7 +2219,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1031, 561);
             this.Controls.Add(this.ageLbl);
@@ -2195,8 +2227,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1047, 720);
             this.Name = "enterography_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "enterography_form";

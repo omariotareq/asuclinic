@@ -374,7 +374,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Navy;
-            this.label30.Location = new System.Drawing.Point(20, 611);
+            this.label30.Location = new System.Drawing.Point(13, 570);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(142, 20);
             this.label30.TabIndex = 209;
@@ -1054,7 +1054,7 @@
             // jejuLocalLnSizeTB
             // 
             this.jejuLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jejuLocalLnSizeTB.Location = new System.Drawing.Point(280, 449);
+            this.jejuLocalLnSizeTB.Location = new System.Drawing.Point(275, 446);
             this.jejuLocalLnSizeTB.Name = "jejuLocalLnSizeTB";
             this.jejuLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.jejuLocalLnSizeTB.TabIndex = 313;
@@ -1080,7 +1080,7 @@
             // ileumLocalLnSizeTB
             // 
             this.ileumLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ileumLocalLnSizeTB.Location = new System.Drawing.Point(386, 448);
+            this.ileumLocalLnSizeTB.Location = new System.Drawing.Point(381, 445);
             this.ileumLocalLnSizeTB.Name = "ileumLocalLnSizeTB";
             this.ileumLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.ileumLocalLnSizeTB.TabIndex = 314;
@@ -1106,7 +1106,7 @@
             // rtColonLocalLnSizeTB
             // 
             this.rtColonLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtColonLocalLnSizeTB.Location = new System.Drawing.Point(486, 448);
+            this.rtColonLocalLnSizeTB.Location = new System.Drawing.Point(481, 445);
             this.rtColonLocalLnSizeTB.Name = "rtColonLocalLnSizeTB";
             this.rtColonLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.rtColonLocalLnSizeTB.TabIndex = 315;
@@ -1114,7 +1114,7 @@
             // trColonLocalLnSizeTB
             // 
             this.trColonLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trColonLocalLnSizeTB.Location = new System.Drawing.Point(590, 448);
+            this.trColonLocalLnSizeTB.Location = new System.Drawing.Point(585, 445);
             this.trColonLocalLnSizeTB.Name = "trColonLocalLnSizeTB";
             this.trColonLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.trColonLocalLnSizeTB.TabIndex = 316;
@@ -1149,7 +1149,7 @@
             // ltColonLocalLnSizeTB
             // 
             this.ltColonLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ltColonLocalLnSizeTB.Location = new System.Drawing.Point(694, 448);
+            this.ltColonLocalLnSizeTB.Location = new System.Drawing.Point(689, 445);
             this.ltColonLocalLnSizeTB.Name = "ltColonLocalLnSizeTB";
             this.ltColonLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.ltColonLocalLnSizeTB.TabIndex = 317;
@@ -1165,7 +1165,7 @@
             // sigColonLocalLnSizeTB
             // 
             this.sigColonLocalLnSizeTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sigColonLocalLnSizeTB.Location = new System.Drawing.Point(799, 449);
+            this.sigColonLocalLnSizeTB.Location = new System.Drawing.Point(794, 445);
             this.sigColonLocalLnSizeTB.Name = "sigColonLocalLnSizeTB";
             this.sigColonLocalLnSizeTB.Size = new System.Drawing.Size(85, 26);
             this.sigColonLocalLnSizeTB.TabIndex = 318;
@@ -1211,7 +1211,7 @@
             // 
             this.rtColonLocalLnVasCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtColonLocalLnVasCB.FormattingEnabled = true;
-            this.rtColonLocalLnVasCB.Location = new System.Drawing.Point(475, 489);
+            this.rtColonLocalLnVasCB.Location = new System.Drawing.Point(479, 489);
             this.rtColonLocalLnVasCB.Name = "rtColonLocalLnVasCB";
             this.rtColonLocalLnVasCB.Size = new System.Drawing.Size(96, 28);
             this.rtColonLocalLnVasCB.TabIndex = 333;
@@ -1229,7 +1229,7 @@
             // 
             this.trColonLocalLnVasCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.trColonLocalLnVasCB.FormattingEnabled = true;
-            this.trColonLocalLnVasCB.Location = new System.Drawing.Point(579, 489);
+            this.trColonLocalLnVasCB.Location = new System.Drawing.Point(585, 489);
             this.trColonLocalLnVasCB.Name = "trColonLocalLnVasCB";
             this.trColonLocalLnVasCB.Size = new System.Drawing.Size(96, 28);
             this.trColonLocalLnVasCB.TabIndex = 334;
@@ -1238,7 +1238,7 @@
             // 
             this.ltColonLocalLnVasCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltColonLocalLnVasCB.FormattingEnabled = true;
-            this.ltColonLocalLnVasCB.Location = new System.Drawing.Point(683, 489);
+            this.ltColonLocalLnVasCB.Location = new System.Drawing.Point(691, 489);
             this.ltColonLocalLnVasCB.Name = "ltColonLocalLnVasCB";
             this.ltColonLocalLnVasCB.Size = new System.Drawing.Size(96, 28);
             this.ltColonLocalLnVasCB.TabIndex = 335;
@@ -1247,7 +1247,7 @@
             // 
             this.sigColonLocalLnVasCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sigColonLocalLnVasCB.FormattingEnabled = true;
-            this.sigColonLocalLnVasCB.Location = new System.Drawing.Point(799, 489);
+            this.sigColonLocalLnVasCB.Location = new System.Drawing.Point(797, 489);
             this.sigColonLocalLnVasCB.Name = "sigColonLocalLnVasCB";
             this.sigColonLocalLnVasCB.Size = new System.Drawing.Size(97, 28);
             this.sigColonLocalLnVasCB.TabIndex = 336;
@@ -1436,7 +1436,7 @@
             // jejuPresDiaTB
             // 
             this.jejuPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jejuPresDiaTB.Location = new System.Drawing.Point(280, 641);
+            this.jejuPresDiaTB.Location = new System.Drawing.Point(277, 646);
             this.jejuPresDiaTB.Name = "jejuPresDiaTB";
             this.jejuPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.jejuPresDiaTB.TabIndex = 355;
@@ -1444,7 +1444,7 @@
             // ileumPresDiaTB
             // 
             this.ileumPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ileumPresDiaTB.Location = new System.Drawing.Point(386, 640);
+            this.ileumPresDiaTB.Location = new System.Drawing.Point(380, 645);
             this.ileumPresDiaTB.Name = "ileumPresDiaTB";
             this.ileumPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.ileumPresDiaTB.TabIndex = 356;
@@ -1452,7 +1452,7 @@
             // rtColonPresDiaTB
             // 
             this.rtColonPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtColonPresDiaTB.Location = new System.Drawing.Point(486, 640);
+            this.rtColonPresDiaTB.Location = new System.Drawing.Point(483, 645);
             this.rtColonPresDiaTB.Name = "rtColonPresDiaTB";
             this.rtColonPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.rtColonPresDiaTB.TabIndex = 357;
@@ -1460,7 +1460,7 @@
             // trColonPresDiaTB
             // 
             this.trColonPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trColonPresDiaTB.Location = new System.Drawing.Point(590, 640);
+            this.trColonPresDiaTB.Location = new System.Drawing.Point(586, 645);
             this.trColonPresDiaTB.Name = "trColonPresDiaTB";
             this.trColonPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.trColonPresDiaTB.TabIndex = 358;
@@ -1468,7 +1468,7 @@
             // ltColonPresDiaTB
             // 
             this.ltColonPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ltColonPresDiaTB.Location = new System.Drawing.Point(694, 640);
+            this.ltColonPresDiaTB.Location = new System.Drawing.Point(689, 645);
             this.ltColonPresDiaTB.Name = "ltColonPresDiaTB";
             this.ltColonPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.ltColonPresDiaTB.TabIndex = 359;
@@ -1476,7 +1476,7 @@
             // sigColonPresDiaTB
             // 
             this.sigColonPresDiaTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sigColonPresDiaTB.Location = new System.Drawing.Point(799, 641);
+            this.sigColonPresDiaTB.Location = new System.Drawing.Point(792, 646);
             this.sigColonPresDiaTB.Name = "sigColonPresDiaTB";
             this.sigColonPresDiaTB.Size = new System.Drawing.Size(85, 26);
             this.sigColonPresDiaTB.TabIndex = 360;
@@ -1491,6 +1491,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.saveBtn);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
@@ -1653,13 +1655,12 @@
             this.groupBox1.Controls.Add(this.ltColonSubEdeChkbx);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(991, 1536);
+            this.groupBox1.Size = new System.Drawing.Size(969, 1536);
             this.groupBox1.TabIndex = 312;
             this.groupBox1.TabStop = false;
             // 
             // saveBtn
             // 
-            this.saveBtn.Enabled = false;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveBtn.Location = new System.Drawing.Point(435, 1479);
             this.saveBtn.Name = "saveBtn";
@@ -1678,6 +1679,7 @@
             this.button1.TabIndex = 390;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -1708,6 +1710,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -1719,6 +1722,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -1730,6 +1734,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -1741,6 +1746,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label46
             // 
@@ -2096,6 +2102,7 @@
             this.usDate.Name = "usDate";
             this.usDate.Size = new System.Drawing.Size(144, 31);
             this.usDate.TabIndex = 315;
+            this.usDate.ValueChanged += new System.EventHandler(this.usDate_ValueChanged);
             // 
             // dateCB
             // 
@@ -2106,6 +2113,7 @@
             this.dateCB.Name = "dateCB";
             this.dateCB.Size = new System.Drawing.Size(227, 32);
             this.dateCB.TabIndex = 313;
+            this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged);
             // 
             // ultrasound_form
             // 
@@ -2113,15 +2121,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1127, 643);
-            this.Controls.Add(this.label30);
+            this.ClientSize = new System.Drawing.Size(1008, 601);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.patNameLb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
             this.Name = "ultrasound_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ultrasound_form";
