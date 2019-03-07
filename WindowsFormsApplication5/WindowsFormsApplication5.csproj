@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dataset.cs" />
+    <Compile Include="durg_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="durg_form.Designer.cs">
+      <DependentUpon>durg_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="endoscopy_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,7 +132,16 @@
     <Compile Include="surgery_form.Designer.cs">
       <DependentUpon>surgery_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="ultrasound_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ultrasound_form.Designer.cs">
+      <DependentUpon>ultrasound_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="durg_form.resx">
+      <DependentUpon>durg_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="endoscopy_form.resx">
       <DependentUpon>endoscopy_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +190,9 @@
     </Compile>
     <EmbeddedResource Include="surgery_form.resx">
       <DependentUpon>surgery_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ultrasound_form.resx">
+      <DependentUpon>ultrasound_form.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
