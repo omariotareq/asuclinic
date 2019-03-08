@@ -463,6 +463,58 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			DataTable dt = getDataTable(sql);
 			return dt;
 		}
+		//3/8/2018
+		public static DataTable getDrugDates(int p_id)
+		{
+			string sql = @"SELECT Recorddate FROM asudb.dbo.druglist WHERE p_id='" + p_id + "'";
+			DataTable dt = getDataTable(sql);
+
+			return dt;
+		}
+		//3/8/2019
+		public static DataTable getDrugs(string date, int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.druglist WHERE Recorddate='" + date + "' AND p_id='" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+		//3/8/2019
+		public static int Insertdruginfo(DateTime Rd,int sterodate,int dose,int weekno,string sternotes,int Asas,string Asad,string Asaw,int Asao,string Asaod,string Asaow,int Asar,string Asard,string Asarw ,int immmtx,string immmd,string immmw,int imma,string immad,string immaw,int bif,string bifd,string bifw,int bad,string badd,string badw,int bgo,string bgod,string bgow,int bus,string busd,string busw,string Biolgnotes,int supvit,int supca,int supppi,int suppfa,int suppiron,string suproute,string supdose,int antiat,string antidetails,string othermedication,int p_id)
+		{
+			string sql = @"INSERT INTO asudb.dbo.druglist( Recorddate,steroidtreat,Dose,Wekkno,Steroidsnotes,Asas,Asad,Asaw,Asao,Asaod,Asaow,Asar,Asard,Asarw,immmtx.immmd,immmw,imma,immad,immaw,bif,bifd,bifw,bad,badd,badw,bgo,bgod,bgow,bus,busd,busw,Biolgnotes,supvit,supca,supppi,suppfa,suppiron,suproute,supdose,antiat,antidetails,othermedication,p_id)  OUTPUT INSERTED.id as id VAlUES('" + Rd + "','" + sterodate + "','" + dose + "','" + weekno + "','" + sternotes + "','" + Asas + "','" + Asad + "','" + Asaw + "','" + Asao + "','" + Asaod + "','" + Asaow + "','" + Asar + "','" + Asard + "','" + Asarw + "','" + immmtx + "','" + immmd + "','" + immmw + "','" + imma + "','" + immad + "','" + immaw + "','" + bif + "','" + bifd + "','" + bifw + "','" + bad + "','" + badd + "','" + badw + "','" + bgo + "','" + bgod + "','" + bgow + "','" + bus + "','" + busd + "','" + busw + "','" + Biolgnotes + "','" + supvit + "','" + supca + "','" + supppi + "','" + suppfa + "','" + suppiron + "','" + suproute + "','" + supdose + "','" + antiat + "','" + antidetails + "','" + othermedication + "','" + p_id + "')";
+
+
+
+
+			DataTable dt = getDataTable(sql);
+			if (dt.Rows.Count > 0)
+			{
+				DataRow dataRow = dt.Rows[0];
+
+				int id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+				return id;
+			}
+			else
+			{
+				return -1;
+			}
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
