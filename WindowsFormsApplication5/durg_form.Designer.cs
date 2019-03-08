@@ -35,97 +35,97 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.otherMedicationNotesTB = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.antibioticDetailsTB = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.antibioticChkbx = new System.Windows.Forms.CheckBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.ileumMucOutTB = new System.Windows.Forms.ComboBox();
+            this.suppTherapyDoseTB = new System.Windows.Forms.TextBox();
+            this.routeCB = new System.Windows.Forms.ComboBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.ironChkbx = new System.Windows.Forms.CheckBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.folicAcidChkbx = new System.Windows.Forms.CheckBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.ppiTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.caChkbx = new System.Windows.Forms.CheckBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.vitDChkbx = new System.Windows.Forms.CheckBox();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.bioTherapyNotesTB = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.ustekinTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.ustekinTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.ustekinTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.goliTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.goliTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.goliTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.adaTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.adaTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.adaTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.ifxTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.ifxTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.ifxTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.azaTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.azaTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.azaTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.mtxTreatWeekTB = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.mtxTreatDoseTB = new System.Windows.Forms.TextBox();
+            this.mtxTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.rectalMesaWeekTB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.rectalMesaDoseTB = new System.Windows.Forms.TextBox();
+            this.rectalMesaChkbx = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.oralMesaWeekTB = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.oralMesaDoseTB = new System.Windows.Forms.TextBox();
+            this.oralMesaChkbx = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.sulphaWeekTB = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.sulphaDoseTB = new System.Windows.Forms.TextBox();
+            this.sulphaChkbx = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.steriodNotesTB = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.steriodWeekNoTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.erosionTB = new System.Windows.Forms.TextBox();
-            this.rectumSegmentChkbx = new System.Windows.Forms.CheckBox();
+            this.sterDoseTB = new System.Windows.Forms.TextBox();
+            this.steroidTreatChkbx = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.endscopyDate = new System.Windows.Forms.DateTimePicker();
+            this.drugDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
@@ -197,97 +197,97 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.saveBtn);
-            this.groupBox1.Controls.Add(this.textBox24);
+            this.groupBox1.Controls.Add(this.otherMedicationNotesTB);
             this.groupBox1.Controls.Add(this.label52);
-            this.groupBox1.Controls.Add(this.textBox23);
+            this.groupBox1.Controls.Add(this.antibioticDetailsTB);
             this.groupBox1.Controls.Add(this.label51);
-            this.groupBox1.Controls.Add(this.checkBox15);
+            this.groupBox1.Controls.Add(this.antibioticChkbx);
             this.groupBox1.Controls.Add(this.label50);
             this.groupBox1.Controls.Add(this.label49);
             this.groupBox1.Controls.Add(this.label48);
-            this.groupBox1.Controls.Add(this.textBox22);
-            this.groupBox1.Controls.Add(this.ileumMucOutTB);
+            this.groupBox1.Controls.Add(this.suppTherapyDoseTB);
+            this.groupBox1.Controls.Add(this.routeCB);
             this.groupBox1.Controls.Add(this.label47);
-            this.groupBox1.Controls.Add(this.checkBox14);
+            this.groupBox1.Controls.Add(this.ironChkbx);
             this.groupBox1.Controls.Add(this.label46);
-            this.groupBox1.Controls.Add(this.checkBox13);
+            this.groupBox1.Controls.Add(this.folicAcidChkbx);
             this.groupBox1.Controls.Add(this.label45);
-            this.groupBox1.Controls.Add(this.checkBox12);
+            this.groupBox1.Controls.Add(this.ppiTreatChkbx);
             this.groupBox1.Controls.Add(this.label44);
-            this.groupBox1.Controls.Add(this.checkBox11);
+            this.groupBox1.Controls.Add(this.caChkbx);
             this.groupBox1.Controls.Add(this.label43);
-            this.groupBox1.Controls.Add(this.checkBox10);
+            this.groupBox1.Controls.Add(this.vitDChkbx);
             this.groupBox1.Controls.Add(this.label42);
             this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.textBox21);
+            this.groupBox1.Controls.Add(this.bioTherapyNotesTB);
             this.groupBox1.Controls.Add(this.label40);
             this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.textBox19);
+            this.groupBox1.Controls.Add(this.ustekinTreatWeekTB);
             this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Controls.Add(this.textBox20);
-            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Controls.Add(this.ustekinTreatDoseTB);
+            this.groupBox1.Controls.Add(this.ustekinTreatChkbx);
             this.groupBox1.Controls.Add(this.label39);
             this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.goliTreatWeekTB);
             this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.goliTreatDoseTB);
+            this.groupBox1.Controls.Add(this.goliTreatChkbx);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.textBox15);
+            this.groupBox1.Controls.Add(this.adaTreatWeekTB);
             this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.textBox16);
-            this.groupBox1.Controls.Add(this.checkBox7);
+            this.groupBox1.Controls.Add(this.adaTreatDoseTB);
+            this.groupBox1.Controls.Add(this.adaTreatChkbx);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.Controls.Add(this.label33);
-            this.groupBox1.Controls.Add(this.textBox17);
+            this.groupBox1.Controls.Add(this.ifxTreatWeekTB);
             this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.textBox18);
-            this.groupBox1.Controls.Add(this.checkBox8);
+            this.groupBox1.Controls.Add(this.ifxTreatDoseTB);
+            this.groupBox1.Controls.Add(this.ifxTreatChkbx);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.azaTreatWeekTB);
             this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.textBox12);
-            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.azaTreatDoseTB);
+            this.groupBox1.Controls.Add(this.azaTreatChkbx);
             this.groupBox1.Controls.Add(this.label25);
             this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.textBox13);
+            this.groupBox1.Controls.Add(this.mtxTreatWeekTB);
             this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.textBox14);
-            this.groupBox1.Controls.Add(this.checkBox6);
+            this.groupBox1.Controls.Add(this.mtxTreatDoseTB);
+            this.groupBox1.Controls.Add(this.mtxTreatChkbx);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Controls.Add(this.label29);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.rectalMesaWeekTB);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.rectalMesaDoseTB);
+            this.groupBox1.Controls.Add(this.rectalMesaChkbx);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.oralMesaWeekTB);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.oralMesaDoseTB);
+            this.groupBox1.Controls.Add(this.oralMesaChkbx);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.sulphaWeekTB);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.sulphaDoseTB);
+            this.groupBox1.Controls.Add(this.sulphaChkbx);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.steriodNotesTB);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.steriodWeekNoTB);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.erosionTB);
-            this.groupBox1.Controls.Add(this.rectumSegmentChkbx);
+            this.groupBox1.Controls.Add(this.sterDoseTB);
+            this.groupBox1.Controls.Add(this.steroidTreatChkbx);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.endscopyDate);
+            this.groupBox1.Controls.Add(this.drugDate);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateCB);
             this.groupBox1.Location = new System.Drawing.Point(10, 43);
@@ -305,15 +305,16 @@
             this.saveBtn.TabIndex = 444;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // textBox24
+            // otherMedicationNotesTB
             // 
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(232, 1027);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(623, 114);
-            this.textBox24.TabIndex = 443;
+            this.otherMedicationNotesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherMedicationNotesTB.Location = new System.Drawing.Point(232, 1027);
+            this.otherMedicationNotesTB.Multiline = true;
+            this.otherMedicationNotesTB.Name = "otherMedicationNotesTB";
+            this.otherMedicationNotesTB.Size = new System.Drawing.Size(623, 114);
+            this.otherMedicationNotesTB.TabIndex = 443;
             // 
             // label52
             // 
@@ -329,14 +330,14 @@
             this.label52.TabIndex = 442;
             this.label52.Text = "Other medication notes";
             // 
-            // textBox23
+            // antibioticDetailsTB
             // 
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(551, 920);
-            this.textBox23.Multiline = true;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(304, 92);
-            this.textBox23.TabIndex = 441;
+            this.antibioticDetailsTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.antibioticDetailsTB.Location = new System.Drawing.Point(551, 920);
+            this.antibioticDetailsTB.Multiline = true;
+            this.antibioticDetailsTB.Name = "antibioticDetailsTB";
+            this.antibioticDetailsTB.Size = new System.Drawing.Size(304, 92);
+            this.antibioticDetailsTB.TabIndex = 441;
             // 
             // label51
             // 
@@ -352,14 +353,14 @@
             this.label51.TabIndex = 440;
             this.label51.Text = "Details";
             // 
-            // checkBox15
+            // antibioticChkbx
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(438, 930);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(15, 14);
-            this.checkBox15.TabIndex = 439;
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.antibioticChkbx.AutoSize = true;
+            this.antibioticChkbx.Location = new System.Drawing.Point(438, 930);
+            this.antibioticChkbx.Name = "antibioticChkbx";
+            this.antibioticChkbx.Size = new System.Drawing.Size(15, 14);
+            this.antibioticChkbx.TabIndex = 439;
+            this.antibioticChkbx.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -403,25 +404,25 @@
             this.label48.TabIndex = 436;
             this.label48.Text = "Dose";
             // 
-            // textBox22
+            // suppTherapyDoseTB
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(486, 852);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(92, 29);
-            this.textBox22.TabIndex = 435;
+            this.suppTherapyDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suppTherapyDoseTB.Location = new System.Drawing.Point(486, 852);
+            this.suppTherapyDoseTB.Name = "suppTherapyDoseTB";
+            this.suppTherapyDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.suppTherapyDoseTB.TabIndex = 435;
             // 
-            // ileumMucOutTB
+            // routeCB
             // 
-            this.ileumMucOutTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ileumMucOutTB.FormattingEnabled = true;
-            this.ileumMucOutTB.Items.AddRange(new object[] {
+            this.routeCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.routeCB.FormattingEnabled = true;
+            this.routeCB.Items.AddRange(new object[] {
             "Oral",
             "IV"});
-            this.ileumMucOutTB.Location = new System.Drawing.Point(310, 852);
-            this.ileumMucOutTB.Name = "ileumMucOutTB";
-            this.ileumMucOutTB.Size = new System.Drawing.Size(94, 28);
-            this.ileumMucOutTB.TabIndex = 434;
+            this.routeCB.Location = new System.Drawing.Point(310, 852);
+            this.routeCB.Name = "routeCB";
+            this.routeCB.Size = new System.Drawing.Size(94, 28);
+            this.routeCB.TabIndex = 434;
             // 
             // label47
             // 
@@ -437,14 +438,14 @@
             this.label47.TabIndex = 433;
             this.label47.Text = "Route";
             // 
-            // checkBox14
+            // ironChkbx
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(758, 824);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 431;
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.ironChkbx.AutoSize = true;
+            this.ironChkbx.Location = new System.Drawing.Point(758, 824);
+            this.ironChkbx.Name = "ironChkbx";
+            this.ironChkbx.Size = new System.Drawing.Size(15, 14);
+            this.ironChkbx.TabIndex = 431;
+            this.ironChkbx.UseVisualStyleBackColor = true;
             // 
             // label46
             // 
@@ -460,14 +461,14 @@
             this.label46.TabIndex = 430;
             this.label46.Text = "Iron";
             // 
-            // checkBox13
+            // folicAcidChkbx
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(676, 824);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(15, 14);
-            this.checkBox13.TabIndex = 429;
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.folicAcidChkbx.AutoSize = true;
+            this.folicAcidChkbx.Location = new System.Drawing.Point(676, 824);
+            this.folicAcidChkbx.Name = "folicAcidChkbx";
+            this.folicAcidChkbx.Size = new System.Drawing.Size(15, 14);
+            this.folicAcidChkbx.TabIndex = 429;
+            this.folicAcidChkbx.UseVisualStyleBackColor = true;
             // 
             // label45
             // 
@@ -483,14 +484,14 @@
             this.label45.TabIndex = 428;
             this.label45.Text = "Folic acid";
             // 
-            // checkBox12
+            // ppiTreatChkbx
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(541, 824);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 427;
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.ppiTreatChkbx.AutoSize = true;
+            this.ppiTreatChkbx.Location = new System.Drawing.Point(541, 824);
+            this.ppiTreatChkbx.Name = "ppiTreatChkbx";
+            this.ppiTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.ppiTreatChkbx.TabIndex = 427;
+            this.ppiTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label44
             // 
@@ -506,14 +507,14 @@
             this.label44.TabIndex = 426;
             this.label44.Text = "PPI treatment";
             // 
-            // checkBox11
+            // caChkbx
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(375, 824);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 425;
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.caChkbx.AutoSize = true;
+            this.caChkbx.Location = new System.Drawing.Point(375, 824);
+            this.caChkbx.Name = "caChkbx";
+            this.caChkbx.Size = new System.Drawing.Size(15, 14);
+            this.caChkbx.TabIndex = 425;
+            this.caChkbx.UseVisualStyleBackColor = true;
             // 
             // label43
             // 
@@ -529,14 +530,14 @@
             this.label43.TabIndex = 424;
             this.label43.Text = "Ca";
             // 
-            // checkBox10
+            // vitDChkbx
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(304, 824);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 423;
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.vitDChkbx.AutoSize = true;
+            this.vitDChkbx.Location = new System.Drawing.Point(304, 824);
+            this.vitDChkbx.Name = "vitDChkbx";
+            this.vitDChkbx.Size = new System.Drawing.Size(15, 14);
+            this.vitDChkbx.TabIndex = 423;
+            this.vitDChkbx.UseVisualStyleBackColor = true;
             // 
             // label42
             // 
@@ -566,14 +567,14 @@
             this.label41.TabIndex = 421;
             this.label41.Text = "Supplemental therapy";
             // 
-            // textBox21
+            // bioTherapyNotesTB
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(450, 642);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(405, 139);
-            this.textBox21.TabIndex = 420;
+            this.bioTherapyNotesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bioTherapyNotesTB.Location = new System.Drawing.Point(450, 642);
+            this.bioTherapyNotesTB.Multiline = true;
+            this.bioTherapyNotesTB.Name = "bioTherapyNotesTB";
+            this.bioTherapyNotesTB.Size = new System.Drawing.Size(405, 139);
+            this.bioTherapyNotesTB.TabIndex = 420;
             // 
             // label40
             // 
@@ -603,13 +604,13 @@
             this.label37.TabIndex = 418;
             this.label37.Text = "Week no.";
             // 
-            // textBox19
+            // ustekinTreatWeekTB
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(763, 594);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(92, 29);
-            this.textBox19.TabIndex = 417;
+            this.ustekinTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ustekinTreatWeekTB.Location = new System.Drawing.Point(763, 594);
+            this.ustekinTreatWeekTB.Name = "ustekinTreatWeekTB";
+            this.ustekinTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.ustekinTreatWeekTB.TabIndex = 417;
             // 
             // label38
             // 
@@ -625,22 +626,22 @@
             this.label38.TabIndex = 416;
             this.label38.Text = "Dose";
             // 
-            // textBox20
+            // ustekinTreatDoseTB
             // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(539, 595);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(92, 29);
-            this.textBox20.TabIndex = 415;
+            this.ustekinTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ustekinTreatDoseTB.Location = new System.Drawing.Point(539, 595);
+            this.ustekinTreatDoseTB.Name = "ustekinTreatDoseTB";
+            this.ustekinTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.ustekinTreatDoseTB.TabIndex = 415;
             // 
-            // checkBox9
+            // ustekinTreatChkbx
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(450, 605);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(15, 14);
-            this.checkBox9.TabIndex = 414;
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.ustekinTreatChkbx.AutoSize = true;
+            this.ustekinTreatChkbx.Location = new System.Drawing.Point(450, 605);
+            this.ustekinTreatChkbx.Name = "ustekinTreatChkbx";
+            this.ustekinTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.ustekinTreatChkbx.TabIndex = 414;
+            this.ustekinTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label39
             // 
@@ -670,13 +671,13 @@
             this.label19.TabIndex = 412;
             this.label19.Text = "Week no.";
             // 
-            // textBox9
+            // goliTreatWeekTB
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(763, 554);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(92, 29);
-            this.textBox9.TabIndex = 411;
+            this.goliTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goliTreatWeekTB.Location = new System.Drawing.Point(763, 554);
+            this.goliTreatWeekTB.Name = "goliTreatWeekTB";
+            this.goliTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.goliTreatWeekTB.TabIndex = 411;
             // 
             // label21
             // 
@@ -692,22 +693,22 @@
             this.label21.TabIndex = 410;
             this.label21.Text = "Dose";
             // 
-            // textBox10
+            // goliTreatDoseTB
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(539, 555);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(92, 29);
-            this.textBox10.TabIndex = 409;
+            this.goliTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goliTreatDoseTB.Location = new System.Drawing.Point(539, 555);
+            this.goliTreatDoseTB.Name = "goliTreatDoseTB";
+            this.goliTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.goliTreatDoseTB.TabIndex = 409;
             // 
-            // checkBox4
+            // goliTreatChkbx
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(450, 565);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 408;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.goliTreatChkbx.AutoSize = true;
+            this.goliTreatChkbx.Location = new System.Drawing.Point(450, 565);
+            this.goliTreatChkbx.Name = "goliTreatChkbx";
+            this.goliTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.goliTreatChkbx.TabIndex = 408;
+            this.goliTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label22
             // 
@@ -737,13 +738,13 @@
             this.label30.TabIndex = 406;
             this.label30.Text = "Week no.";
             // 
-            // textBox15
+            // adaTreatWeekTB
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(763, 514);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(92, 29);
-            this.textBox15.TabIndex = 405;
+            this.adaTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adaTreatWeekTB.Location = new System.Drawing.Point(763, 514);
+            this.adaTreatWeekTB.Name = "adaTreatWeekTB";
+            this.adaTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.adaTreatWeekTB.TabIndex = 405;
             // 
             // label31
             // 
@@ -759,22 +760,22 @@
             this.label31.TabIndex = 404;
             this.label31.Text = "Dose";
             // 
-            // textBox16
+            // adaTreatDoseTB
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(539, 515);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(92, 29);
-            this.textBox16.TabIndex = 403;
+            this.adaTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adaTreatDoseTB.Location = new System.Drawing.Point(539, 515);
+            this.adaTreatDoseTB.Name = "adaTreatDoseTB";
+            this.adaTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.adaTreatDoseTB.TabIndex = 403;
             // 
-            // checkBox7
+            // adaTreatChkbx
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(450, 525);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 402;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.adaTreatChkbx.AutoSize = true;
+            this.adaTreatChkbx.Location = new System.Drawing.Point(450, 525);
+            this.adaTreatChkbx.Name = "adaTreatChkbx";
+            this.adaTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.adaTreatChkbx.TabIndex = 402;
+            this.adaTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label32
             // 
@@ -804,13 +805,13 @@
             this.label33.TabIndex = 400;
             this.label33.Text = "Week no.";
             // 
-            // textBox17
+            // ifxTreatWeekTB
             // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(763, 475);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(92, 29);
-            this.textBox17.TabIndex = 399;
+            this.ifxTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ifxTreatWeekTB.Location = new System.Drawing.Point(763, 475);
+            this.ifxTreatWeekTB.Name = "ifxTreatWeekTB";
+            this.ifxTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.ifxTreatWeekTB.TabIndex = 399;
             // 
             // label34
             // 
@@ -826,22 +827,22 @@
             this.label34.TabIndex = 398;
             this.label34.Text = "Dose";
             // 
-            // textBox18
+            // ifxTreatDoseTB
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(539, 476);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(92, 29);
-            this.textBox18.TabIndex = 397;
+            this.ifxTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ifxTreatDoseTB.Location = new System.Drawing.Point(539, 476);
+            this.ifxTreatDoseTB.Name = "ifxTreatDoseTB";
+            this.ifxTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.ifxTreatDoseTB.TabIndex = 397;
             // 
-            // checkBox8
+            // ifxTreatChkbx
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(450, 486);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 396;
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.ifxTreatChkbx.AutoSize = true;
+            this.ifxTreatChkbx.Location = new System.Drawing.Point(450, 486);
+            this.ifxTreatChkbx.Name = "ifxTreatChkbx";
+            this.ifxTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.ifxTreatChkbx.TabIndex = 396;
+            this.ifxTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label35
             // 
@@ -885,13 +886,13 @@
             this.label23.TabIndex = 393;
             this.label23.Text = "Week no.";
             // 
-            // textBox11
+            // azaTreatWeekTB
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(763, 422);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(92, 29);
-            this.textBox11.TabIndex = 392;
+            this.azaTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.azaTreatWeekTB.Location = new System.Drawing.Point(763, 422);
+            this.azaTreatWeekTB.Name = "azaTreatWeekTB";
+            this.azaTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.azaTreatWeekTB.TabIndex = 392;
             // 
             // label24
             // 
@@ -907,22 +908,22 @@
             this.label24.TabIndex = 391;
             this.label24.Text = "Dose";
             // 
-            // textBox12
+            // azaTreatDoseTB
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(539, 423);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(92, 29);
-            this.textBox12.TabIndex = 390;
+            this.azaTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.azaTreatDoseTB.Location = new System.Drawing.Point(539, 423);
+            this.azaTreatDoseTB.Name = "azaTreatDoseTB";
+            this.azaTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.azaTreatDoseTB.TabIndex = 390;
             // 
-            // checkBox5
+            // azaTreatChkbx
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(450, 433);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 389;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.azaTreatChkbx.AutoSize = true;
+            this.azaTreatChkbx.Location = new System.Drawing.Point(450, 433);
+            this.azaTreatChkbx.Name = "azaTreatChkbx";
+            this.azaTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.azaTreatChkbx.TabIndex = 389;
+            this.azaTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label25
             // 
@@ -952,13 +953,13 @@
             this.label26.TabIndex = 387;
             this.label26.Text = "Week no.";
             // 
-            // textBox13
+            // mtxTreatWeekTB
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(763, 383);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(92, 29);
-            this.textBox13.TabIndex = 386;
+            this.mtxTreatWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxTreatWeekTB.Location = new System.Drawing.Point(763, 383);
+            this.mtxTreatWeekTB.Name = "mtxTreatWeekTB";
+            this.mtxTreatWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.mtxTreatWeekTB.TabIndex = 386;
             // 
             // label27
             // 
@@ -974,22 +975,22 @@
             this.label27.TabIndex = 385;
             this.label27.Text = "Dose";
             // 
-            // textBox14
+            // mtxTreatDoseTB
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(539, 384);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(92, 29);
-            this.textBox14.TabIndex = 384;
+            this.mtxTreatDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxTreatDoseTB.Location = new System.Drawing.Point(539, 384);
+            this.mtxTreatDoseTB.Name = "mtxTreatDoseTB";
+            this.mtxTreatDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.mtxTreatDoseTB.TabIndex = 384;
             // 
-            // checkBox6
+            // mtxTreatChkbx
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(450, 394);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 383;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.mtxTreatChkbx.AutoSize = true;
+            this.mtxTreatChkbx.Location = new System.Drawing.Point(450, 394);
+            this.mtxTreatChkbx.Name = "mtxTreatChkbx";
+            this.mtxTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.mtxTreatChkbx.TabIndex = 383;
+            this.mtxTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
@@ -1033,13 +1034,13 @@
             this.label15.TabIndex = 380;
             this.label15.Text = "Week no.";
             // 
-            // textBox7
+            // rectalMesaWeekTB
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(763, 328);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(92, 29);
-            this.textBox7.TabIndex = 379;
+            this.rectalMesaWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rectalMesaWeekTB.Location = new System.Drawing.Point(763, 328);
+            this.rectalMesaWeekTB.Name = "rectalMesaWeekTB";
+            this.rectalMesaWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.rectalMesaWeekTB.TabIndex = 379;
             // 
             // label16
             // 
@@ -1055,22 +1056,22 @@
             this.label16.TabIndex = 378;
             this.label16.Text = "Dose";
             // 
-            // textBox8
+            // rectalMesaDoseTB
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(539, 329);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(92, 29);
-            this.textBox8.TabIndex = 377;
+            this.rectalMesaDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rectalMesaDoseTB.Location = new System.Drawing.Point(539, 329);
+            this.rectalMesaDoseTB.Name = "rectalMesaDoseTB";
+            this.rectalMesaDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.rectalMesaDoseTB.TabIndex = 377;
             // 
-            // checkBox3
+            // rectalMesaChkbx
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(450, 339);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 376;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.rectalMesaChkbx.AutoSize = true;
+            this.rectalMesaChkbx.Location = new System.Drawing.Point(450, 339);
+            this.rectalMesaChkbx.Name = "rectalMesaChkbx";
+            this.rectalMesaChkbx.Size = new System.Drawing.Size(15, 14);
+            this.rectalMesaChkbx.TabIndex = 376;
+            this.rectalMesaChkbx.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -1100,13 +1101,13 @@
             this.label11.TabIndex = 374;
             this.label11.Text = "Week no.";
             // 
-            // textBox5
+            // oralMesaWeekTB
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(763, 288);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(92, 29);
-            this.textBox5.TabIndex = 373;
+            this.oralMesaWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oralMesaWeekTB.Location = new System.Drawing.Point(763, 288);
+            this.oralMesaWeekTB.Name = "oralMesaWeekTB";
+            this.oralMesaWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.oralMesaWeekTB.TabIndex = 373;
             // 
             // label12
             // 
@@ -1122,22 +1123,22 @@
             this.label12.TabIndex = 372;
             this.label12.Text = "Dose";
             // 
-            // textBox6
+            // oralMesaDoseTB
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(539, 289);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(92, 29);
-            this.textBox6.TabIndex = 371;
+            this.oralMesaDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oralMesaDoseTB.Location = new System.Drawing.Point(539, 289);
+            this.oralMesaDoseTB.Name = "oralMesaDoseTB";
+            this.oralMesaDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.oralMesaDoseTB.TabIndex = 371;
             // 
-            // checkBox2
+            // oralMesaChkbx
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(450, 299);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 370;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.oralMesaChkbx.AutoSize = true;
+            this.oralMesaChkbx.Location = new System.Drawing.Point(450, 299);
+            this.oralMesaChkbx.Name = "oralMesaChkbx";
+            this.oralMesaChkbx.Size = new System.Drawing.Size(15, 14);
+            this.oralMesaChkbx.TabIndex = 370;
+            this.oralMesaChkbx.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -1167,13 +1168,13 @@
             this.label9.TabIndex = 368;
             this.label9.Text = "Week no.";
             // 
-            // textBox3
+            // sulphaWeekTB
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(763, 249);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(92, 29);
-            this.textBox3.TabIndex = 367;
+            this.sulphaWeekTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sulphaWeekTB.Location = new System.Drawing.Point(763, 249);
+            this.sulphaWeekTB.Name = "sulphaWeekTB";
+            this.sulphaWeekTB.Size = new System.Drawing.Size(92, 29);
+            this.sulphaWeekTB.TabIndex = 367;
             // 
             // label10
             // 
@@ -1189,22 +1190,22 @@
             this.label10.TabIndex = 366;
             this.label10.Text = "Dose";
             // 
-            // textBox4
+            // sulphaDoseTB
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(539, 250);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(92, 29);
-            this.textBox4.TabIndex = 365;
+            this.sulphaDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sulphaDoseTB.Location = new System.Drawing.Point(539, 250);
+            this.sulphaDoseTB.Name = "sulphaDoseTB";
+            this.sulphaDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.sulphaDoseTB.TabIndex = 365;
             // 
-            // checkBox1
+            // sulphaChkbx
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(450, 260);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 364;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sulphaChkbx.AutoSize = true;
+            this.sulphaChkbx.Location = new System.Drawing.Point(450, 260);
+            this.sulphaChkbx.Name = "sulphaChkbx";
+            this.sulphaChkbx.Size = new System.Drawing.Size(15, 14);
+            this.sulphaChkbx.TabIndex = 364;
+            this.sulphaChkbx.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -1248,14 +1249,14 @@
             this.label6.TabIndex = 361;
             this.label6.Text = "Steriod notes";
             // 
-            // textBox2
+            // steriodNotesTB
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(780, 119);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 87);
-            this.textBox2.TabIndex = 360;
+            this.steriodNotesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.steriodNotesTB.Location = new System.Drawing.Point(780, 119);
+            this.steriodNotesTB.Multiline = true;
+            this.steriodNotesTB.Name = "steriodNotesTB";
+            this.steriodNotesTB.Size = new System.Drawing.Size(200, 87);
+            this.steriodNotesTB.TabIndex = 360;
             // 
             // label5
             // 
@@ -1271,13 +1272,13 @@
             this.label5.TabIndex = 359;
             this.label5.Text = "Week no.";
             // 
-            // textBox1
+            // steriodWeekNoTB
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(516, 119);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 29);
-            this.textBox1.TabIndex = 358;
+            this.steriodWeekNoTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.steriodWeekNoTB.Location = new System.Drawing.Point(516, 119);
+            this.steriodWeekNoTB.Name = "steriodWeekNoTB";
+            this.steriodWeekNoTB.Size = new System.Drawing.Size(92, 29);
+            this.steriodWeekNoTB.TabIndex = 358;
             // 
             // label4
             // 
@@ -1293,22 +1294,22 @@
             this.label4.TabIndex = 357;
             this.label4.Text = "Dose";
             // 
-            // erosionTB
+            // sterDoseTB
             // 
-            this.erosionTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erosionTB.Location = new System.Drawing.Point(292, 120);
-            this.erosionTB.Name = "erosionTB";
-            this.erosionTB.Size = new System.Drawing.Size(92, 29);
-            this.erosionTB.TabIndex = 356;
+            this.sterDoseTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sterDoseTB.Location = new System.Drawing.Point(292, 120);
+            this.sterDoseTB.Name = "sterDoseTB";
+            this.sterDoseTB.Size = new System.Drawing.Size(92, 29);
+            this.sterDoseTB.TabIndex = 356;
             // 
-            // rectumSegmentChkbx
+            // steroidTreatChkbx
             // 
-            this.rectumSegmentChkbx.AutoSize = true;
-            this.rectumSegmentChkbx.Location = new System.Drawing.Point(180, 130);
-            this.rectumSegmentChkbx.Name = "rectumSegmentChkbx";
-            this.rectumSegmentChkbx.Size = new System.Drawing.Size(15, 14);
-            this.rectumSegmentChkbx.TabIndex = 354;
-            this.rectumSegmentChkbx.UseVisualStyleBackColor = true;
+            this.steroidTreatChkbx.AutoSize = true;
+            this.steroidTreatChkbx.Location = new System.Drawing.Point(180, 130);
+            this.steroidTreatChkbx.Name = "steroidTreatChkbx";
+            this.steroidTreatChkbx.Size = new System.Drawing.Size(15, 14);
+            this.steroidTreatChkbx.TabIndex = 354;
+            this.steroidTreatChkbx.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -1338,15 +1339,16 @@
             this.label1.TabIndex = 324;
             this.label1.Text = "Date";
             // 
-            // endscopyDate
+            // drugDate
             // 
-            this.endscopyDate.CustomFormat = "dd/MM/yyyy";
-            this.endscopyDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endscopyDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endscopyDate.Location = new System.Drawing.Point(10, 71);
-            this.endscopyDate.Name = "endscopyDate";
-            this.endscopyDate.Size = new System.Drawing.Size(144, 31);
-            this.endscopyDate.TabIndex = 323;
+            this.drugDate.CustomFormat = "dd/MM/yyyy";
+            this.drugDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drugDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.drugDate.Location = new System.Drawing.Point(10, 71);
+            this.drugDate.Name = "drugDate";
+            this.drugDate.Size = new System.Drawing.Size(144, 31);
+            this.drugDate.TabIndex = 323;
+            this.drugDate.ValueChanged += new System.EventHandler(this.drugDate_ValueChanged);
             // 
             // label2
             // 
@@ -1371,6 +1373,7 @@
             this.dateCB.Name = "dateCB";
             this.dateCB.Size = new System.Drawing.Size(227, 32);
             this.dateCB.TabIndex = 321;
+            this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged);
             // 
             // durg_form
             // 
@@ -1405,97 +1408,97 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker endscopyDate;
+        private System.Windows.Forms.DateTimePicker drugDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox dateCB;
-        private System.Windows.Forms.CheckBox rectumSegmentChkbx;
+        private System.Windows.Forms.CheckBox steroidTreatChkbx;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox erosionTB;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox sterDoseTB;
+        private System.Windows.Forms.CheckBox sulphaChkbx;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox steriodNotesTB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox steriodWeekNoTB;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox rectalMesaWeekTB;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.TextBox rectalMesaDoseTB;
+        private System.Windows.Forms.CheckBox rectalMesaChkbx;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox oralMesaWeekTB;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox oralMesaDoseTB;
+        private System.Windows.Forms.CheckBox oralMesaChkbx;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox sulphaWeekTB;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox sulphaDoseTB;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox ironChkbx;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox folicAcidChkbx;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox ppiTreatChkbx;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox caChkbx;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox vitDChkbx;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox bioTherapyNotesTB;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox ustekinTreatWeekTB;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.TextBox ustekinTreatDoseTB;
+        private System.Windows.Forms.CheckBox ustekinTreatChkbx;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox goliTreatWeekTB;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.TextBox goliTreatDoseTB;
+        private System.Windows.Forms.CheckBox goliTreatChkbx;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox adaTreatWeekTB;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.TextBox adaTreatDoseTB;
+        private System.Windows.Forms.CheckBox adaTreatChkbx;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox ifxTreatWeekTB;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.TextBox ifxTreatDoseTB;
+        private System.Windows.Forms.CheckBox ifxTreatChkbx;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox azaTreatWeekTB;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.TextBox azaTreatDoseTB;
+        private System.Windows.Forms.CheckBox azaTreatChkbx;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox mtxTreatWeekTB;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.TextBox mtxTreatDoseTB;
+        private System.Windows.Forms.CheckBox mtxTreatChkbx;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.TextBox antibioticDetailsTB;
         private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.CheckBox antibioticChkbx;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.ComboBox ileumMucOutTB;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox suppTherapyDoseTB;
+        private System.Windows.Forms.ComboBox routeCB;
+        private System.Windows.Forms.TextBox otherMedicationNotesTB;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button saveBtn;
     }

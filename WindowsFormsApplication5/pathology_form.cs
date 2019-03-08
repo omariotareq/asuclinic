@@ -186,6 +186,11 @@ namespace WindowsFormsApplication5
             }
         }
 
+        private void pathDate_ValueChanged(object sender, EventArgs e)
+        {
+            clearBindings();
+        }
+
 
     }
 }

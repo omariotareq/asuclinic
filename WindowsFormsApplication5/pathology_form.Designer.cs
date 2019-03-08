@@ -712,6 +712,7 @@
             this.pathDate.Name = "pathDate";
             this.pathDate.Size = new System.Drawing.Size(144, 31);
             this.pathDate.TabIndex = 50;
+            this.pathDate.ValueChanged += new System.EventHandler(this.pathDate_ValueChanged);
             // 
             // dateCB
             // 
