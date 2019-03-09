@@ -664,6 +664,28 @@ string sql=	@"UPDATE asudb.dbo.labentery
                     return dt;
                 }
 
+		public static DataTable getEndoDates(int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.Endoscopy WHERE  p_id= '" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+		public static DataTable getEndoall(string date, int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.Endoscopy WHERE Endodate='" + date + "' AND p_id= '" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+
+		public static void Insertendoscopydata(DateTime date, int Segment, string eryr, string erys, string eryl, string erytr, string eryrt, string eryti, string eryn, string vr, string vs, string vl, string vtr, string vrt, string vti, string vn, string ur, string us, string ul, string utr, string urt, string uti, string un, string usr, string uss, string usl, string ustr, string usrt, string usti, string usn, string uar, string uas, string ual,string uatr,string uart,string uati,string uan,int Muscoalero,int Muscoalfria,string Nr,string Ns,string Nl,string Ntr,string Nrt,string Nti,string Nn, int Pancolitis, int pid)
+		{
+
+			String sql = @"INSERT INTO  asudb.dbo.Endoscopy (Endodate, Segment, eryr, erys,eryl,erytr,eryti,eryn,vr,vs,vl,vtr,vrt,vti,vn,ur,us,ul,utr,urt,uti,un,usr,uss,usl,ustr,usrt,usti,usn,uar,uas,ual,uatr,uart,uati,uan,Muscoalero,Muscoalfria,Nr,Ns,Nl,Ntr,Nrt,Nti,Nn,Pancolitis,p_id)
+            VALUES ('" + date + "',' " + Segment + "','" + eryr + "','" + erys + "','" + eryl+ "','" + erytr + "', '" + eryrt + "','" + eryti + "','" + eryn + "','" + vr + "','" + vs + "','" + vl + "', '" + vtr + "'   , '" + vrt + "'  , '" + vti + "'  , '" + vn + "', '" + ur + "'  , '" + us+ "'  , '" + ul + "','" + utr + "','" + urt + "','" + uti + "','" + un + "','" + usr + "','" + uss + "','" + usl + "','" + ustr + "','" + usrt + "','" + usti + "','" + usn + "','" + uar + "','" + uas + "','" + ual + "','" + uatr + "','" + uart + "','" + uati + "','" + uan + "','" + Muscoalero + "','" + Muscoalfria + "','" + Nr + "','" + Ns + "','" + Nl + "','" + Ntr + "','" + Nrt + "','" + Nti + "','" + Nn + "','" + Pancolitis + "','" + pid + "') ";
+			executeQuery(sql);
+		}
 
 
 		/*
