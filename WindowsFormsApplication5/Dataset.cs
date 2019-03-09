@@ -686,7 +686,28 @@ string sql=	@"UPDATE asudb.dbo.labentery
             VALUES ('" + date + "',' " + Segment + "','" + eryr + "','" + erys + "','" + eryl+ "','" + erytr + "', '" + eryrt + "','" + eryti + "','" + eryn + "','" + vr + "','" + vs + "','" + vl + "', '" + vtr + "'   , '" + vrt + "'  , '" + vti + "'  , '" + vn + "', '" + ur + "'  , '" + us+ "'  , '" + ul + "','" + utr + "','" + urt + "','" + uti + "','" + un + "','" + usr + "','" + uss + "','" + usl + "','" + ustr + "','" + usrt + "','" + usti + "','" + usn + "','" + uar + "','" + uas + "','" + ual + "','" + uatr + "','" + uart + "','" + uati + "','" + uan + "','" + Muscoalero + "','" + Muscoalfria + "','" + Nr + "','" + Ns + "','" + Nl + "','" + Ntr + "','" + Nrt + "','" + Nti + "','" + Nn + "','" + Pancolitis + "','" + pid + "') ";
 			executeQuery(sql);
 		}
+		public static DataTable getActionDates(int p_id)
+		{
 
+			string sql = @"SELECT * FROM asudb.dbo.Actionplan WHERE  p_id= '" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+		public static DataTable getActionall(string date, int p_id)
+		{
+
+			string sql = @"SELECT * FROM asudb.dbo.Actionplan WHERE planDate='" + date + "' AND p_id= '" + p_id + "' ";
+			DataTable dt = getDataTable(sql);
+			return dt;
+		}
+
+		public static void InsertActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, int Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, string Datenextvisit, string Responsibleresident,DateTime  planDate,int pid)
+		{
+
+			String sql = @"INSERT INTO  asudb.dbo.Actionplan (Clinicalactivityindex, CDAI, TWID, Endoscopicactivity,SESendoscopic,Monteralactivityindexno,Monteralindexle,Mayoscore,currentpatientstatus,Detailsofcplan,Decisionstuff,Datenextvisit,Responsibleresident,planDate,p_id)
+            VALUES ('" + Clinicalactivityindex + "',' " + CDAI + "','" + TWID + "','" + Endoscopicactivity + "','" + SESendoscopic + "','" + Monteralactivityindexno + "', '" + Monteralindexle + "','" + Mayoscore + "','" + currentpatientstatus + "','" + Detailsofcplan + "','" + Decisionstuff + "','" + Datenextvisit + "', '" + Responsibleresident + "'   , '" + planDate + "'  , '" + pid + "'  ) ";
+			executeQuery(sql);
+		}
 
 		/*
 		public static DataTable getAllBuildings()
