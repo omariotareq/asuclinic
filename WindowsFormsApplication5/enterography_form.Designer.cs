@@ -216,7 +216,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(567, 16);
+            this.ageLbl.Location = new System.Drawing.Point(559, 16);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
             this.ageLbl.TabIndex = 46;
@@ -226,7 +226,7 @@
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(507, 16);
+            this.label20.Location = new System.Drawing.Point(499, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
             this.label20.TabIndex = 45;
@@ -237,7 +237,7 @@
             this.patNameLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(270, 16);
+            this.patNameLb.Location = new System.Drawing.Point(262, 16);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
             this.patNameLb.TabIndex = 44;
@@ -247,7 +247,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(193, 16);
+            this.label18.Location = new System.Drawing.Point(185, 16);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 43;
@@ -258,7 +258,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(-2, 9);
+            this.label3.Location = new System.Drawing.Point(-10, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 31);
             this.label3.TabIndex = 42;
@@ -432,7 +432,7 @@
             this.groupBox1.Controls.Add(this.lengthOfTrackTB);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.fistulaChkbx);
-            this.groupBox1.Location = new System.Drawing.Point(4, 43);
+            this.groupBox1.Location = new System.Drawing.Point(-4, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(996, 1336);
             this.groupBox1.TabIndex = 47;

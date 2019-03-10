@@ -64,6 +64,7 @@ namespace WindowsFormsApplication5
                     if (tb is CheckBox)
                     {
                         ((CheckBox)tb).Checked = false;
+                        tb.DataBindings.Clear();
                     }
                 }
 
