@@ -709,6 +709,37 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			executeQuery(sql);
 		}
 
+		  
+		//3/10/2019 update action plane yryes
+		public static void updateActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, int Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, string Datenextvisit, string Responsibleresident, DateTime planDate, int pid)
+		{
+
+			string sql = @"UPDATE `asudb.dbo`.`Actionplan` SET `Clinicalactivityindex`='" + Clinicalactivityindex + "'" +
+				", CDAI``='" + CDAI + "', `TWID`='" + TWID + "', `Endoscopicactivity`='" + Endoscopicactivity + "', " +
+				"`SESendoscopic `='" + SESendoscopic + "', `Monteralactivityindexno`='" + Monteralactivityindexno + "', " +
+				"`Monteralindexle`='" + Monteralindexle + "', `Mayoscore`='" + Mayoscore + "', " +
+				"`currentpatientstatus`='" + currentpatientstatus + "', `Detailsofcplan`='" + Detailsofcplan + "', `Decisionstuff`='" + Decisionstuff + "', `Datenextvisit`='" + Datenextvisit + "', `Responsibleresident`='" + Responsibleresident + "', `planDate`='" + planDate + "',  WHERE `p_id`='" + pid + "';";
+
+			          executeQuery(sql);
+		}
+
+
+
+		public static void updateAppartment(int appID, double app_maintanace, double expenses, double app_area, double gardenArea
+			, double roof_building_area, double roof_empty_area, double app_building_meter_price, double app_empty_meter_price
+			, int noOfGarages, double garagePrice)
+		{
+			String sql = @"UPDATE `flowers_park`.`appartments` SET `app_maintenance`='" + app_maintanace + "'" +
+				", `administrative_expenses`='" + expenses + "', `app_area`='" + app_area + "', `garden_area`='" + gardenArea + "', " +
+				"`roof_building_area`='" + roof_building_area + "', `roof_empty_area`='" + roof_empty_area + "', " +
+				"`app_building_meter_price`='" + app_building_meter_price + "', `app_empty_meter_price`='" + app_empty_meter_price + "', " +
+				"`number_of_garages`='" + noOfGarages + "', `garage_price`='" + garagePrice + "' WHERE `id`='" + appID + "';";
+
+			executeQuery(sql);
+
+		}
+
+
 		/*
 		public static DataTable getAllBuildings()
 		{
