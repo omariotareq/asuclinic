@@ -749,7 +749,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 
 
-			string sql = @"UPDATE `asudb.dbo`.`` SET `Dateofsurgery`='" + ds + "'" +
+			string sql = @"UPDATE `asudb.dbo`.`surgery` SET `Dateofsurgery`='" + ds + "'" +
 			", `surgicalindication`='" + si + "', `operativedetails`='" + opd + "', `surgicalcomplication`='" + sc + "',     WHERE `p_id`='" + pid + "' And `id`='" + id + "';";
 
 			executeQuery(sql);
