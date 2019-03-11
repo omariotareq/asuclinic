@@ -709,7 +709,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			executeQuery(sql);
 		}
 
-		  
+
 		//3/10/2019 update action plane yryes
         public static void updateActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, string Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, DateTime Datenextvisit, string Responsibleresident, DateTime planDate, int pid, int id)
 		{
@@ -739,7 +739,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		{
 			string sql = @"UPDATE asudb.dbo.pathology SET patholgydate='" + date + "'" +
 			", ileir='" + il + "', ilad='" + ilad + "', ilic='" + ilc + "', " +
-			" Niil ='" + nii + "', ilER='" + Er + "', " + "ucil='" + uc + "', grail='" + gra + "', " + "otherileal='" + other + "', irco='" + irco + "', cradco='" + cradc + "', balco='" + balco + "', crycco='" + cry + "', lamineosco='" + lamin + "', lamneutroco='" + lamen + "', ulceco='" + ulceo + "', granilco='" + gran + "', otherfindings='" + otherfind + "', finalreport='" + finalreport + "',    WHERE p_id='" + pid + "' And id='" + id + "';";
+			" Niil ='" + nii + "', ilER='" + Er + "', " + "ucil='" + uc + "', grail='" + gra + "', " + "otherileal='" + other + "', irco='" + irco + "', cradco='" + cradc + "', balco='" + balco + "', crycco='" + cry + "', lamineosco='" + lamin + "', lamneutroco='" + lamen + "', ulceco='" + ulceo + "', granilco='" + gran + "', otherfindings='" + otherfind + "', finalreport='" + finalreport + "'WHERE p_id='" + pid + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -750,7 +750,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 
 			string sql = @"UPDATE asudb.dbo.surgery SET Dateofsurgery='" + ds + "'" +
-			", surgicalindication='" + si + "', operativedetails='" + opd + "', surgicalcomplication='" + sc + "',     WHERE p_id='" + pid + "' And id='" + id + "';";
+			", surgicalindication='" + si + "', operativedetails='" + opd + "', surgicalcomplication='" + sc + "' WHERE p_id='" + pid + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -769,7 +769,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			string sql = @"UPDATE asudb.dbo.ultrasonicradio SET ultrasoniccheck='" + uscheck + "'" +
 				  ", Dateofus='" +date + "', moje ='" + moje + "', moil='" + moil + "'" +
 			   ",morc='" + moRc + "', motc='" + moTc + "', " + "molc='" + moLc + "',mosi ='" + moSi + "', " + "subedema='" + subed + "', smtje='" + smtje + "', smtil='" + smtil + "', smtrc='" + smtRc + "', smttc='" + smtTc + "',smtlc ='" + smtLc + "', smtsi='" + smtSi + "', slje='" + slje + "', slil='" + slil + "', slrc='" + slRc + "', sltc='" + slTc + "',sllc='" + slLc + "',    slsi='" + slSi + "',    mtje='" + mtje + "',    mtil='" + mtil + "',    mtrc='" + mtrc + "',   mttc='" + mttc + "',    mtlc='" + mtlc + "',    mtsi='" + mtsi + "',    mhje='" + mhje + "',  mhil='" + mhil + "',  mhrc='" + mhrc + "',    mhtc='" + mhtc + "',    mhlc='" + mhlc + "',    mhsi='" + mhsi + "',    mpje='" + mpje + "',    mpil='" + mpil + "',  mprc='" + mprc + "',  mptc='" + mptc + "',  mplc='" + mplc + "',  mpsi='" + mpsi + "',  mrje='" + mrje + "',  mril='" + mril + "', mrrc='" + mrrc + "',  mrtc='" + mrtc + "', mrlc='" + mrlc + "', mrsi='" + mrsi + "', mpije='" + mpije + "', mpiil='" + mpiil + "', mpirc='" + mpirc + "', mpitc='" + mpitc + "', mpilc='" + mpilc + "', mpisi='" + mpisi + "', fatcreepsign='" + fat + "', locallnenla='" + local + "', llsje='" + llsj + "', llsil='" + llsi + "', llsrc='" + llsrc + "', llstc='" + llstc + "', llslc='" + llslc + "', llssi='" + llssi + "', llvje='" + llvj + "', llvil='" + llvi+ "', llvrc='" + llvrc + "', llvtc='" + llvtc + "', llvlc='" + llvlc + "', llvsi='" + llvsi + "', muralfib='" + muralfib + "', luminalstric='" + luminalstric + "', presdialation='" + pres + "', jejuPresDiam='" + jdiam + "', ileumPresDiam='" + idiam + "', rtColonPresDiam='" + rtcdiam + "', trColonPresDiam='" + trcdiam + "', ltColonPresDiam='" + ltcdiam + "', sigColonPresDiam='" + sigcdiam + "', tcl='" + tl + "', pof='" + pof + "', length='" + leng + "', fis_diameter='" + fis_dia + "', typeoffis='" + type + "', othertypefis='" + othertypefis + "', pa='" + pa + "', Diam='" + dia + "', volume='" + vol + "', loa='" + loa + "', otherlloac='" + otherlloac + "',  otherfinding='" + oth + "', ultrasoundreport='" + ultra + "',        WHERE p_id='" + p_id + "' And id='" + id + "';";
-    
+
 			executeQuery(sql);
 		}
 		public static void UpdateUserInfo(string f, string m, string l, string t, string g, int age, string address, string city, string governorate, string occu, string mari, string menst, DateTime fv,int id)

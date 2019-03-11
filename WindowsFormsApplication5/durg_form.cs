@@ -14,6 +14,8 @@ namespace WindowsFormsApplication5
     public partial class durg_form : Form
     {
         int p_id = 0;
+        int mode = 0;
+        int entry_id = 0;
 
         DataTable dt_date = new DataTable();
         BindingSource dateBindingSource = new BindingSource();
@@ -77,15 +79,29 @@ namespace WindowsFormsApplication5
         {
             try
             {
-               
 
-                DataSet.Insertdruginfo(drugDate.Value.Date, Convert.ToInt16(steroidTreatChkbx.Checked), sterDoseTB.Text, steriodWeekNoTB.Text, steriodNotesTB.Text, Convert.ToInt16(sulphaChkbx.Checked), sulphaDoseTB.Text, sulphaWeekTB.Text,
-                    Convert.ToInt16(oralMesaChkbx.Checked), oralMesaDoseTB.Text, oralMesaWeekTB.Text, Convert.ToInt16(rectalMesaChkbx.Checked), rectalMesaDoseTB.Text, rectalMesaWeekTB.Text, Convert.ToInt16(mtxTreatChkbx.Checked), mtxTreatDoseTB.Text,
-                    mtxTreatWeekTB.Text, Convert.ToInt16(azaTreatChkbx.Checked), azaTreatDoseTB.Text, azaTreatWeekTB.Text, Convert.ToInt16(ifxTreatChkbx.Checked), ifxTreatDoseTB.Text, ifxTreatWeekTB.Text, Convert.ToInt16(adaTreatChkbx.Checked),
-                    adaTreatDoseTB.Text, adaTreatWeekTB.Text, Convert.ToInt16(goliTreatChkbx.Checked), goliTreatDoseTB.Text, goliTreatWeekTB.Text, Convert.ToInt16(ustekinTreatChkbx.Checked), ustekinTreatDoseTB.Text, ustekinTreatWeekTB.Text,
-                    bioTherapyNotesTB.Text, Convert.ToInt16(vitDChkbx.Checked), Convert.ToInt16(caChkbx.Checked), Convert.ToInt16(ppiTreatChkbx.Checked), Convert.ToInt16(folicAcidChkbx.Checked), Convert.ToInt16(ironChkbx.Checked), routeCB.Text, 
-                    suppTherapyDoseTB.Text, Convert.ToInt16(antibioticChkbx.Checked), antibioticDetailsTB.Text, otherMedicationNotesTB.Text, p_id);
-
+                if (mode == 0)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    DataSet.Insertdruginfo(drugDate.Value.Date, Convert.ToInt16(steroidTreatChkbx.Checked), sterDoseTB.Text, steriodWeekNoTB.Text, steriodNotesTB.Text, Convert.ToInt16(sulphaChkbx.Checked), sulphaDoseTB.Text, sulphaWeekTB.Text,
+                        Convert.ToInt16(oralMesaChkbx.Checked), oralMesaDoseTB.Text, oralMesaWeekTB.Text, Convert.ToInt16(rectalMesaChkbx.Checked), rectalMesaDoseTB.Text, rectalMesaWeekTB.Text, Convert.ToInt16(mtxTreatChkbx.Checked), mtxTreatDoseTB.Text,
+                        mtxTreatWeekTB.Text, Convert.ToInt16(azaTreatChkbx.Checked), azaTreatDoseTB.Text, azaTreatWeekTB.Text, Convert.ToInt16(ifxTreatChkbx.Checked), ifxTreatDoseTB.Text, ifxTreatWeekTB.Text, Convert.ToInt16(adaTreatChkbx.Checked),
+                        adaTreatDoseTB.Text, adaTreatWeekTB.Text, Convert.ToInt16(goliTreatChkbx.Checked), goliTreatDoseTB.Text, goliTreatWeekTB.Text, Convert.ToInt16(ustekinTreatChkbx.Checked), ustekinTreatDoseTB.Text, ustekinTreatWeekTB.Text,
+                        bioTherapyNotesTB.Text, Convert.ToInt16(vitDChkbx.Checked), Convert.ToInt16(caChkbx.Checked), Convert.ToInt16(ppiTreatChkbx.Checked), Convert.ToInt16(folicAcidChkbx.Checked), Convert.ToInt16(ironChkbx.Checked), routeCB.Text,
+                        suppTherapyDoseTB.Text, Convert.ToInt16(antibioticChkbx.Checked), antibioticDetailsTB.Text, otherMedicationNotesTB.Text, p_id);
+                    Cursor.Current = Cursors.Default;
+                }
+                else if (mode == 1)
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    DataSet.Updatedruginfo(drugDate.Value.Date, Convert.ToInt16(steroidTreatChkbx.Checked), sterDoseTB.Text, steriodWeekNoTB.Text, steriodNotesTB.Text, Convert.ToInt16(sulphaChkbx.Checked), sulphaDoseTB.Text, sulphaWeekTB.Text,
+                        Convert.ToInt16(oralMesaChkbx.Checked), oralMesaDoseTB.Text, oralMesaWeekTB.Text, Convert.ToInt16(rectalMesaChkbx.Checked), rectalMesaDoseTB.Text, rectalMesaWeekTB.Text, Convert.ToInt16(mtxTreatChkbx.Checked), mtxTreatDoseTB.Text,
+                        mtxTreatWeekTB.Text, Convert.ToInt16(azaTreatChkbx.Checked), azaTreatDoseTB.Text, azaTreatWeekTB.Text, Convert.ToInt16(ifxTreatChkbx.Checked), ifxTreatDoseTB.Text, ifxTreatWeekTB.Text, Convert.ToInt16(adaTreatChkbx.Checked),
+                        adaTreatDoseTB.Text, adaTreatWeekTB.Text, Convert.ToInt16(goliTreatChkbx.Checked), goliTreatDoseTB.Text, goliTreatWeekTB.Text, Convert.ToInt16(ustekinTreatChkbx.Checked), ustekinTreatDoseTB.Text, ustekinTreatWeekTB.Text,
+                        bioTherapyNotesTB.Text, Convert.ToInt16(vitDChkbx.Checked), Convert.ToInt16(caChkbx.Checked), Convert.ToInt16(ppiTreatChkbx.Checked), Convert.ToInt16(folicAcidChkbx.Checked), Convert.ToInt16(ironChkbx.Checked), routeCB.Text,
+                        suppTherapyDoseTB.Text, Convert.ToInt16(antibioticChkbx.Checked), antibioticDetailsTB.Text, otherMedicationNotesTB.Text, p_id,entry_id);
+                    Cursor.Current = Cursors.Default;
+                }
                 MessageBox.Show("Saved successfully");
                 refreshDateCB();
             }
@@ -94,7 +110,24 @@ namespace WindowsFormsApplication5
                 switch (ex.Number)
                 {
                     case 2601:
-                        MessageBox.Show("This date already contains pathology results registered on the system! \nPlease try a differenet date");
+                        MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                                    if (dr == DialogResult.Yes)
+                                    {
+                                        mode = 1;
+                                        Cursor.Current = Cursors.WaitCursor;
+                                        drugDate.ValueChanged -= drugDate_ValueChanged;
+                                        fillData(drugDate.Value.Date.ToString());
+                                        drugDate.ValueChanged += drugDate_ValueChanged;
+                                        Cursor.Current = Cursors.Default;
+                                    }
+                                    if (dr == DialogResult.No)
+                                    {
+                                        mode = 0;
+                                    }
+                                
+                        
                         break;
                     default:
                         MessageBox.Show(ex.Message);
@@ -107,7 +140,10 @@ namespace WindowsFormsApplication5
         {
             try
             {
-                fillData();
+                Cursor.Current = Cursors.WaitCursor;
+                mode = 1;
+                fillData(dateCB.Text);
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
             {
@@ -115,15 +151,19 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void fillData()
+        private void fillData(string date)
         {
-            dt = DataSet.getDrugs(dateCB.Text, p_id);
+            dt = DataSet.getDrugs(date, p_id);
             pathBindingSource.DataSource = dt;
 
             clearBindings();
             drugDate.DataBindings.Clear();
 
-            this.drugDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "Recorddate", true));
+            entry_id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+            drugDate.ValueChanged -= drugDate_ValueChanged;
+            this.drugDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pathBindingSource, "Recorddate", true));
+            drugDate.ValueChanged += drugDate_ValueChanged;
 
             this.steroidTreatChkbx.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.pathBindingSource, "steroidtreat", true));
             this.sterDoseTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "Dose", true));
@@ -191,6 +231,7 @@ namespace WindowsFormsApplication5
         private void drugDate_ValueChanged(object sender, EventArgs e)
         {
             clearBindings();
+            mode = 0;
         }
     }
 }

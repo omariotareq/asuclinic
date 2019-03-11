@@ -14,6 +14,9 @@ namespace WindowsFormsApplication5
     public partial class pathology_form : Form
     {
         int p_id = 0;
+        int mode = 0;
+        int entry_id = 0;
+
         DataTable dt_date = new DataTable();
         BindingSource dateBindingSource = new BindingSource();
 
@@ -59,6 +62,7 @@ namespace WindowsFormsApplication5
                     if (tb is ComboBox)
                     {
                         tb.DataBindings.Clear();
+                        tb.Text = "";
                     }
                     if (tb is CheckBox)
                     {
@@ -72,18 +76,23 @@ namespace WindowsFormsApplication5
         }
 
 
-        private void fillData()
+        private void fillData(string date)
         {
             try
             {
-                
 
-                dt = DataSet.getpathologydata(dateCB.Text, p_id);
+                clearBindings();
+                dt = DataSet.getpathologydata(date, p_id);
                 pathBindingSource.DataSource = dt;
 
                 pathDate.DataBindings.Clear();
 
-                this.pathDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "patholgydate", true));
+                entry_id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+                pathDate.ValueChanged -= pathDate_ValueChanged;
+                this.pathDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pathBindingSource, "patholgydate", true));
+                pathDate.ValueChanged += pathDate_ValueChanged;
+
                 this.ileumInfReaction.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "ileir", true));
                 this.archDist.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "ilad", true));
                 this.infCells.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathBindingSource, "ilic", true));
@@ -134,8 +143,10 @@ namespace WindowsFormsApplication5
 
         private void dateCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            clearBindings();
-            fillData();
+            Cursor.Current = Cursors.WaitCursor;
+            mode = 1;
+            fillData(dateCB.Text);
+            Cursor.Current = Cursors.Default;
         }
 
         private void pathology_form_Load(object sender, EventArgs e)
@@ -147,6 +158,7 @@ namespace WindowsFormsApplication5
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 int ulc=0;
                 int gran =0;
                 int lam = 0;
@@ -168,17 +180,45 @@ namespace WindowsFormsApplication5
                     colon_gran =1;
                 }
 
-
-                DataSet.Insertpatholgydata(pathDate.Value.Date, ileumInfReaction.Text, archDist.Text, infCells.Text, neutInf.Text, erosionTB.Text, ulc, gran, otherIlealFindingsTB.Text, colonInfReaction.Text, cryptDist.Text, basalLymph.Text, cryptAbc.Text, laminaEosino.Text, lam, colon_ulc, colon_gran, colonOtherFindingsTB.Text, finalReportTB.Text, p_id);
-                MessageBox.Show("Saved Successfully");
+                if (mode == 0)
+                {
+                    DataSet.Insertpatholgydata(pathDate.Value.Date, ileumInfReaction.Text, archDist.Text, infCells.Text, neutInf.Text, erosionTB.Text, Convert.ToInt16(UlcChkbx.Checked), Convert.ToInt16(granChkbx.Checked),
+                        otherIlealFindingsTB.Text, colonInfReaction.Text, cryptDist.Text, basalLymph.Text, cryptAbc.Text, laminaEosino.Text, Convert.ToInt16(laminaNeutroChkbx.Checked), Convert.ToInt16(colonUlcChkbx.Checked),
+                        Convert.ToInt16(colonGranChkbx.Checked), colonOtherFindingsTB.Text, finalReportTB.Text, p_id);
+                }
+                else if (mode == 1)
+                {
+                    DataSet.Updatepatholgydata(pathDate.Value.Date, ileumInfReaction.Text, archDist.Text, infCells.Text, neutInf.Text, erosionTB.Text, Convert.ToInt16(UlcChkbx.Checked), Convert.ToInt16(granChkbx.Checked),
+                        otherIlealFindingsTB.Text, colonInfReaction.Text, cryptDist.Text, basalLymph.Text, cryptAbc.Text, laminaEosino.Text, Convert.ToInt16(laminaNeutroChkbx.Checked), Convert.ToInt16(colonUlcChkbx.Checked),
+                        Convert.ToInt16(colonGranChkbx.Checked), colonOtherFindingsTB.Text, finalReportTB.Text, p_id, entry_id);
+                }
+                    MessageBox.Show("Saved Successfully");
                 refreshDateCB();
+                Cursor.Current = Cursors.Default;
             }
             catch (SqlException ex)
             {
                 switch (ex.Number)
                 {
                     case 2601:
-                        MessageBox.Show("This date already contains pathology results registered on the system! \nPlease try a differenet date");
+                       MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                                    if (dr == DialogResult.Yes)
+                                    {
+                                        mode = 1;
+                                        Cursor.Current = Cursors.WaitCursor;
+                                        pathDate.ValueChanged -= pathDate_ValueChanged;
+                                        fillData(pathDate.Value.Date.ToString());
+                                        pathDate.ValueChanged += pathDate_ValueChanged;
+                                        Cursor.Current = Cursors.Default;
+                                    }
+                                    if (dr == DialogResult.No)
+                                    {
+                                        mode = 0;
+                                    }
+                                
+                        
                         break;
                     default:
                         throw;
@@ -188,6 +228,7 @@ namespace WindowsFormsApplication5
 
         private void pathDate_ValueChanged(object sender, EventArgs e)
         {
+            mode = 0;
             clearBindings();
         }
 
