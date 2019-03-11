@@ -206,8 +206,6 @@
             this.actionDate.Name = "actionDate";
             this.actionDate.Size = new System.Drawing.Size(144, 31);
             this.actionDate.TabIndex = 333;
-            this.actionDate.ValueChanged += new System.EventHandler(this.actionDate_ValueChanged);
-            this.actionDate.Validated += new System.EventHandler(this.actionDate_Validated);
             // 
             // dateCB
             // 
