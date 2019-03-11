@@ -45,6 +45,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,7 +182,7 @@
             // 
             this.button6.BackColor = System.Drawing.Color.PowderBlue;
             this.button6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(78, 538);
+            this.button6.Location = new System.Drawing.Point(161, 534);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(145, 33);
             this.button6.TabIndex = 8;
@@ -193,7 +194,7 @@
             // 
             this.button7.BackColor = System.Drawing.Color.PowderBlue;
             this.button7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(255, 538);
+            this.button7.Location = new System.Drawing.Point(338, 534);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(145, 33);
             this.button7.TabIndex = 9;
@@ -205,13 +206,25 @@
             // 
             this.button8.BackColor = System.Drawing.Color.PowderBlue;
             this.button8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(432, 538);
+            this.button8.Location = new System.Drawing.Point(515, 534);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(145, 33);
             this.button8.TabIndex = 10;
             this.button8.Text = "Drug Record";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.PowderBlue;
+            this.button9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(692, 534);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(145, 33);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Action Plan";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // patients_form
             // 
@@ -220,6 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1028, 616);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -260,5 +274,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
 	}
 }

@@ -689,7 +689,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		public static DataTable getActionDates(int p_id)
 		{
 
-			string sql = @"SELECT * FROM asudb.dbo.Actionplan WHERE  p_id= '" + p_id + "' ";
+            string sql = @"SELECT planDate FROM asudb.dbo.Actionplan WHERE  p_id= '" + p_id + "' ";
 			DataTable dt = getDataTable(sql);
 			return dt;
 		}
@@ -701,7 +701,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			return dt;
 		}
 
-		public static void InsertActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, int Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, string Datenextvisit, string Responsibleresident,DateTime  planDate,int pid)
+        public static void InsertActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, string Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, DateTime Datenextvisit, string Responsibleresident, DateTime planDate, int pid)
 		{
 
 			String sql = @"INSERT INTO  asudb.dbo.Actionplan (Clinicalactivityindex, CDAI, TWID, Endoscopicactivity,SESendoscopic,Monteralactivityindexno,Monteralindexle,Mayoscore,currentpatientstatus,Detailsofcplan,Decisionstuff,Datenextvisit,Responsibleresident,planDate,p_id)

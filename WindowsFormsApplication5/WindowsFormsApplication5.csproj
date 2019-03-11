@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="action_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="action_form.Designer.cs">
+      <DependentUpon>action_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dataset.cs" />
     <Compile Include="durg_form.cs">
       <SubType>Form</SubType>
@@ -139,6 +145,9 @@
       <DependentUpon>ultrasound_form.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="action_form.resx">
+      <DependentUpon>action_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="durg_form.resx">
       <DependentUpon>durg_form.cs</DependentUpon>
     </EmbeddedResource>
