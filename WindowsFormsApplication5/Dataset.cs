@@ -711,14 +711,14 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 		  
 		//3/10/2019 update action plane yryes
-		public static void updateActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, int Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, string Datenextvisit, string Responsibleresident, DateTime planDate, int pid,int id)
+        public static void updateActionplandata(string Clinicalactivityindex, string CDAI, string TWID, string Endoscopicactivity, string SESendoscopic, string Monteralactivityindexno, string Monteralindexle, string Mayoscore, string currentpatientstatus, string Detailsofcplan, string Decisionstuff, DateTime Datenextvisit, string Responsibleresident, DateTime planDate, int pid, int id)
 		{
 
-			string sql = @"UPDATE `asudb.dbo`.`Actionplan` SET `Clinicalactivityindex`='" + Clinicalactivityindex + "'" +
-				", `CDAI`='" + CDAI + "', `TWID`='" + TWID + "', `Endoscopicactivity`='" + Endoscopicactivity + "', " +
-				"`SESendoscopic `='" + SESendoscopic + "', `Monteralactivityindexno`='" + Monteralactivityindexno + "', " +
-				"`Monteralindexle`='" + Monteralindexle + "', `Mayoscore`='" + Mayoscore + "', " +
-				"`currentpatientstatus`='" + currentpatientstatus + "', `Detailsofcplan`='" + Detailsofcplan + "', `Decisionstuff`='" + Decisionstuff + "', `Datenextvisit`='" + Datenextvisit + "', `Responsibleresident`='" + Responsibleresident + "', `planDate`='" + planDate + "',  WHERE `p_id`='" + pid + "' And `id`='" + id + "' ;";
+			string sql = @"UPDATE asudb.dbo.Actionplan SET Clinicalactivityindex='" + Clinicalactivityindex + "'" +
+				", CDAI='" + CDAI + "', TWID='" + TWID + "', Endoscopicactivity='" + Endoscopicactivity + "', " +
+				"SESendoscopic ='" + SESendoscopic + "', Monteralactivityindexno='" + Monteralactivityindexno + "', " +
+				"Monteralindexle='" + Monteralindexle + "', Mayoscore='" + Mayoscore + "', " +
+				"currentpatientstatus='" + currentpatientstatus + "', Detailsofcplan='" + Detailsofcplan + "', Decisionstuff='" + Decisionstuff + "', Datenextvisit='" + Datenextvisit + "', Responsibleresident='" + Responsibleresident + "', planDate='" + planDate + "'  WHERE p_id='" + pid + "' And id='" + id + "' ;";
 
 			     executeQuery(sql);
 		}
