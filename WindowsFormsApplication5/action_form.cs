@@ -64,46 +64,17 @@ namespace WindowsFormsApplication5
                     if (tb is TextBox)
                     {
                         tb.DataBindings.Clear();
-                       
-                    }
-                    if (tb is ComboBox)
-                    {
-                        tb.DataBindings.Clear();
-                       
-                    }
-                    if (tb is CheckBox)
-                    {
-                       
-                        tb.DataBindings.Clear();
-                    }
-                }
-
-            }
-
-
-        }
-
-        private void clearText()
-        {
-            foreach (Control gb in this.Controls)
-            {
-
-                foreach (Control tb in gb.Controls)
-                {
-                    if (tb is TextBox)
-                    {
-                        
                         tb.Text = "";
                     }
                     if (tb is ComboBox)
                     {
-                        
+                        tb.DataBindings.Clear();
                         tb.Text = "";
                     }
                     if (tb is CheckBox)
                     {
                         ((CheckBox)tb).Checked = false;
-                        
+                        tb.DataBindings.Clear();
                     }
                 }
 
@@ -117,10 +88,10 @@ namespace WindowsFormsApplication5
         private void dateCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            //actionDate.ValueChanged -= actionDate_ValueChanged;
+            actionDate.ValueChanged -= actionDate_ValueChanged;
             fillData(dateCB.Text);
             mode = 1;
-            //actionDate.ValueChanged += actionDate_ValueChanged;
+            actionDate.ValueChanged += actionDate_ValueChanged;
             Cursor.Current = Cursors.Default;
         }
 
@@ -150,9 +121,8 @@ namespace WindowsFormsApplication5
                 this.decisionStaffTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Decisionstuff", true));
                 this.nxtDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Datenextvisit", true));
                 this.fuResidentTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Responsibleresident", true));
-
                 this.actionDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "planDate", true));
-                clearBindings();
+
             }
             catch (Exception ex)
             {
@@ -193,9 +163,9 @@ namespace WindowsFormsApplication5
                                     {
                                         mode = 1;
                                         Cursor.Current = Cursors.WaitCursor;
-                                        //actionDate.ValueChanged -= actionDate_ValueChanged;
+                                        actionDate.ValueChanged -= actionDate_ValueChanged;
                                         fillData(actionDate.Value.Date.ToString());
-                                       // actionDate.ValueChanged += actionDate_ValueChanged;
+                                        actionDate.ValueChanged += actionDate_ValueChanged;
                                         Cursor.Current = Cursors.Default;
                                     }
                                     if (dr == DialogResult.No)
@@ -210,6 +180,17 @@ namespace WindowsFormsApplication5
                         break;
                 }
             }
+        }
+
+        private void actionDate_ValueChanged(object sender, EventArgs e)
+        {
+            mode = 0;
+            clearBindings();
+        }
+
+        private void actionDate_Validated(object sender, EventArgs e)
+        {
+
         }
 
     }

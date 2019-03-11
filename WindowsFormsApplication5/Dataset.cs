@@ -739,7 +739,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		{
 			string sql = @"UPDATE asudb.dbo.pathology SET patholgydate='" + date + "'" +
 			", ileir='" + il + "', ilad='" + ilad + "', ilic='" + ilc + "', " +
-			" Niil ='" + nii + "', ilER='" + Er + "', " + "ucil='" + uc + "', grail='" + gra + "', " + "otherileal='" + other + "', irco='" + irco + "', cradco='" + cradc + "', balco='" + balco + "', crycco='" + cry + "', lamineosco='" + lamin + "', lamneutroco='" + lamen + "', ulceco='" + ulceo + "', granilco='" + gran + "', otherfindings='" + otherfind + "', finalreport='" + finalreport + "',    WHERE p_id='" + pid + "' And id='" + id + "';";
+			" Niil ='" + nii + "', ilER='" + Er + "', " + "ucil='" + uc + "', grail='" + gra + "', " + "otherileal='" + other + "', irco='" + irco + "', cradco='" + cradc + "', balco='" + balco + "', crycco='" + cry + "', lamineosco='" + lamin + "', lamneutroco='" + lamen + "', ulceco='" + ulceo + "', granilco='" + gran + "', otherfindings='" + otherfind + "', finalreport='" + finalreport + "'WHERE p_id='" + pid + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -750,7 +750,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 
 			string sql = @"UPDATE asudb.dbo.surgery SET Dateofsurgery='" + ds + "'" +
-			", surgicalindication='" + si + "', operativedetails='" + opd + "', surgicalcomplication='" + sc + "',     WHERE p_id='" + pid + "' And id='" + id + "';";
+			", surgicalindication='" + si + "', operativedetails='" + opd + "', surgicalcomplication='" + sc + "' WHERE p_id='" + pid + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -759,7 +759,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		{
 			string sql = @"UPDATE asudb.dbo.druglist SET Recorddate='" + Rd + "'" +
 		", steroidtreat='" + sterodate + "', Dose ='" + dose + "', Wekkno='" + weekno + "'" +
-		",Steroidsnotes='" + sternotes + "', Asas='" + Asas + "', " + "Asad='" + Asad + "', Asaw='" + Asaw + "', " + "Asao='" + Asao + "', Asaod='" + Asaod + "', Asaow='" + Asaow + "', Asar='" + Asar + "', Asard='" + Asard + "', Asarw='" + Asarw + "', immmtx='" + immmtx + "', immmd='" + immmd + "', immmw='" + immmw + "', imma='" + imma + "', immad='" + immad + "',immaw='" + immaw + "',    bif='" + bif + "',    bifd='" + bifd + "',    bifw='" + bifw + "',    bad='" + bad + "',    badd='" + badd + "',    badw='" + badw + "',    bgo='" + bgo + "',    bgod='" + bgod + "',    bgow='" + bgow + "',    bus='" + bus + "',    busd='" + busd + "',    busw='" + busw + "',    Biolgnotes='" + Biolgnotes + "',    supvit='" + supvit + "',    supca='" + supca + "',  supca='" + supca + "',  supppi='" + supppi + "',  suppfa='" + suppfa + "',  suppiron='" + suppiron + "',  suproute='" + suproute + "',  antiat='" + antiat + "', antidetails='" + antidetails + "',  othermedication='" + othermedication + "',         WHERE p_id='" + p_id + "' And id='" + id + "';";
+		",Steroidsnotes='" + sternotes + "', Asas='" + Asas + "', " + "Asad='" + Asad + "', Asaw='" + Asaw + "', " + "Asao='" + Asao + "', Asaod='" + Asaod + "', Asaow='" + Asaow + "', Asar='" + Asar + "', Asard='" + Asard + "', Asarw='" + Asarw + "', immmtx='" + immmtx + "', immmd='" + immmd + "', immmw='" + immmw + "', imma='" + imma + "', immad='" + immad + "',immaw='" + immaw + "',    bif='" + bif + "',    bifd='" + bifd + "',    bifw='" + bifw + "',    bad='" + bad + "',    badd='" + badd + "',    badw='" + badw + "',    bgo='" + bgo + "',    bgod='" + bgod + "',    bgow='" + bgow + "',    bus='" + bus + "',    busd='" + busd + "',    busw='" + busw + "',    Biolgnotes='" + Biolgnotes + "',    supvit='" + supvit + "',    supca='" + supca + "',  supca='" + supca + "',  supppi='" + supppi + "',  suppfa='" + suppfa + "',  suppiron='" + suppiron + "',  suproute='" + suproute + "',  antiat='" + antiat + "', antidetails='" + antidetails + "',  othermedication='" + othermedication + "' WHERE p_id='" + p_id + "' And id='" + id + "';";
 
 			executeQuery(sql);
 

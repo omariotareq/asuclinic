@@ -34,37 +34,37 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.actionDate = new System.Windows.Forms.DateTimePicker();
-            this.dateCB = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.caiCB = new System.Windows.Forms.ComboBox();
-            this.cdaiTB = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.twCB = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.eaiCB = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.seseaiTB = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.mayoTB = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.montreal1CB = new System.Windows.Forms.ComboBox();
-            this.montreal2CB = new System.Windows.Forms.ComboBox();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.fuResidentTB = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.nxtDate = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.decisionStaffTB = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.currentPlanTB = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.currentStatusCB = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.currentPlanTB = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.decisionStaffTB = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.nxtDate = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
-            this.fuResidentTB = new System.Windows.Forms.TextBox();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.montreal2CB = new System.Windows.Forms.ComboBox();
+            this.montreal1CB = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.mayoTB = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.seseaiTB = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.eaiCB = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.twCB = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cdaiTB = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.caiCB = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateCB = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.actionDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,250 +171,97 @@
             this.groupBox1.TabIndex = 330;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // saveBtn
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 24);
-            this.label1.TabIndex = 334;
-            this.label1.Text = "Date";
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.Location = new System.Drawing.Point(446, 783);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(106, 32);
+            this.saveBtn.TabIndex = 393;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // label2
+            // fuResidentTB
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(271, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 24);
-            this.label2.TabIndex = 332;
-            this.label2.Text = "Browse US dates";
+            this.fuResidentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fuResidentTB.Location = new System.Drawing.Point(658, 728);
+            this.fuResidentTB.Multiline = true;
+            this.fuResidentTB.Name = "fuResidentTB";
+            this.fuResidentTB.Size = new System.Drawing.Size(257, 32);
+            this.fuResidentTB.TabIndex = 359;
             // 
-            // actionDate
+            // label16
             // 
-            this.actionDate.CustomFormat = "dd/MM/yyyy";
-            this.actionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.actionDate.Location = new System.Drawing.Point(7, 60);
-            this.actionDate.Name = "actionDate";
-            this.actionDate.Size = new System.Drawing.Size(144, 31);
-            this.actionDate.TabIndex = 333;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Maroon;
+            this.label16.Location = new System.Drawing.Point(414, 732);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(240, 24);
+            this.label16.TabIndex = 358;
+            this.label16.Text = "Responsible FU resident";
             // 
-            // dateCB
+            // nxtDate
             // 
-            this.dateCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateCB.FormatString = "yyyy-MM-dd";
-            this.dateCB.FormattingEnabled = true;
-            this.dateCB.Location = new System.Drawing.Point(446, 13);
-            this.dateCB.Name = "dateCB";
-            this.dateCB.Size = new System.Drawing.Size(227, 32);
-            this.dateCB.TabIndex = 331;
-            this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged);
+            this.nxtDate.CustomFormat = "dd/MM/yyyy";
+            this.nxtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nxtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.nxtDate.Location = new System.Drawing.Point(221, 727);
+            this.nxtDate.Name = "nxtDate";
+            this.nxtDate.Size = new System.Drawing.Size(144, 31);
+            this.nxtDate.TabIndex = 334;
             // 
-            // label4
+            // label15
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(6, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(321, 24);
-            this.label4.TabIndex = 335;
-            this.label4.Text = "Activity indicies and patient status";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Maroon;
+            this.label15.Location = new System.Drawing.Point(79, 731);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 24);
+            this.label15.TabIndex = 357;
+            this.label15.Text = "Next visit date";
             // 
-            // label6
+            // decisionStaffTB
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(71, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 24);
-            this.label6.TabIndex = 338;
-            this.label6.Text = "CDAI";
+            this.decisionStaffTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decisionStaffTB.Location = new System.Drawing.Point(225, 569);
+            this.decisionStaffTB.Multiline = true;
+            this.decisionStaffTB.Name = "decisionStaffTB";
+            this.decisionStaffTB.Size = new System.Drawing.Size(297, 133);
+            this.decisionStaffTB.TabIndex = 356;
             // 
-            // label5
+            // label14
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(67, 153);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 24);
-            this.label5.TabIndex = 336;
-            this.label5.Text = "Clinical activity index";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Maroon;
+            this.label14.Location = new System.Drawing.Point(6, 572);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(196, 24);
+            this.label14.TabIndex = 355;
+            this.label14.Text = "Decision maker staff";
             // 
-            // caiCB
+            // currentPlanTB
             // 
-            this.caiCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.caiCB.FormatString = "yyyy-MM-dd";
-            this.caiCB.FormattingEnabled = true;
-            this.caiCB.Items.AddRange(new object[] {
-            "CDAI",
-            "TW"});
-            this.caiCB.Location = new System.Drawing.Point(277, 150);
-            this.caiCB.Name = "caiCB";
-            this.caiCB.Size = new System.Drawing.Size(111, 32);
-            this.caiCB.TabIndex = 337;
+            this.currentPlanTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentPlanTB.Location = new System.Drawing.Point(225, 385);
+            this.currentPlanTB.Multiline = true;
+            this.currentPlanTB.Name = "currentPlanTB";
+            this.currentPlanTB.Size = new System.Drawing.Size(681, 139);
+            this.currentPlanTB.TabIndex = 354;
             // 
-            // cdaiTB
+            // label13
             // 
-            this.cdaiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cdaiTB.Location = new System.Drawing.Point(130, 195);
-            this.cdaiTB.Name = "cdaiTB";
-            this.cdaiTB.Size = new System.Drawing.Size(82, 29);
-            this.cdaiTB.TabIndex = 339;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(233, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 24);
-            this.label7.TabIndex = 340;
-            this.label7.Text = "TW";
-            // 
-            // twCB
-            // 
-            this.twCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.twCB.FormatString = "yyyy-MM-dd";
-            this.twCB.FormattingEnabled = true;
-            this.twCB.Items.AddRange(new object[] {
-            "Mild",
-            "Moderete",
-            "Severe"});
-            this.twCB.Location = new System.Drawing.Point(277, 193);
-            this.twCB.Name = "twCB";
-            this.twCB.Size = new System.Drawing.Size(111, 32);
-            this.twCB.TabIndex = 341;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Navy;
-            this.label8.Location = new System.Drawing.Point(503, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 24);
-            this.label8.TabIndex = 342;
-            this.label8.Text = "Endoscopic activity index";
-            // 
-            // eaiCB
-            // 
-            this.eaiCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eaiCB.FormatString = "yyyy-MM-dd";
-            this.eaiCB.FormattingEnabled = true;
-            this.eaiCB.Items.AddRange(new object[] {
-            "UC",
-            "CD"});
-            this.eaiCB.Location = new System.Drawing.Point(756, 150);
-            this.eaiCB.Name = "eaiCB";
-            this.eaiCB.Size = new System.Drawing.Size(111, 32);
-            this.eaiCB.TabIndex = 343;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(503, 193);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(291, 24);
-            this.label9.TabIndex = 344;
-            this.label9.Text = "SES endoscopic activity index";
-            // 
-            // seseaiTB
-            // 
-            this.seseaiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.seseaiTB.Location = new System.Drawing.Point(800, 190);
-            this.seseaiTB.Name = "seseaiTB";
-            this.seseaiTB.Size = new System.Drawing.Size(106, 29);
-            this.seseaiTB.TabIndex = 345;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(503, 229);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 24);
-            this.label10.TabIndex = 346;
-            this.label10.Text = "Mayo score";
-            // 
-            // mayoTB
-            // 
-            this.mayoTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mayoTB.Location = new System.Drawing.Point(627, 226);
-            this.mayoTB.Name = "mayoTB";
-            this.mayoTB.Size = new System.Drawing.Size(82, 29);
-            this.mayoTB.TabIndex = 347;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(503, 267);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(217, 24);
-            this.label11.TabIndex = 348;
-            this.label11.Text = "Montreal activity index";
-            // 
-            // montreal1CB
-            // 
-            this.montreal1CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montreal1CB.FormatString = "yyyy-MM-dd";
-            this.montreal1CB.FormattingEnabled = true;
-            this.montreal1CB.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "L",
-            "E"});
-            this.montreal1CB.Location = new System.Drawing.Point(726, 264);
-            this.montreal1CB.Name = "montreal1CB";
-            this.montreal1CB.Size = new System.Drawing.Size(68, 32);
-            this.montreal1CB.TabIndex = 349;
-            // 
-            // montreal2CB
-            // 
-            this.montreal2CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.montreal2CB.FormatString = "yyyy-MM-dd";
-            this.montreal2CB.FormattingEnabled = true;
-            this.montreal2CB.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.montreal2CB.Location = new System.Drawing.Point(800, 264);
-            this.montreal2CB.Name = "montreal2CB";
-            this.montreal2CB.Size = new System.Drawing.Size(68, 32);
-            this.montreal2CB.TabIndex = 350;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Maroon;
+            this.label13.Location = new System.Drawing.Point(6, 385);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(213, 24);
+            this.label13.TabIndex = 353;
+            this.label13.Text = "Details of current plan";
             // 
             // currentStatusCB
             // 
@@ -447,97 +294,252 @@
             this.label12.TabIndex = 351;
             this.label12.Text = "Current patient status";
             // 
-            // label13
+            // montreal2CB
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Maroon;
-            this.label13.Location = new System.Drawing.Point(6, 385);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(213, 24);
-            this.label13.TabIndex = 353;
-            this.label13.Text = "Details of current plan";
+            this.montreal2CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montreal2CB.FormatString = "yyyy-MM-dd";
+            this.montreal2CB.FormattingEnabled = true;
+            this.montreal2CB.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.montreal2CB.Location = new System.Drawing.Point(800, 264);
+            this.montreal2CB.Name = "montreal2CB";
+            this.montreal2CB.Size = new System.Drawing.Size(68, 32);
+            this.montreal2CB.TabIndex = 350;
             // 
-            // currentPlanTB
+            // montreal1CB
             // 
-            this.currentPlanTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentPlanTB.Location = new System.Drawing.Point(225, 385);
-            this.currentPlanTB.Multiline = true;
-            this.currentPlanTB.Name = "currentPlanTB";
-            this.currentPlanTB.Size = new System.Drawing.Size(681, 139);
-            this.currentPlanTB.TabIndex = 354;
+            this.montreal1CB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montreal1CB.FormatString = "yyyy-MM-dd";
+            this.montreal1CB.FormattingEnabled = true;
+            this.montreal1CB.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "L",
+            "E"});
+            this.montreal1CB.Location = new System.Drawing.Point(726, 264);
+            this.montreal1CB.Name = "montreal1CB";
+            this.montreal1CB.Size = new System.Drawing.Size(68, 32);
+            this.montreal1CB.TabIndex = 349;
             // 
-            // label14
+            // label11
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Maroon;
-            this.label14.Location = new System.Drawing.Point(6, 572);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(196, 24);
-            this.label14.TabIndex = 355;
-            this.label14.Text = "Decision maker staff";
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(503, 267);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(217, 24);
+            this.label11.TabIndex = 348;
+            this.label11.Text = "Montreal activity index";
             // 
-            // decisionStaffTB
+            // mayoTB
             // 
-            this.decisionStaffTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decisionStaffTB.Location = new System.Drawing.Point(225, 569);
-            this.decisionStaffTB.Multiline = true;
-            this.decisionStaffTB.Name = "decisionStaffTB";
-            this.decisionStaffTB.Size = new System.Drawing.Size(297, 133);
-            this.decisionStaffTB.TabIndex = 356;
+            this.mayoTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mayoTB.Location = new System.Drawing.Point(627, 226);
+            this.mayoTB.Name = "mayoTB";
+            this.mayoTB.Size = new System.Drawing.Size(82, 29);
+            this.mayoTB.TabIndex = 347;
             // 
-            // label15
+            // label10
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Maroon;
-            this.label15.Location = new System.Drawing.Point(79, 731);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 24);
-            this.label15.TabIndex = 357;
-            this.label15.Text = "Next visit date";
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(503, 229);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 24);
+            this.label10.TabIndex = 346;
+            this.label10.Text = "Mayo score";
             // 
-            // nxtDate
+            // seseaiTB
             // 
-            this.nxtDate.CustomFormat = "dd/MM/yyyy";
-            this.nxtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nxtDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.nxtDate.Location = new System.Drawing.Point(221, 727);
-            this.nxtDate.Name = "nxtDate";
-            this.nxtDate.Size = new System.Drawing.Size(144, 31);
-            this.nxtDate.TabIndex = 334;
+            this.seseaiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.seseaiTB.Location = new System.Drawing.Point(800, 190);
+            this.seseaiTB.Name = "seseaiTB";
+            this.seseaiTB.Size = new System.Drawing.Size(106, 29);
+            this.seseaiTB.TabIndex = 345;
             // 
-            // label16
+            // label9
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Maroon;
-            this.label16.Location = new System.Drawing.Point(414, 732);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(240, 24);
-            this.label16.TabIndex = 358;
-            this.label16.Text = "Responsible FU resident";
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(503, 193);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(291, 24);
+            this.label9.TabIndex = 344;
+            this.label9.Text = "SES endoscopic activity index";
             // 
-            // fuResidentTB
+            // eaiCB
             // 
-            this.fuResidentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fuResidentTB.Location = new System.Drawing.Point(658, 728);
-            this.fuResidentTB.Multiline = true;
-            this.fuResidentTB.Name = "fuResidentTB";
-            this.fuResidentTB.Size = new System.Drawing.Size(257, 32);
-            this.fuResidentTB.TabIndex = 359;
+            this.eaiCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eaiCB.FormatString = "yyyy-MM-dd";
+            this.eaiCB.FormattingEnabled = true;
+            this.eaiCB.Items.AddRange(new object[] {
+            "UC",
+            "CD"});
+            this.eaiCB.Location = new System.Drawing.Point(756, 150);
+            this.eaiCB.Name = "eaiCB";
+            this.eaiCB.Size = new System.Drawing.Size(111, 32);
+            this.eaiCB.TabIndex = 343;
             // 
-            // saveBtn
+            // label8
             // 
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(446, 783);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(106, 32);
-            this.saveBtn.TabIndex = 393;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = true;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Navy;
+            this.label8.Location = new System.Drawing.Point(503, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(247, 24);
+            this.label8.TabIndex = 342;
+            this.label8.Text = "Endoscopic activity index";
+            // 
+            // twCB
+            // 
+            this.twCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.twCB.FormatString = "yyyy-MM-dd";
+            this.twCB.FormattingEnabled = true;
+            this.twCB.Items.AddRange(new object[] {
+            "Mild",
+            "Moderete",
+            "Severe"});
+            this.twCB.Location = new System.Drawing.Point(277, 193);
+            this.twCB.Name = "twCB";
+            this.twCB.Size = new System.Drawing.Size(111, 32);
+            this.twCB.TabIndex = 341;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(233, 197);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 24);
+            this.label7.TabIndex = 340;
+            this.label7.Text = "TW";
+            // 
+            // cdaiTB
+            // 
+            this.cdaiTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cdaiTB.Location = new System.Drawing.Point(130, 195);
+            this.cdaiTB.Name = "cdaiTB";
+            this.cdaiTB.Size = new System.Drawing.Size(82, 29);
+            this.cdaiTB.TabIndex = 339;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(71, 197);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 24);
+            this.label6.TabIndex = 338;
+            this.label6.Text = "CDAI";
+            // 
+            // caiCB
+            // 
+            this.caiCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caiCB.FormatString = "yyyy-MM-dd";
+            this.caiCB.FormattingEnabled = true;
+            this.caiCB.Items.AddRange(new object[] {
+            "CDAI",
+            "TW"});
+            this.caiCB.Location = new System.Drawing.Point(277, 150);
+            this.caiCB.Name = "caiCB";
+            this.caiCB.Size = new System.Drawing.Size(111, 32);
+            this.caiCB.TabIndex = 337;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Navy;
+            this.label5.Location = new System.Drawing.Point(67, 153);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(204, 24);
+            this.label5.TabIndex = 336;
+            this.label5.Text = "Clinical activity index";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(6, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(321, 24);
+            this.label4.TabIndex = 335;
+            this.label4.Text = "Activity indicies and patient status";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 24);
+            this.label1.TabIndex = 334;
+            this.label1.Text = "Date";
+            // 
+            // dateCB
+            // 
+            this.dateCB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateCB.FormatString = "yyyy-MM-dd";
+            this.dateCB.FormattingEnabled = true;
+            this.dateCB.Location = new System.Drawing.Point(446, 13);
+            this.dateCB.Name = "dateCB";
+            this.dateCB.Size = new System.Drawing.Size(227, 32);
+            this.dateCB.TabIndex = 331;
+            this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(271, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(168, 24);
+            this.label2.TabIndex = 332;
+            this.label2.Text = "Browse US dates";
+            // 
+            // actionDate
+            // 
+            this.actionDate.CustomFormat = "dd/MM/yyyy";
+            this.actionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actionDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.actionDate.Location = new System.Drawing.Point(7, 60);
+            this.actionDate.Name = "actionDate";
+            this.actionDate.Size = new System.Drawing.Size(144, 31);
+            this.actionDate.TabIndex = 333;
+            this.actionDate.ValueChanged += new System.EventHandler(this.actionDate_ValueChanged);
+            this.actionDate.Validated += new System.EventHandler(this.actionDate_Validated);
             // 
             // action_form
             // 
@@ -545,7 +547,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 601);
+            this.ClientSize = new System.Drawing.Size(1025, 601);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
