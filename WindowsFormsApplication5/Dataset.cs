@@ -783,8 +783,14 @@ string sql=	@"UPDATE asudb.dbo.labentery
 			executeQuery(sql);
 		}
 
+		public static void UpdateenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, string ttl, int cf, int caf, string clot, string cdab, string cdot, string cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id,int id)
+		{
+			string sql = @"UPDATE asudb.dbo.enterography date='" + date + "'" +
+			  ", Entrostudy='" + enst + "', mucosalenh ='" + musleh + "', jejEa='" + jeE + "'" +
+		   ",ilEa='" + ilE + "', RcEa='" + RcE + "', " + "TcEa='" + TcE + "',LcEa ='" + LcE + "', " + "ScEa='" + ScE + "', ReEa='" + ReE + "', Mucosalirrefi='" + Msl + "', submucosaledema='" + subdema + "', jethofSMedema='" + jedema + "',ilthofSMedema ='" + ildema + "', RcthofSMedema='" + Rcdema + "', TcthofSMedema='" + Tcdema+ "', LcthofSMedema='" + Lcdema + "', ScthofSMedema='" + Scdema + "', RethofSMedema='" + Redema + "',muralabscess='" + muralab+ "',  jelengthactivity='" + jela + "',    illengthactivity='" + illa + "',    Rclengthactivity='" + Rcla + "',    Tclengthactivity='" + Tcla + "',   Lclengthactivity='" + Lcla + "',    Sclengthactivity='" +Scla + "',    Relengthactivity='" + Rela + "',    jemuralthickness='" + jemt + "',  ilmuralthickness='" + ilmt + "',  Rcmuralthickness='" + Rcmt + "',    Tcmuralthickness='" + Tcmt + "',    Lcmuralthickness='" + Lcmt + "',    Scmuralthickness='" + Scmt + "',    Remuralthickness='" + Remt + "',    Fatedema='" + fd + "',  combsign='" + cs + "',  Muralfib='" + mf + "',  jeNarstr='" + jens + "',  ilNarstr='" + ilns + "',  RcNarstr='" +Rcns + "',  TcNarstr='" + Tcns + "', LcNarstr='" + Lcns + "',  ScNarstr='" + Scns + "', ReNarstr='" + Rens + "', Prestenoticdial='" + presd + "', jePrestenoticdiam='" + jep + "', ilPrestenoticdiam='" + ilp + "', RcPrestenoticdiam='" + Rcp + "', TcPrestenoticdiam='" + Tcp + "', LcPrestenoticdiam='" + lcp + "', ScPrestenoticdiam='" + Scp + "', RePrestenoticdiam='" + Rep+ "', LossofHaus='" + Lh + "',totallength='" + ttl+ "', compfistula='" + cf+ "', compAbscessformation='" + caf + "', complenoftrack='" + clot + "', compdiamofab='" + cdab + "', compdiamoftrack='" + cdot + "', compvolofab='" + cdvt+ "', comptypeoffistula='" + ctof + "', compabsloc='" + cabs+ "', compothertypefis='" + cttf + "', compotherabsloc='" + comother + "', otherentrofindings='" + oth + "', EntroReport='" + enter + "',        WHERE p_id='" + p_id + "' And id='" + id + "';";
 
-
+			executeQuery(sql);
+		}
 		/*
 		public static DataTable getAllBuildings()
 		{
