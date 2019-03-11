@@ -720,25 +720,12 @@ string sql=	@"UPDATE asudb.dbo.labentery
 				"`Monteralindexle`='" + Monteralindexle + "', `Mayoscore`='" + Mayoscore + "', " +
 				"`currentpatientstatus`='" + currentpatientstatus + "', `Detailsofcplan`='" + Detailsofcplan + "', `Decisionstuff`='" + Decisionstuff + "', `Datenextvisit`='" + Datenextvisit + "', `Responsibleresident`='" + Responsibleresident + "', `planDate`='" + planDate + "',  WHERE `p_id`='" + pid + "';";
 
-			          executeQuery(sql);
+			     executeQuery(sql);
 		}
 
 
 
-		public static void updateAppartment(int appID, double app_maintanace, double expenses, double app_area, double gardenArea
-			, double roof_building_area, double roof_empty_area, double app_building_meter_price, double app_empty_meter_price
-			, int noOfGarages, double garagePrice)
-		{
-			String sql = @"UPDATE `flowers_park`.`appartments` SET `app_maintenance`='" + app_maintanace + "'" +
-				", `administrative_expenses`='" + expenses + "', `app_area`='" + app_area + "', `garden_area`='" + gardenArea + "', " +
-				"`roof_building_area`='" + roof_building_area + "', `roof_empty_area`='" + roof_empty_area + "', " +
-				"`app_building_meter_price`='" + app_building_meter_price + "', `app_empty_meter_price`='" + app_empty_meter_price + "', " +
-				"`number_of_garages`='" + noOfGarages + "', `garage_price`='" + garagePrice + "' WHERE `id`='" + appID + "';";
-
-			executeQuery(sql);
-
-		}
-
+	
 
 		/*
 		public static DataTable getAllBuildings()
