@@ -124,4 +124,13 @@
   <data name="7b41441013495626c240a7ea48a51aa6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7b41441013495626c240a7ea48a51aa6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ain_shams_university" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ain_shams_university.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Untitled-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

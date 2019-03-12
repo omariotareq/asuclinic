@@ -124,6 +124,12 @@
     <Compile Include="patient_history.Designer.cs">
       <DependentUpon>patient_history.cs</DependentUpon>
     </Compile>
+    <Compile Include="patient_info_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patient_info_form.Designer.cs">
+      <DependentUpon>patient_info_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhotoPreviewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="patient_history.resx">
       <DependentUpon>patient_history.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="patient_info_form.resx">
+      <DependentUpon>patient_info_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhotoPreviewForm.resx">
       <DependentUpon>PhotoPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +233,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\7b41441013495626c240a7ea48a51aa6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ain_shams_university.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

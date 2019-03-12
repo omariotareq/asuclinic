@@ -49,7 +49,8 @@ namespace WindowsFormsApplication5
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            long id = DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
+            long id = DataSet.InsertUserInfo(firstNameTB.Text, middleNameTB.Text, lastNameTB.Text, telephoneTB.Text, genderCB.Text, Convert.ToInt16(ageTB.Text), addressTB.Text, 
+                cityTB.Text, govTB.Text, occupTB.Text, maritalstatusCB.Text, mensTB.Text, firstvisitDP.Value.Date);
             
             DataSet.InsertHistoryFirstTime(DateTime.Now.Date , id );
             DataSet.InsertExamFirst(id);

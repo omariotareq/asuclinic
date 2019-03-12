@@ -17,7 +17,11 @@ namespace WindowsFormsApplication5
     {
 
         int p_id = 0;
-        long e_id = 0;
+        int e_id = 0;
+
+        int mode = 0;
+        int entry_id = 0;
+
         string muc_enhanc = "";
         string muc_irr = "";
         string sub_edema = "";
@@ -703,15 +707,28 @@ namespace WindowsFormsApplication5
                     abcess_form = 0;
                 }
 
-                e_id= DataSet.InsertenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
-                    ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
-                    ltColonThicknessEdemaTB.Text, sigColonThicknessEdemaTB.Text, rectumThicknessEdemaTB.Text, binToInt(mural_abcess), jejuLengthActTB.Text, ileumLengthActTB.Text, rtColonLengthActTB.Text, trColonLengthActTB.Text, ltColonLengthActTB.Text, sigColonLengthActTB.Text,
-                    rectumLengthActTB.Text, jejuMuralThicknessTB.Text, ileumMuralThicknessTB.Text, rtColonMuralThicknessTB.Text, trColonMuralThicknessTB.Text, ltColonMuralThicknessTB.Text, sigColonMuralThicknessTB.Text, rectumMuralThicknessTB.Text,
-                    binToInt(fat_edema), binToInt(comb_sign), binToInt(mural_fibrosis), jejuNarrwoingCB.Text, ileumNarrwoingCB.Text, rtColonNarrwoingCB.Text, trColonNarrwoingCB.Text, ltColonNarrwoingCB.Text, sigColonNarrwoingCB.Text, rectumNarrwoingCB.Text, binToInt(pres_dila), jejuPresDiameterTB.Text,
-                    ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus),(activeSegmentTB.Text), fistula, abcess_form, (lengthOfTrackTB.Text), 
-                    diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id);
-                
-                refreshDateCB();
+                if (mode == 0)
+                {
+                    e_id = DataSet.InsertenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
+                        ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
+                        ltColonThicknessEdemaTB.Text, sigColonThicknessEdemaTB.Text, rectumThicknessEdemaTB.Text, binToInt(mural_abcess), jejuLengthActTB.Text, ileumLengthActTB.Text, rtColonLengthActTB.Text, trColonLengthActTB.Text, ltColonLengthActTB.Text, sigColonLengthActTB.Text,
+                        rectumLengthActTB.Text, jejuMuralThicknessTB.Text, ileumMuralThicknessTB.Text, rtColonMuralThicknessTB.Text, trColonMuralThicknessTB.Text, ltColonMuralThicknessTB.Text, sigColonMuralThicknessTB.Text, rectumMuralThicknessTB.Text,
+                        binToInt(fat_edema), binToInt(comb_sign), binToInt(mural_fibrosis), jejuNarrwoingCB.Text, ileumNarrwoingCB.Text, rtColonNarrwoingCB.Text, trColonNarrwoingCB.Text, ltColonNarrwoingCB.Text, sigColonNarrwoingCB.Text, rectumNarrwoingCB.Text, binToInt(pres_dila), jejuPresDiameterTB.Text,
+                        ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus), (activeSegmentTB.Text), fistula, abcess_form, (lengthOfTrackTB.Text),
+                        diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id);
+                    refreshDateCB();
+                }
+                else if(mode == 1)
+                {
+                    DataSet.UpdateenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
+                        ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
+                        ltColonThicknessEdemaTB.Text, sigColonThicknessEdemaTB.Text, rectumThicknessEdemaTB.Text, binToInt(mural_abcess), jejuLengthActTB.Text, ileumLengthActTB.Text, rtColonLengthActTB.Text, trColonLengthActTB.Text, ltColonLengthActTB.Text, sigColonLengthActTB.Text,
+                        rectumLengthActTB.Text, jejuMuralThicknessTB.Text, ileumMuralThicknessTB.Text, rtColonMuralThicknessTB.Text, trColonMuralThicknessTB.Text, ltColonMuralThicknessTB.Text, sigColonMuralThicknessTB.Text, rectumMuralThicknessTB.Text,
+                        binToInt(fat_edema), binToInt(comb_sign), binToInt(mural_fibrosis), jejuNarrwoingCB.Text, ileumNarrwoingCB.Text, rtColonNarrwoingCB.Text, trColonNarrwoingCB.Text, ltColonNarrwoingCB.Text, sigColonNarrwoingCB.Text, rectumNarrwoingCB.Text, binToInt(pres_dila), jejuPresDiameterTB.Text,
+                        ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus), (activeSegmentTB.Text), fistula, abcess_form, (lengthOfTrackTB.Text),
+                        diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id, e_id);
+                }
+               
 
                 MessageBox.Show("Saved successfully");
                 button1.Enabled = true;
@@ -722,16 +739,35 @@ namespace WindowsFormsApplication5
                 switch (ex.Number)
                 {
                     case 2601:
-                        MessageBox.Show("This date already contains enterography results registered on the system! \nPlease try a differenet date");
+                        MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                                    if (dr == DialogResult.Yes)
+                                    {
+                                        mode = 1;
+                                        Cursor.Current = Cursors.WaitCursor;
+                                        enterDate.ValueChanged -= enterDate_ValueChanged;
+                                        fillData(enterDate.Value.Date.ToString());
+                                        fillImages();
+                                        enterDate.ValueChanged += enterDate_ValueChanged;
+                                        Cursor.Current = Cursors.Default;
+                                    }
+                                    if (dr == DialogResult.No)
+                                    {
+                                        mode = 0;
+                                    }
+                                
+                        
                         break;
                     default:
-                        throw;
+                        MessageBox.Show(ex.Message);
+                        break;
                 }
             }
         }
 
 
-        private void fillData()
+        private void fillData(string date)
         {
             int temp = 0;
             char[] temp_char = new char[7];
@@ -748,14 +784,16 @@ namespace WindowsFormsApplication5
 
             clearChkBxes();
             clearBindings();
-           dt =  DataSet.getEnterography(enteroDatesCB.Text, p_id);
+           dt =  DataSet.getEnterography(date, p_id);
            mainBindingSource.DataSource = dt;
 
            studyTypeCB.DataBindings.Clear();
            e_id = Convert.ToInt32(dt.Rows[0]["id"]);
 
            enterDate.DataBindings.Clear();
-           this.enterDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "date", true));
+           enterDate.ValueChanged -= enterDate_ValueChanged;
+           this.enterDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "date", true));
+           enterDate.ValueChanged += enterDate_ValueChanged;
             this.studyTypeCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Entrostudy", true));
 
            this.jejuEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jejEa", true));
@@ -1165,7 +1203,8 @@ namespace WindowsFormsApplication5
         private void enteroDatesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            fillData();
+            mode = 1;
+            fillData(enteroDatesCB.Text);
             fillImages();
             button1.Enabled = true;
             Cursor.Current = Cursors.Default;
@@ -1173,6 +1212,7 @@ namespace WindowsFormsApplication5
 
         private void enterDate_ValueChanged(object sender, EventArgs e)
         {
+            mode = 0;
             clearBindings();
         }
 
