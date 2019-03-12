@@ -132,11 +132,11 @@
             // 
             this.patHistoryBtn.BackColor = System.Drawing.Color.Maroon;
             this.patHistoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.patHistoryBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patHistoryBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patHistoryBtn.ForeColor = System.Drawing.Color.White;
-            this.patHistoryBtn.Location = new System.Drawing.Point(184, 492);
+            this.patHistoryBtn.Location = new System.Drawing.Point(178, 499);
             this.patHistoryBtn.Name = "patHistoryBtn";
-            this.patHistoryBtn.Size = new System.Drawing.Size(145, 33);
+            this.patHistoryBtn.Size = new System.Drawing.Size(154, 33);
             this.patHistoryBtn.TabIndex = 3;
             this.patHistoryBtn.Text = "History";
             this.patHistoryBtn.UseVisualStyleBackColor = false;
@@ -146,11 +146,11 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Maroon;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(356, 492);
+            this.button2.Location = new System.Drawing.Point(350, 499);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 33);
+            this.button2.Size = new System.Drawing.Size(154, 33);
             this.button2.TabIndex = 4;
             this.button2.Text = "First Examination";
             this.button2.UseVisualStyleBackColor = false;
@@ -160,11 +160,11 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Maroon;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(528, 492);
+            this.button3.Location = new System.Drawing.Point(522, 499);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 33);
+            this.button3.Size = new System.Drawing.Size(154, 33);
             this.button3.TabIndex = 5;
             this.button3.Text = "Lab Results";
             this.button3.UseVisualStyleBackColor = false;
@@ -174,11 +174,11 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Maroon;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(700, 492);
+            this.button4.Location = new System.Drawing.Point(694, 499);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 33);
+            this.button4.Size = new System.Drawing.Size(154, 33);
             this.button4.TabIndex = 6;
             this.button4.Text = "Enterography";
             this.button4.UseVisualStyleBackColor = false;
@@ -188,11 +188,11 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Maroon;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(613, 553);
+            this.button5.Location = new System.Drawing.Point(606, 550);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 33);
+            this.button5.Size = new System.Drawing.Size(154, 33);
             this.button5.TabIndex = 7;
             this.button5.Text = "Surgery";
             this.button5.UseVisualStyleBackColor = false;
@@ -202,11 +202,11 @@
             // 
             this.button6.BackColor = System.Drawing.Color.Maroon;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(82, 553);
+            this.button6.Location = new System.Drawing.Point(75, 550);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 33);
+            this.button6.Size = new System.Drawing.Size(154, 33);
             this.button6.TabIndex = 8;
             this.button6.Text = "Ultrasound";
             this.button6.UseVisualStyleBackColor = false;
@@ -216,11 +216,11 @@
             // 
             this.button7.BackColor = System.Drawing.Color.Maroon;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(259, 553);
+            this.button7.Location = new System.Drawing.Point(252, 550);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(145, 33);
+            this.button7.Size = new System.Drawing.Size(154, 33);
             this.button7.TabIndex = 9;
             this.button7.Text = "Endoscopy";
             this.button7.UseVisualStyleBackColor = false;
@@ -230,11 +230,11 @@
             // 
             this.button8.BackColor = System.Drawing.Color.Maroon;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(436, 553);
+            this.button8.Location = new System.Drawing.Point(429, 550);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(145, 33);
+            this.button8.Size = new System.Drawing.Size(154, 33);
             this.button8.TabIndex = 10;
             this.button8.Text = "Drug Record";
             this.button8.UseVisualStyleBackColor = false;
@@ -244,11 +244,11 @@
             // 
             this.button9.BackColor = System.Drawing.Color.Maroon;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(790, 553);
+            this.button9.Location = new System.Drawing.Point(783, 550);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(145, 33);
+            this.button9.Size = new System.Drawing.Size(154, 33);
             this.button9.TabIndex = 11;
             this.button9.Text = "Action Plan";
             this.button9.UseVisualStyleBackColor = false;
@@ -258,11 +258,11 @@
             // 
             this.button10.BackColor = System.Drawing.Color.Maroon;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(872, 492);
+            this.button10.Location = new System.Drawing.Point(866, 499);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(145, 33);
+            this.button10.Size = new System.Drawing.Size(154, 33);
             this.button10.TabIndex = 12;
             this.button10.Text = "Pathology";
             this.button10.UseVisualStyleBackColor = false;
@@ -272,11 +272,11 @@
             // 
             this.button11.BackColor = System.Drawing.Color.Maroon;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(12, 492);
+            this.button11.Location = new System.Drawing.Point(6, 499);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(145, 33);
+            this.button11.Size = new System.Drawing.Size(154, 33);
             this.button11.TabIndex = 13;
             this.button11.Text = "Patient Info";
             this.button11.UseVisualStyleBackColor = false;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(durg_form));
             this.ageLbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.patNameLb = new System.Windows.Forms.Label();
@@ -128,7 +129,12 @@
             this.drugDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dateCB = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // ageLbl
@@ -138,7 +144,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(584, 16);
+            this.ageLbl.Location = new System.Drawing.Point(584, 93);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
             this.ageLbl.TabIndex = 61;
@@ -150,7 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(515, 16);
+            this.label20.Location = new System.Drawing.Point(515, 93);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
             this.label20.TabIndex = 60;
@@ -163,7 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(255, 16);
+            this.patNameLb.Location = new System.Drawing.Point(255, 93);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
             this.patNameLb.TabIndex = 59;
@@ -175,7 +181,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(178, 16);
+            this.label18.Location = new System.Drawing.Point(178, 93);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 58;
@@ -188,7 +194,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 9);
+            this.label3.Location = new System.Drawing.Point(4, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 31);
             this.label3.TabIndex = 57;
@@ -290,21 +296,24 @@
             this.groupBox1.Controls.Add(this.drugDate);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateCB);
-            this.groupBox1.Location = new System.Drawing.Point(10, 43);
+            this.groupBox1.Location = new System.Drawing.Point(10, 117);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(986, 1200);
+            this.groupBox1.Size = new System.Drawing.Size(974, 1200);
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
             // 
             // saveBtn
             // 
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveBtn.Location = new System.Drawing.Point(459, 1156);
+            this.saveBtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(450, 1156);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(106, 32);
+            this.saveBtn.Size = new System.Drawing.Size(146, 32);
             this.saveBtn.TabIndex = 444;
             this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // otherMedicationNotesTB
@@ -1243,7 +1252,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(641, 123);
+            this.label6.Location = new System.Drawing.Point(623, 123);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 24);
             this.label6.TabIndex = 361;
@@ -1252,7 +1261,7 @@
             // steriodNotesTB
             // 
             this.steriodNotesTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.steriodNotesTB.Location = new System.Drawing.Point(780, 119);
+            this.steriodNotesTB.Location = new System.Drawing.Point(762, 119);
             this.steriodNotesTB.Multiline = true;
             this.steriodNotesTB.Name = "steriodNotesTB";
             this.steriodNotesTB.Size = new System.Drawing.Size(200, 87);
@@ -1266,7 +1275,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(411, 123);
+            this.label5.Location = new System.Drawing.Point(408, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 24);
             this.label5.TabIndex = 359;
@@ -1275,7 +1284,7 @@
             // steriodWeekNoTB
             // 
             this.steriodWeekNoTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.steriodWeekNoTB.Location = new System.Drawing.Point(516, 119);
+            this.steriodWeekNoTB.Location = new System.Drawing.Point(513, 119);
             this.steriodWeekNoTB.Name = "steriodWeekNoTB";
             this.steriodWeekNoTB.Size = new System.Drawing.Size(92, 29);
             this.steriodWeekNoTB.TabIndex = 358;
@@ -1375,25 +1384,78 @@
             this.dateCB.TabIndex = 321;
             this.dateCB.SelectedIndexChanged += new System.EventHandler(this.dateCB_SelectedIndexChanged);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(67, 74);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 67;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.Color.DarkRed;
+            this.label53.Location = new System.Drawing.Point(78, 59);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(82, 19);
+            this.label53.TabIndex = 66;
+            this.label53.Text = "IBD TEAM";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.Color.DarkRed;
+            this.label54.Location = new System.Drawing.Point(78, 40);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(347, 19);
+            this.label54.TabIndex = 65;
+            this.label54.Text = "GASTROENTROLOGY AND HEPATOLOGY UNIT";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.ForeColor = System.Drawing.Color.DarkRed;
+            this.label55.Location = new System.Drawing.Point(78, 21);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(270, 19);
+            this.label55.TabIndex = 64;
+            this.label55.Text = "INTERNAL MEDICINE DEPARTMENT";
+            // 
             // durg_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 601);
+            this.ClientSize = new System.Drawing.Size(1009, 601);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label53);
+            this.Controls.Add(this.label54);
+            this.Controls.Add(this.label55);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.patNameLb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "durg_form";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "durg_form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1501,5 +1563,9 @@
         private System.Windows.Forms.TextBox otherMedicationNotesTB;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label55;
     }
 }

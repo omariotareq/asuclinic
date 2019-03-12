@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(enterography_form));
             this.ageLbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.patNameLb = new System.Windows.Forms.Label();
@@ -203,12 +204,17 @@
             this.lengthOfTrackTB = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.fistulaChkbx = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ageLbl
@@ -216,7 +222,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(574, 16);
+            this.ageLbl.Location = new System.Drawing.Point(587, 88);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
             this.ageLbl.TabIndex = 46;
@@ -226,7 +232,7 @@
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(514, 16);
+            this.label20.Location = new System.Drawing.Point(527, 88);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
             this.label20.TabIndex = 45;
@@ -237,7 +243,7 @@
             this.patNameLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(277, 16);
+            this.patNameLb.Location = new System.Drawing.Point(290, 88);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
             this.patNameLb.TabIndex = 44;
@@ -247,7 +253,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(200, 16);
+            this.label18.Location = new System.Drawing.Point(213, 88);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 43;
@@ -258,7 +264,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 9);
+            this.label3.Location = new System.Drawing.Point(13, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 31);
             this.label3.TabIndex = 42;
@@ -432,7 +438,7 @@
             this.groupBox1.Controls.Add(this.lengthOfTrackTB);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.fistulaChkbx);
-            this.groupBox1.Location = new System.Drawing.Point(6, 43);
+            this.groupBox1.Location = new System.Drawing.Point(16, 113);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(996, 1336);
             this.groupBox1.TabIndex = 47;
@@ -441,13 +447,17 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.CadetBlue;
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(869, 1244);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(869, 1238);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 21);
+            this.button1.Size = new System.Drawing.Size(103, 32);
             this.button1.TabIndex = 222;
             this.button1.Text = "Upload";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // activeSegmentTB
@@ -462,12 +472,16 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(467, 1277);
+            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(444, 1284);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 40);
+            this.button2.Size = new System.Drawing.Size(145, 40);
             this.button2.TabIndex = 221;
             this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // enteroDatesCB
@@ -2214,22 +2228,78 @@
             this.fistulaChkbx.TabIndex = 190;
             this.fistulaChkbx.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.DarkRed;
+            this.label43.Location = new System.Drawing.Point(84, 55);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(82, 19);
+            this.label43.TabIndex = 70;
+            this.label43.Text = "IBD TEAM";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.DarkRed;
+            this.label47.Location = new System.Drawing.Point(84, 36);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(347, 19);
+            this.label47.TabIndex = 69;
+            this.label47.Text = "GASTROENTROLOGY AND HEPATOLOGY UNIT";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.DarkRed;
+            this.label48.Location = new System.Drawing.Point(84, 17);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(270, 19);
+            this.label48.TabIndex = 68;
+            this.label48.Text = "INTERNAL MEDICINE DEPARTMENT";
+            // 
             // enterography_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1048, 561);
+            this.ClientSize = new System.Drawing.Size(1065, 561);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label47);
+            this.Controls.Add(this.label48);
             this.Controls.Add(this.ageLbl);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.patNameLb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "enterography_form";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "enterography_form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.attachmentFlowPanel.ResumeLayout(false);
@@ -2237,6 +2307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2419,5 +2490,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
     }
 }
