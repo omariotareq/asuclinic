@@ -14,11 +14,14 @@ namespace WindowsFormsApplication5
     public partial class lab_results : Form
     {
         int p_id = 0;
+        int mode = 0;
+        int entry_id = 0;
+
         BindingSource dateBindingSource = new BindingSource();
         BindingSource resultsBindingSource = new BindingSource();
         DataTable dt = new DataTable();
         DataTable dt_date = new DataTable();
-        int mode = 0;
+        
         public lab_results(int pa_id, string name, int age)
         {
             InitializeComponent();
@@ -47,6 +50,7 @@ namespace WindowsFormsApplication5
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 int paraCheck=0;
                 int hbcCheck=0;
                 int hbvCheck=0;
@@ -77,17 +81,50 @@ namespace WindowsFormsApplication5
                 {
                     tuberculosisCheck = 1;
                 }
-                DataSet.InsertlabenteryInfo(labDate.Value.Date, hbTB.Text, (hematoTB.Text), (mcvTB.Text), (rdwTB.Text), (platltsTB.Text), (tlcTB.Text), (neutroTB.Text), (lymphoTB.Text), (eosinoTB.Text), (serumIronTB.Text), (tibcTB.Text), (serumFerrTB.Text), (esrTB.Text), (crpTB.Text), (pancaTB.Text), (ascaTB.Text),(fecalTB.Text), (ttgTB.Text), (rbcTB.Text), (puscellsTB.Text), (closdeficileTB.Text), paraCheck, (stoolcsTB.Text), parasiteTB.Text, stoolothernotesTB.Text, (tuberculinTB.Text), tuberculosisCheck, comboBox1.Text, hbcCheck, hbvCheck, hcvCheck, hivCheck, (amylaseTB.Text), (lipaseTB.Text), (naTB.Text), (kTB.Text), (caTB.Text), (mgTB.Text), (phosTB.Text), (altTB.Text), (astTB.Text), (tproteinTB.Text), (albuminTB.Text), (dbilirubinTB.Text), (tbilirubinTB.Text), (alpTB.Text), (ggtTB.Text), (inrTB.Text), (screatTB.Text), (bunTB.Text), otherlabdataTB.Text, p_id, (ibilirubinTB.Text));
+
+                if (mode == 0)
+                {
+                    DataSet.InsertlabenteryInfo(labDate.Value.Date, hbTB.Text, (hematoTB.Text), (mcvTB.Text), (rdwTB.Text), (platltsTB.Text), (tlcTB.Text), (neutroTB.Text), (lymphoTB.Text), (eosinoTB.Text), (serumIronTB.Text), (tibcTB.Text), 
+                        (serumFerrTB.Text), (esrTB.Text), (crpTB.Text), (pancaTB.Text), (ascaTB.Text), (fecalTB.Text), (ttgTB.Text), (rbcTB.Text), (puscellsTB.Text), (closdeficileTB.Text), paraCheck, (stoolcsTB.Text), parasiteTB.Text, 
+                        stoolothernotesTB.Text, (tuberculinTB.Text), tuberculosisCheck, comboBox1.Text, hbcCheck, hbvCheck, hcvCheck, hivCheck, (amylaseTB.Text), (lipaseTB.Text), (naTB.Text), (kTB.Text), (caTB.Text), (mgTB.Text), (phosTB.Text), 
+                        (altTB.Text), (astTB.Text), (tproteinTB.Text), (albuminTB.Text), (dbilirubinTB.Text), (tbilirubinTB.Text), (alpTB.Text), (ggtTB.Text), (inrTB.Text), (screatTB.Text), (bunTB.Text), otherlabdataTB.Text, p_id, (ibilirubinTB.Text));
+                }
+                else if (mode == 1) 
+                {
+                    DataSet.Updatelabentery(labDate.Value.Date, hbTB.Text, (hematoTB.Text), (mcvTB.Text), (rdwTB.Text), (platltsTB.Text), (tlcTB.Text), (neutroTB.Text), (lymphoTB.Text), (eosinoTB.Text), (serumIronTB.Text), (tibcTB.Text),
+                        (serumFerrTB.Text), (esrTB.Text), (crpTB.Text), (pancaTB.Text), (ascaTB.Text), (fecalTB.Text), (ttgTB.Text), (rbcTB.Text), (puscellsTB.Text), (closdeficileTB.Text), paraCheck, (stoolcsTB.Text), parasiteTB.Text,
+                        stoolothernotesTB.Text, (tuberculinTB.Text), tuberculosisCheck, comboBox1.Text, hbcCheck, hbvCheck, hcvCheck, hivCheck, (amylaseTB.Text), (lipaseTB.Text), (naTB.Text), (kTB.Text), (caTB.Text), (mgTB.Text), (phosTB.Text),
+                        (altTB.Text), (astTB.Text), (tproteinTB.Text), (albuminTB.Text), (dbilirubinTB.Text), (tbilirubinTB.Text), (alpTB.Text), (ggtTB.Text), (inrTB.Text), (screatTB.Text), (bunTB.Text), otherlabdataTB.Text, p_id,entry_id, (ibilirubinTB.Text));
+                }
+
                 MessageBox.Show("Saved Successfully");
 
                 refreshDateCB();
+                Cursor.Current = Cursors.Default;
             }
             catch (SqlException ex)
             {
                 switch (ex.Number)
                 {
                     case 2601:
-                        MessageBox.Show("This date already contains lab results registered on the system! \nPlease try a differenet date");
+                       MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                                    if (dr == DialogResult.Yes)
+                                    {
+                                        mode = 1;
+                                        Cursor.Current = Cursors.WaitCursor;
+                                        labDate.ValueChanged -= labDate_ValueChanged;
+                                        fillData(labDate.Value.Date.ToString());
+                                        labDate.ValueChanged += labDate_ValueChanged;
+                                        Cursor.Current = Cursors.Default;
+                                    }
+                                    if (dr == DialogResult.No)
+                                    {
+                                        mode = 0;
+                                    }
+                                
+                        
                         break;
                     default:
                         throw;
@@ -140,8 +177,11 @@ namespace WindowsFormsApplication5
             
             if (dt.Rows.Count > 0)
             {
-                this.labDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.resultsBindingSource, "labdate", true));
-                
+                entry_id = Convert.ToInt32(dt.Rows[0]["id"]);
+
+                labDate.ValueChanged -= labDate_ValueChanged;
+                this.labDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.resultsBindingSource, "labdate", true));
+                labDate.ValueChanged += labDate_ValueChanged;
 
                 this.hbTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.resultsBindingSource, "cbchb", true));
                 this.mcvTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.resultsBindingSource, "cbcmcv", true));
@@ -223,14 +263,24 @@ namespace WindowsFormsApplication5
 
         private void dateCB_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            
+            fillData(dateCB.Text);
             mode = 1;
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void fillData(string date)
+        {
+            
             if (dateCB.Text != "")
             {
                 try
                 {
                     //resultsBindingSource.DataSource = null;
                     dt.Clear();
-                    dt = DataSet.getLabDetails(dateCB.Text, p_id);
+                    dt = DataSet.getLabDetails(date, p_id);
                     resultsBindingSource.DataSource = dt;
                     loadLabResults();
                 }
@@ -240,7 +290,6 @@ namespace WindowsFormsApplication5
                 }
             }
         }
-
         private void labDate_ValueChanged(object sender, EventArgs e)
         {
             mode = 0;

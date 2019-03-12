@@ -22,11 +22,13 @@ namespace WindowsFormsApplication5
         {
             user_id = DataSet.getUserID(loginTB.Text, passwordTB.Text);
             if(user_id != 0){
+                Cursor.Current = Cursors.WaitCursor;
                 WindowsFormsApplication5.Properties.Settings.Default.drId = user_id;
                 WindowsFormsApplication5.Properties.Settings.Default.drName = loginTB.Text;
                 HomeForm f1 = new HomeForm();
                 this.Hide();
                 f1.ShowDialog();
+                Cursor.Current = Cursors.Default;
                 this.Close();
             }
             else{

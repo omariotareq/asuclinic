@@ -15,8 +15,10 @@ namespace WindowsFormsApplication5
         public HomeForm()
         {
             InitializeComponent();
-            drNameLbl.Text = WindowsFormsApplication5.Properties.Settings.Default.drName.ToUpper();
+            String name = WindowsFormsApplication5.Properties.Settings.Default.drName;
            
+            drNameLbl.Text = char.ToUpper(name[0]) + name.Substring(1);
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

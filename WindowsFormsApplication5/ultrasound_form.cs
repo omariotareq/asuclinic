@@ -23,6 +23,9 @@ namespace WindowsFormsApplication5
         string lum_stric = "";
         string pres_dila = "";
         int u_id = 0;
+        int mode = 0;
+        int entry_id = 0;
+
         DataTable dt_date = new DataTable();
         DataTable dt = new DataTable();
 
@@ -455,18 +458,34 @@ namespace WindowsFormsApplication5
                     pres_abc =1 ;
                 }
 
-               u_id =  DataSet.Insertultrasonicinfo(1, usDate.Value.Date, jejuMucOutTB.Text, ileumMucOutTB.Text, rtColonMucOutTB.Text, trColonMucOutTB.Text, ltColonMucOutTB.Text, sigColonMucOutTB.Text,
-                    binToInt(sub_muc), jejuSMthickTB.Text, ileumSMthickTB.Text, rtColonSMthickTB.Text, trColonSMthickTB.Text, ltColonSMthickTB.Text, sigColonSMthickTB.Text, jejuSegmentLenTB.Text,
-                    ileumSegmentLenTB.Text, rtColonSegmentLenTB.Text, trColonSegmentLenTB.Text, ltColonSegmentLenTB.Text, sigColonSegmentLenTB.Text, jejuMuralThickTB.Text, ileumMuralThickTB.Text,
-                    rtColonMuralThickTB.Text, trColonMuralThickTB.Text, ltColonMuralThickTB.Text, sigColonMuralThickTB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text,
-                    trColonMuralHyperCB.Text, ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text, trColonMuralHyperCB.Text,
-                    ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralRiTB.Text, ileumMuralRiTB.Text, rtColonMuralRiTB.Text, trColonMuralRiTB.Text, ltColonMuralRiTB.Text,
-                    sigColonMuralRiTB.Text, jejuMuralPiTB.Text, ileumMuralPiTB.Text, rtColonMuralPiTB.Text, trColonMuralPiTB.Text, ltColonMuralPiTB.Text, sigColonMuralPiTB.Text, binToInt(fat_creep),
-                    binToInt(local_ln_enlarg), jejuLocalLnSizeTB.Text, ileumLocalLnSizeTB.Text, rtColonLocalLnSizeTB.Text, trColonLocalLnSizeTB.Text, ltColonLocalLnSizeTB.Text, sigColonLocalLnSizeTB.Text,
-                    jejuLocalLnVasCB.Text, ileumLocalLnVasCB.Text, rtColonLocalLnVasCB.Text, trColonLocalLnVasCB.Text, ltColonLocalLnVasCB.Text, sigColonLocalLnVasCB.Text, binToInt(mur_fib),
-                    binToInt(lum_stric), binToInt(pres_dila), jejuPresDiaTB.Text, ileumPresDiaTB.Text, rtColonPresDiaTB.Text, trColonPresDiaTB.Text, ltColonPresDiaTB.Text, sigColonPresDiaTB.Text,
-                    totalActiveLengthTB.Text, pof, fistulaLengthTB.Text, fistulaDiamTB.Text, fistTypeCB.Text, otherFisTypeTB.Text, pres_abc, abcDiaTB.Text,abcVolumeTB.Text, locationAbcCB.Text, otherTypeAbcTB.Text, otherFindingsTB.Text, usReportTB.Text, p_id);
-
+                if (mode == 0)
+                {
+                    u_id = DataSet.Insertultrasonicinfo(1, usDate.Value.Date, jejuMucOutTB.Text, ileumMucOutTB.Text, rtColonMucOutTB.Text, trColonMucOutTB.Text, ltColonMucOutTB.Text, sigColonMucOutTB.Text,
+                         binToInt(sub_muc), jejuSMthickTB.Text, ileumSMthickTB.Text, rtColonSMthickTB.Text, trColonSMthickTB.Text, ltColonSMthickTB.Text, sigColonSMthickTB.Text, jejuSegmentLenTB.Text,
+                         ileumSegmentLenTB.Text, rtColonSegmentLenTB.Text, trColonSegmentLenTB.Text, ltColonSegmentLenTB.Text, sigColonSegmentLenTB.Text, jejuMuralThickTB.Text, ileumMuralThickTB.Text,
+                         rtColonMuralThickTB.Text, trColonMuralThickTB.Text, ltColonMuralThickTB.Text, sigColonMuralThickTB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text,
+                         trColonMuralHyperCB.Text, ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text, trColonMuralHyperCB.Text,
+                         ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralRiTB.Text, ileumMuralRiTB.Text, rtColonMuralRiTB.Text, trColonMuralRiTB.Text, ltColonMuralRiTB.Text,
+                         sigColonMuralRiTB.Text, jejuMuralPiTB.Text, ileumMuralPiTB.Text, rtColonMuralPiTB.Text, trColonMuralPiTB.Text, ltColonMuralPiTB.Text, sigColonMuralPiTB.Text, binToInt(fat_creep),
+                         binToInt(local_ln_enlarg), jejuLocalLnSizeTB.Text, ileumLocalLnSizeTB.Text, rtColonLocalLnSizeTB.Text, trColonLocalLnSizeTB.Text, ltColonLocalLnSizeTB.Text, sigColonLocalLnSizeTB.Text,
+                         jejuLocalLnVasCB.Text, ileumLocalLnVasCB.Text, rtColonLocalLnVasCB.Text, trColonLocalLnVasCB.Text, ltColonLocalLnVasCB.Text, sigColonLocalLnVasCB.Text, binToInt(mur_fib),
+                         binToInt(lum_stric), binToInt(pres_dila), jejuPresDiaTB.Text, ileumPresDiaTB.Text, rtColonPresDiaTB.Text, trColonPresDiaTB.Text, ltColonPresDiaTB.Text, sigColonPresDiaTB.Text,
+                         totalActiveLengthTB.Text, pof, fistulaLengthTB.Text, fistulaDiamTB.Text, fistTypeCB.Text, otherFisTypeTB.Text, pres_abc, abcDiaTB.Text, abcVolumeTB.Text, locationAbcCB.Text, otherTypeAbcTB.Text, otherFindingsTB.Text, usReportTB.Text, p_id);
+                }
+                else if(mode==1)
+                {
+                    DataSet.Updateultrasonicinfo(1, usDate.Value.Date, jejuMucOutTB.Text, ileumMucOutTB.Text, rtColonMucOutTB.Text, trColonMucOutTB.Text, ltColonMucOutTB.Text, sigColonMucOutTB.Text,
+                         binToInt(sub_muc), jejuSMthickTB.Text, ileumSMthickTB.Text, rtColonSMthickTB.Text, trColonSMthickTB.Text, ltColonSMthickTB.Text, sigColonSMthickTB.Text, jejuSegmentLenTB.Text,
+                         ileumSegmentLenTB.Text, rtColonSegmentLenTB.Text, trColonSegmentLenTB.Text, ltColonSegmentLenTB.Text, sigColonSegmentLenTB.Text, jejuMuralThickTB.Text, ileumMuralThickTB.Text,
+                         rtColonMuralThickTB.Text, trColonMuralThickTB.Text, ltColonMuralThickTB.Text, sigColonMuralThickTB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text,
+                         trColonMuralHyperCB.Text, ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralHyperCB.Text, ileumMuralHyperCB.Text, rtColonMuralHyperCB.Text, trColonMuralHyperCB.Text,
+                         ltColonMuralHyperCB.Text, sigColonMuralHyperCB.Text, jejuMuralRiTB.Text, ileumMuralRiTB.Text, rtColonMuralRiTB.Text, trColonMuralRiTB.Text, ltColonMuralRiTB.Text,
+                         sigColonMuralRiTB.Text, jejuMuralPiTB.Text, ileumMuralPiTB.Text, rtColonMuralPiTB.Text, trColonMuralPiTB.Text, ltColonMuralPiTB.Text, sigColonMuralPiTB.Text, binToInt(fat_creep),
+                         binToInt(local_ln_enlarg), jejuLocalLnSizeTB.Text, ileumLocalLnSizeTB.Text, rtColonLocalLnSizeTB.Text, trColonLocalLnSizeTB.Text, ltColonLocalLnSizeTB.Text, sigColonLocalLnSizeTB.Text,
+                         jejuLocalLnVasCB.Text, ileumLocalLnVasCB.Text, rtColonLocalLnVasCB.Text, trColonLocalLnVasCB.Text, ltColonLocalLnVasCB.Text, sigColonLocalLnVasCB.Text, binToInt(mur_fib),
+                         binToInt(lum_stric), binToInt(pres_dila), jejuPresDiaTB.Text, ileumPresDiaTB.Text, rtColonPresDiaTB.Text, trColonPresDiaTB.Text, ltColonPresDiaTB.Text, sigColonPresDiaTB.Text,
+                         totalActiveLengthTB.Text, pof, fistulaLengthTB.Text, fistulaDiamTB.Text, fistTypeCB.Text, otherFisTypeTB.Text, pres_abc, abcDiaTB.Text, abcVolumeTB.Text, locationAbcCB.Text, otherTypeAbcTB.Text, otherFindingsTB.Text, usReportTB.Text, p_id, u_id);
+                }
                 MessageBox.Show("Saved successfully");
                 refreshDateCB();
 
@@ -476,7 +495,25 @@ namespace WindowsFormsApplication5
                 switch (ex.Number)
                 {
                     case 2601:
-                        MessageBox.Show("This date already contains enterography results registered on the system! \nPlease try a differenet date");
+                        MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                                    if (dr == DialogResult.Yes)
+                                    {
+                                        mode = 1;
+                                        Cursor.Current = Cursors.WaitCursor;
+                                        usDate.ValueChanged -= usDate_ValueChanged;
+                                        fillData(usDate.Value.Date.ToString());
+                                        fillImages(u_id);
+                                        usDate.ValueChanged += usDate_ValueChanged;
+                                        Cursor.Current = Cursors.Default;
+                                    }
+                                    if (dr == DialogResult.No)
+                                    {
+                                        mode = 0;
+                                    }
+                                
+                        
                         break;
                     default:
                         MessageBox.Show(ex.Message);
@@ -487,7 +524,7 @@ namespace WindowsFormsApplication5
         }
 
 
-        private void fillData()
+        private void fillData(string date)
         {
             try
             {
@@ -495,13 +532,17 @@ namespace WindowsFormsApplication5
                 char[] temp_char = new char[6];
 
                 clearBindings();
-                dt = DataSet.getUltrasonics(dateCB.Text, p_id);
+                dt = DataSet.getUltrasonics(date, p_id);
                 mainBindingSource.DataSource = dt;
 
                 usDate.DataBindings.Clear();
 
                 u_id = Convert.ToInt32(dt.Rows[0]["id"]);
-                this.usDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Dateofus", true));
+
+                usDate.ValueChanged -= usDate_ValueChanged;
+                this.usDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "Dateofus", true));
+                usDate.ValueChanged += usDate_ValueChanged;
+
                 this.jejuMucOutTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "moje", true));
                 this.ileumMucOutTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "moil", true));
                 this.rtColonMucOutTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "morc", true));
@@ -829,15 +870,18 @@ namespace WindowsFormsApplication5
         private void dateCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            fillData();
-            fillImages();
+            mode = 1;
+            fillData(dateCB.Text);
+            fillImages(u_id);
             button1.Enabled = true;
             Cursor.Current = Cursors.Default;
         }
 
         private void usDate_ValueChanged(object sender, EventArgs e)
         {
+            mode = 0;
             clearBindings();
+            flowLayoutPanel1.Controls.Clear();
         }
 
 
@@ -912,7 +956,7 @@ namespace WindowsFormsApplication5
             }
         }
 
-        private void fillImages()
+        private void fillImages(int id)
         {
 
 
@@ -920,7 +964,7 @@ namespace WindowsFormsApplication5
             {
                 flowLayoutPanel1.Controls.Clear();
                 DataTable di = new DataTable();
-                di = DataSet.getUltrasonicImages(Convert.ToInt16(u_id));
+                di = DataSet.getUltrasonicImages(Convert.ToInt16(id));
                 byte[] image_arr = null;
                 Image photo = null;
 
@@ -1031,7 +1075,7 @@ namespace WindowsFormsApplication5
                 MessageBox.Show("upload complete");
                 clearPb();
                 flowLayoutPanel1.Controls.Clear();
-                fillImages();
+                fillImages(u_id);
             }
             catch (Exception ex)
             {

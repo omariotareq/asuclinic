@@ -35,6 +35,8 @@ namespace WindowsFormsApplication5
 					myBuilder.DataSource = getDBServerName();
 					myBuilder.UserID = getDBUserID();
 					myBuilder.Password = getDBPassword();
+                    myBuilder.MultipleActiveResultSets = true;
+                    
 
 					myconn = new SqlConnection(myBuilder.ConnectionString);
 
@@ -228,6 +230,9 @@ namespace WindowsFormsApplication5
 
 		}
 
+        
+
+
         public static DataTable getPatientHistory(long p_id)
         {
             String sql = @"SELECT * FROM asudb.dbo.History WHERE p_id ='"+p_id +"'" ;
@@ -294,6 +299,16 @@ namespace WindowsFormsApplication5
 
             return dt;
         }
+
+        public static DataTable getPatientInfo(int id)
+        {
+            String sql = @"SELECT * FROM asudb.dbo.personal_info WHERE id= '" +id+"'";
+
+            DataTable dt = getDataTable(sql);
+
+            return dt;
+        }
+
 		//SURGERYDATAENTERY
 		public static void InsertSurgeryInfo(DateTime ds,string si,string opd,string sc,int p_id )
         {
@@ -311,12 +326,13 @@ namespace WindowsFormsApplication5
 
 
         }
-		public static void Updatelabentery(DateTime labdat, int hb, int hema, int mcv, int rdw, int latlets, int tlc, int neuro, int lym, int ceos, int seriron, int tibc, int serumfe, int ESR, int CRP, int ANCA, int ASCA,int fecacal, int TTG, int ARBCs, int puscells, int clodef, int para, int toolscs, String paranotes, String othernotes, int tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, int Am, int LI, int NA, int K, int Ca, int Mg, int ph, int FALT, int FAST, int FTP, int FAlb, int fdb, int ftb, int FALP, int FFGT, int INR, int SCreat, int BUn, string otherdetails, int p_id, int LARFib)
+        public static void Updatelabentery(DateTime labdat, string hb, string hema, string mcv, string rdw, string latlets, string tlc, string neuro, string lym, string ceos, string seriron, string tibc, string serumfe, string ESR, string CRP, string ANCA, string ASCA, string fecacal, string TTG, string ARBCs, string puscells, string clodef, int para, string toolscs, String paranotes, String othernotes, string tt, int tp, String Qua, int HB, int HBV, int HC, int HIV, string Am, string LI, string NA, string K, string Ca, string Mg, string ph, string FALT, string FAST, string FTP, string FAlb, string fdb, string ftb, string FALP, string FFGT, string INR, string SCreat, string BUn, string otherdetails, int p_id,int id ,string LARFib)
         {
 
 string sql=	@"UPDATE asudb.dbo.labentery
    SET
-      [cbchema]			= '"+hema+@"'
+    [labdate]			= '" + labdat + @"'
+      ,[cbchema]			= '" +hema+@"'
       ,[cbchb]				= '"+hb+@"'
       ,[cbcmcv]				= '"+mcv+@"'
       ,[cbcrdw]				= '"+rdw+@"'
@@ -368,13 +384,14 @@ string sql=	@"UPDATE asudb.dbo.labentery
       ,[LARFBUN]			= '"+BUn+@"'
       ,[otherlabdetails]	= '"+otherdetails+@"'
       ,[LARFib]				= '"+LARFib+@"'
-         WHERE p_id ='"+p_id+ "'AND  labdate='"+labdat+"'";
+
+         WHERE p_id ='"+p_id+ "'AND  id='"+id+"'";
 
 
 		executeQuery(sql);
 			//27/2
 }
-        public static long InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, string ttl, int cf, int caf, string clot, string cdab, string cdot, string cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id)
+        public static int InsertenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, string ttl, int cf, int caf, string clot, string cdab, string cdot, string cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id)
         {
 
             String sql = @"INSERT INTO asudb.dbo.enterography
@@ -388,7 +405,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
             {
                 DataRow dataRow = dt.Rows[0];
 
-                long id = Convert.ToInt32(dt.Rows[0]["id"]);
+                int id = Convert.ToInt32(dt.Rows[0]["id"]);
 
                 return id;
             }
@@ -730,7 +747,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 			string sql = @"UPDATE asudb.dbo.Endoscopy SET Endodate='" + date + "'" +
 				", Segment='" + Segment + "', eryr='" + eryr + "', erys='" + erys + "', " +
-				"eryl ='" + eryl + "', erytr='" + erytr + "', " + "eryrt='" + eryrt + "', eryti='" + eryti + "', eryn='" + eryn + "', vr='" + vr + "', vs='" + vs + "', vl='" + vl + "', vtr='" + vtr + "', vrt='" + vrt + "', vti='" + vti + "', vn='" + vn + "', ur='" + ur + "', us='" + us + "', ul='" + ul + "', utr='" + utr + "', urt='" + urt + "', uti='" + uti + "', un='" + un + "', usr='" + usr + "', uss='" + uss + "', usl='" + usl + "', ustr='" + ustr + "', usrt='" + usrt + "', usti='" + usti + "', usn='" + usn + "', uar='" + uar + "', uas='" + uas + "',ual='" + ual + "', uatr='" + uatr + "', uart='" + uart + "', uati='" + uati + "', uan='" + uan + "', Muscoalero='" + Muscoalero + "', Muscoalfria='" + Muscoalfria + "', Nr='" + Nr + "', Ns='" + Ns + "', Nl='" + Nl + "', Ntr='" + Ntr + "', Nrt='" + Nrt + "', Nti='" + Nti + "', Nn='" + Nn + "', Pancolitis='" + Pancolitis + "',   WHERE p_id='" + pid + "' And id='" + id + "';";
+				"eryl ='" + eryl + "', erytr='" + erytr + "', " + "eryrt='" + eryrt + "', eryti='" + eryti + "', " +"eryn='" + eryn +  "', vr='" + vr + "', vs='" + vs + "', vl='" + vl + "', vtr='" + vtr + "', vrt='" + vrt + "', vti='" + vti + "', vn='" + vn + "', ur='" + ur + "', us='" + us + "', ul='" + ul + "', utr='" + utr + "', urt='" + urt + "', uti='" + uti + "', un='" + un + "', usr='" + usr + "', uss='" + uss + "', usl='" + usl + "', ustr='" + ustr + "', usrt='" + usrt + "', usti='" + usti + "', usn='" + usn + "', uar='" + uar + "', uas='" + uas + "',ual='" + ual + "', uatr='" + uatr + "', uart='" + uart + "', uati='" + uati + "', uan='" + uan + "', Muscoalero='" + Muscoalero + "', Muscoalfria='" + Muscoalfria + "', Nr='" + Nr + "', Ns='" + Ns + "', Nl='" + Nl + "', Ntr='" + Ntr + "', Nrt='" + Nrt + "', Nti='" + Nti + "', Nn='" + Nn + "', Pancolitis='" + Pancolitis + "'WHERE p_id='" + pid + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -759,7 +776,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		{
 			string sql = @"UPDATE asudb.dbo.druglist SET Recorddate='" + Rd + "'" +
 		", steroidtreat='" + sterodate + "', Dose ='" + dose + "', Wekkno='" + weekno + "'" +
-		",Steroidsnotes='" + sternotes + "', Asas='" + Asas + "', " + "Asad='" + Asad + "', Asaw='" + Asaw + "', " + "Asao='" + Asao + "', Asaod='" + Asaod + "', Asaow='" + Asaow + "', Asar='" + Asar + "', Asard='" + Asard + "', Asarw='" + Asarw + "', immmtx='" + immmtx + "', immmd='" + immmd + "', immmw='" + immmw + "', imma='" + imma + "', immad='" + immad + "',immaw='" + immaw + "',    bif='" + bif + "',    bifd='" + bifd + "',    bifw='" + bifw + "',    bad='" + bad + "',    badd='" + badd + "',    badw='" + badw + "',    bgo='" + bgo + "',    bgod='" + bgod + "',    bgow='" + bgow + "',    bus='" + bus + "',    busd='" + busd + "',    busw='" + busw + "',    Biolgnotes='" + Biolgnotes + "',    supvit='" + supvit + "',  supca='" + supca + "',  supppi='" + supppi + "',  suppfa='" + suppfa + "',  suppiron='" + suppiron + "',  suproute='" + suproute + "',  antiat='" + antiat + "', antidetails='" + antidetails + "',  othermedication='" + othermedication + "',         WHERE p_id='" + p_id + "' And id='" + id + "';";
+		",Steroidsnotes='" + sternotes + "', Asas='" + Asas + "', " + "Asad='" + Asad + "', Asaw='" + Asaw + "', " + "Asao='" + Asao + "', Asaod='" + Asaod + "', Asaow='" + Asaow + "', Asar='" + Asar + "', Asard='" + Asard + "', Asarw='" + Asarw + "', immmtx='" + immmtx + "', immmd='" + immmd + "', immmw='" + immmw + "', imma='" + imma + "', immad='" + immad + "',immaw='" + immaw + "',    bif='" + bif + "',    bifd='" + bifd + "',    bifw='" + bifw + "',    bad='" + bad + "',    badd='" + badd + "',    badw='" + badw + "',    bgo='" + bgo + "',    bgod='" + bgod + "',    bgow='" + bgow + "',    bus='" + bus + "',    busd='" + busd + "',    busw='" + busw + "',    Biolgnotes='" + Biolgnotes + "',    supvit='" + supvit + "',  supca='" + supca + "',  supppi='" + supppi + "',  suppfa='" + suppfa + "',  suppiron='" + suppiron + "',  suproute='" + suproute + "',  antiat='" + antiat + "', antidetails='" + antidetails + "',  othermedication='" + othermedication + "'WHERE p_id='" + p_id + "' And id='" + id + "';";
 
 			executeQuery(sql);
 
@@ -768,7 +785,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 		{
 			string sql = @"UPDATE asudb.dbo.ultrasonicradio SET ultrasoniccheck='" + uscheck + "'" +
 				  ", Dateofus='" +date + "', moje ='" + moje + "', moil='" + moil + "'" +
-			   ",morc='" + moRc + "', motc='" + moTc + "', " + "molc='" + moLc + "',mosi ='" + moSi + "', " + "subedema='" + subed + "', smtje='" + smtje + "', smtil='" + smtil + "', smtrc='" + smtRc + "', smttc='" + smtTc + "',smtlc ='" + smtLc + "', smtsi='" + smtSi + "', slje='" + slje + "', slil='" + slil + "', slrc='" + slRc + "', sltc='" + slTc + "',sllc='" + slLc + "',    slsi='" + slSi + "',    mtje='" + mtje + "',    mtil='" + mtil + "',    mtrc='" + mtrc + "',   mttc='" + mttc + "',    mtlc='" + mtlc + "',    mtsi='" + mtsi + "',    mhje='" + mhje + "',  mhil='" + mhil + "',  mhrc='" + mhrc + "',    mhtc='" + mhtc + "',    mhlc='" + mhlc + "',    mhsi='" + mhsi + "',    mpje='" + mpje + "',    mpil='" + mpil + "',  mprc='" + mprc + "',  mptc='" + mptc + "',  mplc='" + mplc + "',  mpsi='" + mpsi + "',  mrje='" + mrje + "',  mril='" + mril + "', mrrc='" + mrrc + "',  mrtc='" + mrtc + "', mrlc='" + mrlc + "', mrsi='" + mrsi + "', mpije='" + mpije + "', mpiil='" + mpiil + "', mpirc='" + mpirc + "', mpitc='" + mpitc + "', mpilc='" + mpilc + "', mpisi='" + mpisi + "', fatcreepsign='" + fat + "', locallnenla='" + local + "', llsje='" + llsj + "', llsil='" + llsi + "', llsrc='" + llsrc + "', llstc='" + llstc + "', llslc='" + llslc + "', llssi='" + llssi + "', llvje='" + llvj + "', llvil='" + llvi+ "', llvrc='" + llvrc + "', llvtc='" + llvtc + "', llvlc='" + llvlc + "', llvsi='" + llvsi + "', muralfib='" + muralfib + "', luminalstric='" + luminalstric + "', presdialation='" + pres + "', jejuPresDiam='" + jdiam + "', ileumPresDiam='" + idiam + "', rtColonPresDiam='" + rtcdiam + "', trColonPresDiam='" + trcdiam + "', ltColonPresDiam='" + ltcdiam + "', sigColonPresDiam='" + sigcdiam + "', tcl='" + tl + "', pof='" + pof + "', length='" + leng + "', fis_diameter='" + fis_dia + "', typeoffis='" + type + "', othertypefis='" + othertypefis + "', pa='" + pa + "', Diam='" + dia + "', volume='" + vol + "', loa='" + loa + "', otherlloac='" + otherlloac + "',  otherfinding='" + oth + "', ultrasoundreport='" + ultra + "',        WHERE p_id='" + p_id + "' And id='" + id + "';";
+			   ",morc='" + moRc + "', motc='" + moTc + "', " + "molc='" + moLc + "',mosi ='" + moSi + "', " + "subedema='" + subed + "', smtje='" + smtje + "', smtil='" + smtil + "', smtrc='" + smtRc + "', smttc='" + smtTc + "',smtlc ='" + smtLc + "', smtsi='" + smtSi + "', slje='" + slje + "', slil='" + slil + "', slrc='" + slRc + "', sltc='" + slTc + "',sllc='" + slLc + "',    slsi='" + slSi + "',    mtje='" + mtje + "',    mtil='" + mtil + "',    mtrc='" + mtrc + "',   mttc='" + mttc + "',    mtlc='" + mtlc + "',    mtsi='" + mtsi + "',    mhje='" + mhje + "',  mhil='" + mhil + "',  mhrc='" + mhrc + "',    mhtc='" + mhtc + "',    mhlc='" + mhlc + "',    mhsi='" + mhsi + "',    mpje='" + mpje + "',    mpil='" + mpil + "',  mprc='" + mprc + "',  mptc='" + mptc + "',  mplc='" + mplc + "',  mpsi='" + mpsi + "',  mrje='" + mrje + "',  mril='" + mril + "', mrrc='" + mrrc + "',  mrtc='" + mrtc + "', mrlc='" + mrlc + "', mrsi='" + mrsi + "', mpije='" + mpije + "', mpiil='" + mpiil + "', mpirc='" + mpirc + "', mpitc='" + mpitc + "', mpilc='" + mpilc + "', mpisi='" + mpisi + "', fatcreepsign='" + fat + "', locallnenla='" + local + "', llsje='" + llsj + "', llsil='" + llsi + "', llsrc='" + llsrc + "', llstc='" + llstc + "', llslc='" + llslc + "', llssi='" + llssi + "', llvje='" + llvj + "', llvil='" + llvi+ "', llvrc='" + llvrc + "', llvtc='" + llvtc + "', llvlc='" + llvlc + "', llvsi='" + llvsi + "', muralfib='" + muralfib + "', luminalstric='" + luminalstric + "', presdialation='" + pres + "', jejuPresDiam='" + jdiam + "', ileumPresDiam='" + idiam + "', rtColonPresDiam='" + rtcdiam + "', trColonPresDiam='" + trcdiam + "', ltColonPresDiam='" + ltcdiam + "', sigColonPresDiam='" + sigcdiam + "', tcl='" + tl + "', pof='" + pof + "', length='" + leng + "', fis_diameter='" + fis_dia + "', typeoffis='" + type + "', othertypefis='" + othertypefis + "', pa='" + pa + "', Diam='" + dia + "', volume='" + vol + "', loa='" + loa + "', otherlloac='" + otherlloac + "',  otherfinding='" + oth + "', ultrasoundreport='" + ultra + "'WHERE p_id='" + p_id + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
@@ -777,17 +794,17 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 
 
-			string sql = @"UPDATE asudb.dbo.personal_info SET fname'" + f + "'" +
+			string sql = @"UPDATE asudb.dbo.personal_info SET fname= '" + f + "'" +
 				  ", mname='" + m + "', lname ='" + l + "', tele='" + t + "'" +
-			   ",gender='" + g + "', age='" + age + "', " + "adress='" + address + "',city ='" + city + "', " + "governorate='" + governorate + "', occupation='" + occu + "', maritialstatus='" + mari + "', mensturalhistory='" + menst + "', where id='" + id + "';";
+			   ",gender='" + g + "', age='" + age + "', " + "adress='" + address + "',city ='" + city + "', " + "governorate='" + governorate + "', occupation='" + occu + "', maritialstatus='" + mari + "', mensturalhistory='" + menst + "' where id='" + id + "';";
 			executeQuery(sql);
 		}
 
 		public static void UpdateenterographyyInfo(DateTime date, string enst, int musleh, string jeE, string ilE, string RcE, string TcE, string LcE, string ScE, string ReE, int Msl, int subdema, string jedema, string ildema, string Rcdema, string Tcdema, string Lcdema, string Scdema, string Redema, int muralab, string jela, string illa, string Rcla, string Tcla, string Lcla, string Scla, string Rela, string jemt, string ilmt, string Rcmt, string Tcmt, string Lcmt, string Scmt, string Remt, int fd, int cs, int mf, string jens, string ilns, string Rcns, string Tcns, string Lcns, string Scns, string Rens, int presd, string jep, string ilp, string Rcp, string Tcp, string lcp, string Scp, string Rep, int Lh, string ttl, int cf, int caf, string clot, string cdab, string cdot, string cdvt, string ctof, string cabs, string cttf, string comother, string oth, string enter, int p_id,int id)
 		{
-			string sql = @"UPDATE asudb.dbo.enterography date='" + date + "'" +
+			string sql = @"UPDATE asudb.dbo.enterography SET date='" + date + "'" +
 			  ", Entrostudy='" + enst + "', mucosalenh ='" + musleh + "', jejEa='" + jeE + "'" +
-		   ",ilEa='" + ilE + "', RcEa='" + RcE + "', " + "TcEa='" + TcE + "',LcEa ='" + LcE + "', " + "ScEa='" + ScE + "', ReEa='" + ReE + "', Mucosalirrefi='" + Msl + "', submucosaledema='" + subdema + "', jethofSMedema='" + jedema + "',ilthofSMedema ='" + ildema + "', RcthofSMedema='" + Rcdema + "', TcthofSMedema='" + Tcdema+ "', LcthofSMedema='" + Lcdema + "', ScthofSMedema='" + Scdema + "', RethofSMedema='" + Redema + "',muralabscess='" + muralab+ "',  jelengthactivity='" + jela + "',    illengthactivity='" + illa + "',    Rclengthactivity='" + Rcla + "',    Tclengthactivity='" + Tcla + "',   Lclengthactivity='" + Lcla + "',    Sclengthactivity='" +Scla + "',    Relengthactivity='" + Rela + "',    jemuralthickness='" + jemt + "',  ilmuralthickness='" + ilmt + "',  Rcmuralthickness='" + Rcmt + "',    Tcmuralthickness='" + Tcmt + "',    Lcmuralthickness='" + Lcmt + "',    Scmuralthickness='" + Scmt + "',    Remuralthickness='" + Remt + "',    Fatedema='" + fd + "',  combsign='" + cs + "',  Muralfib='" + mf + "',  jeNarstr='" + jens + "',  ilNarstr='" + ilns + "',  RcNarstr='" +Rcns + "',  TcNarstr='" + Tcns + "', LcNarstr='" + Lcns + "',  ScNarstr='" + Scns + "', ReNarstr='" + Rens + "', Prestenoticdial='" + presd + "', jePrestenoticdiam='" + jep + "', ilPrestenoticdiam='" + ilp + "', RcPrestenoticdiam='" + Rcp + "', TcPrestenoticdiam='" + Tcp + "', LcPrestenoticdiam='" + lcp + "', ScPrestenoticdiam='" + Scp + "', RePrestenoticdiam='" + Rep+ "', LossofHaus='" + Lh + "',totallength='" + ttl+ "', compfistula='" + cf+ "', compAbscessformation='" + caf + "', complenoftrack='" + clot + "', compdiamofab='" + cdab + "', compdiamoftrack='" + cdot + "', compvolofab='" + cdvt+ "', comptypeoffistula='" + ctof + "', compabsloc='" + cabs+ "', compothertypefis='" + cttf + "', compotherabsloc='" + comother + "', otherentrofindings='" + oth + "', EntroReport='" + enter + "',        WHERE p_id='" + p_id + "' And id='" + id + "';";
+		   ",ilEa='" + ilE + "', RcEa='" + RcE + "', " + "TcEa='" + TcE + "',LcEa ='" + LcE + "', " + "ScEa='" + ScE + "', ReEa='" + ReE + "', Mucosalirrefi='" + Msl + "', submucosaledema='" + subdema + "', jethofSMedema='" + jedema + "',ilthofSMedema ='" + ildema + "', RcthofSMedema='" + Rcdema + "', TcthofSMedema='" + Tcdema+ "', LcthofSMedema='" + Lcdema + "', ScthofSMedema='" + Scdema + "', RethofSMedema='" + Redema + "',muralabscess='" + muralab+ "',  jelengthactivity='" + jela + "',    illengthactivity='" + illa + "',    Rclengthactivity='" + Rcla + "',    Tclengthactivity='" + Tcla + "',   Lclengthactivity='" + Lcla + "',    Sclengthactivity='" +Scla + "',    Relengthactivity='" + Rela + "',    jemuralthickness='" + jemt + "',  ilmuralthickness='" + ilmt + "',  Rcmuralthickness='" + Rcmt + "',    Tcmuralthickness='" + Tcmt + "',    Lcmuralthickness='" + Lcmt + "',    Scmuralthickness='" + Scmt + "',    Remuralthickness='" + Remt + "',    Fatedema='" + fd + "',  combsign='" + cs + "',  Muralfib='" + mf + "',  jeNarstr='" + jens + "',  ilNarstr='" + ilns + "',  RcNarstr='" +Rcns + "',  TcNarstr='" + Tcns + "', LcNarstr='" + Lcns + "',  ScNarstr='" + Scns + "', ReNarstr='" + Rens + "', Prestenoticdial='" + presd + "', jePrestenoticdiam='" + jep + "', ilPrestenoticdiam='" + ilp + "', RcPrestenoticdiam='" + Rcp + "', TcPrestenoticdiam='" + Tcp + "', LcPrestenoticdiam='" + lcp + "', ScPrestenoticdiam='" + Scp + "', RePrestenoticdiam='" + Rep+ "', LossofHaus='" + Lh + "',totallength='" + ttl+ "', compfistula='" + cf+ "', compAbscessformation='" + caf + "', complenoftrack='" + clot + "', compdiamofab='" + cdab + "', compdiamoftrack='" + cdot + "', compvolofab='" + cdvt+ "', comptypeoffistula='" + ctof + "', compabsloc='" + cabs+ "', compothertypefis='" + cttf + "', compotherabsloc='" + comother + "', otherentrofindings='" + oth + "', EntroReport='" + enter + "'WHERE p_id='" + p_id + "' And id='" + id + "';";
 
 			executeQuery(sql);
 		}
