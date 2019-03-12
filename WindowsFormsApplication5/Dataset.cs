@@ -791,6 +791,120 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
 			executeQuery(sql);
 		}
+
+
+		public static void deletePatients(int id)
+		{
+			String sql = "DELETE FROM asudb.dbo.personal_info  WHERE id='" + id + "';";
+
+			executeQuery(sql);
+		}
+
+		public static void deletesurgery(int id,int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.surgery  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+
+		public static void deletelabentery(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.labentery  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+
+		public static void deletedruglist(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.druglist  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+		public static void deleteActionplan(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.Actionplan  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+		public static void deleteEndoscopy(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.Endoscopy  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+		public static void deleteEntero(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.enterography  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		
+		}
+
+		public static void deleteExam(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.Exam_details WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+		public static void deletehistory(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.History  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+
+		}
+		public static void deleteultrasonic(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.ultrasonicradio  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+		public static void deletepathology(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.pathology  WHERE id='" + id + "' And p_id='" + pid + "';";
+
+			executeQuery(sql);
+		}
+
+		public static void deleteuimages(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.u_images  WHERE id='" + id + "';";
+
+			executeQuery(sql);
+		}
+
+		public static void deleteenteroimages(int id, int pid)
+		{
+			String sql = "DELETE FROM asudb.dbo.imageentro  WHERE id='" + id + "' ;";
+
+			executeQuery(sql);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		/*
 		public static DataTable getAllBuildings()
 		{
