@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace WindowsFormsApplication5
         string segment="";
         string muc_ero = "";
         string muc_fri = "";
+        int mode = 0;
+        int entry_id = 0;
 
         DataTable dt_date = new DataTable();
         DataTable dt = new DataTable();
@@ -251,6 +254,7 @@ namespace WindowsFormsApplication5
         {
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 segment = "";
                 muc_fri = "";
                 muc_ero = "";
@@ -259,20 +263,59 @@ namespace WindowsFormsApplication5
                 gatherMucEro();
                 gatherMucFri();
 
-                DataSet.Insertendoscopydata(endscopyDate.Value.Date, binToInt(segment), rectumEyrthemaCB.Text, sigmoidEyrthemaCB.Text, ltColonEyrthemaCB.Text, trColonEyrthemaCB.Text,
-                    rtColonEyrthemaCB.Text, tileumEyrthemaCB.Text, neotEyrthemaCB.Text, rectumVasPattCB.Text, sigmoidVasPattCB.Text, ltColonVasPattCB.Text, trColonVasPattCB.Text,
-                    rtColonVasPattCB.Text, tileumVasPattCB.Text, neotVasPattCB.Text, rectumUlcCB.Text, sigmoidUlcCB.Text, ltColonUlcCB.Text, trColonUlcCB.Text, rtColonUlcCB.Text, tileumUlcCB.Text,
-                    neotUlcCB.Text, rectumUlcerSizeCB.Text, sigmoidUlcerSizeCB.Text, ltColonUlcerSizeCB.Text, trColonUlcerSizeCB.Text, rtColonUlcerSizeCB.Text, tileumUlcerSizeCB.Text, neotUlcerSizeCB.Text,
-                    rectumUlcerAreaCB.Text, sigmoidUlcerAreaCB.Text, ltColonUlcerAreaCB.Text, trColonUlcerAreaCB.Text, rtColonUlcerAreaCB.Text, tileumUlcerAreaCB.Text, neotUlcerAreaCB.Text,
-                    binToInt(muc_ero), binToInt(muc_fri), rectumNarrowingCB.Text, sigmoidNarrowingCB.Text, ltColonNarrowingCB.Text, trColonNarrowingCB.Text, rtColonNarrowingCB.Text, tileumNarrowingCB.Text,
-                    neotNarrowingCB.Text, Convert.ToInt16(pancolitisChkbx.Checked), p_id);
+                if (mode == 0)
+                {
+                    DataSet.Insertendoscopydata(endscopyDate.Value.Date, binToInt(segment), rectumEyrthemaCB.Text, sigmoidEyrthemaCB.Text, ltColonEyrthemaCB.Text, trColonEyrthemaCB.Text,
+                        rtColonEyrthemaCB.Text, tileumEyrthemaCB.Text, neotEyrthemaCB.Text, rectumVasPattCB.Text, sigmoidVasPattCB.Text, ltColonVasPattCB.Text, trColonVasPattCB.Text,
+                        rtColonVasPattCB.Text, tileumVasPattCB.Text, neotVasPattCB.Text, rectumUlcCB.Text, sigmoidUlcCB.Text, ltColonUlcCB.Text, trColonUlcCB.Text, rtColonUlcCB.Text, tileumUlcCB.Text,
+                        neotUlcCB.Text, rectumUlcerSizeCB.Text, sigmoidUlcerSizeCB.Text, ltColonUlcerSizeCB.Text, trColonUlcerSizeCB.Text, rtColonUlcerSizeCB.Text, tileumUlcerSizeCB.Text, neotUlcerSizeCB.Text,
+                        rectumUlcerAreaCB.Text, sigmoidUlcerAreaCB.Text, ltColonUlcerAreaCB.Text, trColonUlcerAreaCB.Text, rtColonUlcerAreaCB.Text, tileumUlcerAreaCB.Text, neotUlcerAreaCB.Text,
+                        binToInt(muc_ero), binToInt(muc_fri), rectumNarrowingCB.Text, sigmoidNarrowingCB.Text, ltColonNarrowingCB.Text, trColonNarrowingCB.Text, rtColonNarrowingCB.Text, tileumNarrowingCB.Text,
+                        neotNarrowingCB.Text, Convert.ToInt16(pancolitisChkbx.Checked), p_id);
+                }
+                else if(mode == 1)
+                {
+                    DataSet.Updateendoscopydata(endscopyDate.Value.Date, binToInt(segment), rectumEyrthemaCB.Text, sigmoidEyrthemaCB.Text, ltColonEyrthemaCB.Text, trColonEyrthemaCB.Text,
+                        rtColonEyrthemaCB.Text, tileumEyrthemaCB.Text, neotEyrthemaCB.Text, rectumVasPattCB.Text, sigmoidVasPattCB.Text, ltColonVasPattCB.Text, trColonVasPattCB.Text,
+                        rtColonVasPattCB.Text, tileumVasPattCB.Text, neotVasPattCB.Text, rectumUlcCB.Text, sigmoidUlcCB.Text, ltColonUlcCB.Text, trColonUlcCB.Text, rtColonUlcCB.Text, tileumUlcCB.Text,
+                        neotUlcCB.Text, rectumUlcerSizeCB.Text, sigmoidUlcerSizeCB.Text, ltColonUlcerSizeCB.Text, trColonUlcerSizeCB.Text, rtColonUlcerSizeCB.Text, tileumUlcerSizeCB.Text, neotUlcerSizeCB.Text,
+                        rectumUlcerAreaCB.Text, sigmoidUlcerAreaCB.Text, ltColonUlcerAreaCB.Text, trColonUlcerAreaCB.Text, rtColonUlcerAreaCB.Text, tileumUlcerAreaCB.Text, neotUlcerAreaCB.Text,
+                        binToInt(muc_ero), binToInt(muc_fri), rectumNarrowingCB.Text, sigmoidNarrowingCB.Text, ltColonNarrowingCB.Text, trColonNarrowingCB.Text, rtColonNarrowingCB.Text, tileumNarrowingCB.Text,
+                        neotNarrowingCB.Text, Convert.ToInt16(pancolitisChkbx.Checked), p_id,entry_id);
+                }
 
                 MessageBox.Show("Saved successfully");
                 refreshDateCB();
+                Cursor.Current = Cursors.Default;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                switch (ex.Number)
+                {
+                    case 2601:
+                        MouseEventArgs me = (MouseEventArgs)e;
+                        DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                        if (dr == DialogResult.Yes)
+                        {
+                            mode = 1;
+                            Cursor.Current = Cursors.WaitCursor;
+                            endscopyDate.ValueChanged -= endscopyDate_ValueChanged;
+                            fillData(endscopyDate.Value.Date.ToString());
+                            endscopyDate.ValueChanged += endscopyDate_ValueChanged;
+                            Cursor.Current = Cursors.Default;
+                        }
+                        if (dr == DialogResult.No)
+                        {
+                            mode = 0;
+                        }
+
+
+                        break;
+                    default:
+                        MessageBox.Show(ex.Message);
+                        break;
+                }
             }
         }
 
@@ -319,6 +362,14 @@ namespace WindowsFormsApplication5
         }
         private void dateCB_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+            mode = 1;
+            fillData(dateCB.Text);
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void fillData(string date)
+        {
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -326,13 +377,16 @@ namespace WindowsFormsApplication5
                 int temp = 0;
                 char[] temp_char = new char[7];
 
-                dt = DataSet.getEndoall(dateCB.Text, p_id);
+                dt = DataSet.getEndoall(date, p_id);
                 mainBindingSource.DataSource = dt;
 
                 clearBindings();
                 endscopyDate.DataBindings.Clear();
 
-                this.endscopyDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Endodate", true));
+                entry_id = Convert.ToInt32(dt.Rows[0]["id"]);
+                endscopyDate.ValueChanged -= endscopyDate_ValueChanged;
+                this.endscopyDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "Endodate", true));
+                endscopyDate.ValueChanged += endscopyDate_ValueChanged;
 
                 #region Segment
                 temp = Convert.ToInt32(dt.Rows[0]["Segment"]);
@@ -493,6 +547,7 @@ namespace WindowsFormsApplication5
 
         private void endscopyDate_ValueChanged(object sender, EventArgs e)
         {
+            mode = 0;
             clearBindings();
         }
 
