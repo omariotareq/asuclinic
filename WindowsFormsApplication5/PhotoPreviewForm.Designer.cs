@@ -42,6 +42,7 @@
             this.previewPb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.previewPb.TabIndex = 1;
             this.previewPb.TabStop = false;
+            this.previewPb.Click += new System.EventHandler(this.previewPb_Click);
             // 
             // PhotoPreviewForm
             // 

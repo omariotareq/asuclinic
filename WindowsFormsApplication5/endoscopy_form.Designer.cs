@@ -1342,7 +1342,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1356,7 +1356,7 @@
             this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.DarkRed;
-            this.label43.Location = new System.Drawing.Point(82, 54);
+            this.label43.Location = new System.Drawing.Point(74, 54);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(82, 19);
             this.label43.TabIndex = 74;
@@ -1369,7 +1369,7 @@
             this.label47.BackColor = System.Drawing.Color.Transparent;
             this.label47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.DarkRed;
-            this.label47.Location = new System.Drawing.Point(82, 35);
+            this.label47.Location = new System.Drawing.Point(74, 35);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(347, 19);
             this.label47.TabIndex = 73;
@@ -1382,7 +1382,7 @@
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.DarkRed;
-            this.label48.Location = new System.Drawing.Point(82, 16);
+            this.label48.Location = new System.Drawing.Point(74, 16);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(270, 19);
             this.label48.TabIndex = 72;

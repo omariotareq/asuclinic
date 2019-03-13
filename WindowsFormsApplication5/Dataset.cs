@@ -446,7 +446,7 @@ string sql=	@"UPDATE asudb.dbo.labentery
 
         public static DataTable getUltrasonicImages(int p_id)
         {
-            string sql = @"SELECT u_image FROM asudb.dbo.u_images WHERE u_id='" + p_id + "'";
+            string sql = @"SELECT * FROM asudb.dbo.u_images WHERE u_id='" + p_id + "'";
             DataTable dt = getDataTable(sql);
 
             return dt;

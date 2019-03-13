@@ -17,5 +17,10 @@ namespace WindowsFormsApplication5
             InitializeComponent();
             previewPb.Image = img;
         }
+
+        private void previewPb_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

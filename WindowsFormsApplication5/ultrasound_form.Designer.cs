@@ -1659,7 +1659,7 @@
             this.groupBox1.Controls.Add(this.rtColonSubEdeChkbx);
             this.groupBox1.Controls.Add(this.trColonSubEdeChkbx);
             this.groupBox1.Controls.Add(this.ltColonSubEdeChkbx);
-            this.groupBox1.Location = new System.Drawing.Point(19, 107);
+            this.groupBox1.Location = new System.Drawing.Point(11, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(969, 1536);
             this.groupBox1.TabIndex = 312;

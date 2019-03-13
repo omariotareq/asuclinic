@@ -34,7 +34,7 @@ namespace WindowsFormsApplication5
 
         byte[] arr_upload_image;
 
-        char[] muc_enhanc_char ;
+        char[] muc_enhanc_char;
         char[] muc_irr_char;
         char[] sub_edema_char;
         char[] mural_abcess_char;
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication5
             ageLbl.Text = "" + age;
             p_id = pa_id;
 
-            
+
             refreshDateCB();
             enteroDatesCB.Text = "";
         }
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication5
         }
         public static char[] intToBinary(int number)
         {
-            
+
 
             var array = Convert.ToString(number, 2).PadLeft(7, '0').ToArray();
 
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication5
         public static int binToInt(string number)
         {
             int output = Convert.ToInt32(number, 2);
-            
+
 
             return output;
         }
@@ -100,7 +100,8 @@ namespace WindowsFormsApplication5
             {
                 muc_enhanc = muc_enhanc + "1";
             }
-            else{
+            else
+            {
                 muc_enhanc = muc_enhanc + "0";
             }
 
@@ -117,7 +118,8 @@ namespace WindowsFormsApplication5
             {
                 muc_enhanc = muc_enhanc + "1";
             }
-            else{
+            else
+            {
                 muc_enhanc = muc_enhanc + "0";
             }
             if (trColonMucosalEnhancChkb.Checked)
@@ -547,7 +549,7 @@ namespace WindowsFormsApplication5
 
         private void gatherPressDila()
         {
-            pres_dila  = "";
+            pres_dila = "";
 
             if (jejuPresDilatatiorChkbx.Checked)
             {
@@ -614,7 +616,7 @@ namespace WindowsFormsApplication5
         {
             loss_haus = "00";
 
-           
+
 
             if (rtColonLossHausChkb.Checked)
             {
@@ -666,14 +668,14 @@ namespace WindowsFormsApplication5
 
         private void ileumMucosalEnhancChkb_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             gatherMucEnhanc();
             int trans = binToInt(muc_enhanc);
-            MessageBox.Show(muc_enhanc +" - "+trans);
+            MessageBox.Show(muc_enhanc + " - " + trans);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -690,20 +692,24 @@ namespace WindowsFormsApplication5
                 gatherPressDila();
                 gatherLossHaus();
 
-                int fistula =0;
+                int fistula = 0;
                 int abcess_form = 0;
 
-                if(fistulaChkbx.Checked){
-                    fistula =1;
+                if (fistulaChkbx.Checked)
+                {
+                    fistula = 1;
                 }
-                else{
+                else
+                {
                     fistula = 0;
                 }
 
-                if(abcessFormChkbx.Checked){
-                    abcess_form =1;
+                if (abcessFormChkbx.Checked)
+                {
+                    abcess_form = 1;
                 }
-                else{
+                else
+                {
                     abcess_form = 0;
                 }
 
@@ -718,7 +724,7 @@ namespace WindowsFormsApplication5
                         diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id);
                     refreshDateCB();
                 }
-                else if(mode == 1)
+                else if (mode == 1)
                 {
                     DataSet.UpdateenterographyyInfo(enterDate.Value.Date, studyTypeCB.Text, binToInt(muc_enhanc), jejuEnhancAmountTB.Text, ileumEnhancAmountTB.Text, rtColonEnhancAmountTB.Text, trColonEnhancAmountTB.Text,
                         ltColonEnhancAmountTB.Text, sigColonEnhancAmountTB.Text, rectumEnhancAmountTB.Text, binToInt(muc_irr), binToInt(sub_edema), jejuThicknessEdemaTB.Text, ileumThicknessEdemaTB.Text, rtColonThicknessEdemaTB.Text, trColonThicknessEdemaTB.Text,
@@ -728,11 +734,11 @@ namespace WindowsFormsApplication5
                         ileumPresDiameterTB.Text, rtColonPresDiameterTB.Text, trColonPresDiameterTB.Text, ltColonPresDiameterTB.Text, sigColonPresDiameterTB.Text, rectumPresDiameterTB.Text, binToInt(loss_haus), (activeSegmentTB.Text), fistula, abcess_form, (lengthOfTrackTB.Text),
                         diameterOfAbcTB.Text, (diameterOfTrackTB.Text), (volOfAbcTB.Text), typeOfFistulaCB.Text, abcessLocationCB.Text, otherFistulaTypeTB.Text, otherAbcLocTB.Text, otherEnterographyTB.Text, enteroReportTB.Text, p_id, e_id);
                 }
-               
+
 
                 MessageBox.Show("Saved successfully");
                 button1.Enabled = true;
-                    
+
             }
             catch (SqlException ex)
             {
@@ -742,22 +748,22 @@ namespace WindowsFormsApplication5
                         MouseEventArgs me = (MouseEventArgs)e;
                         DialogResult dr = MessageBox.Show("This date already data registered on the system! \nWould you like to edit the current entry?\nIf no please choose a different date.", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
-                                    if (dr == DialogResult.Yes)
-                                    {
-                                        mode = 1;
-                                        Cursor.Current = Cursors.WaitCursor;
-                                        enterDate.ValueChanged -= enterDate_ValueChanged;
-                                        fillData(enterDate.Value.Date.ToString());
-                                        fillImages();
-                                        enterDate.ValueChanged += enterDate_ValueChanged;
-                                        Cursor.Current = Cursors.Default;
-                                    }
-                                    if (dr == DialogResult.No)
-                                    {
-                                        mode = 0;
-                                    }
-                                
-                        
+                        if (dr == DialogResult.Yes)
+                        {
+                            mode = 1;
+                            Cursor.Current = Cursors.WaitCursor;
+                            enterDate.ValueChanged -= enterDate_ValueChanged;
+                            fillData(enterDate.Value.Date.ToString());
+                            fillImages();
+                            enterDate.ValueChanged += enterDate_ValueChanged;
+                            Cursor.Current = Cursors.Default;
+                        }
+                        if (dr == DialogResult.No)
+                        {
+                            mode = 0;
+                        }
+
+
                         break;
                     default:
                         MessageBox.Show(ex.Message);
@@ -784,376 +790,376 @@ namespace WindowsFormsApplication5
 
             clearChkBxes();
             clearBindings();
-           dt =  DataSet.getEnterography(date, p_id);
-           mainBindingSource.DataSource = dt;
+            dt = DataSet.getEnterography(date, p_id);
+            mainBindingSource.DataSource = dt;
 
-           studyTypeCB.DataBindings.Clear();
-           e_id = Convert.ToInt32(dt.Rows[0]["id"]);
+            studyTypeCB.DataBindings.Clear();
+            e_id = Convert.ToInt32(dt.Rows[0]["id"]);
 
-           enterDate.DataBindings.Clear();
-           enterDate.ValueChanged -= enterDate_ValueChanged;
-           this.enterDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "date", true));
-           enterDate.ValueChanged += enterDate_ValueChanged;
+            enterDate.DataBindings.Clear();
+            enterDate.ValueChanged -= enterDate_ValueChanged;
+            this.enterDate.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.mainBindingSource, "date", true));
+            enterDate.ValueChanged += enterDate_ValueChanged;
             this.studyTypeCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Entrostudy", true));
 
-           this.jejuEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jejEa", true));
-           this.ileumEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilEa", true));
-           this.rtColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcEa", true));
-           this.trColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcEa", true));
-           this.ltColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcEa", true));
-           this.sigColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScEa", true));
-           this.rectumEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ReEa", true));
+            this.jejuEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jejEa", true));
+            this.ileumEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilEa", true));
+            this.rtColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcEa", true));
+            this.trColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcEa", true));
+            this.ltColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcEa", true));
+            this.sigColonEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScEa", true));
+            this.rectumEnhancAmountTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ReEa", true));
 
-           this.jejuThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jethofSMedema", true));
-           this.ileumThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilthofSMedema", true));
-           this.rtColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcthofSMedema", true));
-           this.trColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcthofSMedema", true));
-           this.ltColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcthofSMedema", true));
-           this.sigColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScthofSMedema", true));
-           this.rectumThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RethofSMedema", true));
+            this.jejuThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jethofSMedema", true));
+            this.ileumThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilthofSMedema", true));
+            this.rtColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcthofSMedema", true));
+            this.trColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcthofSMedema", true));
+            this.ltColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcthofSMedema", true));
+            this.sigColonThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScthofSMedema", true));
+            this.rectumThicknessEdemaTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RethofSMedema", true));
 
-           this.jejuLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jelengthactivity", true));
-           this.ileumLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "illengthactivity", true));
-           this.rtColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Rclengthactivity", true));
-           this.trColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Tclengthactivity", true));
-           this.ltColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Lclengthactivity", true));
-           this.sigColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Sclengthactivity", true));
-           this.rectumLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Relengthactivity", true));
+            this.jejuLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jelengthactivity", true));
+            this.ileumLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "illengthactivity", true));
+            this.rtColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Rclengthactivity", true));
+            this.trColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Tclengthactivity", true));
+            this.ltColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Lclengthactivity", true));
+            this.sigColonLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Sclengthactivity", true));
+            this.rectumLengthActTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Relengthactivity", true));
 
-           this.jejuMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jemuralthickness", true));
-           this.ileumMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilmuralthickness", true));
-           this.rtColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Rcmuralthickness", true));
-           this.trColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Tcmuralthickness", true));
-           this.ltColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Lcmuralthickness", true));
-           this.sigColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Scmuralthickness", true));
-           this.rectumMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Remuralthickness", true));
+            this.jejuMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jemuralthickness", true));
+            this.ileumMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilmuralthickness", true));
+            this.rtColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Rcmuralthickness", true));
+            this.trColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Tcmuralthickness", true));
+            this.ltColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Lcmuralthickness", true));
+            this.sigColonMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Scmuralthickness", true));
+            this.rectumMuralThicknessTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "Remuralthickness", true));
 
-           this.jejuNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jeNarstr", true));
-           this.ileumNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilNarstr", true));
-           this.rtColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcNarstr", true));
-           this.trColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcNarstr", true));
-           this.ltColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcNarstr", true));
-           this.sigColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScNarstr", true));
-           this.rectumNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ReNarstr", true));
+            this.jejuNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jeNarstr", true));
+            this.ileumNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilNarstr", true));
+            this.rtColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcNarstr", true));
+            this.trColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcNarstr", true));
+            this.ltColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcNarstr", true));
+            this.sigColonNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScNarstr", true));
+            this.rectumNarrwoingCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ReNarstr", true));
 
-           this.jejuPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jePrestenoticdiam", true));
-           this.ileumPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilPrestenoticdiam", true));
-           this.rtColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcPrestenoticdiam", true));
-           this.trColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcPrestenoticdiam", true));
-           this.ltColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcPrestenoticdiam", true));
-           this.sigColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScPrestenoticdiam", true));
-           this.rectumPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RePrestenoticdiam", true));
+            this.jejuPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "jePrestenoticdiam", true));
+            this.ileumPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ilPrestenoticdiam", true));
+            this.rtColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RcPrestenoticdiam", true));
+            this.trColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "TcPrestenoticdiam", true));
+            this.ltColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "LcPrestenoticdiam", true));
+            this.sigColonPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "ScPrestenoticdiam", true));
+            this.rectumPresDiameterTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "RePrestenoticdiam", true));
 
-           #region mucosalEnhancment
-           temp = Convert.ToInt32(dt.Rows[0]["mucosalenh"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonMucosalEnhancChkb.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumMucosalEnhancChkb.Checked = true;
-           }
-           #endregion
+            #region mucosalEnhancment
+            temp = Convert.ToInt32(dt.Rows[0]["mucosalenh"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonMucosalEnhancChkb.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumMucosalEnhancChkb.Checked = true;
+            }
+            #endregion
 
-           #region mucosalIrr
-           temp = Convert.ToInt32(dt.Rows[0]["Mucosalirrefi"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonMucIrrChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumMucIrrChkbx.Checked = true;
-           }
-           #endregion
+            #region mucosalIrr
+            temp = Convert.ToInt32(dt.Rows[0]["Mucosalirrefi"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonMucIrrChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumMucIrrChkbx.Checked = true;
+            }
+            #endregion
 
-           #region SubMucosalEdema
-           temp = Convert.ToInt32(dt.Rows[0]["submucosaledema"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonSubMucEdemaChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumSubMucEdemaChkbx.Checked = true;
-           }
-           #endregion
+            #region SubMucosalEdema
+            temp = Convert.ToInt32(dt.Rows[0]["submucosaledema"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonSubMucEdemaChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumSubMucEdemaChkbx.Checked = true;
+            }
+            #endregion
 
-           #region muralAbcess
-           temp = Convert.ToInt32(dt.Rows[0]["muralabscess"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonMuralAbcChkb.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumMuralAbcChkb.Checked = true;
-           }
-           #endregion 
+            #region muralAbcess
+            temp = Convert.ToInt32(dt.Rows[0]["muralabscess"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonMuralAbcChkb.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumMuralAbcChkb.Checked = true;
+            }
+            #endregion
 
-           #region FatEdema
-           temp = Convert.ToInt32(dt.Rows[0]["Fatedema"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonFatEdemaChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumFatEdemaChkbx.Checked = true;
-           }
-           #endregion
+            #region FatEdema
+            temp = Convert.ToInt32(dt.Rows[0]["Fatedema"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonFatEdemaChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumFatEdemaChkbx.Checked = true;
+            }
+            #endregion
 
-           #region CombSign
-           temp = Convert.ToInt32(dt.Rows[0]["combsign"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuCombSignChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumCombSignChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonCombSignChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonCombSignChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonCombSignChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonCombSignChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumCombSignChkbx.Checked = true;
-           }
-           #endregion 
+            #region CombSign
+            temp = Convert.ToInt32(dt.Rows[0]["combsign"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuCombSignChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumCombSignChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonCombSignChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonCombSignChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonCombSignChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonCombSignChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumCombSignChkbx.Checked = true;
+            }
+            #endregion
 
-           #region MuralFibrosis
-           temp = Convert.ToInt32(dt.Rows[0]["Muralfib"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonMuralFibrosisChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumMuralFibrosisChkbx.Checked = true;
-           }
-           #endregion
+            #region MuralFibrosis
+            temp = Convert.ToInt32(dt.Rows[0]["Muralfib"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonMuralFibrosisChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumMuralFibrosisChkbx.Checked = true;
+            }
+            #endregion
 
             #region PresDia
-           temp = Convert.ToInt32(dt.Rows[0]["Prestenoticdial"]);
-           temp_char = intToBinary(temp);
-           if (temp_char[0] == '1')
-           {
-               jejuPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[1] == '1')
-           {
-               ileumPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[2] == '1')
-           {
-               rtColonPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonPresDilatatiorChkbx.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumPresDilatatiorChkbx.Checked = true;
-           }
-            #endregion 
+            temp = Convert.ToInt32(dt.Rows[0]["Prestenoticdial"]);
+            temp_char = intToBinary(temp);
+            if (temp_char[0] == '1')
+            {
+                jejuPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[1] == '1')
+            {
+                ileumPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[2] == '1')
+            {
+                rtColonPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonPresDilatatiorChkbx.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumPresDilatatiorChkbx.Checked = true;
+            }
+            #endregion
 
-           #region LossHauss
-           temp = Convert.ToInt32(dt.Rows[0]["LossofHaus"]);
-           temp_char = intToBinary(temp);
-           
-           if (temp_char[2] == '1')
-           {
-               rtColonLossHausChkb.Checked = true;
-           }
-           if (temp_char[3] == '1')
-           {
-               trColonLossHausChkb.Checked = true;
-           }
-           if (temp_char[4] == '1')
-           {
-               ltColonLossHausChkb.Checked = true;
-           }
-           if (temp_char[5] == '1')
-           {
-               sigColonLossHausChkb.Checked = true;
-           }
-           if (temp_char[6] == '1')
-           {
-               rectumLossHausChkb.Checked = true;
-           }
-           #endregion
+            #region LossHauss
+            temp = Convert.ToInt32(dt.Rows[0]["LossofHaus"]);
+            temp_char = intToBinary(temp);
 
-           this.activeSegmentTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "totallength", true));
-           this.lengthOfTrackTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "complenoftrack", true));
-           this.diameterOfTrackTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compdiamoftrack", true));
-           this.typeOfFistulaCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "comptypeoffistula", true));
-           this.otherFistulaTypeTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compothertypefis", true));
-           this.diameterOfAbcTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compdiamofab", true));
-           this.volOfAbcTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compvolofab", true));
-           this.abcessLocationCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compabsloc", true));
-           this.otherAbcLocTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compotherabsloc", true));
-           this.otherEnterographyTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "otherentrofindings", true));
-           this.enteroReportTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "EntroReport", true));
+            if (temp_char[2] == '1')
+            {
+                rtColonLossHausChkb.Checked = true;
+            }
+            if (temp_char[3] == '1')
+            {
+                trColonLossHausChkb.Checked = true;
+            }
+            if (temp_char[4] == '1')
+            {
+                ltColonLossHausChkb.Checked = true;
+            }
+            if (temp_char[5] == '1')
+            {
+                sigColonLossHausChkb.Checked = true;
+            }
+            if (temp_char[6] == '1')
+            {
+                rectumLossHausChkb.Checked = true;
+            }
+            #endregion
 
-           if (Convert.ToInt32(dt.Rows[0]["compfistula"]) == 1)
-           {
-               fistulaChkbx.Checked = true;
-           }
-           if (Convert.ToInt32(dt.Rows[0]["compAbscessformation"]) == 1)
-           {
-               abcessFormChkbx.Checked = true;
-           }
+            this.activeSegmentTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "totallength", true));
+            this.lengthOfTrackTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "complenoftrack", true));
+            this.diameterOfTrackTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compdiamoftrack", true));
+            this.typeOfFistulaCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "comptypeoffistula", true));
+            this.otherFistulaTypeTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compothertypefis", true));
+            this.diameterOfAbcTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compdiamofab", true));
+            this.volOfAbcTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compvolofab", true));
+            this.abcessLocationCB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compabsloc", true));
+            this.otherAbcLocTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "compotherabsloc", true));
+            this.otherEnterographyTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "otherentrofindings", true));
+            this.enteroReportTB.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.mainBindingSource, "EntroReport", true));
+
+            if (Convert.ToInt32(dt.Rows[0]["compfistula"]) == 1)
+            {
+                fistulaChkbx.Checked = true;
+            }
+            if (Convert.ToInt32(dt.Rows[0]["compAbscessformation"]) == 1)
+            {
+                abcessFormChkbx.Checked = true;
+            }
 
         }
 
@@ -1169,34 +1175,34 @@ namespace WindowsFormsApplication5
                     }
                 }
             }
-            
+
         }
 
         private void clearBindings()
         {
             foreach (Control gb in this.Controls)
             {
-                
-                    foreach (Control tb in gb.Controls)
+
+                foreach (Control tb in gb.Controls)
+                {
+                    if (tb is TextBox)
                     {
-                        if (tb is TextBox)
-                        {
-                            tb.DataBindings.Clear();
-                            tb.Text = "";
-                        }
-                        if (tb is ComboBox)
-                        {
-                            tb.DataBindings.Clear();
-                        }
-                        if (tb is CheckBox)
-                        {
-                            ((CheckBox)tb).Checked = false;
-                        }
+                        tb.DataBindings.Clear();
+                        tb.Text = "";
                     }
-                
+                    if (tb is ComboBox)
+                    {
+                        tb.DataBindings.Clear();
+                    }
+                    if (tb is CheckBox)
+                    {
+                        ((CheckBox)tb).Checked = false;
+                    }
+                }
+
             }
 
-            
+
         }
 
 
@@ -1228,7 +1234,7 @@ namespace WindowsFormsApplication5
                         MemoryStream ms = new MemoryStream();
                         byte[] PhotoByte = null;
                         item.Image.Save(ms, ImageFormat.Jpeg);
-                        PhotoByte = ms.ToArray(); 
+                        PhotoByte = ms.ToArray();
 
                         /*Image img = item.Image;
                         ImageConverter converter = new ImageConverter();
@@ -1240,7 +1246,7 @@ namespace WindowsFormsApplication5
 
                             try
                             {
-                               DataSet.parametrizedInsert(Convert.ToInt16(e_id), PhotoByte);
+                                DataSet.parametrizedInsert(Convert.ToInt16(e_id), PhotoByte);
                             }
                             catch (Exception ex)
                             {
@@ -1286,14 +1292,14 @@ namespace WindowsFormsApplication5
                 byte[] image_arr = null;
                 Image photo = null;
 
-               for(int i=0;i<di.Rows.Count;i++)
+                for (int i = 0; i < di.Rows.Count; i++)
                 {
                     try
                     {
                         image_arr = (byte[])di.Rows[i]["imageentro"];
 
                         //photo = (Bitmap)((new ImageConverter()).ConvertFrom(image_arr));
-                       
+
 
                     }
                     catch (Exception ex)
@@ -1301,12 +1307,13 @@ namespace WindowsFormsApplication5
                         MessageBox.Show("" + ex);
                     }
                     PictureBox pb = new PictureBox();
-                    MemoryStream stream = new MemoryStream(image_arr,0,image_arr.Length);
+                    MemoryStream stream = new MemoryStream(image_arr, 0, image_arr.Length);
                     pb.Image = Image.FromStream(stream);
                     pb.SizeMode = PictureBoxSizeMode.StretchImage;
                     pb.BackColor = Color.Transparent;
                     pb.Height = 100;
                     pb.Width = 100;
+                    pb.Tag = di.Rows[i]["id"];
                     pb.Click += new EventHandler(pb_click);
                     flowLayoutPanel1.Controls.Add(pb);
 
@@ -1316,7 +1323,7 @@ namespace WindowsFormsApplication5
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void chooseImage()
@@ -1394,25 +1401,27 @@ namespace WindowsFormsApplication5
         {
             MouseEventArgs me = (MouseEventArgs)e;
 
-       /*     if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
             {
                 DialogResult dr = MessageBox.Show("Are you sure you want to delete this photo ?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
                 if (dr == DialogResult.Yes)
                 {
                     // Do something
-
-                   // attachmentTableAdapter.DeleteAttachmentQuery(Convert.ToInt32(((PictureBox)sender).Tag));
-                  //  photoPanel.Controls.Clear();
+                    Cursor.Current = Cursors.WaitCursor;
+                    DataSet.deleteenteroimages(Convert.ToInt32(((PictureBox)sender).Tag), p_id);
+                    flowLayoutPanel1.Controls.Clear();
                     fillImages();
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("Deleted successfullyy");
                 }
             }
             if (me.Button == System.Windows.Forms.MouseButtons.Left)
-            {*/
+            {
                 PhotoPreviewForm ppf = new PhotoPreviewForm(((PictureBox)sender).Image);
                 ppf.ShowDialog();
             }
         }
-       
-    
+
+    }
 }

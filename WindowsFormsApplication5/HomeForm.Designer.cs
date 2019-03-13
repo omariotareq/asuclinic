@@ -66,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bell MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(242, 117);
+            this.label2.Location = new System.Drawing.Point(321, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 40);
             this.label2.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.drNameLbl.AutoSize = true;
             this.drNameLbl.BackColor = System.Drawing.Color.Transparent;
             this.drNameLbl.Font = new System.Drawing.Font("Bell MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drNameLbl.Location = new System.Drawing.Point(390, 117);
+            this.drNameLbl.Location = new System.Drawing.Point(469, 113);
             this.drNameLbl.Name = "drNameLbl";
             this.drNameLbl.Size = new System.Drawing.Size(0, 40);
             this.drNameLbl.TabIndex = 3;

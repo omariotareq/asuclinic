@@ -989,6 +989,7 @@ namespace WindowsFormsApplication5
                     pb.BackColor = Color.Transparent;
                     pb.Height = 100;
                     pb.Width = 100;
+                    pb.Tag = di.Rows[i]["id"];
                     pb.Click += new EventHandler(pb_click);
                     flowLayoutPanel1.Controls.Add(pb);
 
@@ -1005,23 +1006,26 @@ namespace WindowsFormsApplication5
         {
             MouseEventArgs me = (MouseEventArgs)e;
 
-            /*     if (me.Button == System.Windows.Forms.MouseButtons.Right)
+                 if (me.Button == System.Windows.Forms.MouseButtons.Right)
                  {
                      DialogResult dr = MessageBox.Show("Are you sure you want to delete this photo ?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
 
                      if (dr == DialogResult.Yes)
                      {
                          // Do something
-
-                        // attachmentTableAdapter.DeleteAttachmentQuery(Convert.ToInt32(((PictureBox)sender).Tag));
-                       //  photoPanel.Controls.Clear();
-                         fillImages();
+                         Cursor.Current = Cursors.WaitCursor;
+                         DataSet.deleteuimages(Convert.ToInt32(((PictureBox)sender).Tag), p_id);
+                         flowLayoutPanel1.Controls.Clear();
+                         fillImages(p_id);
+                         Cursor.Current = Cursors.Default;
+                         MessageBox.Show("Deleted successfullyy");
                      }
                  }
                  if (me.Button == System.Windows.Forms.MouseButtons.Left)
-                 {*/
-            PhotoPreviewForm ppf = new PhotoPreviewForm(((PictureBox)sender).Image);
-            ppf.ShowDialog();
+                 {
+                     PhotoPreviewForm ppf = new PhotoPreviewForm(((PictureBox)sender).Image);
+                     ppf.ShowDialog();
+                 }
         }
 
 
