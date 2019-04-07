@@ -1570,7 +1570,7 @@
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(1, 3);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1584,7 +1584,7 @@
             this.label59.BackColor = System.Drawing.Color.Transparent;
             this.label59.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.DarkRed;
-            this.label59.Location = new System.Drawing.Point(78, 53);
+            this.label59.Location = new System.Drawing.Point(69, 53);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(82, 19);
             this.label59.TabIndex = 70;
@@ -1597,7 +1597,7 @@
             this.label60.BackColor = System.Drawing.Color.Transparent;
             this.label60.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.ForeColor = System.Drawing.Color.DarkRed;
-            this.label60.Location = new System.Drawing.Point(78, 34);
+            this.label60.Location = new System.Drawing.Point(69, 34);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(347, 19);
             this.label60.TabIndex = 69;
@@ -1610,7 +1610,7 @@
             this.label61.BackColor = System.Drawing.Color.Transparent;
             this.label61.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.DarkRed;
-            this.label61.Location = new System.Drawing.Point(78, 15);
+            this.label61.Location = new System.Drawing.Point(69, 15);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(270, 19);
             this.label61.TabIndex = 68;
@@ -1638,6 +1638,7 @@
             this.Name = "lab_results";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.lab_results_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox8.ResumeLayout(false);

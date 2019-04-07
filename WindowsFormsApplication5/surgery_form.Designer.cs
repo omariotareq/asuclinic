@@ -1,33 +1,33 @@
 ﻿namespace WindowsFormsApplication5
 {
-    partial class Surgery_form
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class Surgery_form
+	{
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary>
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Windows Form Designer generated code
+		#region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Surgery_form));
             this.ageLbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -320,7 +320,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1011, 601);
+            this.ClientSize = new System.Drawing.Size(1028, 601);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label14);
@@ -336,13 +336,14 @@
             this.Name = "Surgery_form";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Surgery_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
-        }
+		}
 
 		#endregion
 
@@ -350,22 +351,22 @@
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.Label patNameLb;
 		private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox surgicaInd;
+		private System.Windows.Forms.TextBox surgicaInd;
 		private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker surgDate;
-        private System.Windows.Forms.ComboBox surgDatesCB;
-        private System.Windows.Forms.TextBox surgicalComp;
-        private System.Windows.Forms.TextBox operDetails;
-        private System.Windows.Forms.Button saveBtn;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.DateTimePicker surgDate;
+		private System.Windows.Forms.ComboBox surgDatesCB;
+		private System.Windows.Forms.TextBox surgicalComp;
+		private System.Windows.Forms.TextBox operDetails;
+		private System.Windows.Forms.Button saveBtn;
+		private System.Windows.Forms.PictureBox pictureBox3;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label label15;
 	}
 }

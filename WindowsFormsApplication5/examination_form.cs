@@ -60,5 +60,14 @@ namespace WindowsFormsApplication5
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void examination_form_Load(object sender, EventArgs e)
+        {
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
+        }
     }
 }

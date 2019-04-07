@@ -233,5 +233,19 @@ namespace WindowsFormsApplication5
             clearBindings();
             mode = 0;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void durg_form_Load(object sender, EventArgs e)
+        {
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
+        }
     }
 }

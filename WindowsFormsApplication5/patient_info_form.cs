@@ -79,5 +79,14 @@ namespace WindowsFormsApplication5
         {
 
         }
+
+        private void patient_info_form_Load(object sender, EventArgs e)
+        {
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
+        }
     }
 }

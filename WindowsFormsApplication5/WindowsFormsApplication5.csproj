@@ -8,8 +8,8 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication5</RootNamespace>
-    <AssemblyName>WindowsFormsApplication5</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AssemblyName>IBD Patients Database</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -23,7 +23,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ProductName>IBD Patients - Database</ProductName>
+    <PublisherName>Omar Tareq</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -59,6 +61,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ain_shams_university_DWK_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -134,6 +139,18 @@
     <Compile Include="login_form.Designer.cs">
       <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
+    <Compile Include="edit_user_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_user_form - Copy.Designer.cs">
+      <DependentUpon>edit_user_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_user_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_user_form.Designer.cs">
+      <DependentUpon>new_user_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="pathology_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +196,12 @@
       <DependentUpon>ultrasound_form.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="users_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="users_control.Designer.cs">
+      <DependentUpon>users_control.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="action_form.resx">
       <DependentUpon>action_form.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login_form.resx">
       <DependentUpon>login_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_user_form - Copy.resx">
+      <DependentUpon>edit_user_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_user_form.resx">
+      <DependentUpon>new_user_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pathology_form.resx">
       <DependentUpon>pathology_form.cs</DependentUpon>
@@ -239,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ultrasound_form.resx">
       <DependentUpon>ultrasound_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="users_control.resx">
+      <DependentUpon>users_control.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -273,6 +305,11 @@
     <None Include="Resources\Untitled-11.png" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -283,6 +320,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2de4802f9c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\292fd6b79e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ain_shams_university_DWK_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

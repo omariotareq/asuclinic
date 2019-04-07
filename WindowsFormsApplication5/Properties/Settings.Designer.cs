@@ -46,5 +46,17 @@ namespace WindowsFormsApplication5.Properties {
                 this["drId"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string drAccess {
+            get {
+                return ((string)(this["drAccess"]));
+            }
+            set {
+                this["drAccess"] = value;
+            }
+        }
     }
 }

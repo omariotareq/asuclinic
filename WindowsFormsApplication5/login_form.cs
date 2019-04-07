@@ -12,7 +12,7 @@ namespace WindowsFormsApplication5
 {
     public partial class Login_Form : Form
     {
-        long user_id = 0;
+       
         public Login_Form()
         {
             InitializeComponent();
@@ -20,10 +20,13 @@ namespace WindowsFormsApplication5
         
         private void lgnBtn_Click(object sender, EventArgs e)
         {
-            user_id = DataSet.getUserID(loginTB.Text, passwordTB.Text);
-            if(user_id != 0){
+            DataSet.ReturnValues rv = new DataSet.ReturnValues();
+            
+            rv  = DataSet.getUserID(loginTB.Text, passwordTB.Text);
+            if(rv.usrId != 0){
                 Cursor.Current = Cursors.WaitCursor;
-                WindowsFormsApplication5.Properties.Settings.Default.drId = user_id;
+                WindowsFormsApplication5.Properties.Settings.Default.drId = rv.usrId;
+                WindowsFormsApplication5.Properties.Settings.Default.drAccess = rv.usrAccess;
                 WindowsFormsApplication5.Properties.Settings.Default.drName = loginTB.Text;
                 HomeForm f1 = new HomeForm();
                 this.Hide();
@@ -32,7 +35,7 @@ namespace WindowsFormsApplication5
                 this.Close();
             }
             else{
-                MessageBox.Show("failure bitch");
+                MessageBox.Show("Wrong Username or Password");
             }
         }
     }

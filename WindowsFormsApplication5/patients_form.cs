@@ -191,5 +191,13 @@ private void button11_Click(object sender, EventArgs e)
     patient_info_form ef = new patient_info_form(p_id);
     ef.ShowDialog();
 }
+
+private void button12_Click(object sender, EventArgs e)
+{
+    HomeForm hf = new HomeForm();
+    this.Hide();
+    hf.ShowDialog();
+    this.Close();
+}
     }        
 }

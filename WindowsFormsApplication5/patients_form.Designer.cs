@@ -53,6 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +84,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,6 +97,7 @@
             this.Telephone});
             this.dataGridView1.Location = new System.Drawing.Point(223, 147);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(603, 329);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -101,32 +105,38 @@
             // 
             this.id.HeaderText = "id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
             // FirstName
             // 
             this.FirstName.HeaderText = "First Name";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // MiddleName
             // 
             this.MiddleName.HeaderText = "Middle Name";
             this.MiddleName.Name = "MiddleName";
+            this.MiddleName.ReadOnly = true;
             // 
             // LastName
             // 
             this.LastName.HeaderText = "Last Name";
             this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
             // 
             // Age
             // 
             this.Age.HeaderText = "Age";
             this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
             // 
             // Telephone
             // 
             this.Telephone.HeaderText = "Telephone";
             this.Telephone.Name = "Telephone";
+            this.Telephone.ReadOnly = true;
             // 
             // patHistoryBtn
             // 
@@ -328,6 +338,18 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "IBD TEAM";
             // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Silver;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Location = new System.Drawing.Point(893, 40);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(101, 30);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "Home";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // patients_form
             // 
             this.AcceptButton = this.button1;
@@ -336,6 +358,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApplication5.Properties.Resources.Untitled_11;
             this.ClientSize = new System.Drawing.Size(1028, 616);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -357,7 +380,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "patients_form";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -393,5 +415,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button12;
 	}
 }

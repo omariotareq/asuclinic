@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(enterography_form));
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
             this.ageLbl = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.patNameLb = new System.Windows.Forms.Label();
@@ -204,38 +209,89 @@
             this.lengthOfTrackTB = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.fistulaChkbx = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.attachmentFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 80;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label43
+            // 
+            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Transparent;
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.DarkRed;
+            this.label43.Location = new System.Drawing.Point(71, 12);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(82, 19);
+            this.label43.TabIndex = 79;
+            this.label43.Text = "IBD TEAM";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.DarkRed;
+            this.label47.Location = new System.Drawing.Point(71, 50);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(347, 19);
+            this.label47.TabIndex = 78;
+            this.label47.Text = "GASTROENTROLOGY AND HEPATOLOGY UNIT";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.DarkRed;
+            this.label48.Location = new System.Drawing.Point(71, 31);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(270, 19);
+            this.label48.TabIndex = 77;
+            this.label48.Text = "INTERNAL MEDICINE DEPARTMENT";
             // 
             // ageLbl
             // 
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(579, 88);
+            this.ageLbl.Location = new System.Drawing.Point(574, 102);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
-            this.ageLbl.TabIndex = 46;
+            this.ageLbl.TabIndex = 76;
             // 
             // label20
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(519, 88);
+            this.label20.Location = new System.Drawing.Point(514, 102);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
-            this.label20.TabIndex = 45;
+            this.label20.TabIndex = 75;
             this.label20.Text = "Age:";
             // 
             // patNameLb
@@ -243,20 +299,20 @@
             this.patNameLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(282, 88);
+            this.patNameLb.Location = new System.Drawing.Point(277, 102);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
-            this.patNameLb.TabIndex = 44;
+            this.patNameLb.TabIndex = 74;
             // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(205, 88);
+            this.label18.Location = new System.Drawing.Point(200, 102);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
-            this.label18.TabIndex = 43;
+            this.label18.TabIndex = 73;
             this.label18.Text = "Name:";
             // 
             // label3
@@ -264,10 +320,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 81);
+            this.label3.Location = new System.Drawing.Point(0, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(189, 31);
-            this.label3.TabIndex = 42;
+            this.label3.TabIndex = 72;
             this.label3.Text = "Enterography";
             // 
             // groupBox1
@@ -438,10 +494,10 @@
             this.groupBox1.Controls.Add(this.lengthOfTrackTB);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.fistulaChkbx);
-            this.groupBox1.Location = new System.Drawing.Point(8, 113);
+            this.groupBox1.Location = new System.Drawing.Point(3, 140);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(996, 1336);
-            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             // 
             // button1
@@ -458,7 +514,6 @@
             this.button1.TabIndex = 222;
             this.button1.Text = "Upload";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // activeSegmentTB
             // 
@@ -482,7 +537,6 @@
             this.button2.TabIndex = 221;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // enteroDatesCB
             // 
@@ -498,11 +552,11 @@
             this.enteroDatesCB.Name = "enteroDatesCB";
             this.enteroDatesCB.Size = new System.Drawing.Size(190, 32);
             this.enteroDatesCB.TabIndex = 220;
-            this.enteroDatesCB.SelectedIndexChanged += new System.EventHandler(this.enteroDatesCB_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(541, 1018);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(434, 206);
@@ -532,8 +586,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.DoubleClick += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -546,7 +598,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox5
             // 
@@ -559,7 +610,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox6
             // 
@@ -572,7 +622,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label46
             // 
@@ -1993,7 +2042,6 @@
             this.enterDate.Name = "enterDate";
             this.enterDate.Size = new System.Drawing.Size(144, 31);
             this.enterDate.TabIndex = 47;
-            this.enterDate.ValueChanged += new System.EventHandler(this.enterDate_ValueChanged);
             // 
             // ileumMucosalEnhancChkb
             // 
@@ -2004,7 +2052,6 @@
             this.ileumMucosalEnhancChkb.Size = new System.Drawing.Size(15, 14);
             this.ileumMucosalEnhancChkb.TabIndex = 91;
             this.ileumMucosalEnhancChkb.UseVisualStyleBackColor = true;
-            this.ileumMucosalEnhancChkb.CheckedChanged += new System.EventHandler(this.ileumMucosalEnhancChkb_CheckedChanged);
             // 
             // otherAbcLocTB
             // 
@@ -2228,64 +2275,14 @@
             this.fistulaChkbx.TabIndex = 190;
             this.fistulaChkbx.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label43
-            // 
-            this.label43.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Transparent;
-            this.label43.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.DarkRed;
-            this.label43.Location = new System.Drawing.Point(76, 55);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(82, 19);
-            this.label43.TabIndex = 70;
-            this.label43.Text = "IBD TEAM";
-            // 
-            // label47
-            // 
-            this.label47.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.DarkRed;
-            this.label47.Location = new System.Drawing.Point(76, 36);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(347, 19);
-            this.label47.TabIndex = 69;
-            this.label47.Text = "GASTROENTROLOGY AND HEPATOLOGY UNIT";
-            // 
-            // label48
-            // 
-            this.label48.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.DarkRed;
-            this.label48.Location = new System.Drawing.Point(76, 17);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(270, 19);
-            this.label48.TabIndex = 68;
-            this.label48.Text = "INTERNAL MEDICINE DEPARTMENT";
-            // 
             // enterography_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1065, 561);
+            this.ClientSize = new System.Drawing.Size(1082, 561);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label43);
             this.Controls.Add(this.label47);
@@ -2295,11 +2292,12 @@
             this.Controls.Add(this.patNameLb);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "enterography_form";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.enterography_form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.attachmentFlowPanel.ResumeLayout(false);
@@ -2307,7 +2305,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2315,43 +2312,34 @@
 
         #endregion
 
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label ageLbl;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label patNameLb;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker enterDate;
-        private System.Windows.Forms.ComboBox studyTypeCB;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox jejuMucosalEnhancChkb;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox activeSegmentTB;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox enteroDatesCB;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel attachmentFlowPanel;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox enteroReportTB;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox otherEnterographyTB;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.CheckBox rectumLossHausChkb;
         private System.Windows.Forms.CheckBox sigColonLossHausChkb;
@@ -2382,6 +2370,7 @@
         private System.Windows.Forms.TextBox sigColonLengthActTB;
         private System.Windows.Forms.CheckBox sigColonMuralAbcChkb;
         private System.Windows.Forms.TextBox sigColonThicknessEdemaTB;
+        private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
         private System.Windows.Forms.CheckBox sigColonMucIrrChkbx;
         private System.Windows.Forms.TextBox sigColonEnhancAmountTB;
         private System.Windows.Forms.CheckBox sigColonMucosalEnhancChkb;
@@ -2440,7 +2429,6 @@
         private System.Windows.Forms.CheckBox ileumSubMucEdemaChkbx;
         private System.Windows.Forms.CheckBox ileumMucIrrChkbx;
         private System.Windows.Forms.TextBox ileumEnhancAmountTB;
-        private System.Windows.Forms.CheckBox ileumMucosalEnhancChkb;
         private System.Windows.Forms.ComboBox jejuNarrwoingCB;
         private System.Windows.Forms.TextBox jejuPresDiameterTB;
         private System.Windows.Forms.CheckBox jejuMuralFibrosisChkbx;
@@ -2454,6 +2442,37 @@
         private System.Windows.Forms.CheckBox jejuSubMucEdemaChkbx;
         private System.Windows.Forms.CheckBox jejuMucIrrChkbx;
         private System.Windows.Forms.TextBox jejuEnhancAmountTB;
+        private System.Windows.Forms.CheckBox jejuMucosalEnhancChkb;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox studyTypeCB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker enterDate;
+        private System.Windows.Forms.CheckBox ileumMucosalEnhancChkb;
         private System.Windows.Forms.TextBox otherAbcLocTB;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.ComboBox abcessLocationCB;
@@ -2473,26 +2492,5 @@
         private System.Windows.Forms.TextBox lengthOfTrackTB;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.CheckBox fistulaChkbx;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox otherEnterographyTB;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox enteroReportTB;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.CheckBox sigColonSubMucEdemaChkbx;
-        private System.Windows.Forms.ComboBox enteroDatesCB;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel attachmentFlowPanel;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
     }
 }

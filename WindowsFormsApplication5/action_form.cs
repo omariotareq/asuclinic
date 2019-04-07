@@ -16,6 +16,7 @@ namespace WindowsFormsApplication5
         int p_id = 0;
         int mode = 0;
         int entry_id = 0;
+        
 
         DataTable dt_date = new DataTable();
         DataTable dt = new DataTable();
@@ -38,7 +39,11 @@ namespace WindowsFormsApplication5
 
         private void action_form_Load(object sender, EventArgs e)
         {
-
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
         }
 
         private void refreshDateCB()

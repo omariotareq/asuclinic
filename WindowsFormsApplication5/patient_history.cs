@@ -125,7 +125,11 @@ namespace WindowsFormsApplication5
 
         private void patient_history_Load(object sender, EventArgs e)
         {
-
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

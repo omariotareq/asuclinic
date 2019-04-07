@@ -75,7 +75,7 @@
             this.ageLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ageLbl.AutoSize = true;
             this.ageLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageLbl.Location = new System.Drawing.Point(567, 88);
+            this.ageLbl.Location = new System.Drawing.Point(551, 88);
             this.ageLbl.Name = "ageLbl";
             this.ageLbl.Size = new System.Drawing.Size(0, 24);
             this.ageLbl.TabIndex = 41;
@@ -85,7 +85,7 @@
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(507, 88);
+            this.label20.Location = new System.Drawing.Point(491, 88);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(54, 24);
             this.label20.TabIndex = 40;
@@ -96,7 +96,7 @@
             this.patNameLb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patNameLb.AutoSize = true;
             this.patNameLb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patNameLb.Location = new System.Drawing.Point(283, 88);
+            this.patNameLb.Location = new System.Drawing.Point(267, 88);
             this.patNameLb.Name = "patNameLb";
             this.patNameLb.Size = new System.Drawing.Size(0, 24);
             this.patNameLb.TabIndex = 39;
@@ -106,7 +106,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(206, 88);
+            this.label18.Location = new System.Drawing.Point(190, 88);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 38;
@@ -117,7 +117,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 81);
+            this.label3.Location = new System.Drawing.Point(11, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 31);
             this.label3.TabIndex = 37;
@@ -140,7 +140,7 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pulseTB);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(4, 115);
+            this.groupBox1.Location = new System.Drawing.Point(-12, 115);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(975, 548);
             this.groupBox1.TabIndex = 42;
@@ -435,7 +435,7 @@
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::WindowsFormsApplication5.Properties.Resources.ain_shams_university;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 8);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -449,7 +449,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkRed;
-            this.label14.Location = new System.Drawing.Point(81, 53);
+            this.label14.Location = new System.Drawing.Point(85, 58);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 19);
             this.label14.TabIndex = 66;
@@ -462,7 +462,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkRed;
-            this.label15.Location = new System.Drawing.Point(81, 34);
+            this.label15.Location = new System.Drawing.Point(85, 39);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(347, 19);
             this.label15.TabIndex = 65;
@@ -475,7 +475,7 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkRed;
-            this.label16.Location = new System.Drawing.Point(81, 15);
+            this.label16.Location = new System.Drawing.Point(85, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(270, 19);
             this.label16.TabIndex = 64;
@@ -489,7 +489,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1025, 601);
+            this.ClientSize = new System.Drawing.Size(1042, 601);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -505,6 +505,7 @@
             this.Name = "examination_form";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.examination_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

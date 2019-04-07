@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -144,14 +146,20 @@ namespace WindowsFormsApplication5
         private void dateCB_SelectedIndexChanged(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
+            button1.Enabled = true;
             mode = 1;
             fillData(dateCB.Text);
+            fillImages();
             Cursor.Current = Cursors.Default;
         }
 
         private void pathology_form_Load(object sender, EventArgs e)
         {
-
+            string usrAccess = WindowsFormsApplication5.Properties.Settings.Default.drAccess;
+            if (Convert.ToInt16(usrAccess) < 1)
+            {
+                saveBtn.Visible = false;
+            }
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -230,6 +238,211 @@ namespace WindowsFormsApplication5
         {
             mode = 0;
             clearBindings();
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                foreach (PictureBox item in attachmentFlowPanel.Controls)
+                {
+                    bool isNullOrEmpty = (item == null) || (item.Image == null);
+                    if (!isNullOrEmpty)
+                    {
+                        MemoryStream ms = new MemoryStream();
+                        byte[] PhotoByte = null;
+                        item.Image.Save(ms, ImageFormat.Jpeg);
+                        PhotoByte = ms.ToArray();
+
+                        /*Image img = item.Image;
+                        ImageConverter converter = new ImageConverter();
+                        arr_upload_image = (byte[])converter.ConvertTo(img, typeof(byte[]));*/
+
+
+                        if (p_id != 0)
+                        {
+
+                            try
+                            {
+                                DataSet.parametrizedInsertPath(Convert.ToInt16(entry_id), PhotoByte);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please select a date");
+                        }
+                    }
+
+                }
+                MessageBox.Show("upload complete");
+                clearPb();
+                flowLayoutPanel1.Controls.Clear();
+                fillImages();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("please select a valid date");
+                MessageBox.Show(ex.Message);
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void clearPb()
+        {
+            pictureBox3.Image = null;
+            pictureBox4.Image = null;
+            pictureBox5.Image = null;
+            pictureBox6.Image = null;
+        }
+
+        private void fillImages()
+        {
+
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+                flowLayoutPanel1.Controls.Clear();
+                DataTable di = new DataTable();
+                di = DataSet.selectPathImages(Convert.ToInt16(entry_id));
+                byte[] image_arr = null;
+                Image photo = null;
+
+                for (int i = 0; i < di.Rows.Count; i++)
+                {
+                    try
+                    {
+                        image_arr = (byte[])di.Rows[i]["path_image"];
+
+                        //photo = (Bitmap)((new ImageConverter()).ConvertFrom(image_arr));
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+                    PictureBox pb = new PictureBox();
+                    MemoryStream stream = new MemoryStream(image_arr, 0, image_arr.Length);
+                    pb.Image = Image.FromStream(stream);
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pb.BackColor = Color.Transparent;
+                    pb.Height = 100;
+                    pb.Width = 100;
+                    pb.Tag = di.Rows[i]["id"];
+                    pb.Click += new EventHandler(pb_click);
+                    flowLayoutPanel1.Controls.Add(pb);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            Cursor.Current = Cursors.Default;
+
+        }
+
+        private void chooseImage()
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox3.Image = new Bitmap(openFileDialog.FileName);
+            }
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox3.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox4.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox5.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Choose Image File";
+            openFileDialog.InitialDirectory =
+                Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            openFileDialog.Filter = "Image Files (*.bmp, *.jpg, *.png, *.ico, *.jpeg)|*.bmp;*.jpg;*.png;*.ico;*.jpeg";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox6.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void pb_click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+
+            if (me.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to delete this photo ?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+                if (dr == DialogResult.Yes)
+                {
+                    // Do something
+                    Cursor.Current = Cursors.WaitCursor;
+                    DataSet.deletePathImage(Convert.ToInt32(((PictureBox)sender).Tag), p_id);
+                    flowLayoutPanel1.Controls.Clear();
+                    fillImages();
+                    Cursor.Current = Cursors.Default;
+                    MessageBox.Show("Deleted successfullyy");
+                }
+            }
+            if (me.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                PhotoPreviewForm ppf = new PhotoPreviewForm(((PictureBox)sender).Image);
+                ppf.ShowDialog();
+            }
         }
 
 
